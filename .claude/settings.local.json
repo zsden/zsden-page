@@ -5,7 +5,9 @@
       "Bash(bun run dev)",
       "Bash(bunx prisma generate:*)",
       "Bash(bunx prisma migrate dev:*)",
-      "Bash(bunx prisma db push:*)"
+      "Bash(bunx prisma db push:*)",
+      "Bash(rm:*)",
+      "Bash(git add:*)"
     ]
   }
 }

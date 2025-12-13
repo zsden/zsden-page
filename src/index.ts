@@ -12,9 +12,15 @@ const app = new Elysia()
   }))
   .use(postsRoute)
   .use(metaRoute)
-  .use(rssRoute)
-  .listen(3000);
+  .use(rssRoute);
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+// Vercel Serverless Function handler
+export default app.handle;
+
+// 开发环境监听端口
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(3000);
+  console.log(
+    `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+  );
+}
