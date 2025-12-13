@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia'
-import { getAllPosts, getPostBySlug, markdownToHtml } from '../lib/markdown'
+import { getAllPosts, getPostBySlug, markdownToHtml } from '../lib/markdown.js'
 import { format } from 'date-fns'
 
 const SITE_URL = process.env.SITE_URL || 'http://localhost:3000'

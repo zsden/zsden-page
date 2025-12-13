@@ -1,8 +1,8 @@
 import { Elysia } from "elysia";
 import { staticPlugin } from "@elysiajs/static";
 import { cors } from "@elysiajs/cors";
-import { postsRoute, metaRoute } from "./routes/posts";
-import { rssRoute } from "./routes/rss";
+import { postsRoute, metaRoute } from "./routes/posts.js";
+import { rssRoute } from "./routes/rss.js";
 
 const app = new Elysia()
   .use(cors())

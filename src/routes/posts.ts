@@ -1,5 +1,5 @@
 import { Elysia, t } from 'elysia'
-import { prisma } from '../lib/prisma'
+import { prisma } from '../lib/prisma.js'
 import {
   getAllPosts,
   getPostBySlug,
@@ -8,7 +8,7 @@ import {
   getAllCategories,
   getPostsByTag,
   getPostsByCategory
-} from '../lib/markdown'
+} from '../lib/markdown.js'
 import { Prisma, PostStatus } from '@prisma/client'
 
 export const postsRoute = new Elysia({ prefix: '/api/posts' })
