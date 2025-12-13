@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "bunVersion": "1.x",
+  "installCommand": "bun install",
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "DIRECT_URL": "@direct_url"
+  }
+}

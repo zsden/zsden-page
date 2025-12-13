@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun add:*)",
+      "Bash(bun run dev)",
+      "Bash(bunx prisma generate:*)",
+      "Bash(bunx prisma migrate dev:*)",
+      "Bash(bunx prisma db push:*)"
+    ]
+  }
+}

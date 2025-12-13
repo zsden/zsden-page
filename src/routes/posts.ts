@@ -9,7 +9,7 @@ import {
   getPostsByTag,
   getPostsByCategory
 } from '../lib/markdown'
-import { PostStatus } from '@prisma/client'
+import { Prisma, PostStatus } from '@prisma/client'
 
 export const postsRoute = new Elysia({ prefix: '/api/posts' })
   .get('/', async () => {
@@ -54,8 +54,8 @@ export const postsRoute = new Elysia({ prefix: '/api/posts' })
           viewCount: dbPost.viewCount,
           createdAt: dbPost.createdAt,
           updatedAt: dbPost.updatedAt,
-          tags: dbPost.tags.map(pt => pt.tag.name),
-          categories: dbPost.categories.map(pc => pc.category.name)
+          tags: dbPost.tags.map((pt: any) => pt.tag.name),
+          categories: dbPost.categories.map((pc: any) => pc.category.name)
         })
       } else {
         // 创建新记录
@@ -212,14 +212,14 @@ export const metaRoute = new Elysia({ prefix: '/api' })
     const tags = await prisma.tag.findMany({
       orderBy: { name: 'asc' }
     })
-    return tags.map(tag => tag.name)
+    return tags.map((tag: any) => tag.name)
   })
 
   .get('/categories', async () => {
     const categories = await prisma.category.findMany({
       orderBy: { name: 'asc' }
     })
-    return categories.map(category => category.name)
+    return categories.map((category: any) => category.name)
   })
 
   .get('/stats', async () => {
