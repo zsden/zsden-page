@@ -1,6 +1,18 @@
+import cors from "@elysiajs/cors";
+import staticPlugin from "@elysiajs/static";
 import { Elysia } from "elysia";
+import { metaRoute, postsRoute } from "./routes/posts";
+import { rssRoute } from "./routes/rss";
 
-const app = new Elysia().get("/", () => "Hello Elysia");
+const app = new Elysia()
+  .use(cors())
+  .use(staticPlugin({
+    assets: "public",
+    prefix: "/"
+  }))
+  .use(postsRoute)
+  .use(metaRoute)
+  .use(rssRoute);
 
 // For local development
 if (process.env.NODE_ENV !== "production") {
