@@ -1,5 +1,9 @@
 {
   "version": 2,
-  "bunVersion": "1.x",
-  "installCommand": "bun install"
+  "buildCommand": "bun install",
+  "functions": {
+    "src/api.ts": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
