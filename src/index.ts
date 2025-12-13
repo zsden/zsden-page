@@ -4,15 +4,17 @@ import { cors } from "@elysiajs/cors";
 import { postsRoute, metaRoute } from "./routes/posts.js";
 import { rssRoute } from "./routes/rss.js";
 
-const app = new Elysia()
-  .use(cors())
-  .use(staticPlugin({
-    assets: "public",
-    prefix: "/"
-  }))
-  .use(postsRoute)
-  .use(metaRoute)
-  .use(rssRoute);
+// const app = new Elysia()
+//   .use(cors())
+//   .use(staticPlugin({
+//     assets: "public",
+//     prefix: "/"
+//   }))
+//   .use(postsRoute)
+//   .use(metaRoute)
+//   .use(rssRoute);
+
+const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
 
 // Vercel Serverless Function handler
 export default app.handle;
