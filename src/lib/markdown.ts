@@ -71,12 +71,7 @@ export async function markdownToHtml(markdown: string) {
   const processedContent = await remark()
     .use(remarkGfm)
     .use(html, { sanitize: false })
-    .use(rehypeHighlight, {
-      // 配置选项
-      subset: false, // 包含所有语言
-      ignoreMissing: true, // 忽略未定义的语言
-      plainText: ['text', 'txt', 'plain'] // 纯文本类型
-    })
+    .use(rehypeHighlight) // 使用默认配置
     .process(markdown)
   return processedContent.toString()
 }
