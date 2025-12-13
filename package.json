@@ -6,11 +6,24 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
+    "@elysiajs/cors": "^1.4.0",
+    "@elysiajs/static": "^1.4.7",
+    "@prisma/adapter-pg": "^7.1.0",
     "@prisma/client": "^7.1.0",
+    "@supabase/supabase-js": "^2.87.1",
+    "date-fns": "^4.1.0",
     "elysia": "latest",
-    "prisma": "^7.1.0"
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.1",
+    "prisma": "^7.1.0",
+    "rehype-highlight": "^7.0.2",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-html": "^16.0.1"
   },
   "devDependencies": {
+    "@types/node": "^25.0.1",
     "bun-types": "latest"
   },
   "module": "src/index.js"
