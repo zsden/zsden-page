@@ -5,9 +5,8 @@ import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import { format } from 'date-fns'
 import { PostFrontmatter } from '../types/blog'
-import { join } from 'path'
 
-const postsDirectory = join(process.cwd(), 'posts')
+const postsDirectory = `${process.cwd()}/posts`
 
 export async function getAllPostSlugs() {
   const { glob } = await import('fast-glob')
@@ -16,7 +15,7 @@ export async function getAllPostSlugs() {
 }
 
 export function getPostFilePath(slug: string) {
-  return join(postsDirectory, `${slug}.md`)
+  return `${postsDirectory}/${slug}.md`
 }
 
 export function parseSlugToDate(slug: string) {
