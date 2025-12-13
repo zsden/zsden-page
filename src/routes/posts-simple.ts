@@ -21,7 +21,7 @@ export const postsRouteSimple = new Elysia({ prefix: '/api/posts' })
       author: post.author || 'zsden',
       status: post.status,
       createdAt: post.slug.split('/')[0] || new Date().toISOString(),
-      updatedAt: post.updatedAt || post.slug.split('/')[0] || new Date().toISOString(),
+      updatedAt: post.slug.split('/')[0] || new Date().toISOString(),
       tags: post.tags || [],
       categories: post.categories || []
     })).sort((a, b) =>
