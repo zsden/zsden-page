@@ -7,7 +7,9 @@ import { format, parseISO } from 'date-fns'
 import { PostFrontmatter, ParsedPost, Post } from '../types/blog'
 import path from 'path'
 
+// 在 Vercel 环境中确保正确的路径
 const postsDirectory = path.join(process.cwd(), 'posts')
+const dataDirectory = path.join(process.cwd(), 'data')
 
 export async function getAllPostSlugs(): Promise<string[]> {
   const { glob } = await import('fast-glob')

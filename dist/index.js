@@ -1,4 +1,4 @@
-// @bun
+import { createRequire } from "node:module";
 var __create = Object.create;
 var __getProtoOf = Object.getPrototypeOf;
 var __defProp = Object.defineProperty;
@@ -26,7 +26,454 @@ var __export = (target, all) => {
     });
 };
 var __esm = (fn, res) => () => (fn && (res = fn(fn = 0)), res);
-var __require = import.meta.require;
+var __require = /* @__PURE__ */ createRequire(import.meta.url);
+
+// node_modules/fast-decode-uri-component/index.js
+var require_fast_decode_uri_component = __commonJS((exports, module) => {
+  var UTF8_ACCEPT = 12;
+  var UTF8_REJECT = 0;
+  var UTF8_DATA = [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    10,
+    9,
+    9,
+    9,
+    11,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    12,
+    0,
+    0,
+    0,
+    0,
+    24,
+    36,
+    48,
+    60,
+    72,
+    84,
+    96,
+    0,
+    12,
+    12,
+    12,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    24,
+    24,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    24,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    48,
+    48,
+    48,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    48,
+    48,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    48,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    127,
+    63,
+    63,
+    63,
+    0,
+    31,
+    15,
+    15,
+    15,
+    7,
+    7,
+    7
+  ];
+  function decodeURIComponent2(uri) {
+    var percentPosition = uri.indexOf("%");
+    if (percentPosition === -1)
+      return uri;
+    var length = uri.length;
+    var decoded = "";
+    var last = 0;
+    var codepoint = 0;
+    var startOfOctets = percentPosition;
+    var state = UTF8_ACCEPT;
+    while (percentPosition > -1 && percentPosition < length) {
+      var high = hexCodeToInt(uri[percentPosition + 1], 4);
+      var low = hexCodeToInt(uri[percentPosition + 2], 0);
+      var byte = high | low;
+      var type = UTF8_DATA[byte];
+      state = UTF8_DATA[256 + state + type];
+      codepoint = codepoint << 6 | byte & UTF8_DATA[364 + type];
+      if (state === UTF8_ACCEPT) {
+        decoded += uri.slice(last, startOfOctets);
+        decoded += codepoint <= 65535 ? String.fromCharCode(codepoint) : String.fromCharCode(55232 + (codepoint >> 10), 56320 + (codepoint & 1023));
+        codepoint = 0;
+        last = percentPosition + 3;
+        percentPosition = startOfOctets = uri.indexOf("%", last);
+      } else if (state === UTF8_REJECT) {
+        return null;
+      } else {
+        percentPosition += 3;
+        if (percentPosition < length && uri.charCodeAt(percentPosition) === 37)
+          continue;
+        return null;
+      }
+    }
+    return decoded + uri.slice(last);
+  }
+  var HEX = {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    a: 10,
+    A: 10,
+    b: 11,
+    B: 11,
+    c: 12,
+    C: 12,
+    d: 13,
+    D: 13,
+    e: 14,
+    E: 14,
+    f: 15,
+    F: 15
+  };
+  function hexCodeToInt(c, shift) {
+    var i = HEX[c];
+    return i === undefined ? 255 : i << shift;
+  }
+  module.exports = decodeURIComponent2;
+});
 
 // node_modules/strtok3/lib/stream/Errors.js
 var defaultMessages = "End-Of-Stream", EndOfStreamError, AbortError;
@@ -595,7 +1042,7 @@ var init_core = __esm(() => {
 });
 
 // node_modules/strtok3/lib/FileTokenizer.js
-import { open as fsOpen } from "fs/promises";
+import { open as fsOpen } from "node:fs/promises";
 var FileTokenizer;
 var init_FileTokenizer = __esm(() => {
   init_AbstractTokenizer();
@@ -603,8 +1050,8 @@ var init_FileTokenizer = __esm(() => {
   FileTokenizer = class FileTokenizer extends AbstractTokenizer {
     static async fromFile(sourceFilePath) {
       const fileHandle = await fsOpen(sourceFilePath, "r");
-      const stat = await fileHandle.stat();
-      return new FileTokenizer(fileHandle, { fileInfo: { path: sourceFilePath, size: stat.size } });
+      const stat2 = await fileHandle.stat();
+      return new FileTokenizer(fileHandle, { fileInfo: { path: sourceFilePath, size: stat2.size } });
     }
     constructor(fileHandle, options2) {
       super(options2);
@@ -645,13 +1092,13 @@ var init_FileTokenizer = __esm(() => {
 });
 
 // node_modules/strtok3/lib/index.js
-import { stat as fsStat } from "fs/promises";
+import { stat as fsStat } from "node:fs/promises";
 async function fromStream2(stream, options2) {
   const rst = fromStream(stream, options2);
   if (stream.path) {
-    const stat = await fsStat(stream.path);
+    const stat2 = await fsStat(stream.path);
     rst.fileInfo.path = stream.path;
-    rst.fileInfo.size = stat.size;
+    rst.fileInfo.size = stat2.size;
   }
   return rst;
 }
@@ -743,33 +1190,33 @@ function decodeWindows1252(bytes) {
 var WINDOWS_1252_EXTRA, WINDOWS_1252_REVERSE;
 var init_lib2 = __esm(() => {
   WINDOWS_1252_EXTRA = {
-    128: "\u20AC",
-    130: "\u201A",
-    131: "\u0192",
-    132: "\u201E",
-    133: "\u2026",
-    134: "\u2020",
-    135: "\u2021",
-    136: "\u02C6",
-    137: "\u2030",
-    138: "\u0160",
-    139: "\u2039",
-    140: "\u0152",
-    142: "\u017D",
-    145: "\u2018",
-    146: "\u2019",
-    147: "\u201C",
-    148: "\u201D",
-    149: "\u2022",
-    150: "\u2013",
-    151: "\u2014",
-    152: "\u02DC",
-    153: "\u2122",
-    154: "\u0161",
-    155: "\u203A",
-    156: "\u0153",
-    158: "\u017E",
-    159: "\u0178"
+    128: "€",
+    130: "‚",
+    131: "ƒ",
+    132: "„",
+    133: "…",
+    134: "†",
+    135: "‡",
+    136: "ˆ",
+    137: "‰",
+    138: "Š",
+    139: "‹",
+    140: "Œ",
+    142: "Ž",
+    145: "‘",
+    146: "’",
+    147: "“",
+    148: "”",
+    149: "•",
+    150: "–",
+    151: "—",
+    152: "˜",
+    153: "™",
+    154: "š",
+    155: "›",
+    156: "œ",
+    158: "ž",
+    159: "Ÿ"
   };
   WINDOWS_1252_REVERSE = {};
   for (const [code, char] of Object.entries(WINDOWS_1252_EXTRA)) {
@@ -980,7 +1427,7 @@ var require_ms = __commonJS((exports, module) => {
 
 // node_modules/debug/src/common.js
 var require_common = __commonJS((exports, module) => {
-  function setup(env) {
+  function setup(env2) {
     createDebug.debug = createDebug;
     createDebug.default = createDebug;
     createDebug.coerce = coerce;
@@ -989,8 +1436,8 @@ var require_common = __commonJS((exports, module) => {
     createDebug.enabled = enabled;
     createDebug.humanize = require_ms();
     createDebug.destroy = destroy;
-    Object.keys(env).forEach((key) => {
-      createDebug[key] = env[key];
+    Object.keys(env2).forEach((key) => {
+      createDebug[key] = env2[key];
     });
     createDebug.names = [];
     createDebug.skips = [];
@@ -3743,8 +4190,8 @@ __export(exports_file_type, {
   fileTypeFromBlob: () => fileTypeFromBlob,
   FileTypeParser: () => FileTypeParser2
 });
-import { ReadableStream as WebReadableStream } from "stream/web";
-import { pipeline, PassThrough, Readable } from "stream";
+import { ReadableStream as WebReadableStream } from "node:stream/web";
+import { pipeline, PassThrough, Readable } from "node:stream";
 async function fileTypeFromFile(path, options2) {
   return new FileTypeParser2(options2).fromFile(path, options2);
 }
@@ -3809,451 +4256,249 @@ var init_file_type = __esm(() => {
   };
 });
 
-// node_modules/fast-decode-uri-component/index.js
-var require_fast_decode_uri_component2 = __commonJS((exports, module) => {
-  var UTF8_ACCEPT = 12;
-  var UTF8_REJECT = 0;
-  var UTF8_DATA = [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    4,
-    4,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    6,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    8,
-    7,
-    7,
-    10,
-    9,
-    9,
-    9,
-    11,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    12,
-    0,
-    0,
-    0,
-    0,
-    24,
-    36,
-    48,
-    60,
-    72,
-    84,
-    96,
-    0,
-    12,
-    12,
-    12,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    24,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    24,
-    24,
-    24,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    24,
-    24,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    48,
-    48,
-    48,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    48,
-    48,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    48,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    127,
-    63,
-    63,
-    63,
-    0,
-    31,
-    15,
-    15,
-    15,
-    7,
-    7,
-    7
-  ];
-  function decodeURIComponent2(uri2) {
-    var percentPosition = uri2.indexOf("%");
-    if (percentPosition === -1)
-      return uri2;
-    var length = uri2.length;
-    var decoded = "";
-    var last = 0;
-    var codepoint = 0;
-    var startOfOctets = percentPosition;
-    var state = UTF8_ACCEPT;
-    while (percentPosition > -1 && percentPosition < length) {
-      var high = hexCodeToInt(uri2[percentPosition + 1], 4);
-      var low = hexCodeToInt(uri2[percentPosition + 2], 0);
-      var byte2 = high | low;
-      var type = UTF8_DATA[byte2];
-      state = UTF8_DATA[256 + state + type];
-      codepoint = codepoint << 6 | byte2 & UTF8_DATA[364 + type];
-      if (state === UTF8_ACCEPT) {
-        decoded += uri2.slice(last, startOfOctets);
-        decoded += codepoint <= 65535 ? String.fromCharCode(codepoint) : String.fromCharCode(55232 + (codepoint >> 10), 56320 + (codepoint & 1023));
-        codepoint = 0;
-        last = percentPosition + 3;
-        percentPosition = startOfOctets = uri2.indexOf("%", last);
-      } else if (state === UTF8_REJECT) {
-        return null;
-      } else {
-        percentPosition += 3;
-        if (percentPosition < length && uri2.charCodeAt(percentPosition) === 37)
-          continue;
-        return null;
+// node_modules/cookie/dist/index.js
+var require_dist = __commonJS((exports) => {
+  Object.defineProperty(exports, "__esModule", { value: true });
+  exports.parseCookie = parseCookie;
+  exports.parse = parseCookie;
+  exports.stringifyCookie = stringifyCookie;
+  exports.stringifySetCookie = stringifySetCookie;
+  exports.serialize = stringifySetCookie;
+  exports.parseSetCookie = parseSetCookie;
+  exports.stringifySetCookie = stringifySetCookie;
+  exports.serialize = stringifySetCookie;
+  var cookieNameRegExp = /^[\u0021-\u003A\u003C\u003E-\u007E]+$/;
+  var cookieValueRegExp = /^[\u0021-\u003A\u003C-\u007E]*$/;
+  var domainValueRegExp = /^([.]?[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)([.][a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)*$/i;
+  var pathValueRegExp = /^[\u0020-\u003A\u003D-\u007E]*$/;
+  var maxAgeRegExp = /^-?\d+$/;
+  var __toString = Object.prototype.toString;
+  var NullObject = /* @__PURE__ */ (() => {
+    const C = function() {};
+    C.prototype = Object.create(null);
+    return C;
+  })();
+  function parseCookie(str2, options2) {
+    const obj = new NullObject;
+    const len = str2.length;
+    if (len < 2)
+      return obj;
+    const dec = options2?.decode || decode2;
+    let index = 0;
+    do {
+      const eqIdx = eqIndex(str2, index, len);
+      if (eqIdx === -1)
+        break;
+      const endIdx = endIndex(str2, index, len);
+      if (eqIdx > endIdx) {
+        index = str2.lastIndexOf(";", eqIdx - 1) + 1;
+        continue;
+      }
+      const key = valueSlice(str2, index, eqIdx);
+      if (obj[key] === undefined) {
+        obj[key] = dec(valueSlice(str2, eqIdx + 1, endIdx));
+      }
+      index = endIdx + 1;
+    } while (index < len);
+    return obj;
+  }
+  function stringifyCookie(cookie, options2) {
+    const enc = options2?.encode || encodeURIComponent;
+    const cookieStrings = [];
+    for (const name of Object.keys(cookie)) {
+      const val = cookie[name];
+      if (val === undefined)
+        continue;
+      if (!cookieNameRegExp.test(name)) {
+        throw new TypeError(`cookie name is invalid: ${name}`);
+      }
+      const value = enc(val);
+      if (!cookieValueRegExp.test(value)) {
+        throw new TypeError(`cookie val is invalid: ${val}`);
+      }
+      cookieStrings.push(`${name}=${value}`);
+    }
+    return cookieStrings.join("; ");
+  }
+  function stringifySetCookie(_name, _val, _opts) {
+    const cookie = typeof _name === "object" ? _name : { ..._opts, name: _name, value: String(_val) };
+    const options2 = typeof _val === "object" ? _val : _opts;
+    const enc = options2?.encode || encodeURIComponent;
+    if (!cookieNameRegExp.test(cookie.name)) {
+      throw new TypeError(`argument name is invalid: ${cookie.name}`);
+    }
+    const value = cookie.value ? enc(cookie.value) : "";
+    if (!cookieValueRegExp.test(value)) {
+      throw new TypeError(`argument val is invalid: ${cookie.value}`);
+    }
+    let str2 = cookie.name + "=" + value;
+    if (cookie.maxAge !== undefined) {
+      if (!Number.isInteger(cookie.maxAge)) {
+        throw new TypeError(`option maxAge is invalid: ${cookie.maxAge}`);
+      }
+      str2 += "; Max-Age=" + cookie.maxAge;
+    }
+    if (cookie.domain) {
+      if (!domainValueRegExp.test(cookie.domain)) {
+        throw new TypeError(`option domain is invalid: ${cookie.domain}`);
+      }
+      str2 += "; Domain=" + cookie.domain;
+    }
+    if (cookie.path) {
+      if (!pathValueRegExp.test(cookie.path)) {
+        throw new TypeError(`option path is invalid: ${cookie.path}`);
+      }
+      str2 += "; Path=" + cookie.path;
+    }
+    if (cookie.expires) {
+      if (!isDate(cookie.expires) || !Number.isFinite(cookie.expires.valueOf())) {
+        throw new TypeError(`option expires is invalid: ${cookie.expires}`);
+      }
+      str2 += "; Expires=" + cookie.expires.toUTCString();
+    }
+    if (cookie.httpOnly) {
+      str2 += "; HttpOnly";
+    }
+    if (cookie.secure) {
+      str2 += "; Secure";
+    }
+    if (cookie.partitioned) {
+      str2 += "; Partitioned";
+    }
+    if (cookie.priority) {
+      const priority = typeof cookie.priority === "string" ? cookie.priority.toLowerCase() : undefined;
+      switch (priority) {
+        case "low":
+          str2 += "; Priority=Low";
+          break;
+        case "medium":
+          str2 += "; Priority=Medium";
+          break;
+        case "high":
+          str2 += "; Priority=High";
+          break;
+        default:
+          throw new TypeError(`option priority is invalid: ${cookie.priority}`);
       }
     }
-    return decoded + uri2.slice(last);
+    if (cookie.sameSite) {
+      const sameSite = typeof cookie.sameSite === "string" ? cookie.sameSite.toLowerCase() : cookie.sameSite;
+      switch (sameSite) {
+        case true:
+        case "strict":
+          str2 += "; SameSite=Strict";
+          break;
+        case "lax":
+          str2 += "; SameSite=Lax";
+          break;
+        case "none":
+          str2 += "; SameSite=None";
+          break;
+        default:
+          throw new TypeError(`option sameSite is invalid: ${cookie.sameSite}`);
+      }
+    }
+    return str2;
   }
-  var HEX = {
-    "0": 0,
-    "1": 1,
-    "2": 2,
-    "3": 3,
-    "4": 4,
-    "5": 5,
-    "6": 6,
-    "7": 7,
-    "8": 8,
-    "9": 9,
-    a: 10,
-    A: 10,
-    b: 11,
-    B: 11,
-    c: 12,
-    C: 12,
-    d: 13,
-    D: 13,
-    e: 14,
-    E: 14,
-    f: 15,
-    F: 15
-  };
-  function hexCodeToInt(c, shift) {
-    var i = HEX[c];
-    return i === undefined ? 255 : i << shift;
+  function parseSetCookie(str2, options2) {
+    const dec = options2?.decode || decode2;
+    const len = str2.length;
+    const endIdx = endIndex(str2, 0, len);
+    const eqIdx = eqIndex(str2, 0, endIdx);
+    const setCookie = eqIdx === -1 ? { name: "", value: dec(valueSlice(str2, 0, endIdx)) } : {
+      name: valueSlice(str2, 0, eqIdx),
+      value: dec(valueSlice(str2, eqIdx + 1, endIdx))
+    };
+    let index = endIdx + 1;
+    while (index < len) {
+      const endIdx2 = endIndex(str2, index, len);
+      const eqIdx2 = eqIndex(str2, index, endIdx2);
+      const attr = eqIdx2 === -1 ? valueSlice(str2, index, endIdx2) : valueSlice(str2, index, eqIdx2);
+      const val = eqIdx2 === -1 ? undefined : valueSlice(str2, eqIdx2 + 1, endIdx2);
+      switch (attr.toLowerCase()) {
+        case "httponly":
+          setCookie.httpOnly = true;
+          break;
+        case "secure":
+          setCookie.secure = true;
+          break;
+        case "partitioned":
+          setCookie.partitioned = true;
+          break;
+        case "domain":
+          setCookie.domain = val;
+          break;
+        case "path":
+          setCookie.path = val;
+          break;
+        case "max-age":
+          if (val && maxAgeRegExp.test(val))
+            setCookie.maxAge = Number(val);
+          break;
+        case "expires":
+          if (!val)
+            break;
+          const date2 = new Date(val);
+          if (Number.isFinite(date2.valueOf()))
+            setCookie.expires = date2;
+          break;
+        case "priority":
+          if (!val)
+            break;
+          const priority = val.toLowerCase();
+          if (priority === "low" || priority === "medium" || priority === "high") {
+            setCookie.priority = priority;
+          }
+          break;
+        case "samesite":
+          if (!val)
+            break;
+          const sameSite = val.toLowerCase();
+          if (sameSite === "lax" || sameSite === "strict" || sameSite === "none") {
+            setCookie.sameSite = sameSite;
+          }
+          break;
+      }
+      index = endIdx2 + 1;
+    }
+    return setCookie;
   }
-  module.exports = decodeURIComponent2;
+  function endIndex(str2, min, len) {
+    const index = str2.indexOf(";", min);
+    return index === -1 ? len : index;
+  }
+  function eqIndex(str2, min, max) {
+    const index = str2.indexOf("=", min);
+    return index < max ? index : -1;
+  }
+  function valueSlice(str2, min, max) {
+    let start = min;
+    let end = max;
+    do {
+      const code = str2.charCodeAt(start);
+      if (code !== 32 && code !== 9)
+        break;
+    } while (++start < end);
+    while (end > start) {
+      const code = str2.charCodeAt(end - 1);
+      if (code !== 32 && code !== 9)
+        break;
+      end--;
+    }
+    return str2.slice(start, end);
+  }
+  function decode2(str2) {
+    if (str2.indexOf("%") === -1)
+      return str2;
+    try {
+      return decodeURIComponent(str2);
+    } catch (e) {
+      return str2;
+    }
+  }
+  function isDate(val) {
+    return __toString.call(val) === "[object Date]";
+  }
 });
 
 // node_modules/kind-of/index.js
@@ -4434,17 +4679,17 @@ var require_section_matter = __commonJS((exports, module) => {
     if (typeof options2 === "function") {
       options2 = { parse: options2 };
     }
-    var file = toObject(input);
+    var file2 = toObject(input);
     var defaults = { section_delimiter: "---", parse: identity };
     var opts = extend({}, defaults, options2);
     var delim = opts.section_delimiter;
-    var lines = file.content.split(/\r?\n/);
+    var lines = file2.content.split(/\r?\n/);
     var sections = null;
     var section = createSection();
     var content = [];
     var stack = [];
     function initSections(val) {
-      file.content = val;
+      file2.content = val;
       sections = [];
       content = [];
     }
@@ -4495,8 +4740,8 @@ var require_section_matter = __commonJS((exports, module) => {
       closeSection(content.join(`
 `));
     }
-    file.sections = sections;
-    return file;
+    file2.sections = sections;
+    return file2;
   };
   function isDelimiter(line, delim) {
     if (line.slice(0, delim.length) !== delim) {
@@ -4625,7 +4870,7 @@ var require_mark = __commonJS((exports, module) => {
     head = "";
     start = this.position;
     while (start > 0 && `\x00\r
-\x85\u2028\u2029`.indexOf(this.buffer.charAt(start - 1)) === -1) {
+\u2028\u2029`.indexOf(this.buffer.charAt(start - 1)) === -1) {
       start -= 1;
       if (this.position - start > maxLength / 2 - 1) {
         head = " ... ";
@@ -4636,7 +4881,7 @@ var require_mark = __commonJS((exports, module) => {
     tail = "";
     end = this.position;
     while (end < this.buffer.length && `\x00\r
-\x85\u2028\u2029`.indexOf(this.buffer.charAt(end)) === -1) {
+\u2028\u2029`.indexOf(this.buffer.charAt(end)) === -1) {
       end += 1;
       if (end - this.position > maxLength / 2 - 1) {
         tail = " ... ";
@@ -5558,7 +5803,7 @@ var require_function = __commonJS((exports, module) => {
   try {
     _require = __require;
     esprima = _require("esprima");
-  } catch (_2) {
+  } catch (_) {
     if (typeof window !== "undefined")
       esprima = window.esprima;
   }
@@ -5687,7 +5932,7 @@ var require_loader = __commonJS((exports, module) => {
   }
   function simpleEscapeSequence(c) {
     return c === 48 ? "\x00" : c === 97 ? "\x07" : c === 98 ? "\b" : c === 116 ? "\t" : c === 9 ? "\t" : c === 110 ? `
-` : c === 118 ? "\v" : c === 102 ? "\f" : c === 114 ? "\r" : c === 101 ? "\x1B" : c === 32 ? " " : c === 34 ? '"' : c === 47 ? "/" : c === 92 ? "\\" : c === 78 ? "\x85" : c === 95 ? "\xA0" : c === 76 ? "\u2028" : c === 80 ? "\u2029" : "";
+` : c === 118 ? "\v" : c === 102 ? "\f" : c === 114 ? "\r" : c === 101 ? "\x1B" : c === 32 ? " " : c === 34 ? '"' : c === 47 ? "/" : c === 92 ? "\\" : c === 78 ? "" : c === 95 ? " " : c === 76 ? "\u2028" : c === 80 ? "\u2029" : "";
   }
   function charFromCodepoint(c) {
     if (c <= 65535) {
@@ -7496,33 +7741,33 @@ var require_stringify = __commonJS((exports, module) => {
   var typeOf = require_kind_of();
   var getEngine = require_engine();
   var defaults = require_defaults();
-  module.exports = function(file, data, options2) {
+  module.exports = function(file2, data, options2) {
     if (data == null && options2 == null) {
-      switch (typeOf(file)) {
+      switch (typeOf(file2)) {
         case "object":
-          data = file.data;
+          data = file2.data;
           options2 = {};
           break;
         case "string":
-          return file;
+          return file2;
         default: {
           throw new TypeError("expected file to be a string or object");
         }
       }
     }
-    const str2 = file.content;
+    const str2 = file2.content;
     const opts = defaults(options2);
     if (data == null) {
       if (!opts.data)
-        return file;
+        return file2;
       data = opts.data;
     }
-    const language = file.language || opts.language;
+    const language = file2.language || opts.language;
     const engine = getEngine(language, opts);
     if (typeof engine.stringify !== "function") {
       throw new TypeError('expected "' + language + '.stringify" to be a function');
     }
-    data = Object.assign({}, file.data, data);
+    data = Object.assign({}, file2.data, data);
     const open = opts.delimiters[0];
     const close = opts.delimiters[1];
     const matter = engine.stringify(data, options2).trim();
@@ -7530,9 +7775,9 @@ var require_stringify = __commonJS((exports, module) => {
     if (matter !== "{}") {
       buf = newline(open) + newline(matter) + newline(close);
     }
-    if (typeof file.excerpt === "string" && file.excerpt !== "") {
-      if (str2.indexOf(file.excerpt.trim()) === -1) {
-        buf += newline(file.excerpt) + newline(close);
+    if (typeof file2.excerpt === "string" && file2.excerpt !== "") {
+      if (str2.indexOf(file2.excerpt.trim()) === -1) {
+        buf += newline(file2.excerpt) + newline(close);
       }
     }
     return buf + newline(str2);
@@ -7547,24 +7792,24 @@ var require_stringify = __commonJS((exports, module) => {
 // node_modules/gray-matter/lib/excerpt.js
 var require_excerpt = __commonJS((exports, module) => {
   var defaults = require_defaults();
-  module.exports = function(file, options2) {
+  module.exports = function(file2, options2) {
     const opts = defaults(options2);
-    if (file.data == null) {
-      file.data = {};
+    if (file2.data == null) {
+      file2.data = {};
     }
     if (typeof opts.excerpt === "function") {
-      return opts.excerpt(file, opts);
+      return opts.excerpt(file2, opts);
     }
-    const sep = file.data.excerpt_separator || opts.excerpt_separator;
+    const sep = file2.data.excerpt_separator || opts.excerpt_separator;
     if (sep == null && (opts.excerpt === false || opts.excerpt == null)) {
-      return file;
+      return file2;
     }
     const delimiter = typeof opts.excerpt === "string" ? opts.excerpt : sep || opts.delimiters[0];
-    const idx = file.content.indexOf(delimiter);
+    const idx = file2.content.indexOf(delimiter);
     if (idx !== -1) {
-      file.excerpt = file.content.slice(0, idx);
+      file2.excerpt = file2.content.slice(0, idx);
     }
-    return file;
+    return file2;
   };
 });
 
@@ -7573,29 +7818,29 @@ var require_to_file = __commonJS((exports, module) => {
   var typeOf = require_kind_of();
   var stringify = require_stringify();
   var utils = require_utils();
-  module.exports = function(file) {
-    if (typeOf(file) !== "object") {
-      file = { content: file };
+  module.exports = function(file2) {
+    if (typeOf(file2) !== "object") {
+      file2 = { content: file2 };
     }
-    if (typeOf(file.data) !== "object") {
-      file.data = {};
+    if (typeOf(file2.data) !== "object") {
+      file2.data = {};
     }
-    if (file.contents && file.content == null) {
-      file.content = file.contents;
+    if (file2.contents && file2.content == null) {
+      file2.content = file2.contents;
     }
-    utils.define(file, "orig", utils.toBuffer(file.content));
-    utils.define(file, "language", file.language || "");
-    utils.define(file, "matter", file.matter || "");
-    utils.define(file, "stringify", function(data, options2) {
+    utils.define(file2, "orig", utils.toBuffer(file2.content));
+    utils.define(file2, "language", file2.language || "");
+    utils.define(file2, "matter", file2.matter || "");
+    utils.define(file2, "stringify", function(data, options2) {
       if (options2 && options2.language) {
-        file.language = options2.language;
+        file2.language = options2.language;
       }
-      return stringify(file, data, options2);
+      return stringify(file2, data, options2);
     });
-    file.content = utils.toString(file.content);
-    file.isEmpty = false;
-    file.excerpt = "";
-    return file;
+    file2.content = utils.toString(file2.content);
+    file2.isEmpty = false;
+    file2.excerpt = "";
+    return file2;
   };
 });
 
@@ -7622,90 +7867,90 @@ var require_gray_matter = __commonJS((exports, module) => {
   var excerpt = require_excerpt();
   var engines = require_engines();
   var toFile = require_to_file();
-  var parse3 = require_parse();
+  var parse4 = require_parse();
   var utils = require_utils();
   function matter(input, options2) {
     if (input === "") {
       return { data: {}, content: input, excerpt: "", orig: input };
     }
-    let file = toFile(input);
-    const cached = matter.cache[file.content];
+    let file2 = toFile(input);
+    const cached = matter.cache[file2.content];
     if (!options2) {
       if (cached) {
-        file = Object.assign({}, cached);
-        file.orig = cached.orig;
-        return file;
+        file2 = Object.assign({}, cached);
+        file2.orig = cached.orig;
+        return file2;
       }
-      matter.cache[file.content] = file;
+      matter.cache[file2.content] = file2;
     }
-    return parseMatter(file, options2);
+    return parseMatter(file2, options2);
   }
-  function parseMatter(file, options2) {
+  function parseMatter(file2, options2) {
     const opts = defaults(options2);
     const open = opts.delimiters[0];
     const close = `
 ` + opts.delimiters[1];
-    let str2 = file.content;
+    let str2 = file2.content;
     if (opts.language) {
-      file.language = opts.language;
+      file2.language = opts.language;
     }
     const openLen = open.length;
     if (!utils.startsWith(str2, open, openLen)) {
-      excerpt(file, opts);
-      return file;
+      excerpt(file2, opts);
+      return file2;
     }
     if (str2.charAt(openLen) === open.slice(-1)) {
-      return file;
+      return file2;
     }
     str2 = str2.slice(openLen);
     const len = str2.length;
     const language = matter.language(str2, opts);
     if (language.name) {
-      file.language = language.name;
+      file2.language = language.name;
       str2 = str2.slice(language.raw.length);
     }
     let closeIndex = str2.indexOf(close);
     if (closeIndex === -1) {
       closeIndex = len;
     }
-    file.matter = str2.slice(0, closeIndex);
-    const block = file.matter.replace(/^\s*#[^\n]+/gm, "").trim();
+    file2.matter = str2.slice(0, closeIndex);
+    const block = file2.matter.replace(/^\s*#[^\n]+/gm, "").trim();
     if (block === "") {
-      file.isEmpty = true;
-      file.empty = file.content;
-      file.data = {};
+      file2.isEmpty = true;
+      file2.empty = file2.content;
+      file2.data = {};
     } else {
-      file.data = parse3(file.language, file.matter, opts);
+      file2.data = parse4(file2.language, file2.matter, opts);
     }
     if (closeIndex === len) {
-      file.content = "";
+      file2.content = "";
     } else {
-      file.content = str2.slice(closeIndex + close.length);
-      if (file.content[0] === "\r") {
-        file.content = file.content.slice(1);
+      file2.content = str2.slice(closeIndex + close.length);
+      if (file2.content[0] === "\r") {
+        file2.content = file2.content.slice(1);
       }
-      if (file.content[0] === `
+      if (file2.content[0] === `
 `) {
-        file.content = file.content.slice(1);
+        file2.content = file2.content.slice(1);
       }
     }
-    excerpt(file, opts);
+    excerpt(file2, opts);
     if (opts.sections === true || typeof opts.section === "function") {
-      sections(file, opts.section);
+      sections(file2, opts.section);
     }
-    return file;
+    return file2;
   }
   matter.engines = engines;
-  matter.stringify = function(file, data, options2) {
-    if (typeof file === "string")
-      file = matter(file, options2);
-    return stringify(file, data, options2);
+  matter.stringify = function(file2, data, options2) {
+    if (typeof file2 === "string")
+      file2 = matter(file2, options2);
+    return stringify(file2, data, options2);
   };
   matter.read = function(filepath, options2) {
     const str2 = fs2.readFileSync(filepath, "utf8");
-    const file = matter(str2, options2);
-    file.path = filepath;
-    return file;
+    const file2 = matter(str2, options2);
+    file2.path = filepath;
+    return file2;
   };
   matter.test = function(str2, options2) {
     return utils.startsWith(str2, defaults(options2).delimiters[0]);
@@ -10263,7 +10508,7 @@ var require_constants = __commonJS((exports, module) => {
     CHAR_LEFT_SQUARE_BRACKET: "[",
     CHAR_LINE_FEED: `
 `,
-    CHAR_NO_BREAK_SPACE: "\xA0",
+    CHAR_NO_BREAK_SPACE: " ",
     CHAR_PERCENT: "%",
     CHAR_PLUS: "+",
     CHAR_QUESTION_MARK: "?",
@@ -10300,7 +10545,7 @@ var require_parse2 = __commonJS((exports, module) => {
     CHAR_NO_BREAK_SPACE,
     CHAR_ZERO_WIDTH_NOBREAK_SPACE
   } = require_constants();
-  var parse4 = (input, options2 = {}) => {
+  var parse5 = (input, options2 = {}) => {
     if (typeof input !== "string") {
       throw new TypeError("Expected a string");
     }
@@ -10504,7 +10749,7 @@ var require_parse2 = __commonJS((exports, module) => {
     push2({ type: "eos" });
     return ast;
   };
-  module.exports = parse4;
+  module.exports = parse5;
 });
 
 // node_modules/braces/index.js
@@ -10512,7 +10757,7 @@ var require_braces = __commonJS((exports, module) => {
   var stringify3 = require_stringify2();
   var compile2 = require_compile();
   var expand = require_expand();
-  var parse4 = require_parse2();
+  var parse5 = require_parse2();
   var braces = (input, options2 = {}) => {
     let output = [];
     if (Array.isArray(input)) {
@@ -10532,7 +10777,7 @@ var require_braces = __commonJS((exports, module) => {
     }
     return output;
   };
-  braces.parse = (input, options2 = {}) => parse4(input, options2);
+  braces.parse = (input, options2 = {}) => parse5(input, options2);
   braces.stringify = (input, options2 = {}) => {
     if (typeof input === "string") {
       return stringify3(braces.parse(input, options2), options2);
@@ -11109,7 +11354,7 @@ var require_parse3 = __commonJS((exports, module) => {
   var syntaxError = (type, char) => {
     return `Missing ${type}: "${char}" - use "\\\\${char}" to match literal characters`;
   };
-  var parse4 = (input, options2) => {
+  var parse5 = (input, options2) => {
     if (typeof input !== "string") {
       throw new TypeError("Expected a string");
     }
@@ -11259,7 +11504,7 @@ var require_parse3 = __commonJS((exports, module) => {
           output = token.close = `)$))${extglobStar}`;
         }
         if (token.inner.includes("*") && (rest = remaining()) && /^\.[^\\/.]+$/.test(rest)) {
-          const expression = parse4(rest, { ...options2, fastpaths: false }).output;
+          const expression = parse5(rest, { ...options2, fastpaths: false }).output;
           output = token.close = `)${expression})${extglobStar})`;
         }
         if (token.prev.type === "bos") {
@@ -11788,7 +12033,7 @@ var require_parse3 = __commonJS((exports, module) => {
     }
     return state;
   };
-  parse4.fastpaths = (input, options2) => {
+  parse5.fastpaths = (input, options2) => {
     const opts = { ...options2 };
     const max = typeof opts.maxLength === "number" ? Math.min(MAX_LENGTH, opts.maxLength) : MAX_LENGTH;
     const len = input.length;
@@ -11857,14 +12102,14 @@ var require_parse3 = __commonJS((exports, module) => {
     }
     return source2;
   };
-  module.exports = parse4;
+  module.exports = parse5;
 });
 
 // node_modules/picomatch/lib/picomatch.js
 var require_picomatch = __commonJS((exports, module) => {
   var path3 = __require("path");
   var scan = require_scan();
-  var parse4 = require_parse3();
+  var parse5 = require_parse3();
   var utils = require_utils3();
   var constants3 = require_constants2();
   var isObject2 = (val) => val && typeof val === "object" && !Array.isArray(val);
@@ -11954,7 +12199,7 @@ var require_picomatch = __commonJS((exports, module) => {
   picomatch.parse = (pattern, options2) => {
     if (Array.isArray(pattern))
       return pattern.map((p3) => picomatch.parse(p3, options2));
-    return parse4(pattern, { ...options2, fastpaths: false });
+    return parse5(pattern, { ...options2, fastpaths: false });
   };
   picomatch.scan = (input, options2) => scan(input, options2);
   picomatch.compileRe = (state, options2, returnOutput = false, returnState = false) => {
@@ -11980,10 +12225,10 @@ var require_picomatch = __commonJS((exports, module) => {
     }
     let parsed = { negated: false, fastpaths: true };
     if (options2.fastpaths !== false && (input[0] === "." || input[0] === "*")) {
-      parsed.output = parse4.fastpaths(input, options2);
+      parsed.output = parse5.fastpaths(input, options2);
     }
     if (!parsed.output) {
-      parsed = parse4(input, options2);
+      parsed = parse5(input, options2);
     }
     return picomatch.compileRe(parsed, options2, returnOutput, returnState);
   };
@@ -14480,6 +14725,284 @@ var require_out4 = __commonJS((exports, module) => {
   }
   module.exports = FastGlob;
 });
+
+// node_modules/memoirist/dist/index.mjs
+var createNode = (part, inert) => {
+  const inertMap = inert?.length ? {} : null;
+  if (inertMap)
+    for (const child of inert)
+      inertMap[child.part.charCodeAt(0)] = child;
+  return {
+    part,
+    store: null,
+    inert: inertMap,
+    params: null,
+    wildcardStore: null
+  };
+};
+var cloneNode = (node, part) => ({
+  ...node,
+  part
+});
+var createParamNode = (name) => ({
+  name,
+  store: null,
+  inert: null
+});
+var Memoirist = class _Memoirist {
+  constructor(config = {}) {
+    this.config = config;
+    if (config.lazy)
+      this.find = this.lazyFind;
+    if (config.onParam && !Array.isArray(config.onParam))
+      this.config.onParam = [
+        this.config.onParam
+      ];
+  }
+  root = {};
+  history = [];
+  deferred = [];
+  static regex = {
+    static: /:.+?(?=\/|$)/,
+    params: /:.+?(?=\/|$)/g,
+    optionalParams: /(\/:\w+\?)/g
+  };
+  lazyFind = (method, url) => {
+    if (!this.config.lazy)
+      return this.find;
+    this.build();
+    return this.find(method, url);
+  };
+  build() {
+    if (!this.config.lazy)
+      return;
+    for (const [method, path, store] of this.deferred)
+      this.add(method, path, store, { lazy: false, ignoreHistory: true });
+    this.deferred = [];
+    this.find = (method, url) => {
+      const root = this.root[method];
+      if (!root)
+        return null;
+      return matchRoute(url, url.length, root, 0, this.config.onParam);
+    };
+  }
+  add(method, path, store, {
+    ignoreError = false,
+    ignoreHistory = false,
+    lazy = this.config.lazy
+  } = {}) {
+    if (lazy) {
+      this.find = this.lazyFind;
+      this.deferred.push([method, path, store]);
+      return store;
+    }
+    if (typeof path !== "string")
+      throw new TypeError("Route path must be a string");
+    if (path === "")
+      path = "/";
+    else if (path[0] !== "/")
+      path = `/${path}`;
+    const isWildcard = path[path.length - 1] === "*";
+    const optionalParams = path.match(_Memoirist.regex.optionalParams);
+    if (optionalParams) {
+      const originalPath = path.replaceAll("?", "");
+      this.add(method, originalPath, store, {
+        ignoreError,
+        ignoreHistory,
+        lazy
+      });
+      for (let i = 0;i < optionalParams.length; i++) {
+        let newPath = path.replace(optionalParams[i], "");
+        this.add(method, newPath, store, {
+          ignoreError: true,
+          ignoreHistory,
+          lazy
+        });
+      }
+      return store;
+    }
+    if (optionalParams)
+      path = path.replaceAll("?", "");
+    if (this.history.find(([m, p, s]) => m === method && p === path))
+      return store;
+    if (isWildcard || optionalParams && path.charCodeAt(path.length - 1) === 63)
+      path = path.slice(0, -1);
+    if (!ignoreHistory)
+      this.history.push([method, path, store]);
+    const inertParts = path.split(_Memoirist.regex.static);
+    const paramParts = path.match(_Memoirist.regex.params) || [];
+    if (inertParts[inertParts.length - 1] === "")
+      inertParts.pop();
+    let node;
+    if (!this.root[method])
+      node = this.root[method] = createNode("/");
+    else
+      node = this.root[method];
+    let paramPartsIndex = 0;
+    for (let i = 0;i < inertParts.length; ++i) {
+      let part = inertParts[i];
+      if (i > 0) {
+        const param = paramParts[paramPartsIndex++].slice(1);
+        if (node.params === null)
+          node.params = createParamNode(param);
+        else if (node.params.name !== param) {
+          if (ignoreError)
+            return store;
+          else
+            throw new Error(`Cannot create route "${path}" with parameter "${param}" because a route already exists with a different parameter name ("${node.params.name}") in the same location`);
+        }
+        const params = node.params;
+        if (params.inert === null) {
+          node = params.inert = createNode(part);
+          continue;
+        }
+        node = params.inert;
+      }
+      for (let j = 0;; ) {
+        if (j === part.length) {
+          if (j < node.part.length) {
+            const childNode = cloneNode(node, node.part.slice(j));
+            Object.assign(node, createNode(part, [childNode]));
+          }
+          break;
+        }
+        if (j === node.part.length) {
+          if (node.inert === null)
+            node.inert = {};
+          const inert = node.inert[part.charCodeAt(j)];
+          if (inert) {
+            node = inert;
+            part = part.slice(j);
+            j = 0;
+            continue;
+          }
+          const childNode = createNode(part.slice(j));
+          node.inert[part.charCodeAt(j)] = childNode;
+          node = childNode;
+          break;
+        }
+        if (part[j] !== node.part[j]) {
+          const existingChild = cloneNode(node, node.part.slice(j));
+          const newChild = createNode(part.slice(j));
+          Object.assign(node, createNode(node.part.slice(0, j), [
+            existingChild,
+            newChild
+          ]));
+          node = newChild;
+          break;
+        }
+        ++j;
+      }
+    }
+    if (paramPartsIndex < paramParts.length) {
+      const param = paramParts[paramPartsIndex];
+      const name = param.slice(1);
+      if (node.params === null)
+        node.params = createParamNode(name);
+      else if (node.params.name !== name) {
+        if (ignoreError)
+          return store;
+        else
+          throw new Error(`Cannot create route "${path}" with parameter "${name}" because a route already exists with a different parameter name ("${node.params.name}") in the same location`);
+      }
+      if (node.params.store === null)
+        node.params.store = store;
+      return node.params.store;
+    }
+    if (isWildcard) {
+      if (node.wildcardStore === null)
+        node.wildcardStore = store;
+      return node.wildcardStore;
+    }
+    if (node.store === null)
+      node.store = store;
+    return node.store;
+  }
+  find(method, url) {
+    const root = this.root[method];
+    if (!root)
+      return null;
+    return matchRoute(url, url.length, root, 0, this.config.onParam);
+  }
+};
+var matchRoute = (url, urlLength, node, startIndex, onParam) => {
+  const part = node.part;
+  const length = part.length;
+  const endIndex = startIndex + length;
+  if (length > 1) {
+    if (endIndex > urlLength)
+      return null;
+    if (length < 15) {
+      for (let i = 1, j = startIndex + 1;i < length; ++i, ++j)
+        if (part.charCodeAt(i) !== url.charCodeAt(j))
+          return null;
+    } else if (url.slice(startIndex, endIndex) !== part)
+      return null;
+  }
+  if (endIndex === urlLength) {
+    if (node.store !== null)
+      return {
+        store: node.store,
+        params: {}
+      };
+    if (node.wildcardStore !== null)
+      return {
+        store: node.wildcardStore,
+        params: { "*": "" }
+      };
+    return null;
+  }
+  if (node.inert !== null) {
+    const inert = node.inert[url.charCodeAt(endIndex)];
+    if (inert !== undefined) {
+      const route = matchRoute(url, urlLength, inert, endIndex, onParam);
+      if (route !== null)
+        return route;
+    }
+  }
+  if (node.params !== null) {
+    const { store, name, inert } = node.params;
+    const slashIndex = url.indexOf("/", endIndex);
+    if (slashIndex !== endIndex) {
+      if (slashIndex === -1 || slashIndex >= urlLength) {
+        if (store !== null) {
+          const params = {};
+          params[name] = url.substring(endIndex, urlLength);
+          if (onParam)
+            for (let i = 0;i < onParam.length; i++) {
+              let temp = onParam[i](params[name], name);
+              if (temp !== undefined)
+                params[name] = temp;
+            }
+          return {
+            store,
+            params
+          };
+        }
+      } else if (inert !== null) {
+        const route = matchRoute(url, urlLength, inert, slashIndex, onParam);
+        if (route !== null) {
+          route.params[name] = url.substring(endIndex, slashIndex);
+          if (onParam)
+            for (let i = 0;i < onParam.length; i++) {
+              let temp = onParam[i](route.params[name], name);
+              if (temp !== undefined)
+                route.params[name] = temp;
+            }
+          return route;
+        }
+      }
+    }
+  }
+  if (node.wildcardStore !== null)
+    return {
+      store: node.wildcardStore,
+      params: {
+        "*": url.substring(endIndex, urlLength)
+      }
+    };
+  return null;
+};
 
 // node_modules/@sinclair/typebox/build/esm/type/guard/value.mjs
 var exports_value = {};
@@ -17176,6 +17699,9 @@ __export(exports_type3, {
 
 // node_modules/@sinclair/typebox/build/esm/type/type/index.mjs
 var Type = exports_type3;
+
+// node_modules/elysia/dist/index.mjs
+var import_fast_decode_uri_component4 = __toESM(require_fast_decode_uri_component(), 1);
 
 // node_modules/@sinclair/typebox/build/esm/errors/function.mjs
 function DefaultErrorFunction(error) {
@@ -21067,473 +21593,95 @@ var TypeCompiler;
   TypeCompiler2.Compile = Compile;
 })(TypeCompiler || (TypeCompiler = {}));
 
-// node_modules/elysia/dist/bun/index.js
-var __create2 = Object.create;
-var { getPrototypeOf: __getProtoOf2, defineProperty: __defProp2, getOwnPropertyNames: __getOwnPropNames2 } = Object;
-var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-var __toESM2 = (mod, isNodeMode, target) => {
-  target = mod != null ? __create2(__getProtoOf2(mod)) : {};
-  let to = isNodeMode || !mod || !mod.__esModule ? __defProp2(target, "default", { value: mod, enumerable: true }) : target;
-  for (let key of __getOwnPropNames2(mod))
-    if (!__hasOwnProp2.call(to, key))
-      __defProp2(to, key, { get: () => mod[key], enumerable: true });
-  return to;
-};
-var __commonJS2 = (cb, mod) => () => (mod || cb((mod = { exports: {} }).exports, mod), mod.exports);
-var require_fast_decode_uri_component = __commonJS2((exports, module) => {
-  var UTF8_ACCEPT = 12, UTF8_REJECT = 0, UTF8_DATA = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 7, 7, 10, 9, 9, 9, 11, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 24, 36, 48, 60, 72, 84, 96, 0, 12, 12, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 24, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 48, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 127, 63, 63, 63, 0, 31, 15, 15, 15, 7, 7, 7];
-  function decodeURIComponent2(uri) {
-    var percentPosition = uri.indexOf("%");
-    if (percentPosition === -1)
-      return uri;
-    var length = uri.length, decoded = "", last = 0, codepoint = 0, startOfOctets = percentPosition, state = UTF8_ACCEPT;
-    while (percentPosition > -1 && percentPosition < length) {
-      var high = hexCodeToInt(uri[percentPosition + 1], 4), low = hexCodeToInt(uri[percentPosition + 2], 0), byte = high | low, type = UTF8_DATA[byte];
-      if (state = UTF8_DATA[256 + state + type], codepoint = codepoint << 6 | byte & UTF8_DATA[364 + type], state === UTF8_ACCEPT)
-        decoded += uri.slice(last, startOfOctets), decoded += codepoint <= 65535 ? String.fromCharCode(codepoint) : String.fromCharCode(55232 + (codepoint >> 10), 56320 + (codepoint & 1023)), codepoint = 0, last = percentPosition + 3, percentPosition = startOfOctets = uri.indexOf("%", last);
-      else if (state === UTF8_REJECT)
-        return null;
-      else {
-        if (percentPosition += 3, percentPosition < length && uri.charCodeAt(percentPosition) === 37)
-          continue;
-        return null;
-      }
-    }
-    return decoded + uri.slice(last);
-  }
-  var HEX = { "0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, a: 10, A: 10, b: 11, B: 11, c: 12, C: 12, d: 13, D: 13, e: 14, E: 14, f: 15, F: 15 };
-  function hexCodeToInt(c, shift) {
-    var i = HEX[c];
-    return i === undefined ? 255 : i << shift;
-  }
-  module.exports = decodeURIComponent2;
-});
-var require_dist = __commonJS2((exports) => {
-  Object.defineProperty(exports, "__esModule", { value: true });
-  exports.parseCookie = parseCookie;
-  exports.parse = parseCookie;
-  exports.stringifyCookie = stringifyCookie;
-  exports.stringifySetCookie = stringifySetCookie;
-  exports.serialize = stringifySetCookie;
-  exports.parseSetCookie = parseSetCookie;
-  exports.stringifySetCookie = stringifySetCookie;
-  exports.serialize = stringifySetCookie;
-  var cookieNameRegExp = /^[\u0021-\u003A\u003C\u003E-\u007E]+$/, cookieValueRegExp = /^[\u0021-\u003A\u003C-\u007E]*$/, domainValueRegExp = /^([.]?[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)([.][a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)*$/i, pathValueRegExp = /^[\u0020-\u003A\u003D-\u007E]*$/, maxAgeRegExp = /^-?\d+$/, __toString = Object.prototype.toString, NullObject = (() => {
-    let C = function() {};
-    return C.prototype = Object.create(null), C;
-  })();
-  function parseCookie(str2, options2) {
-    let obj = new NullObject, len = str2.length;
-    if (len < 2)
-      return obj;
-    let dec = options2?.decode || decode2, index = 0;
-    do {
-      let eqIdx = eqIndex(str2, index, len);
-      if (eqIdx === -1)
-        break;
-      let endIdx = endIndex(str2, index, len);
-      if (eqIdx > endIdx) {
-        index = str2.lastIndexOf(";", eqIdx - 1) + 1;
-        continue;
-      }
-      let key = valueSlice(str2, index, eqIdx);
-      if (obj[key] === undefined)
-        obj[key] = dec(valueSlice(str2, eqIdx + 1, endIdx));
-      index = endIdx + 1;
-    } while (index < len);
-    return obj;
-  }
-  function stringifyCookie(cookie, options2) {
-    let enc = options2?.encode || encodeURIComponent, cookieStrings = [];
-    for (let name of Object.keys(cookie)) {
-      let val = cookie[name];
-      if (val === undefined)
-        continue;
-      if (!cookieNameRegExp.test(name))
-        throw TypeError(`cookie name is invalid: ${name}`);
-      let value = enc(val);
-      if (!cookieValueRegExp.test(value))
-        throw TypeError(`cookie val is invalid: ${val}`);
-      cookieStrings.push(`${name}=${value}`);
-    }
-    return cookieStrings.join("; ");
-  }
-  function stringifySetCookie(_name, _val, _opts) {
-    let cookie = typeof _name === "object" ? _name : { ..._opts, name: _name, value: String(_val) }, enc = (typeof _val === "object" ? _val : _opts)?.encode || encodeURIComponent;
-    if (!cookieNameRegExp.test(cookie.name))
-      throw TypeError(`argument name is invalid: ${cookie.name}`);
-    let value = cookie.value ? enc(cookie.value) : "";
-    if (!cookieValueRegExp.test(value))
-      throw TypeError(`argument val is invalid: ${cookie.value}`);
-    let str2 = cookie.name + "=" + value;
-    if (cookie.maxAge !== undefined) {
-      if (!Number.isInteger(cookie.maxAge))
-        throw TypeError(`option maxAge is invalid: ${cookie.maxAge}`);
-      str2 += "; Max-Age=" + cookie.maxAge;
-    }
-    if (cookie.domain) {
-      if (!domainValueRegExp.test(cookie.domain))
-        throw TypeError(`option domain is invalid: ${cookie.domain}`);
-      str2 += "; Domain=" + cookie.domain;
-    }
-    if (cookie.path) {
-      if (!pathValueRegExp.test(cookie.path))
-        throw TypeError(`option path is invalid: ${cookie.path}`);
-      str2 += "; Path=" + cookie.path;
-    }
-    if (cookie.expires) {
-      if (!isDate(cookie.expires) || !Number.isFinite(cookie.expires.valueOf()))
-        throw TypeError(`option expires is invalid: ${cookie.expires}`);
-      str2 += "; Expires=" + cookie.expires.toUTCString();
-    }
-    if (cookie.httpOnly)
-      str2 += "; HttpOnly";
-    if (cookie.secure)
-      str2 += "; Secure";
-    if (cookie.partitioned)
-      str2 += "; Partitioned";
-    if (cookie.priority)
-      switch (typeof cookie.priority === "string" ? cookie.priority.toLowerCase() : undefined) {
-        case "low":
-          str2 += "; Priority=Low";
-          break;
-        case "medium":
-          str2 += "; Priority=Medium";
-          break;
-        case "high":
-          str2 += "; Priority=High";
-          break;
-        default:
-          throw TypeError(`option priority is invalid: ${cookie.priority}`);
-      }
-    if (cookie.sameSite)
-      switch (typeof cookie.sameSite === "string" ? cookie.sameSite.toLowerCase() : cookie.sameSite) {
-        case true:
-        case "strict":
-          str2 += "; SameSite=Strict";
-          break;
-        case "lax":
-          str2 += "; SameSite=Lax";
-          break;
-        case "none":
-          str2 += "; SameSite=None";
-          break;
-        default:
-          throw TypeError(`option sameSite is invalid: ${cookie.sameSite}`);
-      }
-    return str2;
-  }
-  function parseSetCookie(str2, options2) {
-    let dec = options2?.decode || decode2, len = str2.length, endIdx = endIndex(str2, 0, len), eqIdx = eqIndex(str2, 0, endIdx), setCookie = eqIdx === -1 ? { name: "", value: dec(valueSlice(str2, 0, endIdx)) } : { name: valueSlice(str2, 0, eqIdx), value: dec(valueSlice(str2, eqIdx + 1, endIdx)) }, index = endIdx + 1;
-    while (index < len) {
-      let endIdx2 = endIndex(str2, index, len), eqIdx2 = eqIndex(str2, index, endIdx2), attr = eqIdx2 === -1 ? valueSlice(str2, index, endIdx2) : valueSlice(str2, index, eqIdx2), val = eqIdx2 === -1 ? undefined : valueSlice(str2, eqIdx2 + 1, endIdx2);
-      switch (attr.toLowerCase()) {
-        case "httponly":
-          setCookie.httpOnly = true;
-          break;
-        case "secure":
-          setCookie.secure = true;
-          break;
-        case "partitioned":
-          setCookie.partitioned = true;
-          break;
-        case "domain":
-          setCookie.domain = val;
-          break;
-        case "path":
-          setCookie.path = val;
-          break;
-        case "max-age":
-          if (val && maxAgeRegExp.test(val))
-            setCookie.maxAge = Number(val);
-          break;
-        case "expires":
-          if (!val)
-            break;
-          let date2 = new Date(val);
-          if (Number.isFinite(date2.valueOf()))
-            setCookie.expires = date2;
-          break;
-        case "priority":
-          if (!val)
-            break;
-          let priority = val.toLowerCase();
-          if (priority === "low" || priority === "medium" || priority === "high")
-            setCookie.priority = priority;
-          break;
-        case "samesite":
-          if (!val)
-            break;
-          let sameSite = val.toLowerCase();
-          if (sameSite === "lax" || sameSite === "strict" || sameSite === "none")
-            setCookie.sameSite = sameSite;
-          break;
-      }
-      index = endIdx2 + 1;
-    }
-    return setCookie;
-  }
-  function endIndex(str2, min, len) {
-    let index = str2.indexOf(";", min);
-    return index === -1 ? len : index;
-  }
-  function eqIndex(str2, min, max) {
-    let index = str2.indexOf("=", min);
-    return index < max ? index : -1;
-  }
-  function valueSlice(str2, min, max) {
-    let start = min, end = max;
-    do {
-      let code = str2.charCodeAt(start);
-      if (code !== 32 && code !== 9)
-        break;
-    } while (++start < end);
-    while (end > start) {
-      let code = str2.charCodeAt(end - 1);
-      if (code !== 32 && code !== 9)
-        break;
-      end--;
-    }
-    return str2.slice(start, end);
-  }
-  function decode2(str2) {
-    if (str2.indexOf("%") === -1)
-      return str2;
-    try {
-      return decodeURIComponent(str2);
-    } catch (e) {
-      return str2;
-    }
-  }
-  function isDate(val) {
-    return __toString.call(val) === "[object Date]";
-  }
-});
-var Y = (v, b) => {
-  let A = b?.length ? {} : null;
-  if (A)
-    for (let Q of b)
-      A[Q.part.charCodeAt(0)] = Q;
-  return { part: v, store: null, inert: A, params: null, wildcardStore: null };
-};
-var k = (v, b) => ({ ...v, part: b });
-var T = (v) => ({ name: v, store: null, inert: null });
-
-class _ {
-  config;
-  root = {};
-  history = [];
-  deferred = [];
-  constructor(v = {}) {
-    if (this.config = v, v.lazy)
-      this.find = this.lazyFind;
-    if (v.onParam && !Array.isArray(v.onParam))
-      this.config.onParam = [this.config.onParam];
-  }
-  static regex = { static: /:.+?(?=\/|$)/, params: /:.+?(?=\/|$)/g, optionalParams: /(\/:\w+\?)/g };
-  lazyFind = (v, b) => {
-    if (!this.config.lazy)
-      return this.find;
-    return this.build(), this.find(v, b);
-  };
-  build() {
-    if (!this.config.lazy)
-      return;
-    for (let [v, b, A] of this.deferred)
-      this.add(v, b, A, { lazy: false, ignoreHistory: true });
-    this.deferred = [], this.find = (v, b) => {
-      let A = this.root[v];
-      if (!A)
-        return null;
-      return $(b, b.length, A, 0, this.config.onParam);
-    };
-  }
-  add(v, b, A, { ignoreError: Q = false, ignoreHistory: O = false, lazy: V = this.config.lazy } = {}) {
-    if (V)
-      return this.find = this.lazyFind, this.deferred.push([v, b, A]), A;
-    if (typeof b !== "string")
-      throw TypeError("Route path must be a string");
-    if (b === "")
-      b = "/";
-    else if (b[0] !== "/")
-      b = `/${b}`;
-    let X = b[b.length - 1] === "*", J = b.match(_.regex.optionalParams);
-    if (J) {
-      let F = b.replaceAll("?", "");
-      this.add(v, F, A, { ignoreError: Q, ignoreHistory: O, lazy: V });
-      for (let B = 0;B < J.length; B++) {
-        let D = b.replace(J[B], "");
-        this.add(v, D, A, { ignoreError: true, ignoreHistory: O, lazy: V });
-      }
-      return A;
-    }
-    if (J)
-      b = b.replaceAll("?", "");
-    if (this.history.find(([F, B, D]) => F === v && B === b))
-      return A;
-    if (X || J && b.charCodeAt(b.length - 1) === 63)
-      b = b.slice(0, -1);
-    if (!O)
-      this.history.push([v, b, A]);
-    let K = b.split(_.regex.static), G = b.match(_.regex.params) || [];
-    if (K[K.length - 1] === "")
-      K.pop();
-    let q;
-    if (!this.root[v])
-      q = this.root[v] = Y("/");
-    else
-      q = this.root[v];
-    let U = 0;
-    for (let F = 0;F < K.length; ++F) {
-      let B = K[F];
-      if (F > 0) {
-        let D = G[U++].slice(1);
-        if (q.params === null)
-          q.params = T(D);
-        else if (q.params.name !== D)
-          if (Q)
-            return A;
-          else
-            throw Error(`Cannot create route "${b}" with parameter "${D}" because a route already exists with a different parameter name ("${q.params.name}") in the same location`);
-        let S = q.params;
-        if (S.inert === null) {
-          q = S.inert = Y(B);
-          continue;
-        }
-        q = S.inert;
-      }
-      for (let D = 0;; ) {
-        if (D === B.length) {
-          if (D < q.part.length) {
-            let S = k(q, q.part.slice(D));
-            Object.assign(q, Y(B, [S]));
-          }
-          break;
-        }
-        if (D === q.part.length) {
-          if (q.inert === null)
-            q.inert = {};
-          let S = q.inert[B.charCodeAt(D)];
-          if (S) {
-            q = S, B = B.slice(D), D = 0;
-            continue;
-          }
-          let Z = Y(B.slice(D));
-          q.inert[B.charCodeAt(D)] = Z, q = Z;
-          break;
-        }
-        if (B[D] !== q.part[D]) {
-          let S = k(q, q.part.slice(D)), Z = Y(B.slice(D));
-          Object.assign(q, Y(q.part.slice(0, D), [S, Z])), q = Z;
-          break;
-        }
-        ++D;
-      }
-    }
-    if (U < G.length) {
-      let B = G[U].slice(1);
-      if (q.params === null)
-        q.params = T(B);
-      else if (q.params.name !== B)
-        if (Q)
-          return A;
-        else
-          throw Error(`Cannot create route "${b}" with parameter "${B}" because a route already exists with a different parameter name ("${q.params.name}") in the same location`);
-      if (q.params.store === null)
-        q.params.store = A;
-      return q.params.store;
-    }
-    if (X) {
-      if (q.wildcardStore === null)
-        q.wildcardStore = A;
-      return q.wildcardStore;
-    }
-    if (q.store === null)
-      q.store = A;
-    return q.store;
-  }
-  find(v, b) {
-    let A = this.root[v];
-    if (!A)
-      return null;
-    return $(b, b.length, A, 0, this.config.onParam);
-  }
-}
-var $ = (v, b, A, Q, O) => {
-  let V = A.part, X = V.length, J = Q + X;
-  if (X > 1) {
-    if (J > b)
-      return null;
-    if (X < 15) {
-      for (let K = 1, G = Q + 1;K < X; ++K, ++G)
-        if (V.charCodeAt(K) !== v.charCodeAt(G))
-          return null;
-    } else if (v.slice(Q, J) !== V)
-      return null;
-  }
-  if (J === b) {
-    if (A.store !== null)
-      return { store: A.store, params: {} };
-    if (A.wildcardStore !== null)
-      return { store: A.wildcardStore, params: { "*": "" } };
-    return null;
-  }
-  if (A.inert !== null) {
-    let K = A.inert[v.charCodeAt(J)];
-    if (K !== undefined) {
-      let G = $(v, b, K, J, O);
-      if (G !== null)
-        return G;
-    }
-  }
-  if (A.params !== null) {
-    let { store: K, name: G, inert: q } = A.params, U = v.indexOf("/", J);
-    if (U !== J) {
-      if (U === -1 || U >= b) {
-        if (K !== null) {
-          let F = {};
-          if (F[G] = v.substring(J, b), O)
-            for (let B = 0;B < O.length; B++) {
-              let D = O[B](F[G], G);
-              if (D !== undefined)
-                F[G] = D;
-            }
-          return { store: K, params: F };
-        }
-      } else if (q !== null) {
-        let F = $(v, b, q, U, O);
-        if (F !== null) {
-          if (F.params[G] = v.substring(J, U), O)
-            for (let B = 0;B < O.length; B++) {
-              let D = O[B](F.params[G], G);
-              if (D !== undefined)
-                F.params[G] = D;
-            }
-          return F;
-        }
-      }
-    }
-  }
-  if (A.wildcardStore !== null)
-    return { store: A.wildcardStore, params: { "*": v.substring(J, b) } };
-  return null;
-};
-var import_fast_decode_uri_component4 = __toESM2(require_fast_decode_uri_component(), 1);
+// node_modules/elysia/dist/universal/utils.mjs
 var isBun = typeof Bun < "u";
-var mime = { aac: "audio/aac", abw: "application/x-abiword", ai: "application/postscript", arc: "application/octet-stream", avi: "video/x-msvideo", azw: "application/vnd.amazon.ebook", bin: "application/octet-stream", bz: "application/x-bzip", bz2: "application/x-bzip2", csh: "application/x-csh", css: "text/css", csv: "text/csv", doc: "application/msword", dll: "application/octet-stream", eot: "application/vnd.ms-fontobject", epub: "application/epub+zip", gif: "image/gif", htm: "text/html", html: "text/html", ico: "image/x-icon", ics: "text/calendar", jar: "application/java-archive", jpeg: "image/jpeg", jpg: "image/jpeg", js: "application/javascript", json: "application/json", mid: "audio/midi", midi: "audio/midi", mp2: "audio/mpeg", mp3: "audio/mpeg", mp4: "video/mp4", mpa: "video/mpeg", mpe: "video/mpeg", mpeg: "video/mpeg", mpkg: "application/vnd.apple.installer+xml", odp: "application/vnd.oasis.opendocument.presentation", ods: "application/vnd.oasis.opendocument.spreadsheet", odt: "application/vnd.oasis.opendocument.text", oga: "audio/ogg", ogv: "video/ogg", ogx: "application/ogg", otf: "font/otf", png: "image/png", pdf: "application/pdf", ppt: "application/vnd.ms-powerpoint", rar: "application/x-rar-compressed", rtf: "application/rtf", sh: "application/x-sh", svg: "image/svg+xml", swf: "application/x-shockwave-flash", tar: "application/x-tar", tif: "image/tiff", tiff: "image/tiff", ts: "application/typescript", ttf: "font/ttf", txt: "text/plain", vsd: "application/vnd.visio", wav: "audio/x-wav", weba: "audio/webm", webm: "video/webm", webp: "image/webp", woff: "font/woff", woff2: "font/woff2", xhtml: "application/xhtml+xml", xls: "application/vnd.ms-excel", xlsx: "application/vnd.ms-excel", xlsx_OLD: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", xml: "application/xml", xul: "application/vnd.mozilla.xul+xml", zip: "application/zip", "3gp": "video/3gpp", "3gp_DOES_NOT_CONTAIN_VIDEO": "audio/3gpp", "3gp2": "video/3gpp2", "3gp2_DOES_NOT_CONTAIN_VIDEO": "audio/3gpp2", "7z": "application/x-7z-compressed" };
+
+// node_modules/elysia/dist/universal/file.mjs
+var mime = {
+  aac: "audio/aac",
+  abw: "application/x-abiword",
+  ai: "application/postscript",
+  arc: "application/octet-stream",
+  avi: "video/x-msvideo",
+  azw: "application/vnd.amazon.ebook",
+  bin: "application/octet-stream",
+  bz: "application/x-bzip",
+  bz2: "application/x-bzip2",
+  csh: "application/x-csh",
+  css: "text/css",
+  csv: "text/csv",
+  doc: "application/msword",
+  dll: "application/octet-stream",
+  eot: "application/vnd.ms-fontobject",
+  epub: "application/epub+zip",
+  gif: "image/gif",
+  htm: "text/html",
+  html: "text/html",
+  ico: "image/x-icon",
+  ics: "text/calendar",
+  jar: "application/java-archive",
+  jpeg: "image/jpeg",
+  jpg: "image/jpeg",
+  js: "application/javascript",
+  json: "application/json",
+  mid: "audio/midi",
+  midi: "audio/midi",
+  mp2: "audio/mpeg",
+  mp3: "audio/mpeg",
+  mp4: "video/mp4",
+  mpa: "video/mpeg",
+  mpe: "video/mpeg",
+  mpeg: "video/mpeg",
+  mpkg: "application/vnd.apple.installer+xml",
+  odp: "application/vnd.oasis.opendocument.presentation",
+  ods: "application/vnd.oasis.opendocument.spreadsheet",
+  odt: "application/vnd.oasis.opendocument.text",
+  oga: "audio/ogg",
+  ogv: "video/ogg",
+  ogx: "application/ogg",
+  otf: "font/otf",
+  png: "image/png",
+  pdf: "application/pdf",
+  ppt: "application/vnd.ms-powerpoint",
+  rar: "application/x-rar-compressed",
+  rtf: "application/rtf",
+  sh: "application/x-sh",
+  svg: "image/svg+xml",
+  swf: "application/x-shockwave-flash",
+  tar: "application/x-tar",
+  tif: "image/tiff",
+  tiff: "image/tiff",
+  ts: "application/typescript",
+  ttf: "font/ttf",
+  txt: "text/plain",
+  vsd: "application/vnd.visio",
+  wav: "audio/x-wav",
+  weba: "audio/webm",
+  webm: "video/webm",
+  webp: "image/webp",
+  woff: "font/woff",
+  woff2: "font/woff2",
+  xhtml: "application/xhtml+xml",
+  xls: "application/vnd.ms-excel",
+  xlsx: "application/vnd.ms-excel",
+  xlsx_OLD: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  xml: "application/xml",
+  xul: "application/vnd.mozilla.xul+xml",
+  zip: "application/zip",
+  "3gp": "video/3gpp",
+  "3gp_DOES_NOT_CONTAIN_VIDEO": "audio/3gpp",
+  "3gp2": "video/3gpp2",
+  "3gp2_DOES_NOT_CONTAIN_VIDEO": "audio/3gpp2",
+  "7z": "application/x-7z-compressed"
+};
 var getFileExtension = (path) => {
-  let index = path.lastIndexOf(".");
-  if (index === -1)
-    return "";
-  return path.slice(index + 1);
+  const index = path.lastIndexOf(".");
+  return index === -1 ? "" : path.slice(index + 1);
 };
 var createReadStream;
 var stat;
 
 class ElysiaFile {
-  path;
-  value;
-  stats;
   constructor(path) {
     this.path = path;
     if (isBun)
@@ -21544,196 +21692,209 @@ class ElysiaFile {
           console.warn("Browser environment does not support file");
           return;
         }
-        let warnMissing = (name) => console.warn(Error(`[elysia] \`file\` require \`fs${name ? "." + name : ""}\` ${name?.includes(".") ? "module " : ""}which is not available in this environment`));
-        if (typeof process > "u" || typeof process.getBuiltinModule !== "function") {
+        const warnMissing = (name) => console.warn(new Error(`[elysia] \`file\` require \`fs${name ? "." + name : ""}\` ${name?.includes(".") ? "module " : ""}which is not available in this environment`));
+        if (typeof process > "u" || typeof process.getBuiltinModule != "function") {
           warnMissing();
           return;
         }
-        let fs = process.getBuiltinModule("fs");
+        const fs = process.getBuiltinModule("fs");
         if (!fs) {
           warnMissing();
           return;
         }
-        if (typeof fs.createReadStream !== "function") {
+        if (typeof fs.createReadStream != "function") {
           warnMissing();
           return;
         }
-        if (typeof fs.promises?.stat !== "function") {
+        if (typeof fs.promises?.stat != "function") {
           warnMissing();
           return;
         }
         createReadStream = fs.createReadStream, stat = fs.promises.stat;
       }
-      this.value = (() => createReadStream(path))(), this.stats = stat(path);
+      this.value = createReadStream(path), this.stats = stat(path);
     }
   }
   get type() {
     return mime[getFileExtension(this.path)] || "application/octet-stream";
   }
   get length() {
-    if (isBun)
-      return this.value.size;
-    return this.stats?.then((x) => x.size) ?? 0;
+    return isBun ? this.value.size : this.stats?.then((x) => x.size) ?? 0;
   }
 }
+
+// node_modules/elysia/dist/utils.mjs
 var hasHeaderShorthand = "toJSON" in new Headers;
 var replaceUrlPath = (url, pathname) => {
-  let urlObject = new URL(url);
+  const urlObject = new URL(url);
   return urlObject.pathname = pathname, urlObject.toString();
 };
-var isClass = (v) => typeof v === "function" && /^\s*class\s+/.test(v.toString()) || v.toString && v.toString().startsWith("[object ") && v.toString() !== "[object Object]" || isNotEmpty(Object.getPrototypeOf(v));
-var isObject = (item) => item && typeof item === "object" && !Array.isArray(item);
+var isClass = (v) => typeof v == "function" && /^\s*class\s+/.test(v.toString()) || v.toString && v.toString().startsWith("[object ") && v.toString() !== "[object Object]" || isNotEmpty(Object.getPrototypeOf(v));
+var isObject = (item) => item && typeof item == "object" && !Array.isArray(item);
 var mergeDeep = (target, source, options2) => {
-  let skipKeys = options2?.skipKeys, override = options2?.override ?? true, mergeArray = options2?.mergeArray ?? false;
+  const skipKeys = options2?.skipKeys, override = options2?.override ?? true, mergeArray = options2?.mergeArray ?? false;
   if (!isObject(target) || !isObject(source))
     return target;
-  for (let [key, value] of Object.entries(source)) {
-    if (skipKeys?.includes(key) || ["__proto__", "constructor", "prototype"].includes(key))
-      continue;
-    if (mergeArray && Array.isArray(value)) {
-      target[key] = Array.isArray(target[key]) ? [...target[key], ...value] : target[key] = value;
-      continue;
-    }
-    if (!isObject(value) || !(key in target) || isClass(value)) {
-      if ((override || !(key in target)) && !Object.isFrozen(target))
+  for (const [key, value] of Object.entries(source))
+    if (!(skipKeys?.includes(key) || ["__proto__", "constructor", "prototype"].includes(key))) {
+      if (mergeArray && Array.isArray(value)) {
+        target[key] = Array.isArray(target[key]) ? [...target[key], ...value] : target[key] = value;
+        continue;
+      }
+      if (!isObject(value) || !(key in target) || isClass(value)) {
+        if ((override || !(key in target)) && !Object.isFrozen(target))
+          try {
+            target[key] = value;
+          } catch {}
+        continue;
+      }
+      if (!Object.isFrozen(target[key]))
         try {
-          target[key] = value;
+          target[key] = mergeDeep(target[key], value, { skipKeys, override, mergeArray });
         } catch {}
-      continue;
     }
-    if (!Object.isFrozen(target[key]))
-      try {
-        target[key] = mergeDeep(target[key], value, { skipKeys, override, mergeArray });
-      } catch {}
-  }
   return target;
 };
 var mergeCookie = (a, b) => {
-  let v = mergeDeep(Object.assign({}, a), b, { skipKeys: ["properties"], mergeArray: false });
-  if (v.properties)
-    delete v.properties;
-  return v;
+  const v = mergeDeep(Object.assign({}, a), b, {
+    skipKeys: ["properties"],
+    mergeArray: false
+  });
+  return v.properties && delete v.properties, v;
 };
 var mergeObjectArray = (a, b) => {
   if (!b)
     return a;
-  let array = [], checksums = [];
+  const array = [], checksums = [];
   if (a) {
-    if (!Array.isArray(a))
-      a = [a];
-    for (let item of a)
-      if (array.push(item), item.checksum)
-        checksums.push(item.checksum);
+    Array.isArray(a) || (a = [a]);
+    for (const item of a)
+      array.push(item), item.checksum && checksums.push(item.checksum);
   }
   if (b) {
-    if (!Array.isArray(b))
-      b = [b];
-    for (let item of b)
-      if (!checksums.includes(item.checksum))
-        array.push(item);
+    Array.isArray(b) || (b = [b]);
+    for (const item of b)
+      checksums.includes(item.checksum) || array.push(item);
   }
   return array;
 };
-var primitiveHooks = ["start", "request", "parse", "transform", "resolve", "beforeHandle", "afterHandle", "mapResponse", "afterResponse", "trace", "error", "stop", "body", "headers", "params", "query", "response", "type", "detail"];
+var primitiveHooks = [
+  "start",
+  "request",
+  "parse",
+  "transform",
+  "resolve",
+  "beforeHandle",
+  "afterHandle",
+  "mapResponse",
+  "afterResponse",
+  "trace",
+  "error",
+  "stop",
+  "body",
+  "headers",
+  "params",
+  "query",
+  "response",
+  "type",
+  "detail"
+];
 var primitiveHookMap = primitiveHooks.reduce((acc, x) => (acc[x] = true, acc), {});
-var isRecordNumber = (x) => typeof x === "object" && Object.keys(x).every((x2) => !isNaN(+x2));
-var mergeResponse = (a, b) => {
-  if (isRecordNumber(a) && isRecordNumber(b))
-    return Object.assign({}, a, b);
-  else if (a && !isRecordNumber(a) && isRecordNumber(b))
-    return Object.assign({ 200: a }, b);
-  return b ?? a;
-};
-var mergeSchemaValidator = (a, b) => {
-  if (!a && !b)
-    return { body: undefined, headers: undefined, params: undefined, query: undefined, cookie: undefined, response: undefined };
-  return { body: b?.body ?? a?.body, headers: b?.headers ?? a?.headers, params: b?.params ?? a?.params, query: b?.query ?? a?.query, cookie: b?.cookie ?? a?.cookie, response: mergeResponse(a?.response, b?.response) };
+var isRecordNumber = (x) => typeof x == "object" && Object.keys(x).every((x2) => !isNaN(+x2));
+var mergeResponse = (a, b) => isRecordNumber(a) && isRecordNumber(b) ? Object.assign({}, a, b) : a && !isRecordNumber(a) && isRecordNumber(b) ? Object.assign({ 200: a }, b) : b ?? a;
+var mergeSchemaValidator = (a, b) => !a && !b ? {
+  body: undefined,
+  headers: undefined,
+  params: undefined,
+  query: undefined,
+  cookie: undefined,
+  response: undefined
+} : {
+  body: b?.body ?? a?.body,
+  headers: b?.headers ?? a?.headers,
+  params: b?.params ?? a?.params,
+  query: b?.query ?? a?.query,
+  cookie: b?.cookie ?? a?.cookie,
+  response: mergeResponse(a?.response, b?.response)
 };
 var mergeHook = (a, b) => {
   if (!b)
     return a ?? {};
   if (!a)
     return b ?? {};
-  if (!Object.values(b).find((x) => x !== undefined && x !== null))
+  if (!Object.values(b).find((x) => x != null))
     return { ...a };
-  let hook = { ...a, ...b, body: b.body ?? a.body, headers: b.headers ?? a.headers, params: b.params ?? a.params, query: b.query ?? a.query, cookie: b.cookie ?? a.cookie, response: mergeResponse(a.response, b.response), type: a.type || b.type, detail: mergeDeep(b.detail ?? {}, a.detail ?? {}), parse: mergeObjectArray(a.parse, b.parse), transform: mergeObjectArray(a.transform, b.transform), beforeHandle: mergeObjectArray(mergeObjectArray(fnToContainer(a.resolve, "resolve"), a.beforeHandle), mergeObjectArray(fnToContainer(b.resolve, "resolve"), b.beforeHandle)), afterHandle: mergeObjectArray(a.afterHandle, b.afterHandle), mapResponse: mergeObjectArray(a.mapResponse, b.mapResponse), afterResponse: mergeObjectArray(a.afterResponse, b.afterResponse), trace: mergeObjectArray(a.trace, b.trace), error: mergeObjectArray(a.error, b.error), standaloneSchema: a.standaloneSchema || b.standaloneSchema ? a.standaloneSchema && !b.standaloneSchema ? a.standaloneSchema : b.standaloneSchema && !a.standaloneSchema ? b.standaloneSchema : [...a.standaloneSchema ?? [], ...b.standaloneSchema ?? []] : undefined };
-  if (hook.resolve)
-    delete hook.resolve;
-  return hook;
+  const hook = {
+    ...a,
+    ...b,
+    body: b.body ?? a.body,
+    headers: b.headers ?? a.headers,
+    params: b.params ?? a.params,
+    query: b.query ?? a.query,
+    cookie: b.cookie ?? a.cookie,
+    response: mergeResponse(a.response, b.response),
+    type: a.type || b.type,
+    detail: mergeDeep(b.detail ?? {}, a.detail ?? {}),
+    parse: mergeObjectArray(a.parse, b.parse),
+    transform: mergeObjectArray(a.transform, b.transform),
+    beforeHandle: mergeObjectArray(mergeObjectArray(fnToContainer(a.resolve, "resolve"), a.beforeHandle), mergeObjectArray(fnToContainer(b.resolve, "resolve"), b.beforeHandle)),
+    afterHandle: mergeObjectArray(a.afterHandle, b.afterHandle),
+    mapResponse: mergeObjectArray(a.mapResponse, b.mapResponse),
+    afterResponse: mergeObjectArray(a.afterResponse, b.afterResponse),
+    trace: mergeObjectArray(a.trace, b.trace),
+    error: mergeObjectArray(a.error, b.error),
+    standaloneSchema: a.standaloneSchema || b.standaloneSchema ? a.standaloneSchema && !b.standaloneSchema ? a.standaloneSchema : b.standaloneSchema && !a.standaloneSchema ? b.standaloneSchema : [
+      ...a.standaloneSchema ?? [],
+      ...b.standaloneSchema ?? []
+    ] : undefined
+  };
+  return hook.resolve && delete hook.resolve, hook;
 };
 var lifeCycleToArray = (a) => {
-  if (a.parse && !Array.isArray(a.parse))
-    a.parse = [a.parse];
-  if (a.transform && !Array.isArray(a.transform))
-    a.transform = [a.transform];
-  if (a.afterHandle && !Array.isArray(a.afterHandle))
-    a.afterHandle = [a.afterHandle];
-  if (a.mapResponse && !Array.isArray(a.mapResponse))
-    a.mapResponse = [a.mapResponse];
-  if (a.afterResponse && !Array.isArray(a.afterResponse))
-    a.afterResponse = [a.afterResponse];
-  if (a.trace && !Array.isArray(a.trace))
-    a.trace = [a.trace];
-  if (a.error && !Array.isArray(a.error))
-    a.error = [a.error];
+  a.parse && !Array.isArray(a.parse) && (a.parse = [a.parse]), a.transform && !Array.isArray(a.transform) && (a.transform = [a.transform]), a.afterHandle && !Array.isArray(a.afterHandle) && (a.afterHandle = [a.afterHandle]), a.mapResponse && !Array.isArray(a.mapResponse) && (a.mapResponse = [a.mapResponse]), a.afterResponse && !Array.isArray(a.afterResponse) && (a.afterResponse = [a.afterResponse]), a.trace && !Array.isArray(a.trace) && (a.trace = [a.trace]), a.error && !Array.isArray(a.error) && (a.error = [a.error]);
   let beforeHandle = [];
-  if (a.resolve)
-    beforeHandle = fnToContainer(Array.isArray(a.resolve) ? a.resolve : [a.resolve], "resolve"), delete a.resolve;
-  if (a.beforeHandle)
-    if (beforeHandle.length)
-      beforeHandle = beforeHandle.concat(Array.isArray(a.beforeHandle) ? a.beforeHandle : [a.beforeHandle]);
-    else
-      beforeHandle = Array.isArray(a.beforeHandle) ? a.beforeHandle : [a.beforeHandle];
-  if (beforeHandle.length)
-    a.beforeHandle = beforeHandle;
-  return a;
+  return a.resolve && (beforeHandle = fnToContainer(Array.isArray(a.resolve) ? a.resolve : [a.resolve], "resolve"), delete a.resolve), a.beforeHandle && (beforeHandle.length ? beforeHandle = beforeHandle.concat(Array.isArray(a.beforeHandle) ? a.beforeHandle : [a.beforeHandle]) : beforeHandle = Array.isArray(a.beforeHandle) ? a.beforeHandle : [a.beforeHandle]), beforeHandle.length && (a.beforeHandle = beforeHandle), a;
 };
 var isBun2 = typeof Bun < "u";
-var hasBunHash = isBun2 && typeof Bun.hash === "function";
+var hasBunHash = isBun2 && typeof Bun.hash == "function";
 var checksum = (s) => {
   let h = 9;
   for (let i = 0;i < s.length; )
-    h = Math.imul(h ^ s.charCodeAt(i++), 387420489);
+    h = Math.imul(h ^ s.charCodeAt(i++), 9 ** 9);
   return h = h ^ h >>> 9;
 };
 var injectChecksum = (checksum2, x) => {
   if (!x)
     return;
   if (!Array.isArray(x)) {
-    let fn = x;
-    if (checksum2 && !fn.checksum)
-      fn.checksum = checksum2;
-    if (fn.scope === "scoped")
-      fn.scope = "local";
-    return fn;
+    const fn = x;
+    return checksum2 && !fn.checksum && (fn.checksum = checksum2), fn.scope === "scoped" && (fn.scope = "local"), fn;
   }
-  let fns = [...x];
-  for (let fn of fns) {
-    if (checksum2 && !fn.checksum)
-      fn.checksum = checksum2;
-    if (fn.scope === "scoped")
-      fn.scope = "local";
-  }
+  const fns = [...x];
+  for (const fn of fns)
+    checksum2 && !fn.checksum && (fn.checksum = checksum2), fn.scope === "scoped" && (fn.scope = "local");
   return fns;
 };
-var mergeLifeCycle = (a, b, checksum2) => {
-  return { start: mergeObjectArray(a.start, injectChecksum(checksum2, b?.start)), request: mergeObjectArray(a.request, injectChecksum(checksum2, b?.request)), parse: mergeObjectArray(a.parse, injectChecksum(checksum2, b?.parse)), transform: mergeObjectArray(a.transform, injectChecksum(checksum2, b?.transform)), beforeHandle: mergeObjectArray(mergeObjectArray(fnToContainer(a.resolve, "resolve"), a.beforeHandle), injectChecksum(checksum2, mergeObjectArray(fnToContainer(b?.resolve, "resolve"), b?.beforeHandle))), afterHandle: mergeObjectArray(a.afterHandle, injectChecksum(checksum2, b?.afterHandle)), mapResponse: mergeObjectArray(a.mapResponse, injectChecksum(checksum2, b?.mapResponse)), afterResponse: mergeObjectArray(a.afterResponse, injectChecksum(checksum2, b?.afterResponse)), trace: mergeObjectArray(a.trace, injectChecksum(checksum2, b?.trace)), error: mergeObjectArray(a.error, injectChecksum(checksum2, b?.error)), stop: mergeObjectArray(a.stop, injectChecksum(checksum2, b?.stop)) };
-};
+var mergeLifeCycle = (a, b, checksum2) => ({
+  start: mergeObjectArray(a.start, injectChecksum(checksum2, b?.start)),
+  request: mergeObjectArray(a.request, injectChecksum(checksum2, b?.request)),
+  parse: mergeObjectArray(a.parse, injectChecksum(checksum2, b?.parse)),
+  transform: mergeObjectArray(a.transform, injectChecksum(checksum2, b?.transform)),
+  beforeHandle: mergeObjectArray(mergeObjectArray(fnToContainer(a.resolve, "resolve"), a.beforeHandle), injectChecksum(checksum2, mergeObjectArray(fnToContainer(b?.resolve, "resolve"), b?.beforeHandle))),
+  afterHandle: mergeObjectArray(a.afterHandle, injectChecksum(checksum2, b?.afterHandle)),
+  mapResponse: mergeObjectArray(a.mapResponse, injectChecksum(checksum2, b?.mapResponse)),
+  afterResponse: mergeObjectArray(a.afterResponse, injectChecksum(checksum2, b?.afterResponse)),
+  trace: mergeObjectArray(a.trace, injectChecksum(checksum2, b?.trace)),
+  error: mergeObjectArray(a.error, injectChecksum(checksum2, b?.error)),
+  stop: mergeObjectArray(a.stop, injectChecksum(checksum2, b?.stop))
+});
 var asHookType = (fn, inject, { skipIfHasType = false }) => {
   if (!fn)
     return fn;
-  if (!Array.isArray(fn)) {
-    if (skipIfHasType)
-      fn.scope ??= inject;
-    else
-      fn.scope = inject;
-    return fn;
-  }
-  for (let x of fn)
-    if (skipIfHasType)
-      x.scope ??= inject;
-    else
-      x.scope = inject;
+  if (!Array.isArray(fn))
+    return skipIfHasType ? fn.scope ??= inject : fn.scope = inject, fn;
+  for (const x of fn)
+    skipIfHasType ? x.scope ??= inject : x.scope = inject;
   return fn;
 };
 var filterGlobal = (fn) => {
@@ -21747,99 +21908,164 @@ var filterGlobal = (fn) => {
       default:
         return { fn };
     }
-  let array = [];
-  for (let x of fn)
+  const array = [];
+  for (const x of fn)
     switch (x.scope) {
       case "global":
       case "scoped":
-        array.push({ ...x });
+        array.push({
+          ...x
+        });
         break;
     }
   return array;
 };
-var filterGlobalHook = (hook) => {
-  return { ...hook, type: hook?.type, detail: hook?.detail, parse: filterGlobal(hook?.parse), transform: filterGlobal(hook?.transform), beforeHandle: filterGlobal(hook?.beforeHandle), afterHandle: filterGlobal(hook?.afterHandle), mapResponse: filterGlobal(hook?.mapResponse), afterResponse: filterGlobal(hook?.afterResponse), error: filterGlobal(hook?.error), trace: filterGlobal(hook?.trace) };
+var filterGlobalHook = (hook) => ({
+  ...hook,
+  type: hook?.type,
+  detail: hook?.detail,
+  parse: filterGlobal(hook?.parse),
+  transform: filterGlobal(hook?.transform),
+  beforeHandle: filterGlobal(hook?.beforeHandle),
+  afterHandle: filterGlobal(hook?.afterHandle),
+  mapResponse: filterGlobal(hook?.mapResponse),
+  afterResponse: filterGlobal(hook?.afterResponse),
+  error: filterGlobal(hook?.error),
+  trace: filterGlobal(hook?.trace)
+});
+var StatusMap = {
+  Continue: 100,
+  "Switching Protocols": 101,
+  Processing: 102,
+  "Early Hints": 103,
+  OK: 200,
+  Created: 201,
+  Accepted: 202,
+  "Non-Authoritative Information": 203,
+  "No Content": 204,
+  "Reset Content": 205,
+  "Partial Content": 206,
+  "Multi-Status": 207,
+  "Already Reported": 208,
+  "Multiple Choices": 300,
+  "Moved Permanently": 301,
+  Found: 302,
+  "See Other": 303,
+  "Not Modified": 304,
+  "Temporary Redirect": 307,
+  "Permanent Redirect": 308,
+  "Bad Request": 400,
+  Unauthorized: 401,
+  "Payment Required": 402,
+  Forbidden: 403,
+  "Not Found": 404,
+  "Method Not Allowed": 405,
+  "Not Acceptable": 406,
+  "Proxy Authentication Required": 407,
+  "Request Timeout": 408,
+  Conflict: 409,
+  Gone: 410,
+  "Length Required": 411,
+  "Precondition Failed": 412,
+  "Payload Too Large": 413,
+  "URI Too Long": 414,
+  "Unsupported Media Type": 415,
+  "Range Not Satisfiable": 416,
+  "Expectation Failed": 417,
+  "I'm a teapot": 418,
+  "Enhance Your Calm": 420,
+  "Misdirected Request": 421,
+  "Unprocessable Content": 422,
+  Locked: 423,
+  "Failed Dependency": 424,
+  "Too Early": 425,
+  "Upgrade Required": 426,
+  "Precondition Required": 428,
+  "Too Many Requests": 429,
+  "Request Header Fields Too Large": 431,
+  "Unavailable For Legal Reasons": 451,
+  "Internal Server Error": 500,
+  "Not Implemented": 501,
+  "Bad Gateway": 502,
+  "Service Unavailable": 503,
+  "Gateway Timeout": 504,
+  "HTTP Version Not Supported": 505,
+  "Variant Also Negotiates": 506,
+  "Insufficient Storage": 507,
+  "Loop Detected": 508,
+  "Not Extended": 510,
+  "Network Authentication Required": 511
 };
-var StatusMap = { Continue: 100, "Switching Protocols": 101, Processing: 102, "Early Hints": 103, OK: 200, Created: 201, Accepted: 202, "Non-Authoritative Information": 203, "No Content": 204, "Reset Content": 205, "Partial Content": 206, "Multi-Status": 207, "Already Reported": 208, "Multiple Choices": 300, "Moved Permanently": 301, Found: 302, "See Other": 303, "Not Modified": 304, "Temporary Redirect": 307, "Permanent Redirect": 308, "Bad Request": 400, Unauthorized: 401, "Payment Required": 402, Forbidden: 403, "Not Found": 404, "Method Not Allowed": 405, "Not Acceptable": 406, "Proxy Authentication Required": 407, "Request Timeout": 408, Conflict: 409, Gone: 410, "Length Required": 411, "Precondition Failed": 412, "Payload Too Large": 413, "URI Too Long": 414, "Unsupported Media Type": 415, "Range Not Satisfiable": 416, "Expectation Failed": 417, "I'm a teapot": 418, "Enhance Your Calm": 420, "Misdirected Request": 421, "Unprocessable Content": 422, Locked: 423, "Failed Dependency": 424, "Too Early": 425, "Upgrade Required": 426, "Precondition Required": 428, "Too Many Requests": 429, "Request Header Fields Too Large": 431, "Unavailable For Legal Reasons": 451, "Internal Server Error": 500, "Not Implemented": 501, "Bad Gateway": 502, "Service Unavailable": 503, "Gateway Timeout": 504, "HTTP Version Not Supported": 505, "Variant Also Negotiates": 506, "Insufficient Storage": 507, "Loop Detected": 508, "Not Extended": 510, "Network Authentication Required": 511 };
-var InvertedStatusMap = Object.fromEntries(Object.entries(StatusMap).map(([k2, v]) => [v, k2]));
+var InvertedStatusMap = Object.fromEntries(Object.entries(StatusMap).map(([k, v]) => [v, k]));
 function removeTrailingEquals(digest) {
   let trimmedDigest = digest;
-  while (trimmedDigest.endsWith("="))
+  for (;trimmedDigest.endsWith("="); )
     trimmedDigest = trimmedDigest.slice(0, -1);
   return trimmedDigest;
 }
 var encoder = new TextEncoder;
 var signCookie = async (val, secret) => {
-  if (typeof val === "object")
-    val = JSON.stringify(val);
-  else if (typeof val !== "string")
-    val = val + "";
-  if (secret === null)
-    throw TypeError("Secret key must be provided.");
-  let secretKey = await crypto.subtle.importKey("raw", encoder.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]), hmacBuffer = await crypto.subtle.sign("HMAC", secretKey, encoder.encode(val));
+  if (typeof val == "object" ? val = JSON.stringify(val) : typeof val != "string" && (val = val + ""), secret === null)
+    throw new TypeError("Secret key must be provided.");
+  const secretKey = await crypto.subtle.importKey("raw", encoder.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]), hmacBuffer = await crypto.subtle.sign("HMAC", secretKey, encoder.encode(val));
   return val + "." + removeTrailingEquals(Buffer.from(hmacBuffer).toString("base64"));
 };
 var unsignCookie = async (input, secret) => {
-  if (typeof input !== "string")
-    throw TypeError("Signed cookie string must be provided.");
+  if (typeof input != "string")
+    throw new TypeError("Signed cookie string must be provided.");
   if (secret === null)
-    throw TypeError("Secret key must be provided.");
-  let tentativeValue = input.slice(0, input.lastIndexOf("."));
+    throw new TypeError("Secret key must be provided.");
+  const tentativeValue = input.slice(0, input.lastIndexOf("."));
   return await signCookie(tentativeValue, secret) === input ? tentativeValue : false;
 };
 var insertStandaloneValidator = (hook, name, value) => {
   if (!hook.standaloneValidator?.length || !Array.isArray(hook.standaloneValidator)) {
-    hook.standaloneValidator = [{ [name]: value }];
+    hook.standaloneValidator = [
+      {
+        [name]: value
+      }
+    ];
     return;
   }
-  let last = hook.standaloneValidator[hook.standaloneValidator.length - 1];
-  if (name in last)
-    hook.standaloneValidator.push({ [name]: value });
-  else
-    last[name] = value;
+  const last = hook.standaloneValidator[hook.standaloneValidator.length - 1];
+  name in last ? hook.standaloneValidator.push({
+    [name]: value
+  }) : last[name] = value;
 };
 var parseNumericString = (message) => {
-  if (typeof message === "number")
+  if (typeof message == "number")
     return message;
   if (message.length < 16) {
     if (message.trim().length === 0)
       return null;
-    let length = Number(message);
-    if (Number.isNaN(length))
-      return null;
-    return length;
+    const length = Number(message);
+    return Number.isNaN(length) ? null : length;
   }
   if (message.length === 16) {
     if (message.trim().length === 0)
       return null;
-    let number = Number(message);
-    if (Number.isNaN(number) || number.toString() !== message)
-      return null;
-    return number;
+    const number = Number(message);
+    return Number.isNaN(number) || number.toString() !== message ? null : number;
   }
   return null;
 };
 var isNumericString = (message) => parseNumericString(message) !== null;
 
 class PromiseGroup {
-  onError;
-  onFinally;
-  root = null;
-  promises = [];
   constructor(onError = console.error, onFinally = () => {}) {
     this.onError = onError;
     this.onFinally = onFinally;
+    this.root = null;
+    this.promises = [];
   }
   get size() {
     return this.promises.length;
   }
   add(promise) {
-    if (this.promises.push(promise), this.root ||= this.drain(), this.promises.length === 1)
-      this.then(this.onFinally);
-    return promise;
+    return this.promises.push(promise), this.root ||= this.drain(), this.promises.length === 1 && this.then(this.onFinally), promise;
   }
   async drain() {
-    while (this.promises.length > 0) {
+    for (;this.promises.length > 0; ) {
       try {
         await this.promises[0];
       } catch (error) {
@@ -21857,318 +22083,326 @@ var fnToContainer = (fn, subType) => {
   if (!fn)
     return fn;
   if (!Array.isArray(fn)) {
-    if (typeof fn === "function" || typeof fn === "string")
+    if (typeof fn == "function" || typeof fn == "string")
       return subType ? { fn, subType } : { fn };
-    else if ("fn" in fn)
+    if ("fn" in fn)
       return fn;
   }
-  let fns = [];
-  for (let x of fn)
-    if (typeof x === "function" || typeof x === "string")
-      fns.push(subType ? { fn: x, subType } : { fn: x });
-    else if ("fn" in x)
-      fns.push(x);
+  const fns = [];
+  for (const x of fn)
+    typeof x == "function" || typeof x == "string" ? fns.push(subType ? { fn: x, subType } : { fn: x }) : ("fn" in x) && fns.push(x);
   return fns;
 };
-var localHookToLifeCycleStore = (a) => {
-  if (a.start)
-    a.start = fnToContainer(a.start);
-  if (a.request)
-    a.request = fnToContainer(a.request);
-  if (a.parse)
-    a.parse = fnToContainer(a.parse);
-  if (a.transform)
-    a.transform = fnToContainer(a.transform);
-  if (a.beforeHandle)
-    a.beforeHandle = fnToContainer(a.beforeHandle);
-  if (a.afterHandle)
-    a.afterHandle = fnToContainer(a.afterHandle);
-  if (a.mapResponse)
-    a.mapResponse = fnToContainer(a.mapResponse);
-  if (a.afterResponse)
-    a.afterResponse = fnToContainer(a.afterResponse);
-  if (a.trace)
-    a.trace = fnToContainer(a.trace);
-  if (a.error)
-    a.error = fnToContainer(a.error);
-  if (a.stop)
-    a.stop = fnToContainer(a.stop);
-  return a;
-};
+var localHookToLifeCycleStore = (a) => (a.start && (a.start = fnToContainer(a.start)), a.request && (a.request = fnToContainer(a.request)), a.parse && (a.parse = fnToContainer(a.parse)), a.transform && (a.transform = fnToContainer(a.transform)), a.beforeHandle && (a.beforeHandle = fnToContainer(a.beforeHandle)), a.afterHandle && (a.afterHandle = fnToContainer(a.afterHandle)), a.mapResponse && (a.mapResponse = fnToContainer(a.mapResponse)), a.afterResponse && (a.afterResponse = fnToContainer(a.afterResponse)), a.trace && (a.trace = fnToContainer(a.trace)), a.error && (a.error = fnToContainer(a.error)), a.stop && (a.stop = fnToContainer(a.stop)), a);
 var lifeCycleToFn = (a) => {
-  let lifecycle = Object.create(null);
-  if (a.start?.map)
-    lifecycle.start = a.start.map((x) => x.fn);
-  if (a.request?.map)
-    lifecycle.request = a.request.map((x) => x.fn);
-  if (a.parse?.map)
-    lifecycle.parse = a.parse.map((x) => x.fn);
-  if (a.transform?.map)
-    lifecycle.transform = a.transform.map((x) => x.fn);
-  if (a.beforeHandle?.map)
-    lifecycle.beforeHandle = a.beforeHandle.map((x) => x.fn);
-  if (a.afterHandle?.map)
-    lifecycle.afterHandle = a.afterHandle.map((x) => x.fn);
-  if (a.mapResponse?.map)
-    lifecycle.mapResponse = a.mapResponse.map((x) => x.fn);
-  if (a.afterResponse?.map)
-    lifecycle.afterResponse = a.afterResponse.map((x) => x.fn);
-  if (a.error?.map)
-    lifecycle.error = a.error.map((x) => x.fn);
-  if (a.stop?.map)
-    lifecycle.stop = a.stop.map((x) => x.fn);
-  if (a.trace?.map)
-    lifecycle.trace = a.trace.map((x) => x.fn);
-  else
-    lifecycle.trace = [];
-  return lifecycle;
+  const lifecycle = /* @__PURE__ */ Object.create(null);
+  return a.start?.map && (lifecycle.start = a.start.map((x) => x.fn)), a.request?.map && (lifecycle.request = a.request.map((x) => x.fn)), a.parse?.map && (lifecycle.parse = a.parse.map((x) => x.fn)), a.transform?.map && (lifecycle.transform = a.transform.map((x) => x.fn)), a.beforeHandle?.map && (lifecycle.beforeHandle = a.beforeHandle.map((x) => x.fn)), a.afterHandle?.map && (lifecycle.afterHandle = a.afterHandle.map((x) => x.fn)), a.mapResponse?.map && (lifecycle.mapResponse = a.mapResponse.map((x) => x.fn)), a.afterResponse?.map && (lifecycle.afterResponse = a.afterResponse.map((x) => x.fn)), a.error?.map && (lifecycle.error = a.error.map((x) => x.fn)), a.stop?.map && (lifecycle.stop = a.stop.map((x) => x.fn)), a.trace?.map ? lifecycle.trace = a.trace.map((x) => x.fn) : lifecycle.trace = [], lifecycle;
 };
-var cloneInference = (inference) => ({ body: inference.body, cookie: inference.cookie, headers: inference.headers, query: inference.query, set: inference.set, server: inference.server, path: inference.path, route: inference.route, url: inference.url });
+var cloneInference = (inference) => ({
+  body: inference.body,
+  cookie: inference.cookie,
+  headers: inference.headers,
+  query: inference.query,
+  set: inference.set,
+  server: inference.server,
+  path: inference.path,
+  route: inference.route,
+  url: inference.url
+});
 var redirect = (url, status = 302) => Response.redirect(url, status);
 var ELYSIA_FORM_DATA = Symbol("ElysiaFormData");
 var ELYSIA_REQUEST_ID = Symbol("ElysiaRequestId");
 var form = (items) => {
-  let formData = new FormData;
+  const formData = new FormData;
   if (formData[ELYSIA_FORM_DATA] = {}, items)
-    for (let [key, value] of Object.entries(items)) {
+    for (const [key, value] of Object.entries(items)) {
       if (Array.isArray(value)) {
         formData[ELYSIA_FORM_DATA][key] = [];
-        for (let v of value) {
-          if (value instanceof File)
-            formData.append(key, value, value.name);
-          else if (value instanceof ElysiaFile)
-            formData.append(key, value.value, value.value?.name);
-          else
-            formData.append(key, value);
-          formData[ELYSIA_FORM_DATA][key].push(value);
-        }
+        for (const v of value)
+          value instanceof File ? formData.append(key, value, value.name) : value instanceof ElysiaFile ? formData.append(key, value.value, value.value?.name) : formData.append(key, value), formData[ELYSIA_FORM_DATA][key].push(value);
         continue;
       }
-      if (value instanceof File)
-        formData.append(key, value, value.name);
-      else if (value instanceof ElysiaFile)
-        formData.append(key, value.value, value.value?.name);
-      else
-        formData.append(key, value);
-      formData[ELYSIA_FORM_DATA][key] = value;
+      value instanceof File ? formData.append(key, value, value.name) : value instanceof ElysiaFile ? formData.append(key, value.value, value.value?.name) : formData.append(key, value), formData[ELYSIA_FORM_DATA][key] = value;
     }
   return formData;
 };
 var randomId = typeof crypto > "u" ? () => {
-  let result = "", characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", charactersLength = characters.length;
+  let result = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", charactersLength = characters.length;
   for (let i = 0;i < 16; i++)
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   return result;
 } : () => {
-  let uuid = crypto.randomUUID();
+  const uuid = crypto.randomUUID();
   return uuid.slice(0, 8) + uuid.slice(24, 32);
 };
 var deduplicateChecksum = (array) => {
   if (!array.length)
     return [];
-  let hashes = [];
+  const hashes = [];
   for (let i = 0;i < array.length; i++) {
-    let item = array[i];
-    if (item.checksum) {
-      if (hashes.includes(item.checksum))
-        array.splice(i, 1), i--;
-      hashes.push(item.checksum);
-    }
+    const item = array[i];
+    item.checksum && (hashes.includes(item.checksum) && (array.splice(i, 1), i--), hashes.push(item.checksum));
   }
   return array;
 };
 var promoteEvent = (events, as = "scoped") => {
-  if (!events)
-    return;
-  if (as === "scoped") {
-    for (let event of events)
-      if ("scope" in event && event.scope === "local")
-        event.scope = "scoped";
-    return;
+  if (events) {
+    if (as === "scoped") {
+      for (const event of events)
+        "scope" in event && event.scope === "local" && (event.scope = "scoped");
+      return;
+    }
+    for (const event of events)
+      "scope" in event && (event.scope = "global");
   }
-  for (let event of events)
-    if ("scope" in event)
-      event.scope = "global";
 };
-var getLoosePath = (path) => {
-  if (path.charCodeAt(path.length - 1) === 47)
-    return path.slice(0, path.length - 1);
-  return path + "/";
-};
+var getLoosePath = (path) => path.charCodeAt(path.length - 1) === 47 ? path.slice(0, path.length - 1) : path + "/";
 var isNotEmpty = (obj) => {
   if (!obj)
     return false;
-  for (let _2 in obj)
+  for (const _ in obj)
     return true;
   return false;
 };
 var encodePath = (path, { dynamic = false } = {}) => {
   let encoded = encodeURIComponent(path).replace(/%2F/g, "/");
-  if (dynamic)
-    encoded = encoded.replace(/%3A/g, ":").replace(/%3F/g, "?");
-  return encoded;
+  return dynamic && (encoded = encoded.replace(/%3A/g, ":").replace(/%3F/g, "?")), encoded;
 };
-var supportPerMethodInlineHandler = (() => {
-  if (typeof Bun > "u")
-    return true;
-  if (Bun.semver?.satisfies?.(Bun.version, ">=1.2.14"))
-    return true;
-  return false;
-})();
+var supportPerMethodInlineHandler = !!(typeof Bun > "u" || Bun.semver?.satisfies?.(Bun.version, ">=1.2.14"));
 async function getResponseLength(response) {
   if (response.bodyUsed || !response.body)
     return 0;
-  let length = 0, reader = response.body.getReader();
-  while (true) {
-    let { done, value } = await reader.read();
+  let length = 0;
+  const reader = response.body.getReader();
+  for (;; ) {
+    const { done, value } = await reader.read();
     if (done)
       break;
     length += value.byteLength;
   }
   return length;
 }
-var emptySchema = { headers: true, cookie: true, query: true, params: true, body: true, response: true };
+var emptySchema = {
+  headers: true,
+  cookie: true,
+  query: true,
+  params: true,
+  body: true,
+  response: true
+};
+
+// node_modules/elysia/dist/error.mjs
 var env = typeof Bun < "u" ? Bun.env : typeof process < "u" ? process?.env : undefined;
 var ERROR_CODE = Symbol("ElysiaErrorCode");
 var isProduction = (env?.NODE_ENV ?? env?.ENV) === "production";
-var emptyHttpStatus = { 101: undefined, 204: undefined, 205: undefined, 304: undefined, 307: undefined, 308: undefined };
+var emptyHttpStatus = {
+  101: undefined,
+  204: undefined,
+  205: undefined,
+  304: undefined,
+  307: undefined,
+  308: undefined
+};
 
 class ElysiaCustomStatusResponse {
-  code;
-  response;
   constructor(code, response) {
-    let res = response ?? (code in InvertedStatusMap ? InvertedStatusMap[code] : code);
-    if (this.code = StatusMap[code] ?? code, code in emptyHttpStatus)
-      this.response = undefined;
-    else
-      this.response = res;
+    const res = response ?? (code in InvertedStatusMap ? InvertedStatusMap[code] : code);
+    this.code = StatusMap[code] ?? code, code in emptyHttpStatus ? this.response = undefined : this.response = res;
   }
 }
 var status = (code, response) => new ElysiaCustomStatusResponse(code, response);
 class NotFoundError extends Error {
-  code = "NOT_FOUND";
-  status = 404;
   constructor(message) {
     super(message ?? "NOT_FOUND");
+    this.code = "NOT_FOUND";
+    this.status = 404;
   }
 }
 
 class ParseError2 extends Error {
-  code = "PARSE";
-  status = 400;
   constructor(cause) {
-    super("Bad Request", { cause });
+    super("Bad Request", {
+      cause
+    });
+    this.code = "PARSE";
+    this.status = 400;
   }
 }
 
 class InvalidCookieSignature extends Error {
-  key;
-  code = "INVALID_COOKIE_SIGNATURE";
-  status = 400;
   constructor(key, message) {
     super(message ?? `"${key}" has invalid cookie signature`);
     this.key = key;
+    this.code = "INVALID_COOKIE_SIGNATURE";
+    this.status = 400;
   }
 }
 var mapValueError = (error) => {
   if (!error)
-    return { summary: undefined };
+    return {
+      summary: undefined
+    };
   let { message, path, value, type } = error;
-  if (Array.isArray(path))
-    path = path[0];
-  let property = typeof path === "string" ? path.slice(1).replaceAll("/", ".") : "unknown", isRoot = path === "";
+  Array.isArray(path) && (path = path[0]);
+  const property = typeof path == "string" ? path.slice(1).replaceAll("/", ".") : "unknown", isRoot = path === "";
   switch (type) {
     case 42:
-      return { ...error, summary: isRoot ? "Value should not be provided" : `Property '${property}' should not be provided` };
+      return {
+        ...error,
+        summary: isRoot ? "Value should not be provided" : `Property '${property}' should not be provided`
+      };
     case 45:
-      return { ...error, summary: isRoot ? "Value is missing" : `Property '${property}' is missing` };
+      return {
+        ...error,
+        summary: isRoot ? "Value is missing" : `Property '${property}' is missing`
+      };
     case 50:
-      let quoteIndex = message.indexOf("'"), format = message.slice(quoteIndex + 1, message.indexOf("'", quoteIndex + 1));
-      return { ...error, summary: isRoot ? "Value should be an email" : `Property '${property}' should be ${format}` };
+      const quoteIndex = message.indexOf("'"), format = message.slice(quoteIndex + 1, message.indexOf("'", quoteIndex + 1));
+      return {
+        ...error,
+        summary: isRoot ? "Value should be an email" : `Property '${property}' should be ${format}`
+      };
     case 54:
-      return { ...error, summary: `${message.slice(0, 9).trim()} property '${property}' to be ${message.slice(8).trim()} but found: ${value}` };
+      return {
+        ...error,
+        summary: `${message.slice(0, 9).trim()} property '${property}' to be ${message.slice(8).trim()} but found: ${value}`
+      };
     case 62:
-      let union = error.schema.anyOf.map((x) => `'${x?.format ?? x.type}'`).join(", ");
-      return { ...error, summary: isRoot ? `Value should be one of ${union}` : `Property '${property}' should be one of: ${union}` };
+      const union = error.schema.anyOf.map((x) => `'${x?.format ?? x.type}'`).join(", ");
+      return {
+        ...error,
+        summary: isRoot ? `Value should be one of ${union}` : `Property '${property}' should be one of: ${union}`
+      };
     default:
       return { summary: message, ...error };
   }
 };
 
 class InvalidFileType extends Error {
-  property;
-  expected;
-  message;
-  code = "INVALID_FILE_TYPE";
-  status = 422;
   constructor(property, expected, message = `"${property}" has invalid file type`) {
     super(message);
     this.property = property;
     this.expected = expected;
     this.message = message;
+    this.code = "INVALID_FILE_TYPE";
+    this.status = 422;
     Object.setPrototypeOf(this, InvalidFileType.prototype);
   }
   toResponse(headers) {
-    if (isProduction)
-      return new Response(JSON.stringify({ type: "validation", on: "body" }), { status: 422, headers: { ...headers, "content-type": "application/json" } });
-    return new Response(JSON.stringify({ type: "validation", on: "body", summary: "Invalid file type", message: this.message, property: this.property, expected: this.expected }), { status: 422, headers: { ...headers, "content-type": "application/json" } });
+    return isProduction ? new Response(JSON.stringify({
+      type: "validation",
+      on: "body"
+    }), {
+      status: 422,
+      headers: {
+        ...headers,
+        "content-type": "application/json"
+      }
+    }) : new Response(JSON.stringify({
+      type: "validation",
+      on: "body",
+      summary: "Invalid file type",
+      message: this.message,
+      property: this.property,
+      expected: this.expected
+    }), {
+      status: 422,
+      headers: {
+        ...headers,
+        "content-type": "application/json"
+      }
+    });
   }
 }
 
 class ValidationError extends Error {
-  type;
-  validator;
-  value;
-  allowUnsafeValidationDetails;
-  code = "VALIDATION";
-  status = 422;
-  valueError;
-  get messageValue() {
-    return this.valueError;
-  }
-  expected;
-  customError;
   constructor(type, validator, value, allowUnsafeValidationDetails = false, errors) {
     let message = "", error, expected, customError;
     if (validator?.provider === "standard" || "~standard" in validator || validator.schema && "~standard" in validator.schema) {
-      let standard = ("~standard" in validator ? validator : validator.schema)["~standard"];
-      if (error = (errors ?? standard.validate(value).issues)?.[0], isProduction)
-        message = JSON.stringify({ type: "validation", on: type, found: value });
-      else
-        message = JSON.stringify({ type: "validation", on: type, property: error.path?.[0] || "root", message: error?.message, summary: error?.problem, expected, found: value, errors }, null, 2);
-      customError = error?.message;
+      const standard = ("~standard" in validator ? validator : validator.schema)["~standard"];
+      error = (errors ?? standard.validate(value).issues)?.[0], isProduction ? message = JSON.stringify({
+        type: "validation",
+        on: type,
+        found: value
+      }) : message = JSON.stringify({
+        type: "validation",
+        on: type,
+        property: error.path?.[0] || "root",
+        message: error?.message,
+        summary: error?.problem,
+        expected,
+        found: value,
+        errors
+      }, null, 2), customError = error?.message;
     } else {
-      if (value && typeof value === "object" && value instanceof ElysiaCustomStatusResponse)
-        value = value.response;
-      error = errors?.First() ?? ("Errors" in validator ? validator.Errors(value).First() : exports_value2.Errors(validator, value).First());
-      let accessor = error?.path || "root", schema = validator?.schema ?? validator;
+      value && typeof value == "object" && value instanceof ElysiaCustomStatusResponse && (value = value.response), error = errors?.First() ?? ("Errors" in validator ? validator.Errors(value).First() : exports_value2.Errors(validator, value).First());
+      const accessor = error?.path || "root", schema = validator?.schema ?? validator;
       if (!isProduction && !allowUnsafeValidationDetails)
         try {
           expected = exports_value2.Create(schema);
         } catch (error2) {
-          expected = { type: "Could not create expected value", message: error2?.message, error: error2 };
+          expected = {
+            type: "Could not create expected value",
+            message: error2?.message,
+            error: error2
+          };
         }
-      if (customError = error?.schema?.message || error?.schema?.error !== undefined ? typeof error.schema.error === "function" ? error.schema.error(isProduction && !allowUnsafeValidationDetails ? { type: "validation", on: type, found: value } : { type: "validation", on: type, value, property: accessor, message: error?.message, summary: mapValueError(error).summary, found: value, expected, errors: "Errors" in validator ? [...validator.Errors(value)].map(mapValueError) : [...exports_value2.Errors(validator, value)].map(mapValueError) }, validator) : error.schema.error : undefined, customError !== undefined)
-        message = typeof customError === "object" ? JSON.stringify(customError) : customError + "";
-      else if (isProduction && !allowUnsafeValidationDetails)
-        message = JSON.stringify({ type: "validation", on: type, found: value });
-      else
-        message = JSON.stringify({ type: "validation", on: type, property: accessor, message: error?.message, summary: mapValueError(error).summary, expected, found: value, errors: "Errors" in validator ? [...validator.Errors(value)].map(mapValueError) : [...exports_value2.Errors(validator, value)].map(mapValueError) }, null, 2);
+      customError = error?.schema?.message || error?.schema?.error !== undefined ? typeof error.schema.error == "function" ? error.schema.error(isProduction && !allowUnsafeValidationDetails ? {
+        type: "validation",
+        on: type,
+        found: value
+      } : {
+        type: "validation",
+        on: type,
+        value,
+        property: accessor,
+        message: error?.message,
+        summary: mapValueError(error).summary,
+        found: value,
+        expected,
+        errors: "Errors" in validator ? [
+          ...validator.Errors(value)
+        ].map(mapValueError) : [
+          ...exports_value2.Errors(validator, value)
+        ].map(mapValueError)
+      }, validator) : error.schema.error : undefined, customError !== undefined ? message = typeof customError == "object" ? JSON.stringify(customError) : customError + "" : isProduction && !allowUnsafeValidationDetails ? message = JSON.stringify({
+        type: "validation",
+        on: type,
+        found: value
+      }) : message = JSON.stringify({
+        type: "validation",
+        on: type,
+        property: accessor,
+        message: error?.message,
+        summary: mapValueError(error).summary,
+        expected,
+        found: value,
+        errors: "Errors" in validator ? [...validator.Errors(value)].map(mapValueError) : [...exports_value2.Errors(validator, value)].map(mapValueError)
+      }, null, 2);
     }
     super(message);
     this.type = type;
     this.validator = validator;
     this.value = value;
     this.allowUnsafeValidationDetails = allowUnsafeValidationDetails;
+    this.code = "VALIDATION";
+    this.status = 422;
     this.valueError = error, this.expected = expected, this.customError = customError, Object.setPrototypeOf(this, ValidationError.prototype);
   }
+  get messageValue() {
+    return this.valueError;
+  }
   get all() {
-    if (this.validator?.provider === "standard" || "~standard" in this.validator || "schema" in this.validator && this.validator.schema && "~standard" in this.validator.schema)
-      return ("~standard" in this.validator ? this.validator : this.validator.schema)["~standard"].validate(this.value).issues?.map((issue) => ({ summary: issue.message, path: issue.path?.join(".") || "root", message: issue.message, value: this.value })) || [];
-    return "Errors" in this.validator ? [...this.validator.Errors(this.value)].map(mapValueError) : [...exports_value2.Errors(this.validator, this.value)].map(mapValueError);
+    return this.validator?.provider === "standard" || "~standard" in this.validator || "schema" in this.validator && this.validator.schema && "~standard" in this.validator.schema ? ("~standard" in this.validator ? this.validator : this.validator.schema)["~standard"].validate(this.value).issues?.map((issue) => ({
+      summary: issue.message,
+      path: issue.path?.join(".") || "root",
+      message: issue.message,
+      value: this.value
+    })) || [] : ("Errors" in this.validator) ? [...this.validator.Errors(this.value)].map(mapValueError) : [...exports_value2.Errors(this.validator, this.value)].map(mapValueError);
   }
   static simplifyModel(validator) {
-    let model = "schema" in validator ? validator.schema : validator;
+    const model = "schema" in validator ? validator.schema : validator;
     try {
       return exports_value2.Create(model);
     } catch {
@@ -22176,20 +22410,40 @@ class ValidationError extends Error {
     }
   }
   get model() {
-    if ("~standard" in this.validator)
-      return this.validator;
-    return ValidationError.simplifyModel(this.validator);
+    return "~standard" in this.validator ? this.validator : ValidationError.simplifyModel(this.validator);
   }
   toResponse(headers) {
-    return new Response(this.message, { status: 400, headers: { ...headers, "content-type": "application/json" } });
+    return new Response(this.message, {
+      status: 400,
+      headers: {
+        ...headers,
+        "content-type": "application/json"
+      }
+    });
   }
   detail(message, allowUnsafeValidatorDetails = this.allowUnsafeValidationDetails) {
     if (!this.customError)
       return this.message;
-    let value = this.value, expected = this.expected, errors = this.all;
-    return isProduction && !allowUnsafeValidatorDetails ? { type: "validation", on: this.type, found: value, message } : { type: "validation", on: this.type, property: this.valueError?.path || "root", message, summary: mapValueError(this.valueError).summary, found: value, expected, errors };
+    const value = this.value, expected = this.expected, errors = this.all;
+    return isProduction && !allowUnsafeValidatorDetails ? {
+      type: "validation",
+      on: this.type,
+      found: value,
+      message
+    } : {
+      type: "validation",
+      on: this.type,
+      property: this.valueError?.path || "root",
+      message,
+      summary: mapValueError(this.valueError).summary,
+      found: value,
+      expected,
+      errors
+    };
   }
 }
+
+// node_modules/elysia/dist/type-system/utils.mjs
 var tryParse = (v, schema) => {
   try {
     return JSON.parse(v);
@@ -22198,23 +22452,27 @@ var tryParse = (v, schema) => {
   }
 };
 function createType(kind, func) {
-  if (!exports_type2.Has(kind))
-    exports_type2.Set(kind, func);
-  return (options2 = {}) => Unsafe({ ...options2, [Kind]: kind });
+  return exports_type2.Has(kind) || exports_type2.Set(kind, func), (options2 = {}) => Unsafe({ ...options2, [Kind]: kind });
 }
 var compile = (schema) => {
   try {
-    let compiler = TypeCompiler.Compile(schema);
+    const compiler = TypeCompiler.Compile(schema);
     return compiler.Create = () => exports_value2.Create(schema), compiler.Error = (v) => new ValidationError("property", schema, v, compiler.Errors(v)), compiler;
   } catch {
-    return { Check: (v) => exports_value2.Check(schema, v), CheckThrow: (v) => {
-      if (!exports_value2.Check(schema, v))
-        throw new ValidationError("property", schema, v, exports_value2.Errors(schema, v));
-    }, Decode: (v) => exports_value2.Decode(schema, v), Create: () => exports_value2.Create(schema), Error: (v) => new ValidationError("property", schema, v, exports_value2.Errors(schema, v)) };
+    return {
+      Check: (v) => exports_value2.Check(schema, v),
+      CheckThrow: (v) => {
+        if (!exports_value2.Check(schema, v))
+          throw new ValidationError("property", schema, v, exports_value2.Errors(schema, v));
+      },
+      Decode: (v) => exports_value2.Decode(schema, v),
+      Create: () => exports_value2.Create(schema),
+      Error: (v) => new ValidationError("property", schema, v, exports_value2.Errors(schema, v))
+    };
   }
 };
 var parseFileUnit = (size) => {
-  if (typeof size === "string")
+  if (typeof size == "string")
     switch (size.slice(-1)) {
       case "k":
         return +size.slice(0, size.length - 1) * 1024;
@@ -22225,40 +22483,27 @@ var parseFileUnit = (size) => {
     }
   return size;
 };
-var checkFileExtension = (type, extension) => {
-  if (type.startsWith(extension))
-    return true;
-  return extension.charCodeAt(extension.length - 1) === 42 && extension.charCodeAt(extension.length - 2) === 47 && type.startsWith(extension.slice(0, -1));
-};
+var checkFileExtension = (type, extension) => type.startsWith(extension) ? true : extension.charCodeAt(extension.length - 1) === 42 && extension.charCodeAt(extension.length - 2) === 47 && type.startsWith(extension.slice(0, -1));
 var _fileTypeFromBlobWarn = false;
 var warnIfFileTypeIsNotInstalled = () => {
-  if (!_fileTypeFromBlobWarn)
-    console.warn("[Elysia] Attempt to validate file type without 'file-type'. This may lead to security risks. We recommend installing 'file-type' to properly validate file extension."), _fileTypeFromBlobWarn = true;
+  _fileTypeFromBlobWarn || (console.warn("[Elysia] Attempt to validate file type without 'file-type'. This may lead to security risks. We recommend installing 'file-type' to properly validate file extension."), _fileTypeFromBlobWarn = true);
 };
-var loadFileType = async () => Promise.resolve().then(() => (init_file_type(), exports_file_type)).then((x) => {
-  return _fileTypeFromBlob = x.fileTypeFromBlob, _fileTypeFromBlob;
-}).catch(warnIfFileTypeIsNotInstalled);
+var loadFileType = async () => Promise.resolve().then(() => (init_file_type(), exports_file_type)).then((x) => (_fileTypeFromBlob = x.fileTypeFromBlob, _fileTypeFromBlob)).catch(warnIfFileTypeIsNotInstalled);
 var _fileTypeFromBlob;
-var fileTypeFromBlob2 = (file2) => {
-  if (_fileTypeFromBlob)
-    return _fileTypeFromBlob(file2);
-  return loadFileType().then((mod) => {
-    if (mod)
-      return mod(file2);
-  });
-};
-var fileType = async (file2, extension, name = file2?.name ?? "") => {
-  if (Array.isArray(file2))
-    return await Promise.all(file2.map((f) => fileType(f, extension, name))), true;
-  if (!file2)
+var fileTypeFromBlob2 = (file) => _fileTypeFromBlob ? _fileTypeFromBlob(file) : loadFileType().then((mod) => {
+  if (mod)
+    return mod(file);
+});
+var fileType = async (file, extension, name = file?.name ?? "") => {
+  if (Array.isArray(file))
+    return await Promise.all(file.map((f) => fileType(f, extension, name))), true;
+  if (!file)
     return false;
-  let result = await fileTypeFromBlob2(file2);
+  const result = await fileTypeFromBlob2(file);
   if (!result)
     throw new InvalidFileType(name, extension);
-  if (typeof extension === "string") {
-    if (!checkFileExtension(result.mime, extension))
-      throw new InvalidFileType(name, extension);
-  }
+  if (typeof extension == "string" && !checkFileExtension(result.mime, extension))
+    throw new InvalidFileType(name, extension);
   for (let i = 0;i < extension.length; i++)
     if (checkFileExtension(result.mime, extension[i]))
       return true;
@@ -22267,14 +22512,10 @@ var fileType = async (file2, extension, name = file2?.name ?? "") => {
 var validateFile = (options2, value) => {
   if (value instanceof ElysiaFile)
     return true;
-  if (!(value instanceof Blob))
-    return false;
-  if (options2.minSize && value.size < parseFileUnit(options2.minSize))
-    return false;
-  if (options2.maxSize && value.size > parseFileUnit(options2.maxSize))
+  if (!(value instanceof Blob) || options2.minSize && value.size < parseFileUnit(options2.minSize) || options2.maxSize && value.size > parseFileUnit(options2.maxSize))
     return false;
   if (options2.extension) {
-    if (typeof options2.extension === "string")
+    if (typeof options2.extension == "string")
       return checkFileExtension(value.type, options2.extension);
     for (let i = 0;i < options2.extension.length; i++)
       if (checkFileExtension(value.type, options2.extension[i]))
@@ -22283,44 +22524,69 @@ var validateFile = (options2, value) => {
   }
   return true;
 };
-var fullFormats = { date, time: getTime(true), "date-time": getDateTime(true), "iso-time": getTime(false), "iso-date-time": getDateTime(false), duration: /^P(?!$)((\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+S)?)?|(\d+W)?)$/, uri, "uri-reference": /^(?:[a-z][a-z0-9+\-.]*:)?(?:\/?\/(?:(?:[a-z0-9\-._~!$&'()*+,;=:]|%[0-9a-f]{2})*@)?(?:\[(?:(?:(?:(?:[0-9a-f]{1,4}:){6}|::(?:[0-9a-f]{1,4}:){5}|(?:[0-9a-f]{1,4})?::(?:[0-9a-f]{1,4}:){4}|(?:(?:[0-9a-f]{1,4}:){0,1}[0-9a-f]{1,4})?::(?:[0-9a-f]{1,4}:){3}|(?:(?:[0-9a-f]{1,4}:){0,2}[0-9a-f]{1,4})?::(?:[0-9a-f]{1,4}:){2}|(?:(?:[0-9a-f]{1,4}:){0,3}[0-9a-f]{1,4})?::[0-9a-f]{1,4}:|(?:(?:[0-9a-f]{1,4}:){0,4}[0-9a-f]{1,4})?::)(?:[0-9a-f]{1,4}:[0-9a-f]{1,4}|(?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?))|(?:(?:[0-9a-f]{1,4}:){0,5}[0-9a-f]{1,4})?::[0-9a-f]{1,4}|(?:(?:[0-9a-f]{1,4}:){0,6}[0-9a-f]{1,4})?::)|[Vv][0-9a-f]+\.[a-z0-9\-._~!$&'()*+,;=:]+)\]|(?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)|(?:[a-z0-9\-._~!$&'"()*+,;=]|%[0-9a-f]{2})*)(?::\d*)?(?:\/(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})*)*|\/(?:(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})+(?:\/(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})*)*)?|(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})+(?:\/(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})*)*)?(?:\?(?:[a-z0-9\-._~!$&'"()*+,;=:@/?]|%[0-9a-f]{2})*)?(?:#(?:[a-z0-9\-._~!$&'"()*+,;=:@/?]|%[0-9a-f]{2})*)?$/i, "uri-template": /^(?:(?:[^\x00-\x20"'<>%\\^`{|}]|%[0-9a-f]{2})|\{[+#./;?&=,!@|]?(?:[a-z0-9_]|%[0-9a-f]{2})+(?::[1-9][0-9]{0,3}|\*)?(?:,(?:[a-z0-9_]|%[0-9a-f]{2})+(?::[1-9][0-9]{0,3}|\*)?)*\})*$/i, url: /^(?:https?|ftp):\/\/(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u{00a1}-\u{ffff}]+-)*[a-z0-9\u{00a1}-\u{ffff}]+)(?:\.(?:[a-z0-9\u{00a1}-\u{ffff}]+-)*[a-z0-9\u{00a1}-\u{ffff}]+)*(?:\.(?:[a-z\u{00a1}-\u{ffff}]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/iu, email: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i, hostname: /^(?=.{1,253}\.?$)[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[-0-9a-z]{0,61}[0-9a-z])?)*\.?$/i, ipv4: /^(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)$/, ipv6: /^((([0-9a-f]{1,4}:){7}([0-9a-f]{1,4}|:))|(([0-9a-f]{1,4}:){6}(:[0-9a-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9a-f]{1,4}:){5}(((:[0-9a-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9a-f]{1,4}:){4}(((:[0-9a-f]{1,4}){1,3})|((:[0-9a-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9a-f]{1,4}:){3}(((:[0-9a-f]{1,4}){1,4})|((:[0-9a-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9a-f]{1,4}:){2}(((:[0-9a-f]{1,4}){1,5})|((:[0-9a-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9a-f]{1,4}:){1}(((:[0-9a-f]{1,4}){1,6})|((:[0-9a-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9a-f]{1,4}){1,7})|((:[0-9a-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))$/i, regex, uuid: /^(?:urn:uuid:)?[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i, "json-pointer": /^(?:\/(?:[^~/]|~0|~1)*)*$/, "json-pointer-uri-fragment": /^#(?:\/(?:[a-z0-9_\-.!$&'()*+,;:=@]|%[0-9a-f]{2}|~0|~1)*)*$/i, "relative-json-pointer": /^(?:0|[1-9][0-9]*)(?:#|(?:\/(?:[^~/]|~0|~1)*)*)$/, byte, int32: { type: "number", validate: validateInt32 }, int64: { type: "number", validate: validateInt64 }, float: { type: "number", validate: validateNumber }, double: { type: "number", validate: validateNumber }, password: true, binary: true };
+
+// node_modules/elysia/dist/type-system/format.mjs
+var fullFormats = {
+  date,
+  time: getTime(true),
+  "date-time": getDateTime(true),
+  "iso-time": getTime(false),
+  "iso-date-time": getDateTime(false),
+  duration: /^P(?!$)((\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+S)?)?|(\d+W)?)$/,
+  uri,
+  "uri-reference": /^(?:[a-z][a-z0-9+\-.]*:)?(?:\/?\/(?:(?:[a-z0-9\-._~!$&'()*+,;=:]|%[0-9a-f]{2})*@)?(?:\[(?:(?:(?:(?:[0-9a-f]{1,4}:){6}|::(?:[0-9a-f]{1,4}:){5}|(?:[0-9a-f]{1,4})?::(?:[0-9a-f]{1,4}:){4}|(?:(?:[0-9a-f]{1,4}:){0,1}[0-9a-f]{1,4})?::(?:[0-9a-f]{1,4}:){3}|(?:(?:[0-9a-f]{1,4}:){0,2}[0-9a-f]{1,4})?::(?:[0-9a-f]{1,4}:){2}|(?:(?:[0-9a-f]{1,4}:){0,3}[0-9a-f]{1,4})?::[0-9a-f]{1,4}:|(?:(?:[0-9a-f]{1,4}:){0,4}[0-9a-f]{1,4})?::)(?:[0-9a-f]{1,4}:[0-9a-f]{1,4}|(?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?))|(?:(?:[0-9a-f]{1,4}:){0,5}[0-9a-f]{1,4})?::[0-9a-f]{1,4}|(?:(?:[0-9a-f]{1,4}:){0,6}[0-9a-f]{1,4})?::)|[Vv][0-9a-f]+\.[a-z0-9\-._~!$&'()*+,;=:]+)\]|(?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)|(?:[a-z0-9\-._~!$&'"()*+,;=]|%[0-9a-f]{2})*)(?::\d*)?(?:\/(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})*)*|\/(?:(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})+(?:\/(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})*)*)?|(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})+(?:\/(?:[a-z0-9\-._~!$&'"()*+,;=:@]|%[0-9a-f]{2})*)*)?(?:\?(?:[a-z0-9\-._~!$&'"()*+,;=:@/?]|%[0-9a-f]{2})*)?(?:#(?:[a-z0-9\-._~!$&'"()*+,;=:@/?]|%[0-9a-f]{2})*)?$/i,
+  "uri-template": /^(?:(?:[^\x00-\x20"'<>%\\^`{|}]|%[0-9a-f]{2})|\{[+#./;?&=,!@|]?(?:[a-z0-9_]|%[0-9a-f]{2})+(?::[1-9][0-9]{0,3}|\*)?(?:,(?:[a-z0-9_]|%[0-9a-f]{2})+(?::[1-9][0-9]{0,3}|\*)?)*\})*$/i,
+  url: /^(?:https?|ftp):\/\/(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u{00a1}-\u{ffff}]+-)*[a-z0-9\u{00a1}-\u{ffff}]+)(?:\.(?:[a-z0-9\u{00a1}-\u{ffff}]+-)*[a-z0-9\u{00a1}-\u{ffff}]+)*(?:\.(?:[a-z\u{00a1}-\u{ffff}]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/iu,
+  email: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i,
+  hostname: /^(?=.{1,253}\.?$)[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[-0-9a-z]{0,61}[0-9a-z])?)*\.?$/i,
+  ipv4: /^(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)$/,
+  ipv6: /^((([0-9a-f]{1,4}:){7}([0-9a-f]{1,4}|:))|(([0-9a-f]{1,4}:){6}(:[0-9a-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9a-f]{1,4}:){5}(((:[0-9a-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9a-f]{1,4}:){4}(((:[0-9a-f]{1,4}){1,3})|((:[0-9a-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9a-f]{1,4}:){3}(((:[0-9a-f]{1,4}){1,4})|((:[0-9a-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9a-f]{1,4}:){2}(((:[0-9a-f]{1,4}){1,5})|((:[0-9a-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9a-f]{1,4}:){1}(((:[0-9a-f]{1,4}){1,6})|((:[0-9a-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9a-f]{1,4}){1,7})|((:[0-9a-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))$/i,
+  regex,
+  uuid: /^(?:urn:uuid:)?[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i,
+  "json-pointer": /^(?:\/(?:[^~/]|~0|~1)*)*$/,
+  "json-pointer-uri-fragment": /^#(?:\/(?:[a-z0-9_\-.!$&'()*+,;:=@]|%[0-9a-f]{2}|~0|~1)*)*$/i,
+  "relative-json-pointer": /^(?:0|[1-9][0-9]*)(?:#|(?:\/(?:[^~/]|~0|~1)*)*)$/,
+  byte,
+  int32: { type: "number", validate: validateInt32 },
+  int64: { type: "number", validate: validateInt64 },
+  float: { type: "number", validate: validateNumber },
+  double: { type: "number", validate: validateNumber },
+  password: true,
+  binary: true
+};
 function isLeapYear(year) {
   return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 }
 var DATE = /^(\d\d\d\d)-(\d\d)-(\d\d)$/;
 var DAYS = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 function date(str2) {
-  let matches = DATE.exec(str2);
+  const matches = DATE.exec(str2);
   if (!matches)
     return false;
-  let year = +matches[1], month = +matches[2], day = +matches[3];
+  const year = +matches[1], month = +matches[2], day = +matches[3];
   return month >= 1 && month <= 12 && day >= 1 && day <= (month === 2 && isLeapYear(year) ? 29 : DAYS[month]);
 }
 var TIME = /^(\d\d):(\d\d):(\d\d(?:\.\d+)?)(z|([+-])(\d\d)(?::?(\d\d))?)?$/i;
 function getTime(strictTimeZone) {
   return function(str2) {
-    let matches = TIME.exec(str2);
+    const matches = TIME.exec(str2);
     if (!matches)
       return false;
-    let hr = +matches[1], min = +matches[2], sec = +matches[3], tz = matches[4], tzSign = matches[5] === "-" ? -1 : 1, tzH = +(matches[6] || 0), tzM = +(matches[7] || 0);
+    const hr = +matches[1], min = +matches[2], sec = +matches[3], tz = matches[4], tzSign = matches[5] === "-" ? -1 : 1, tzH = +(matches[6] || 0), tzM = +(matches[7] || 0);
     if (tzH > 23 || tzM > 59 || strictTimeZone && !tz)
       return false;
     if (hr <= 23 && min <= 59 && sec < 60)
       return true;
-    let utcMin = min - tzM * tzSign, utcHr = hr - tzH * tzSign - (utcMin < 0 ? 1 : 0);
+    const utcMin = min - tzM * tzSign, utcHr = hr - tzH * tzSign - (utcMin < 0 ? 1 : 0);
     return (utcHr === 23 || utcHr === -1) && (utcMin === 59 || utcMin === -1) && sec < 61;
   };
 }
-var parseDateTimeEmptySpace = (str2) => {
-  if (str2.charCodeAt(str2.length - 6) === 32)
-    return str2.slice(0, -6) + "+" + str2.slice(-5);
-  return str2;
-};
+var parseDateTimeEmptySpace = (str2) => str2.charCodeAt(str2.length - 6) === 32 ? str2.slice(0, -6) + "+" + str2.slice(-5) : str2;
 var DATE_TIME_SEPARATOR = /t|\s/i;
 function getDateTime(strictTimeZone) {
-  let time = getTime(strictTimeZone);
+  const time = getTime(strictTimeZone);
   return function(str2) {
-    let dateTime = str2.split(DATE_TIME_SEPARATOR);
+    const dateTime = str2.split(DATE_TIME_SEPARATOR);
     return dateTime.length === 2 && date(dateTime[0]) && time(dateTime[1]);
   };
 }
@@ -22333,8 +22599,8 @@ var BYTE = /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/gm;
 function byte(str2) {
   return BYTE.lastIndex = 0, BYTE.test(str2);
 }
-var MIN_INT32 = -2147483648;
-var MAX_INT32 = 2147483647;
+var MIN_INT32 = -(2 ** 31);
+var MAX_INT32 = 2 ** 31 - 1;
 function validateInt32(value) {
   return Number.isInteger(value) && value <= MAX_INT32 && value >= MIN_INT32;
 }
@@ -22350,7 +22616,7 @@ function regex(str2) {
     return false;
   try {
     return new RegExp(str2), true;
-  } catch (e) {
+  } catch {
     return false;
   }
 }
@@ -22359,78 +22625,54 @@ var isFormalDate = /(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\s(?:Jan|Feb|Mar|Apr|May|Jun|
 var isShortenDate = /^(?:(?:(?:(?:0?[1-9]|[12][0-9]|3[01])[/\s-](?:0?[1-9]|1[0-2])[/\s-](?:19|20)\d{2})|(?:(?:19|20)\d{2}[/\s-](?:0?[1-9]|1[0-2])[/\s-](?:0?[1-9]|[12][0-9]|3[01]))))(?:\s(?:1[012]|0?[1-9]):[0-5][0-9](?::[0-5][0-9])?(?:\s[AP]M)?)?$/;
 var _validateDate = fullFormats.date;
 var _validateDateTime = fullFormats["date-time"];
-if (!exports_format.Has("date"))
-  exports_format.Set("date", (value) => {
-    let temp = parseDateTimeEmptySpace(value).replace(/"/g, "");
-    if (isISO8601.test(temp) || isFormalDate.test(temp) || isShortenDate.test(temp) || _validateDate(temp)) {
-      let date2 = new Date(temp);
-      if (!Number.isNaN(date2.getTime()))
-        return true;
-    }
+exports_format.Has("date") || exports_format.Set("date", (value) => {
+  const temp = parseDateTimeEmptySpace(value).replace(/"/g, "");
+  if (isISO8601.test(temp) || isFormalDate.test(temp) || isShortenDate.test(temp) || _validateDate(temp)) {
+    const date2 = new Date(temp);
+    if (!Number.isNaN(date2.getTime()))
+      return true;
+  }
+  return false;
+}), exports_format.Has("date-time") || exports_format.Set("date-time", (value) => {
+  const temp = value.replace(/"/g, "");
+  if (isISO8601.test(temp) || isFormalDate.test(temp) || isShortenDate.test(temp) || _validateDateTime(temp)) {
+    const date2 = new Date(temp);
+    if (!Number.isNaN(date2.getTime()))
+      return true;
+  }
+  return false;
+}), Object.entries(fullFormats).forEach((formatEntry) => {
+  const [formatName, formatValue] = formatEntry;
+  exports_format.Has(formatName) || (formatValue instanceof RegExp ? exports_format.Set(formatName, (value) => formatValue.test(value)) : typeof formatValue == "function" && exports_format.Set(formatName, formatValue));
+}), exports_format.Has("numeric") || exports_format.Set("numeric", (value) => !!value && !isNaN(+value)), exports_format.Has("integer") || exports_format.Set("integer", (value) => !!value && Number.isInteger(+value)), exports_format.Has("boolean") || exports_format.Set("boolean", (value) => value === "true" || value === "false"), exports_format.Has("ObjectString") || exports_format.Set("ObjectString", (value) => {
+  let start = value.charCodeAt(0);
+  if ((start === 9 || start === 10 || start === 32) && (start = value.trimStart().charCodeAt(0)), start !== 123 && start !== 91)
     return false;
-  });
-if (!exports_format.Has("date-time"))
-  exports_format.Set("date-time", (value) => {
-    let temp = value.replace(/"/g, "");
-    if (isISO8601.test(temp) || isFormalDate.test(temp) || isShortenDate.test(temp) || _validateDateTime(temp)) {
-      let date2 = new Date(temp);
-      if (!Number.isNaN(date2.getTime()))
-        return true;
-    }
+  try {
+    return JSON.parse(value), true;
+  } catch {
     return false;
-  });
-Object.entries(fullFormats).forEach((formatEntry) => {
-  let [formatName, formatValue] = formatEntry;
-  if (!exports_format.Has(formatName)) {
-    if (formatValue instanceof RegExp)
-      exports_format.Set(formatName, (value) => formatValue.test(value));
-    else if (typeof formatValue === "function")
-      exports_format.Set(formatName, formatValue);
+  }
+}), exports_format.Has("ArrayString") || exports_format.Set("ArrayString", (value) => {
+  let start = value.charCodeAt(0);
+  if ((start === 9 || start === 10 || start === 32) && (start = value.trimStart().charCodeAt(0)), start !== 123 && start !== 91)
+    return false;
+  try {
+    return JSON.parse(value), true;
+  } catch {
+    return false;
   }
 });
-if (!exports_format.Has("numeric"))
-  exports_format.Set("numeric", (value) => !!value && !isNaN(+value));
-if (!exports_format.Has("integer"))
-  exports_format.Set("integer", (value) => !!value && Number.isInteger(+value));
-if (!exports_format.Has("boolean"))
-  exports_format.Set("boolean", (value) => value === "true" || value === "false");
-if (!exports_format.Has("ObjectString"))
-  exports_format.Set("ObjectString", (value) => {
-    let start = value.charCodeAt(0);
-    if (start === 9 || start === 10 || start === 32)
-      start = value.trimStart().charCodeAt(0);
-    if (start !== 123 && start !== 91)
-      return false;
-    try {
-      return JSON.parse(value), true;
-    } catch {
-      return false;
-    }
-  });
-if (!exports_format.Has("ArrayString"))
-  exports_format.Set("ArrayString", (value) => {
-    let start = value.charCodeAt(0);
-    if (start === 9 || start === 10 || start === 32)
-      start = value.trimStart().charCodeAt(0);
-    if (start !== 123 && start !== 91)
-      return false;
-    try {
-      return JSON.parse(value), true;
-    } catch {
-      return false;
-    }
-  });
+
+// node_modules/elysia/dist/type-system/index.mjs
 var t = Object.assign({}, Type);
-createType("UnionEnum", (schema, value) => (typeof value === "number" || typeof value === "string" || value === null) && schema.enum.includes(value));
-createType("ArrayBuffer", (schema, value) => value instanceof ArrayBuffer);
+createType("UnionEnum", (schema, value) => (typeof value == "number" || typeof value == "string" || value === null) && schema.enum.includes(value)), createType("ArrayBuffer", (schema, value) => value instanceof ArrayBuffer);
 var internalFiles = createType("Files", (options2, value) => {
   if (options2.minItems && options2.minItems > 1 && !Array.isArray(value))
     return false;
   if (!Array.isArray(value))
     return validateFile(options2, value);
-  if (options2.minItems && value.length < options2.minItems)
-    return false;
-  if (options2.maxItems && value.length > options2.maxItems)
+  if (options2.minItems && value.length < options2.minItems || options2.maxItems && value.length > options2.maxItems)
     return false;
   for (let i = 0;i < value.length; i++)
     if (!validateFile(options2, value[i]))
@@ -22448,234 +22690,312 @@ var internalFormData = createType("ElysiaForm", ({ compiler, ...schema }, value)
   }
   return true;
 });
-var ElysiaType = { String: (property) => Type.String(property), Numeric: (property) => {
-  let schema = Type.Number(property), compiler = compile(schema);
-  return t.Transform(t.Union([t.String({ format: "numeric", default: 0 }), t.Number(property)], property)).Decode((value) => {
-    let number = +value;
-    if (isNaN(number))
-      return value;
-    if (property && !compiler.Check(number))
-      throw compiler.Error(number);
-    return number;
-  }).Encode((value) => value);
-}, NumericEnum(item, property) {
-  let schema = Type.Enum(item, property), compiler = compile(schema);
-  return t.Transform(t.Union([t.String({ format: "numeric" }), t.Number()], property)).Decode((value) => {
-    let number = +value;
-    if (isNaN(number))
-      throw compiler.Error(number);
-    if (!compiler.Check(number))
-      throw compiler.Error(number);
-    return number;
-  }).Encode((value) => value);
-}, Integer: (property) => {
-  let schema = Type.Integer(property), compiler = compile(schema);
-  return t.Transform(t.Union([t.String({ format: "integer", default: 0 }), Type.Integer(property)], property)).Decode((value) => {
-    let number = +value;
-    if (!compiler.Check(number))
-      throw compiler.Error(number);
-    return number;
-  }).Encode((value) => value);
-}, Date: (property) => {
-  let schema = Type.Date(property), compiler = compile(schema), _default = property?.default ? new Date(property.default) : undefined;
-  return t.Transform(t.Union([Type.Date(property), t.String({ format: "date-time", default: _default?.toISOString() }), t.String({ format: "date", default: _default?.toISOString() }), t.Number({ default: _default?.getTime() })], property)).Decode((value) => {
-    if (typeof value === "number") {
-      let date3 = new Date(value);
-      if (!compiler.Check(date3))
-        throw compiler.Error(date3);
-      return date3;
-    }
-    if (value instanceof Date)
-      return value;
-    let date2 = new Date(parseDateTimeEmptySpace(value));
-    if (!date2 || isNaN(date2.getTime()))
-      throw new ValidationError("property", schema, date2);
-    if (!compiler.Check(date2))
-      throw compiler.Error(date2);
-    return date2;
-  }).Encode((value) => {
-    if (value instanceof Date)
-      return value.toISOString();
-    if (typeof value === "string") {
-      if (isNaN(new Date(parseDateTimeEmptySpace(value)).getTime()))
-        throw new ValidationError("property", schema, value);
-      return value;
-    }
-    if (!compiler.Check(value))
-      throw compiler.Error(value);
-    return value;
-  });
-}, BooleanString: (property) => {
-  let schema = Type.Boolean(property), compiler = compile(schema);
-  return t.Transform(t.Union([t.Boolean(property), t.String({ format: "boolean", default: false })], property)).Decode((value) => {
-    if (typeof value === "string")
-      return value === "true";
-    if (value !== undefined && !compiler.Check(value))
-      throw compiler.Error(value);
-    return value;
-  }).Encode((value) => value);
-}, ObjectString: (properties, options2) => {
-  let schema = t.Object(properties, options2), compiler = compile(schema);
-  return t.Transform(t.Union([t.String({ format: "ObjectString", default: "{}" }), schema], { elysiaMeta: "ObjectString" })).Decode((value) => {
-    if (typeof value === "string") {
-      if (value.charCodeAt(0) !== 123)
-        throw new ValidationError("property", schema, value);
-      if (!compiler.Check(value = tryParse(value, schema)))
-        throw compiler.Error(value);
-      return compiler.Decode(value);
-    }
-    return value;
-  }).Encode((value) => {
-    let original;
-    if (typeof value === "string")
-      value = tryParse(original = value, schema);
-    if (!compiler.Check(value))
-      throw compiler.Error(value);
-    return original ?? JSON.stringify(value);
-  });
-}, ArrayString: (children = t.String(), options2) => {
-  let schema = t.Array(children, options2), compiler = compile(schema), decode2 = (value, isProperty = false) => {
-    if (value.charCodeAt(0) === 91) {
-      if (!compiler.Check(value = tryParse(value, schema)))
-        throw compiler.Error(value);
-      return compiler.Decode(value);
-    }
-    if (isProperty)
-      return value;
-    throw new ValidationError("property", schema, value);
-  };
-  return t.Transform(t.Union([t.String({ format: "ArrayString", default: options2?.default }), schema])).Decode((value) => {
-    if (Array.isArray(value)) {
-      let values = [];
-      for (let i = 0;i < value.length; i++) {
-        let v = value[i];
-        if (typeof v === "string") {
-          let t2 = decode2(v, true);
-          if (Array.isArray(t2))
-            values = values.concat(t2);
-          else
-            values.push(t2);
-          continue;
-        }
-        values.push(v);
+var ElysiaType = {
+  String: (property) => Type.String(property),
+  Numeric: (property) => {
+    const schema = Type.Number(property), compiler = compile(schema);
+    return t.Transform(t.Union([
+      t.String({
+        format: "numeric",
+        default: 0
+      }),
+      t.Number(property)
+    ], property)).Decode((value) => {
+      const number = +value;
+      if (isNaN(number))
+        return value;
+      if (property && !compiler.Check(number))
+        throw compiler.Error(number);
+      return number;
+    }).Encode((value) => value);
+  },
+  NumericEnum(item, property) {
+    const schema = Type.Enum(item, property), compiler = compile(schema);
+    return t.Transform(t.Union([t.String({ format: "numeric" }), t.Number()], property)).Decode((value) => {
+      const number = +value;
+      if (isNaN(number) || !compiler.Check(number))
+        throw compiler.Error(number);
+      return number;
+    }).Encode((value) => value);
+  },
+  Integer: (property) => {
+    const schema = Type.Integer(property), compiler = compile(schema);
+    return t.Transform(t.Union([
+      t.String({
+        format: "integer",
+        default: 0
+      }),
+      Type.Integer(property)
+    ], property)).Decode((value) => {
+      const number = +value;
+      if (!compiler.Check(number))
+        throw compiler.Error(number);
+      return number;
+    }).Encode((value) => value);
+  },
+  Date: (property) => {
+    const schema = Type.Date(property), compiler = compile(schema), _default = property?.default ? new Date(property.default) : undefined;
+    return t.Transform(t.Union([
+      Type.Date(property),
+      t.String({
+        format: "date-time",
+        default: _default?.toISOString()
+      }),
+      t.String({
+        format: "date",
+        default: _default?.toISOString()
+      }),
+      t.Number({ default: _default?.getTime() })
+    ], property)).Decode((value) => {
+      if (typeof value == "number") {
+        const date22 = new Date(value);
+        if (!compiler.Check(date22))
+          throw compiler.Error(date22);
+        return date22;
       }
-      return values;
-    }
-    if (typeof value === "string")
-      return decode2(value);
-    return value;
-  }).Encode((value) => {
-    let original;
-    if (typeof value === "string")
-      value = tryParse(original = value, schema);
-    if (!compiler.Check(value))
-      throw new ValidationError("property", schema, value);
-    return original ?? JSON.stringify(value);
-  });
-}, ArrayQuery: (children = t.String(), options2) => {
-  let schema = t.Array(children, options2), compiler = compile(schema), decode2 = (value) => {
-    if (value.indexOf(",") !== -1)
-      return compiler.Decode(value.split(","));
-    return [value];
-  };
-  return t.Transform(t.Union([t.String({ default: options2?.default }), schema], { elysiaMeta: "ArrayQuery" })).Decode((value) => {
-    if (Array.isArray(value)) {
-      let values = [];
-      for (let i = 0;i < value.length; i++) {
-        let v = value[i];
-        if (typeof v === "string") {
-          let t2 = decode2(v);
-          if (Array.isArray(t2))
-            values = values.concat(t2);
-          else
-            values.push(t2);
-          continue;
-        }
-        values.push(v);
+      if (value instanceof Date)
+        return value;
+      const date2 = new Date(parseDateTimeEmptySpace(value));
+      if (!date2 || isNaN(date2.getTime()))
+        throw new ValidationError("property", schema, date2);
+      if (!compiler.Check(date2))
+        throw compiler.Error(date2);
+      return date2;
+    }).Encode((value) => {
+      if (value instanceof Date)
+        return value.toISOString();
+      if (typeof value == "string") {
+        if (isNaN(new Date(parseDateTimeEmptySpace(value)).getTime()))
+          throw new ValidationError("property", schema, value);
+        return value;
       }
-      return values;
-    }
-    if (typeof value === "string")
-      return decode2(value);
-    return value;
-  }).Encode((value) => {
-    let original;
-    if (typeof value === "string")
-      value = tryParse(original = value, schema);
-    if (!compiler.Check(value))
-      throw new ValidationError("property", schema, value);
-    return original ?? JSON.stringify(value);
-  });
-}, File: createType("File", validateFile), Files: (options2 = {}) => t.Transform(internalFiles(options2)).Decode((value) => {
-  if (Array.isArray(value))
-    return value;
-  return [value];
-}).Encode((value) => value), Nullable: (schema, options2) => t.Union([schema, t.Null()], { ...options2, nullable: true }), MaybeEmpty: (schema, options2) => t.Union([schema, t.Null(), t.Undefined()], options2), Cookie: (properties, { domain, expires, httpOnly, maxAge, path, priority, sameSite, secure, secrets, sign, ...options2 } = {}) => {
-  let v = t.Object(properties, options2);
-  return v.config = { domain, expires, httpOnly, maxAge, path, priority, sameSite, secure, secrets, sign }, v;
-}, UnionEnum: (values, options2 = {}) => {
-  let type = values.every((value) => typeof value === "string") ? { type: "string" } : values.every((value) => typeof value === "number") ? { type: "number" } : values.every((value) => value === null) ? { type: "null" } : {};
-  if (values.some((x) => typeof x === "object" && x !== null))
-    throw Error("This type does not support objects or arrays");
-  return { default: values[0], ...options2, [Kind]: "UnionEnum", ...type, enum: values };
-}, NoValidate: (v, enabled = true) => {
-  return v.noValidate = enabled, v;
-}, Form: (v, options2 = {}) => {
-  let schema = t.Object(v, { default: form({}), ...options2 }), compiler = compile(schema);
-  return t.Union([schema, internalFormData({ compiler })]);
-}, ArrayBuffer(options2 = {}) {
-  return { default: [1, 2, 3], ...options2, [Kind]: "ArrayBuffer" };
-}, Uint8Array: (options2) => {
-  let schema = Type.Uint8Array(options2), compiler = compile(schema);
-  return t.Transform(t.Union([t.ArrayBuffer(), Type.Uint8Array(options2)])).Decode((value) => {
-    if (value instanceof ArrayBuffer) {
-      if (!compiler.Check(value = new Uint8Array(value)))
+      if (!compiler.Check(value))
         throw compiler.Error(value);
       return value;
-    }
-    return value;
-  }).Encode((value) => value);
-} };
-t.BooleanString = ElysiaType.BooleanString;
-t.ObjectString = ElysiaType.ObjectString;
-t.ArrayString = ElysiaType.ArrayString;
-t.ArrayQuery = ElysiaType.ArrayQuery;
-t.Numeric = ElysiaType.Numeric;
-t.NumericEnum = ElysiaType.NumericEnum;
-t.Integer = ElysiaType.Integer;
-t.File = (arg) => {
-  if (arg?.type)
-    loadFileType();
-  return ElysiaType.File({ default: "File", ...arg, extension: arg?.type, type: "string", format: "binary" });
+    });
+  },
+  BooleanString: (property) => {
+    const schema = Type.Boolean(property), compiler = compile(schema);
+    return t.Transform(t.Union([
+      t.Boolean(property),
+      t.String({
+        format: "boolean",
+        default: false
+      })
+    ], property)).Decode((value) => {
+      if (typeof value == "string")
+        return value === "true";
+      if (value !== undefined && !compiler.Check(value))
+        throw compiler.Error(value);
+      return value;
+    }).Encode((value) => value);
+  },
+  ObjectString: (properties, options2) => {
+    const schema = t.Object(properties, options2), compiler = compile(schema);
+    return t.Transform(t.Union([
+      t.String({
+        format: "ObjectString",
+        default: "{}"
+      }),
+      schema
+    ], {
+      elysiaMeta: "ObjectString"
+    })).Decode((value) => {
+      if (typeof value == "string") {
+        if (value.charCodeAt(0) !== 123)
+          throw new ValidationError("property", schema, value);
+        if (!compiler.Check(value = tryParse(value, schema)))
+          throw compiler.Error(value);
+        return compiler.Decode(value);
+      }
+      return value;
+    }).Encode((value) => {
+      let original;
+      if (typeof value == "string" && (value = tryParse(original = value, schema)), !compiler.Check(value))
+        throw compiler.Error(value);
+      return original ?? JSON.stringify(value);
+    });
+  },
+  ArrayString: (children = t.String(), options2) => {
+    const schema = t.Array(children, options2), compiler = compile(schema), decode2 = (value, isProperty = false) => {
+      if (value.charCodeAt(0) === 91) {
+        if (!compiler.Check(value = tryParse(value, schema)))
+          throw compiler.Error(value);
+        return compiler.Decode(value);
+      }
+      if (isProperty)
+        return value;
+      throw new ValidationError("property", schema, value);
+    };
+    return t.Transform(t.Union([
+      t.String({
+        format: "ArrayString",
+        default: options2?.default
+      }),
+      schema
+    ])).Decode((value) => {
+      if (Array.isArray(value)) {
+        let values = [];
+        for (let i = 0;i < value.length; i++) {
+          const v = value[i];
+          if (typeof v == "string") {
+            const t2 = decode2(v, true);
+            Array.isArray(t2) ? values = values.concat(t2) : values.push(t2);
+            continue;
+          }
+          values.push(v);
+        }
+        return values;
+      }
+      return typeof value == "string" ? decode2(value) : value;
+    }).Encode((value) => {
+      let original;
+      if (typeof value == "string" && (value = tryParse(original = value, schema)), !compiler.Check(value))
+        throw new ValidationError("property", schema, value);
+      return original ?? JSON.stringify(value);
+    });
+  },
+  ArrayQuery: (children = t.String(), options2) => {
+    const schema = t.Array(children, options2), compiler = compile(schema), decode2 = (value) => value.indexOf(",") !== -1 ? compiler.Decode(value.split(",")) : [value];
+    return t.Transform(t.Union([
+      t.String({
+        default: options2?.default
+      }),
+      schema
+    ], {
+      elysiaMeta: "ArrayQuery"
+    })).Decode((value) => {
+      if (Array.isArray(value)) {
+        let values = [];
+        for (let i = 0;i < value.length; i++) {
+          const v = value[i];
+          if (typeof v == "string") {
+            const t2 = decode2(v);
+            Array.isArray(t2) ? values = values.concat(t2) : values.push(t2);
+            continue;
+          }
+          values.push(v);
+        }
+        return values;
+      }
+      return typeof value == "string" ? decode2(value) : value;
+    }).Encode((value) => {
+      let original;
+      if (typeof value == "string" && (value = tryParse(original = value, schema)), !compiler.Check(value))
+        throw new ValidationError("property", schema, value);
+      return original ?? JSON.stringify(value);
+    });
+  },
+  File: createType("File", validateFile),
+  Files: (options2 = {}) => t.Transform(internalFiles(options2)).Decode((value) => Array.isArray(value) ? value : [value]).Encode((value) => value),
+  Nullable: (schema, options2) => t.Union([schema, t.Null()], {
+    ...options2,
+    nullable: true
+  }),
+  MaybeEmpty: (schema, options2) => t.Union([schema, t.Null(), t.Undefined()], options2),
+  Cookie: (properties, {
+    domain,
+    expires,
+    httpOnly,
+    maxAge,
+    path,
+    priority,
+    sameSite,
+    secure,
+    secrets,
+    sign,
+    ...options2
+  } = {}) => {
+    const v = t.Object(properties, options2);
+    return v.config = {
+      domain,
+      expires,
+      httpOnly,
+      maxAge,
+      path,
+      priority,
+      sameSite,
+      secure,
+      secrets,
+      sign
+    }, v;
+  },
+  UnionEnum: (values, options2 = {}) => {
+    const type = values.every((value) => typeof value == "string") ? { type: "string" } : values.every((value) => typeof value == "number") ? { type: "number" } : values.every((value) => value === null) ? { type: "null" } : {};
+    if (values.some((x) => typeof x == "object" && x !== null))
+      throw new Error("This type does not support objects or arrays");
+    return {
+      default: values[0],
+      ...options2,
+      [Kind]: "UnionEnum",
+      ...type,
+      enum: values
+    };
+  },
+  NoValidate: (v, enabled = true) => (v.noValidate = enabled, v),
+  Form: (v, options2 = {}) => {
+    const schema = t.Object(v, {
+      default: form({}),
+      ...options2
+    }), compiler = compile(schema);
+    return t.Union([
+      schema,
+      internalFormData({
+        compiler
+      })
+    ]);
+  },
+  ArrayBuffer(options2 = {}) {
+    return {
+      default: [1, 2, 3],
+      ...options2,
+      [Kind]: "ArrayBuffer"
+    };
+  },
+  Uint8Array: (options2) => {
+    const schema = Type.Uint8Array(options2), compiler = compile(schema);
+    return t.Transform(t.Union([t.ArrayBuffer(), Type.Uint8Array(options2)])).Decode((value) => {
+      if (value instanceof ArrayBuffer) {
+        if (!compiler.Check(value = new Uint8Array(value)))
+          throw compiler.Error(value);
+        return value;
+      }
+      return value;
+    }).Encode((value) => value);
+  }
 };
-t.Files = (arg) => {
-  if (arg?.type)
-    loadFileType();
-  return ElysiaType.Files({ ...arg, elysiaMeta: "Files", default: "Files", extension: arg?.type, type: "array", items: { ...arg, default: "Files", type: "string", format: "binary" } });
-};
-t.Nullable = ElysiaType.Nullable;
-t.MaybeEmpty = ElysiaType.MaybeEmpty;
-t.Cookie = ElysiaType.Cookie;
-t.Date = ElysiaType.Date;
-t.UnionEnum = ElysiaType.UnionEnum;
-t.NoValidate = ElysiaType.NoValidate;
-t.Form = ElysiaType.Form;
-t.ArrayBuffer = ElysiaType.ArrayBuffer;
-t.Uint8Array = ElysiaType.Uint8Array;
-var import_cookie = __toESM2(require_dist(), 1);
-var import_fast_decode_uri_component = __toESM2(require_fast_decode_uri_component(), 1);
+t.BooleanString = ElysiaType.BooleanString, t.ObjectString = ElysiaType.ObjectString, t.ArrayString = ElysiaType.ArrayString, t.ArrayQuery = ElysiaType.ArrayQuery, t.Numeric = ElysiaType.Numeric, t.NumericEnum = ElysiaType.NumericEnum, t.Integer = ElysiaType.Integer, t.File = (arg) => (arg?.type && loadFileType(), ElysiaType.File({
+  default: "File",
+  ...arg,
+  extension: arg?.type,
+  type: "string",
+  format: "binary"
+})), t.Files = (arg) => (arg?.type && loadFileType(), ElysiaType.Files({
+  ...arg,
+  elysiaMeta: "Files",
+  default: "Files",
+  extension: arg?.type,
+  type: "array",
+  items: {
+    ...arg,
+    default: "Files",
+    type: "string",
+    format: "binary"
+  }
+})), t.Nullable = ElysiaType.Nullable, t.MaybeEmpty = ElysiaType.MaybeEmpty, t.Cookie = ElysiaType.Cookie, t.Date = ElysiaType.Date, t.UnionEnum = ElysiaType.UnionEnum, t.NoValidate = ElysiaType.NoValidate, t.Form = ElysiaType.Form, t.ArrayBuffer = ElysiaType.ArrayBuffer, t.Uint8Array = ElysiaType.Uint8Array;
+
+// node_modules/elysia/dist/cookies.mjs
+var import_cookie = __toESM(require_dist(), 1);
+var import_fast_decode_uri_component = __toESM(require_fast_decode_uri_component(), 1);
 var hashString = (str2) => {
-  let hash2 = 2166136261, len = str2.length;
+  let hash2 = 2166136261;
+  const len = str2.length;
   for (let i = 0;i < len; i++)
     hash2 ^= str2.charCodeAt(i), hash2 = Math.imul(hash2, 16777619);
   return hash2 >>> 0;
 };
 
 class Cookie {
-  name;
-  jar;
-  initial;
-  valueHash;
   constructor(name, jar, initial = {}) {
     this.name = name;
     this.jar = jar;
@@ -22685,14 +23005,10 @@ class Cookie {
     return this.jar[this.name] ?? this.initial;
   }
   set cookie(jar) {
-    if (!(this.name in this.jar))
-      this.jar[this.name] = this.initial;
-    this.jar[this.name] = jar, this.valueHash = undefined;
+    this.name in this.jar || (this.jar[this.name] = this.initial), this.jar[this.name] = jar, this.valueHash = undefined;
   }
   get setCookie() {
-    if (!(this.name in this.jar))
-      this.jar[this.name] = this.initial;
-    return this.jar[this.name];
+    return this.name in this.jar || (this.jar[this.name] = this.initial), this.jar[this.name];
   }
   set setCookie(jar) {
     this.cookie = jar;
@@ -22701,25 +23017,23 @@ class Cookie {
     return this.cookie.value;
   }
   set value(value) {
-    let current = this.cookie.value;
-    if (current === value)
-      return;
-    if (typeof current === "object" && current !== null && typeof value === "object" && value !== null)
-      try {
-        let valueStr = JSON.stringify(value), newHash = hashString(valueStr);
-        if (this.valueHash !== undefined && this.valueHash !== newHash)
-          this.valueHash = newHash;
-        else {
-          if (JSON.stringify(current) === valueStr) {
+    const current = this.cookie.value;
+    if (current !== value) {
+      if (typeof current == "object" && current !== null && typeof value == "object" && value !== null)
+        try {
+          const valueStr = JSON.stringify(value), newHash = hashString(valueStr);
+          if (this.valueHash !== undefined && this.valueHash !== newHash)
             this.valueHash = newHash;
-            return;
+          else {
+            if (JSON.stringify(current) === valueStr) {
+              this.valueHash = newHash;
+              return;
+            }
+            this.valueHash = newHash;
           }
-          this.valueHash = newHash;
-        }
-      } catch {}
-    if (!(this.name in this.jar))
-      this.jar[this.name] = { ...this.initial };
-    this.jar[this.name].value = value;
+        } catch {}
+      this.name in this.jar || (this.jar[this.name] = { ...this.initial }), this.jar[this.name].value = value;
+    }
   }
   get expires() {
     return this.cookie.expires;
@@ -22782,42 +23096,47 @@ class Cookie {
     this.setCookie.secrets = secrets;
   }
   update(config) {
-    return this.setCookie = Object.assign(this.cookie, typeof config === "function" ? config(this.cookie) : config), this;
+    return this.setCookie = Object.assign(this.cookie, typeof config == "function" ? config(this.cookie) : config), this;
   }
   set(config) {
-    return this.setCookie = Object.assign({ ...this.initial, value: this.value }, typeof config === "function" ? config(this.cookie) : config), this;
+    return this.setCookie = Object.assign({
+      ...this.initial,
+      value: this.value
+    }, typeof config == "function" ? config(this.cookie) : config), this;
   }
   remove() {
-    if (this.value === undefined)
-      return;
-    return this.set({ expires: new Date(0), maxAge: 0, value: "" }), this;
+    if (this.value !== undefined)
+      return this.set({
+        expires: /* @__PURE__ */ new Date(0),
+        maxAge: 0,
+        value: ""
+      }), this;
   }
   toString() {
-    return typeof this.value === "object" ? JSON.stringify(this.value) : this.value?.toString() ?? "";
+    return typeof this.value == "object" ? JSON.stringify(this.value) : this.value?.toString() ?? "";
   }
 }
-var createCookieJar = (set2, store, initial) => {
-  if (!set2.cookie)
-    set2.cookie = {};
-  return new Proxy(store, { get(_2, key) {
-    if (key in store)
-      return new Cookie(key, set2.cookie, Object.assign({}, initial ?? {}, store[key]));
-    return new Cookie(key, set2.cookie, Object.assign({}, initial));
-  } });
-};
-var parseCookie = async (set2, cookieString, { secrets, sign, ...initial } = {}) => {
+var createCookieJar = (set2, store, initial) => (set2.cookie || (set2.cookie = {}), new Proxy(store, {
+  get(_, key) {
+    return key in store ? new Cookie(key, set2.cookie, Object.assign({}, initial ?? {}, store[key])) : new Cookie(key, set2.cookie, Object.assign({}, initial));
+  }
+}));
+var parseCookie = async (set2, cookieString, {
+  secrets,
+  sign,
+  ...initial
+} = {}) => {
   if (!cookieString)
     return createCookieJar(set2, {}, initial);
-  let isStringKey = typeof secrets === "string";
-  if (sign && sign !== true && !Array.isArray(sign))
-    sign = [sign];
-  let jar = {}, cookies = import_cookie.parse(cookieString);
-  for (let [name, v] of Object.entries(cookies)) {
+  const isStringKey = typeof secrets == "string";
+  sign && sign !== true && !Array.isArray(sign) && (sign = [sign]);
+  const jar = {}, cookies = import_cookie.parse(cookieString);
+  for (const [name, v] of Object.entries(cookies)) {
     if (v === undefined)
       continue;
     let value = import_fast_decode_uri_component.default(v);
     if (value) {
-      let starts = value.charCodeAt(0), ends = value.charCodeAt(value.length - 1);
+      const starts = value.charCodeAt(0), ends = value.charCodeAt(value.length - 1);
       if (starts === 123 && ends === 125 || starts === 91 && ends === 93)
         try {
           value = JSON.parse(value);
@@ -22825,16 +23144,16 @@ var parseCookie = async (set2, cookieString, { secrets, sign, ...initial } = {})
     }
     if (sign === true || sign?.includes(name)) {
       if (!secrets)
-        throw Error("No secret is provided to cookie plugin");
+        throw new Error("No secret is provided to cookie plugin");
       if (isStringKey) {
-        let temp = await unsignCookie(value, secrets);
+        const temp = await unsignCookie(value, secrets);
         if (temp === false)
           throw new InvalidCookieSignature(name);
         value = temp;
       } else {
         let decoded = true;
         for (let i = 0;i < secrets.length; i++) {
-          let temp = await unsignCookie(value, secrets[i]);
+          const temp = await unsignCookie(value, secrets[i]);
           if (temp !== false) {
             decoded = true, value = temp;
             break;
@@ -22844,257 +23163,245 @@ var parseCookie = async (set2, cookieString, { secrets, sign, ...initial } = {})
           throw new InvalidCookieSignature(name);
       }
     }
-    jar[name] = { value };
+    jar[name] = {
+      value
+    };
   }
   return createCookieJar(set2, jar, initial);
 };
 var serializeCookie = (cookies) => {
   if (!cookies || !isNotEmpty(cookies))
     return;
-  let set2 = [];
-  for (let [key, property] of Object.entries(cookies)) {
+  const set2 = [];
+  for (const [key, property] of Object.entries(cookies)) {
     if (!key || !property)
       continue;
-    let value = property.value;
-    if (value === undefined || value === null)
-      continue;
-    set2.push(import_cookie.serialize(key, typeof value === "object" ? JSON.stringify(value) : value + "", property));
+    const value = property.value;
+    value != null && set2.push(import_cookie.serialize(key, typeof value == "object" ? JSON.stringify(value) : value + "", property));
   }
-  if (set2.length === 0)
-    return;
-  if (set2.length === 1)
-    return set2[0];
-  return set2;
+  if (set2.length !== 0)
+    return set2.length === 1 ? set2[0] : set2;
 };
+
+// node_modules/elysia/dist/universal/env.mjs
 var env2 = isBun ? Bun.env : typeof process < "u" && process?.env ? process.env : {};
+
+// node_modules/elysia/dist/adapter/utils.mjs
 var handleFile = (response, set2) => {
   if (!isBun && response instanceof Promise)
     return response.then((res) => handleFile(res, set2));
-  let size = response.size, immutable = set2 && (set2.status === 206 || set2.status === 304 || set2.status === 412 || set2.status === 416), defaultHeader = immutable ? {} : { "accept-ranges": "bytes", "content-range": size ? `bytes 0-${size - 1}/${size}` : undefined };
+  const size = response.size, immutable = set2 && (set2.status === 206 || set2.status === 304 || set2.status === 412 || set2.status === 416), defaultHeader = immutable ? {} : {
+    "accept-ranges": "bytes",
+    "content-range": size ? `bytes 0-${size - 1}/${size}` : undefined
+  };
   if (!set2 && !size)
     return new Response(response);
   if (!set2)
-    return new Response(response, { headers: defaultHeader });
+    return new Response(response, {
+      headers: defaultHeader
+    });
   if (set2.headers instanceof Headers) {
-    for (let key of Object.keys(defaultHeader))
-      if (key in set2.headers)
-        set2.headers.append(key, defaultHeader[key]);
-    if (immutable)
-      set2.headers.delete("content-length"), set2.headers.delete("accept-ranges");
-    return new Response(response, set2);
+    for (const key of Object.keys(defaultHeader))
+      key in set2.headers && set2.headers.append(key, defaultHeader[key]);
+    return immutable && (set2.headers.delete("content-length"), set2.headers.delete("accept-ranges")), new Response(response, set2);
   }
-  if (isNotEmpty(set2.headers))
-    return new Response(response, { status: set2.status, headers: Object.assign(defaultHeader, set2.headers) });
-  return new Response(response, { status: set2.status, headers: defaultHeader });
+  return isNotEmpty(set2.headers) ? new Response(response, {
+    status: set2.status,
+    headers: Object.assign(defaultHeader, set2.headers)
+  }) : new Response(response, {
+    status: set2.status,
+    headers: defaultHeader
+  });
 };
 var parseSetCookies = (headers, setCookie) => {
   if (!headers)
     return headers;
   headers.delete("set-cookie");
   for (let i = 0;i < setCookie.length; i++) {
-    let index = setCookie[i].indexOf("=");
+    const index = setCookie[i].indexOf("=");
     headers.append("set-cookie", `${setCookie[i].slice(0, index)}=${setCookie[i].slice(index + 1) || ""}`);
   }
   return headers;
 };
 var responseToSetHeaders = (response, set2) => {
   if (set2?.headers) {
-    if (response) {
+    if (response)
       if (hasHeaderShorthand)
         Object.assign(set2.headers, response.headers.toJSON());
       else
-        for (let [key, value] of response.headers.entries())
-          if (key in set2.headers)
-            set2.headers[key] = value;
-    }
-    if (set2.status === 200)
-      set2.status = response.status;
-    if (set2.headers["content-encoding"])
-      delete set2.headers["content-encoding"];
-    return set2;
+        for (const [key, value] of response.headers.entries())
+          key in set2.headers && (set2.headers[key] = value);
+    return set2.status === 200 && (set2.status = response.status), set2.headers["content-encoding"] && delete set2.headers["content-encoding"], set2;
   }
   if (!response)
-    return { headers: {}, status: set2?.status ?? 200 };
-  if (hasHeaderShorthand) {
-    if (set2 = { headers: response.headers.toJSON(), status: set2?.status ?? 200 }, set2.headers["content-encoding"])
-      delete set2.headers["content-encoding"];
-    return set2;
-  }
-  set2 = { headers: {}, status: set2?.status ?? 200 };
-  for (let [key, value] of response.headers.entries()) {
-    if (key === "content-encoding")
-      continue;
-    if (key in set2.headers)
-      set2.headers[key] = value;
-  }
+    return {
+      headers: {},
+      status: set2?.status ?? 200
+    };
+  if (hasHeaderShorthand)
+    return set2 = {
+      headers: response.headers.toJSON(),
+      status: set2?.status ?? 200
+    }, set2.headers["content-encoding"] && delete set2.headers["content-encoding"], set2;
+  set2 = {
+    headers: {},
+    status: set2?.status ?? 200
+  };
+  for (const [key, value] of response.headers.entries())
+    key !== "content-encoding" && key in set2.headers && (set2.headers[key] = value);
   return set2;
 };
 var allowRapidStream = env2.ELYSIA_RAPID_STREAM === "true";
 var createStreamHandler = ({ mapResponse, mapCompactResponse }) => async (generator, set2, request) => {
   let init = generator.next?.();
-  if (set2)
-    handleSet(set2);
-  if (init instanceof Promise)
-    init = await init;
-  if (init?.value instanceof ReadableStream)
+  if (set2 && handleSet(set2), init instanceof Promise && (init = await init), init?.value instanceof ReadableStream)
     generator = init.value;
-  else if (init && (typeof init?.done > "u" || init?.done)) {
-    if (set2)
-      return mapResponse(init.value, set2, request);
-    return mapCompactResponse(init.value, request);
-  }
-  let isSSE = init?.value?.sse ?? generator?.sse ?? set2?.headers["content-type"]?.startsWith("text/event-stream"), format = isSSE ? (data) => `data: ${data}
+  else if (init && (typeof init?.done > "u" || init?.done))
+    return set2 ? mapResponse(init.value, set2, request) : mapCompactResponse(init.value, request);
+  const isSSE = init?.value?.sse ?? generator?.sse ?? set2?.headers["content-type"]?.startsWith("text/event-stream"), format = isSSE ? (data) => `data: ${data}
 
-` : (data) => data, contentType = isSSE ? "text/event-stream" : init?.value && typeof init?.value === "object" ? "application/json" : "text/plain";
-  if (set2?.headers) {
-    if (!set2.headers["transfer-encoding"])
-      set2.headers["transfer-encoding"] = "chunked";
-    if (!set2.headers["content-type"])
-      set2.headers["content-type"] = contentType;
-    if (!set2.headers["cache-control"])
-      set2.headers["cache-control"] = "no-cache";
-  } else
-    set2 = { status: 200, headers: { "content-type": contentType, "transfer-encoding": "chunked", "cache-control": "no-cache", connection: "keep-alive" } };
-  let isBrowser = request?.headers.has("Origin");
-  return new Response(new ReadableStream({ async start(controller) {
-    let end = false;
-    if (request?.signal?.addEventListener("abort", () => {
-      end = true;
+` : (data) => data, contentType = isSSE ? "text/event-stream" : init?.value && typeof init?.value == "object" ? "application/json" : "text/plain";
+  set2?.headers ? (set2.headers["transfer-encoding"] || (set2.headers["transfer-encoding"] = "chunked"), set2.headers["content-type"] || (set2.headers["content-type"] = contentType), set2.headers["cache-control"] || (set2.headers["cache-control"] = "no-cache")) : set2 = {
+    status: 200,
+    headers: {
+      "content-type": contentType,
+      "transfer-encoding": "chunked",
+      "cache-control": "no-cache",
+      connection: "keep-alive"
+    }
+  };
+  const isBrowser = request?.headers.has("Origin");
+  return new Response(new ReadableStream({
+    async start(controller) {
+      let end = false;
+      if (request?.signal?.addEventListener("abort", () => {
+        end = true;
+        try {
+          controller.close();
+        } catch {}
+      }), !(!init || init.value instanceof ReadableStream)) {
+        if (init.value !== undefined && init.value !== null)
+          if (init.value.toSSE)
+            controller.enqueue(init.value.toSSE());
+          else if (typeof init.value == "object")
+            try {
+              controller.enqueue(format(JSON.stringify(init.value)));
+            } catch {
+              controller.enqueue(format(init.value.toString()));
+            }
+          else
+            controller.enqueue(format(init.value.toString()));
+      }
+      try {
+        for await (const chunk of generator) {
+          if (end)
+            break;
+          if (chunk != null)
+            if (chunk.toSSE)
+              controller.enqueue(chunk.toSSE());
+            else {
+              if (typeof chunk == "object")
+                try {
+                  controller.enqueue(format(JSON.stringify(chunk)));
+                } catch {
+                  controller.enqueue(format(chunk.toString()));
+                }
+              else
+                controller.enqueue(format(chunk.toString()));
+              !allowRapidStream && isBrowser && !isSSE && await new Promise((resolve) => setTimeout(() => resolve(), 0));
+            }
+        }
+      } catch (error) {
+        console.warn(error);
+      }
       try {
         controller.close();
       } catch {}
-    }), !init || init.value instanceof ReadableStream)
-      ;
-    else if (init.value !== undefined && init.value !== null)
-      if (init.value.toSSE)
-        controller.enqueue(init.value.toSSE());
-      else if (typeof init.value === "object")
-        try {
-          controller.enqueue(format(JSON.stringify(init.value)));
-        } catch {
-          controller.enqueue(format(init.value.toString()));
-        }
-      else
-        controller.enqueue(format(init.value.toString()));
-    try {
-      for await (let chunk of generator) {
-        if (end)
-          break;
-        if (chunk === undefined || chunk === null)
-          continue;
-        if (chunk.toSSE)
-          controller.enqueue(chunk.toSSE());
-        else {
-          if (typeof chunk === "object")
-            try {
-              controller.enqueue(format(JSON.stringify(chunk)));
-            } catch {
-              controller.enqueue(format(chunk.toString()));
-            }
-          else
-            controller.enqueue(format(chunk.toString()));
-          if (!allowRapidStream && isBrowser && !isSSE)
-            await new Promise((resolve) => setTimeout(() => resolve(), 0));
-        }
-      }
-    } catch (error) {
-      console.warn(error);
     }
-    try {
-      controller.close();
-    } catch {}
-  } }), set2);
+  }), set2);
 };
 async function* streamResponse(response) {
-  let body = response.body;
+  const body = response.body;
   if (!body)
     return;
-  let reader = body.getReader(), decoder = new TextDecoder;
+  const reader = body.getReader(), decoder = new TextDecoder;
   try {
-    while (true) {
-      let { done, value } = await reader.read();
+    for (;; ) {
+      const { done, value } = await reader.read();
       if (done)
         break;
-      if (typeof value === "string")
-        yield value;
-      else
-        yield decoder.decode(value);
+      typeof value == "string" ? yield value : yield decoder.decode(value);
     }
   } finally {
     reader.releaseLock();
   }
 }
 var handleSet = (set2) => {
-  if (typeof set2.status === "string")
-    set2.status = StatusMap[set2.status];
-  if (set2.cookie && isNotEmpty(set2.cookie)) {
-    let cookie = serializeCookie(set2.cookie);
-    if (cookie)
-      set2.headers["set-cookie"] = cookie;
+  if (typeof set2.status == "string" && (set2.status = StatusMap[set2.status]), set2.cookie && isNotEmpty(set2.cookie)) {
+    const cookie = serializeCookie(set2.cookie);
+    cookie && (set2.headers["set-cookie"] = cookie);
   }
-  if (set2.headers["set-cookie"] && Array.isArray(set2.headers["set-cookie"]))
-    set2.headers = parseSetCookies(new Headers(set2.headers), set2.headers["set-cookie"]);
+  set2.headers["set-cookie"] && Array.isArray(set2.headers["set-cookie"]) && (set2.headers = parseSetCookies(new Headers(set2.headers), set2.headers["set-cookie"]));
 };
 var createResponseHandler = (handler) => {
-  let handleStream = createStreamHandler(handler);
+  const handleStream = createStreamHandler(handler);
   return (response, set2, request) => {
     let isCookieSet = false;
     if (set2.headers instanceof Headers)
-      for (let key of set2.headers.keys())
+      for (const key of set2.headers.keys())
         if (key === "set-cookie") {
           if (isCookieSet)
             continue;
           isCookieSet = true;
-          for (let cookie of set2.headers.getSetCookie())
+          for (const cookie of set2.headers.getSetCookie())
             response.headers.append("set-cookie", cookie);
         } else
           response.headers.append(key, set2.headers?.get(key) ?? "");
     else
-      for (let key in set2.headers)
+      for (const key in set2.headers)
         response.headers.append(key, set2.headers[key]);
-    let status2 = set2.status ?? 200;
+    const status2 = set2.status ?? 200;
     if (response.status !== status2 && status2 !== 200 && (response.status <= 300 || response.status > 400)) {
-      let newResponse = new Response(response.body, { headers: response.headers, status: set2.status });
-      if (!newResponse.headers.has("content-length") && newResponse.headers.get("transfer-encoding") === "chunked")
-        return handleStream(streamResponse(newResponse), responseToSetHeaders(newResponse, set2), request);
-      return newResponse;
+      const newResponse = new Response(response.body, {
+        headers: response.headers,
+        status: set2.status
+      });
+      return !newResponse.headers.has("content-length") && newResponse.headers.get("transfer-encoding") === "chunked" ? handleStream(streamResponse(newResponse), responseToSetHeaders(newResponse, set2), request) : newResponse;
     }
-    if (!response.headers.has("content-length") && response.headers.get("transfer-encoding") === "chunked")
-      return handleStream(streamResponse(response), responseToSetHeaders(response, set2), request);
-    return response;
+    return !response.headers.has("content-length") && response.headers.get("transfer-encoding") === "chunked" ? handleStream(streamResponse(response), responseToSetHeaders(response, set2), request) : response;
   };
 };
 async function tee(source, branches = 2) {
-  let buffer = [], done = false, waiting = [];
+  const buffer = [];
+  let done = false, waiting = [];
   (async () => {
-    for await (let value of source)
+    for await (const value of source)
       buffer.push(value), waiting.forEach((w) => w.resolve()), waiting = [];
     done = true, waiting.forEach((w) => w.resolve());
   })();
   async function* makeIterator() {
     let i = 0;
-    while (true)
+    for (;; )
       if (i < buffer.length)
         yield buffer[i++];
-      else if (done)
-        return;
-      else
+      else {
+        if (done)
+          return;
         await new Promise((resolve) => waiting.push({ resolve }));
+      }
   }
   return Array.from({ length: branches }, makeIterator);
 }
-var handleElysiaFile = (file2, set2 = { headers: {} }) => {
-  let path = file2.path, contentType = mime[path.slice(path.lastIndexOf(".") + 1)];
-  if (contentType)
-    set2.headers["content-type"] = contentType;
-  if (file2.stats && set2.status !== 206 && set2.status !== 304 && set2.status !== 412 && set2.status !== 416)
-    return file2.stats.then((stat2) => {
-      let size = stat2.size;
-      if (size !== undefined)
-        set2.headers["content-range"] = `bytes 0-${size - 1}/${size}`, set2.headers["content-length"] = size;
-      return handleFile(file2.value, set2);
-    });
-  return handleFile(file2.value, set2);
+
+// node_modules/elysia/dist/adapter/web-standard/handler.mjs
+var handleElysiaFile = (file2, set2 = {
+  headers: {}
+}) => {
+  const path = file2.path, contentType = mime[path.slice(path.lastIndexOf(".") + 1)];
+  return contentType && (set2.headers["content-type"] = contentType), file2.stats && set2.status !== 206 && set2.status !== 304 && set2.status !== 412 && set2.status !== 416 ? file2.stats.then((stat2) => {
+    const size = stat2.size;
+    return size !== undefined && (set2.headers["content-range"] = `bytes 0-${size - 1}/${size}`, set2.headers["content-length"] = size), handleFile(file2.value, set2);
+  }) : handleFile(file2.value, set2);
 };
 var mapResponse = (response, set2, request) => {
   if (isNotEmpty(set2.headers) || set2.status !== 200 || set2.cookie)
@@ -23113,9 +23420,7 @@ var mapResponse = (response, set2, request) => {
       case "ElysiaCustomStatusResponse":
         return set2.status = response.code, mapResponse(response.response, set2, request);
       case undefined:
-        if (!response)
-          return new Response("", set2);
-        return new Response(JSON.stringify(response), set2);
+        return response ? new Response(JSON.stringify(response), set2) : new Response("", set2);
       case "Response":
         return handleResponse(response, set2, request);
       case "Error":
@@ -23128,9 +23433,7 @@ var mapResponse = (response, set2, request) => {
       case "Boolean":
         return new Response(response.toString(), set2);
       case "Cookie":
-        if (response instanceof Cookie)
-          return new Response(response.value, set2);
-        return new Response(response?.toString(), set2);
+        return response instanceof Cookie ? new Response(response.value, set2) : new Response(response?.toString(), set2);
       case "FormData":
         return new Response(response, set2);
       default:
@@ -23142,163 +23445,155 @@ var mapResponse = (response, set2, request) => {
           return errorToResponse(response, set2);
         if (response instanceof ElysiaCustomStatusResponse)
           return set2.status = response.code, mapResponse(response.response, set2, request);
-        if (typeof response?.next === "function" || response instanceof ReadableStream)
+        if (typeof response?.next == "function" || response instanceof ReadableStream)
           return handleStream(response, set2, request);
-        if (typeof response?.then === "function")
+        if (typeof response?.then == "function")
           return response.then((x) => mapResponse(x, set2));
-        if (typeof response?.toResponse === "function")
+        if (typeof response?.toResponse == "function")
           return mapResponse(response.toResponse(), set2);
         if ("charCodeAt" in response) {
-          let code = response.charCodeAt(0);
-          if (code === 123 || code === 91) {
-            if (!set2.headers["Content-Type"])
-              set2.headers["Content-Type"] = "application/json";
-            return new Response(JSON.stringify(response), set2);
-          }
+          const code = response.charCodeAt(0);
+          if (code === 123 || code === 91)
+            return set2.headers["Content-Type"] || (set2.headers["Content-Type"] = "application/json"), new Response(JSON.stringify(response), set2);
         }
         return new Response(response, set2);
     }
-  if (typeof response?.next === "function" || response instanceof ReadableStream)
-    return handleStream(response, set2, request);
-  return mapCompactResponse(response, request);
+  return typeof response?.next == "function" || response instanceof ReadableStream ? handleStream(response, set2, request) : mapCompactResponse(response, request);
 };
 var mapEarlyResponse = (response, set2, request) => {
-  if (response === undefined || response === null)
-    return;
-  if (isNotEmpty(set2.headers) || set2.status !== 200 || set2.cookie)
-    switch (handleSet(set2), response?.constructor?.name) {
-      case "String":
-        return set2.headers["content-type"] = "text/plain", new Response(response, set2);
-      case "Array":
-      case "Object":
-        return set2.headers["content-type"] = "application/json", new Response(JSON.stringify(response), set2);
-      case "ElysiaFile":
-        return handleElysiaFile(response, set2);
-      case "File":
-        return handleFile(response, set2);
-      case "Blob":
-        return handleFile(response, set2);
-      case "ElysiaCustomStatusResponse":
-        return set2.status = response.code, mapEarlyResponse(response.response, set2, request);
-      case undefined:
-        if (!response)
-          return;
-        return new Response(JSON.stringify(response), set2);
-      case "Response":
-        return handleResponse(response, set2, request);
-      case "Promise":
-        return response.then((x) => mapEarlyResponse(x, set2));
-      case "Error":
-        return errorToResponse(response, set2);
-      case "Function":
-        return mapEarlyResponse(response(), set2);
-      case "Number":
-      case "Boolean":
-        return new Response(response.toString(), set2);
-      case "FormData":
-        return new Response(response);
-      case "Cookie":
-        if (response instanceof Cookie)
-          return new Response(response.value, set2);
-        return new Response(response?.toString(), set2);
-      default:
-        if (response instanceof Response)
+  if (response != null)
+    if (isNotEmpty(set2.headers) || set2.status !== 200 || set2.cookie)
+      switch (handleSet(set2), response?.constructor?.name) {
+        case "String":
+          return set2.headers["content-type"] = "text/plain", new Response(response, set2);
+        case "Array":
+        case "Object":
+          return set2.headers["content-type"] = "application/json", new Response(JSON.stringify(response), set2);
+        case "ElysiaFile":
+          return handleElysiaFile(response, set2);
+        case "File":
+          return handleFile(response, set2);
+        case "Blob":
+          return handleFile(response, set2);
+        case "ElysiaCustomStatusResponse":
+          return set2.status = response.code, mapEarlyResponse(response.response, set2, request);
+        case undefined:
+          return response ? new Response(JSON.stringify(response), set2) : undefined;
+        case "Response":
           return handleResponse(response, set2, request);
-        if (response instanceof Promise)
+        case "Promise":
           return response.then((x) => mapEarlyResponse(x, set2));
-        if (response instanceof Error)
+        case "Error":
           return errorToResponse(response, set2);
-        if (response instanceof ElysiaCustomStatusResponse)
-          return set2.status = response.code, mapEarlyResponse(response.response, set2, request);
-        if (typeof response?.next === "function" || response instanceof ReadableStream)
-          return handleStream(response, set2, request);
-        if (typeof response?.then === "function")
-          return response.then((x) => mapEarlyResponse(x, set2));
-        if (typeof response?.toResponse === "function")
-          return mapEarlyResponse(response.toResponse(), set2);
-        if ("charCodeAt" in response) {
-          let code = response.charCodeAt(0);
-          if (code === 123 || code === 91) {
-            if (!set2.headers["Content-Type"])
-              set2.headers["Content-Type"] = "application/json";
-            return new Response(JSON.stringify(response), set2);
+        case "Function":
+          return mapEarlyResponse(response(), set2);
+        case "Number":
+        case "Boolean":
+          return new Response(response.toString(), set2);
+        case "FormData":
+          return new Response(response);
+        case "Cookie":
+          return response instanceof Cookie ? new Response(response.value, set2) : new Response(response?.toString(), set2);
+        default:
+          if (response instanceof Response)
+            return handleResponse(response, set2, request);
+          if (response instanceof Promise)
+            return response.then((x) => mapEarlyResponse(x, set2));
+          if (response instanceof Error)
+            return errorToResponse(response, set2);
+          if (response instanceof ElysiaCustomStatusResponse)
+            return set2.status = response.code, mapEarlyResponse(response.response, set2, request);
+          if (typeof response?.next == "function" || response instanceof ReadableStream)
+            return handleStream(response, set2, request);
+          if (typeof response?.then == "function")
+            return response.then((x) => mapEarlyResponse(x, set2));
+          if (typeof response?.toResponse == "function")
+            return mapEarlyResponse(response.toResponse(), set2);
+          if ("charCodeAt" in response) {
+            const code = response.charCodeAt(0);
+            if (code === 123 || code === 91)
+              return set2.headers["Content-Type"] || (set2.headers["Content-Type"] = "application/json"), new Response(JSON.stringify(response), set2);
           }
-        }
-        return new Response(response, set2);
-    }
-  else
-    switch (response?.constructor?.name) {
-      case "String":
-        return set2.headers["content-type"] = "text/plain", new Response(response);
-      case "Array":
-      case "Object":
-        return set2.headers["content-type"] = "application/json", new Response(JSON.stringify(response), set2);
-      case "ElysiaFile":
-        return handleElysiaFile(response, set2);
-      case "File":
-        return handleFile(response, set2);
-      case "Blob":
-        return handleFile(response, set2);
-      case "ElysiaCustomStatusResponse":
-        return set2.status = response.code, mapEarlyResponse(response.response, set2, request);
-      case undefined:
-        if (!response)
-          return new Response("");
-        return new Response(JSON.stringify(response), { headers: { "content-type": "application/json" } });
-      case "Response":
-        return response;
-      case "Promise":
-        return response.then((x) => {
-          let r = mapEarlyResponse(x, set2);
-          if (r !== undefined)
-            return r;
-        });
-      case "Error":
-        return errorToResponse(response, set2);
-      case "Function":
-        return mapCompactResponse(response(), request);
-      case "Number":
-      case "Boolean":
-        return new Response(response.toString());
-      case "Cookie":
-        if (response instanceof Cookie)
-          return new Response(response.value, set2);
-        return new Response(response?.toString(), set2);
-      case "FormData":
-        return new Response(response);
-      default:
-        if (response instanceof Response)
+          return new Response(response, set2);
+      }
+    else
+      switch (response?.constructor?.name) {
+        case "String":
+          return set2.headers["content-type"] = "text/plain", new Response(response);
+        case "Array":
+        case "Object":
+          return set2.headers["content-type"] = "application/json", new Response(JSON.stringify(response), set2);
+        case "ElysiaFile":
+          return handleElysiaFile(response, set2);
+        case "File":
+          return handleFile(response, set2);
+        case "Blob":
+          return handleFile(response, set2);
+        case "ElysiaCustomStatusResponse":
+          return set2.status = response.code, mapEarlyResponse(response.response, set2, request);
+        case undefined:
+          return response ? new Response(JSON.stringify(response), {
+            headers: {
+              "content-type": "application/json"
+            }
+          }) : new Response("");
+        case "Response":
           return response;
-        if (response instanceof Promise)
-          return response.then((x) => mapEarlyResponse(x, set2));
-        if (response instanceof Error)
+        case "Promise":
+          return response.then((x) => {
+            const r = mapEarlyResponse(x, set2);
+            if (r !== undefined)
+              return r;
+          });
+        case "Error":
           return errorToResponse(response, set2);
-        if (response instanceof ElysiaCustomStatusResponse)
-          return set2.status = response.code, mapEarlyResponse(response.response, set2, request);
-        if (typeof response?.next === "function" || response instanceof ReadableStream)
-          return handleStream(response, set2, request);
-        if (typeof response?.then === "function")
-          return response.then((x) => mapEarlyResponse(x, set2));
-        if (typeof response?.toResponse === "function")
-          return mapEarlyResponse(response.toResponse(), set2);
-        if ("charCodeAt" in response) {
-          let code = response.charCodeAt(0);
-          if (code === 123 || code === 91) {
-            if (!set2.headers["Content-Type"])
-              set2.headers["Content-Type"] = "application/json";
-            return new Response(JSON.stringify(response), set2);
+        case "Function":
+          return mapCompactResponse(response(), request);
+        case "Number":
+        case "Boolean":
+          return new Response(response.toString());
+        case "Cookie":
+          return response instanceof Cookie ? new Response(response.value, set2) : new Response(response?.toString(), set2);
+        case "FormData":
+          return new Response(response);
+        default:
+          if (response instanceof Response)
+            return response;
+          if (response instanceof Promise)
+            return response.then((x) => mapEarlyResponse(x, set2));
+          if (response instanceof Error)
+            return errorToResponse(response, set2);
+          if (response instanceof ElysiaCustomStatusResponse)
+            return set2.status = response.code, mapEarlyResponse(response.response, set2, request);
+          if (typeof response?.next == "function" || response instanceof ReadableStream)
+            return handleStream(response, set2, request);
+          if (typeof response?.then == "function")
+            return response.then((x) => mapEarlyResponse(x, set2));
+          if (typeof response?.toResponse == "function")
+            return mapEarlyResponse(response.toResponse(), set2);
+          if ("charCodeAt" in response) {
+            const code = response.charCodeAt(0);
+            if (code === 123 || code === 91)
+              return set2.headers["Content-Type"] || (set2.headers["Content-Type"] = "application/json"), new Response(JSON.stringify(response), set2);
           }
-        }
-        return new Response(response);
-    }
+          return new Response(response);
+      }
 };
 var mapCompactResponse = (response, request) => {
   switch (response?.constructor?.name) {
     case "String":
-      return new Response(response, { headers: { "Content-Type": "text/plain" } });
+      return new Response(response, {
+        headers: {
+          "Content-Type": "text/plain"
+        }
+      });
     case "Object":
     case "Array":
-      return new Response(JSON.stringify(response), { headers: { "Content-Type": "application/json" } });
+      return new Response(JSON.stringify(response), {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
     case "ElysiaFile":
       return handleElysiaFile(response);
     case "File":
@@ -23306,11 +23601,16 @@ var mapCompactResponse = (response, request) => {
     case "Blob":
       return handleFile(response);
     case "ElysiaCustomStatusResponse":
-      return mapResponse(response.response, { status: response.code, headers: {} });
+      return mapResponse(response.response, {
+        status: response.code,
+        headers: {}
+      });
     case undefined:
-      if (!response)
-        return new Response("");
-      return new Response(JSON.stringify(response), { headers: { "content-type": "application/json" } });
+      return response ? new Response(JSON.stringify(response), {
+        headers: {
+          "content-type": "application/json"
+        }
+      }) : new Response("");
     case "Response":
       return response;
     case "Error":
@@ -23332,319 +23632,339 @@ var mapCompactResponse = (response, request) => {
       if (response instanceof Error)
         return errorToResponse(response);
       if (response instanceof ElysiaCustomStatusResponse)
-        return mapResponse(response.response, { status: response.code, headers: {} });
-      if (typeof response?.next === "function" || response instanceof ReadableStream)
+        return mapResponse(response.response, {
+          status: response.code,
+          headers: {}
+        });
+      if (typeof response?.next == "function" || response instanceof ReadableStream)
         return handleStream(response, undefined, request);
-      if (typeof response?.then === "function")
+      if (typeof response?.then == "function")
         return response.then((x) => mapResponse(x, set));
-      if (typeof response?.toResponse === "function")
+      if (typeof response?.toResponse == "function")
         return mapCompactResponse(response.toResponse());
       if ("charCodeAt" in response) {
-        let code = response.charCodeAt(0);
+        const code = response.charCodeAt(0);
         if (code === 123 || code === 91)
-          return new Response(JSON.stringify(response), { headers: { "Content-Type": "application/json" } });
+          return new Response(JSON.stringify(response), {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
       }
       return new Response(response);
   }
 };
 var errorToResponse = (error, set2) => {
-  if (typeof error?.toResponse === "function") {
-    let raw = error.toResponse(), targetSet = set2 ?? { headers: {}, status: 200, redirect: "" }, apply = (resolved) => {
-      if (resolved instanceof Response)
-        targetSet.status = resolved.status;
-      return mapResponse(resolved, targetSet);
-    };
-    return typeof raw?.then === "function" ? raw.then(apply) : apply(raw);
+  if (typeof error?.toResponse == "function") {
+    const raw = error.toResponse(), targetSet = set2 ?? { headers: {}, status: 200, redirect: "" }, apply = (resolved) => (resolved instanceof Response && (targetSet.status = resolved.status), mapResponse(resolved, targetSet));
+    return typeof raw?.then == "function" ? raw.then(apply) : apply(raw);
   }
-  return new Response(JSON.stringify({ name: error?.name, message: error?.message, cause: error?.cause }), { status: set2?.status !== 200 ? set2?.status ?? 500 : 500, headers: set2?.headers });
+  return new Response(JSON.stringify({
+    name: error?.name,
+    message: error?.message,
+    cause: error?.cause
+  }), {
+    status: set2?.status !== 200 ? set2?.status ?? 500 : 500,
+    headers: set2?.headers
+  });
 };
 var createStaticHandler = (handle, hooks, setHeaders = {}) => {
-  if (typeof handle === "function")
+  if (typeof handle == "function")
     return;
-  let response = mapResponse(handle, { headers: setHeaders });
+  const response = mapResponse(handle, {
+    headers: setHeaders
+  });
   if (!hooks.parse?.length && !hooks.transform?.length && !hooks.beforeHandle?.length && !hooks.afterHandle?.length)
     return () => response.clone();
 };
-var handleResponse = createResponseHandler({ mapResponse, mapCompactResponse });
-var handleStream = createStreamHandler({ mapResponse, mapCompactResponse });
-var WebStandardAdapter = { name: "web-standard", isWebStandard: true, handler: { mapResponse, mapEarlyResponse, mapCompactResponse, createStaticHandler }, composeHandler: { mapResponseContext: "c.request", preferWebstandardHeaders: true, headers: `c.headers={}
+var handleResponse = createResponseHandler({
+  mapResponse,
+  mapCompactResponse
+});
+var handleStream = createStreamHandler({
+  mapResponse,
+  mapCompactResponse
+});
+
+// node_modules/elysia/dist/adapter/web-standard/index.mjs
+var WebStandardAdapter = {
+  name: "web-standard",
+  isWebStandard: true,
+  handler: {
+    mapResponse,
+    mapEarlyResponse,
+    mapCompactResponse,
+    createStaticHandler
+  },
+  composeHandler: {
+    mapResponseContext: "c.request",
+    preferWebstandardHeaders: true,
+    headers: `c.headers={}
 for(const [k,v] of c.request.headers.entries())c.headers[k]=v
-`, parser: { json(isOptional) {
-  if (isOptional)
-    return `try{c.body=await c.request.json()}catch{}
+`,
+    parser: {
+      json(isOptional) {
+        return isOptional ? `try{c.body=await c.request.json()}catch{}
+` : `c.body=await c.request.json()
 `;
-  return `c.body=await c.request.json()
+      },
+      text() {
+        return `c.body=await c.request.text()
 `;
-}, text() {
-  return `c.body=await c.request.text()
+      },
+      urlencoded() {
+        return `c.body=parseQuery(await c.request.text())
 `;
-}, urlencoded() {
-  return `c.body=parseQuery(await c.request.text())
+      },
+      arrayBuffer() {
+        return `c.body=await c.request.arrayBuffer()
 `;
-}, arrayBuffer() {
-  return `c.body=await c.request.arrayBuffer()
-`;
-}, formData(isOptional) {
-  let fnLiteral = `
+      },
+      formData(isOptional) {
+        let fnLiteral = `
 c.body={}
 `;
-  if (isOptional)
-    fnLiteral += "let form;try{form=await c.request.formData()}catch{}";
-  else
-    fnLiteral += `const form=await c.request.formData()
-`;
-  return fnLiteral + `for(const key of form.keys()){if(c.body[key]) continue
+        return isOptional ? fnLiteral += "let form;try{form=await c.request.formData()}catch{}" : fnLiteral += `const form=await c.request.formData()
+`, fnLiteral + `for(const key of form.keys()){if(c.body[key]) continue
 const value=form.getAll(key)
 if(value.length===1)c.body[key]=value[0]
 else c.body[key]=value}`;
-} } }, async stop(app, closeActiveConnections) {
-  if (!app.server)
-    throw Error("Elysia isn't running. Call `app.listen` to start the server.");
-  if (app.server) {
-    if (await app.server.stop(closeActiveConnections), app.server = null, app.event.stop?.length)
+      }
+    }
+  },
+  async stop(app, closeActiveConnections) {
+    if (!app.server)
+      throw new Error("Elysia isn't running. Call `app.listen` to start the server.");
+    if (app.server && (await app.server.stop(closeActiveConnections), app.server = null, app.event.stop?.length))
       for (let i = 0;i < app.event.stop.length; i++)
         app.event.stop[i].fn(app);
-  }
-}, composeGeneralHandler: { parameters: "r", createContext(app) {
-  let decoratorsLiteral = "", fnLiteral = "", defaultHeaders = app.setHeaders;
-  for (let key of Object.keys(app.decorator))
-    decoratorsLiteral += `,'${key}':decorator['${key}']`;
-  let standardHostname = app.config.handler?.standardHostname ?? true, hasTrace = !!app.event.trace?.length;
-  if (fnLiteral += `const u=r.url,s=u.indexOf('/',${standardHostname ? 11 : 7}),qi=u.indexOf('?',s+1),p=u.substring(s,qi===-1?undefined:qi)
-`, hasTrace)
-    fnLiteral += `const id=randomId()
-`;
-  if (fnLiteral += "const c={request:r,store,qi,path:p,url:u,redirect,status,set:{headers:", fnLiteral += Object.keys(defaultHeaders ?? {}).length ? "Object.assign({},app.setHeaders)" : "Object.create(null)", fnLiteral += ",status:200}", app.inference.server)
-    fnLiteral += ",get server(){return app.getServer()}";
-  if (hasTrace)
-    fnLiteral += ",[ELYSIA_REQUEST_ID]:id";
-  return fnLiteral += decoratorsLiteral, fnLiteral += `}
+  },
+  composeGeneralHandler: {
+    parameters: "r",
+    createContext(app) {
+      let decoratorsLiteral = "", fnLiteral = "";
+      const defaultHeaders = app.setHeaders;
+      for (const key of Object.keys(app.decorator))
+        decoratorsLiteral += `,'${key}':decorator['${key}']`;
+      const standardHostname = app.config.handler?.standardHostname ?? true, hasTrace = !!app.event.trace?.length;
+      return fnLiteral += `const u=r.url,s=u.indexOf('/',${standardHostname ? 11 : 7}),qi=u.indexOf('?',s+1),p=u.substring(s,qi===-1?undefined:qi)
+`, hasTrace && (fnLiteral += `const id=randomId()
+`), fnLiteral += "const c={request:r,store,qi,path:p,url:u,redirect,status,set:{headers:", fnLiteral += Object.keys(defaultHeaders ?? {}).length ? "Object.assign({},app.setHeaders)" : "Object.create(null)", fnLiteral += ",status:200}", app.inference.server && (fnLiteral += ",get server(){return app.getServer()}"), hasTrace && (fnLiteral += ",[ELYSIA_REQUEST_ID]:id"), fnLiteral += decoratorsLiteral, fnLiteral += `}
 `, fnLiteral;
-}, error404(hasEventHook, hasErrorHook, afterHandle = "") {
-  let findDynamicRoute = "if(route===null){" + afterHandle + (hasErrorHook ? "" : "c.set.status=404") + `
+    },
+    error404(hasEventHook, hasErrorHook, afterHandle = "") {
+      let findDynamicRoute = "if(route===null){" + afterHandle + (hasErrorHook ? "" : "c.set.status=404") + `
 return `;
-  if (hasErrorHook)
-    findDynamicRoute += `app.handleError(c,notFound,false,${this.parameters})`;
-  else
-    findDynamicRoute += hasEventHook ? "c.response=c.responseValue=new Response(error404Message,{status:c.set.status===200?404:c.set.status,headers:c.set.headers})" : "c.response=c.responseValue=error404.clone()";
-  return findDynamicRoute += "}", { declare: hasErrorHook ? "" : `const error404Message=notFound.message.toString()
+      return hasErrorHook ? findDynamicRoute += `app.handleError(c,notFound,false,${this.parameters})` : findDynamicRoute += hasEventHook ? "c.response=c.responseValue=new Response(error404Message,{status:c.set.status===200?404:c.set.status,headers:c.set.headers})" : "c.response=c.responseValue=error404.clone()", findDynamicRoute += "}", {
+        declare: hasErrorHook ? "" : `const error404Message=notFound.message.toString()
 const error404=new Response(error404Message,{status:404})
-`, code: findDynamicRoute };
-} }, composeError: { mapResponseContext: "", validationError: "set.headers['content-type']='application/json';return mapResponse(error.message,set)", unknownError: "set.status=error.status??set.status??500;return mapResponse(error.message,set)" }, listen() {
-  return () => {
-    throw Error("WebStandard does not support listen, you might want to export default Elysia.fetch instead");
-  };
-} };
+`,
+        code: findDynamicRoute
+      };
+    }
+  },
+  composeError: {
+    mapResponseContext: "",
+    validationError: "set.headers['content-type']='application/json';return mapResponse(error.message,set)",
+    unknownError: "set.status=error.status??set.status??500;return mapResponse(error.message,set)"
+  },
+  listen() {
+    return () => {
+      throw new Error("WebStandard does not support listen, you might want to export default Elysia.fetch instead");
+    };
+  }
+};
+
+// node_modules/elysia/dist/adapter/cloudflare-worker/index.mjs
 function isCloudflareWorker() {
   try {
-    if (typeof caches < "u" && typeof caches.default < "u")
-      return true;
-    if (typeof WebSocketPair < "u")
+    if (typeof caches < "u" && typeof caches.default < "u" || typeof WebSocketPair < "u")
       return true;
   } catch {
     return false;
   }
   return false;
 }
-var CloudflareAdapter = { ...WebStandardAdapter, name: "cloudflare-worker", composeGeneralHandler: { ...WebStandardAdapter.composeGeneralHandler, error404(hasEventHook, hasErrorHook, afterHandle) {
-  let { code } = WebStandardAdapter.composeGeneralHandler.error404(hasEventHook, hasErrorHook, afterHandle);
-  return { code, declare: hasErrorHook ? "" : `const error404Message=notFound.message.toString()
+var CloudflareAdapter = {
+  ...WebStandardAdapter,
+  name: "cloudflare-worker",
+  composeGeneralHandler: {
+    ...WebStandardAdapter.composeGeneralHandler,
+    error404(hasEventHook, hasErrorHook, afterHandle) {
+      const { code } = WebStandardAdapter.composeGeneralHandler.error404(hasEventHook, hasErrorHook, afterHandle);
+      return {
+        code,
+        declare: hasErrorHook ? "" : `const error404Message=notFound.message.toString()
 const error404={clone:()=>new Response(error404Message,{status:404})}
-` };
-} }, beforeCompile(app) {
-  for (let route of app.routes)
-    route.compile();
-}, listen(app) {
-  return (options2, callback) => {
-    console.warn("Cloudflare Worker does not support listen method. Please export default Elysia instance instead."), app.compile();
-  };
-} };
-var separateFunction = (code) => {
-  if (code.startsWith("async"))
-    code = code.slice(5);
-  code = code.trimStart();
-  let index = -1;
-  if (code.charCodeAt(0) === 40) {
-    if (index = code.indexOf("=>", code.indexOf(")")), index !== -1) {
-      let bracketEndIndex = index;
-      while (bracketEndIndex > 0)
-        if (code.charCodeAt(--bracketEndIndex) === 41)
-          break;
-      let body = code.slice(index + 2);
-      if (body.charCodeAt(0) === 32)
-        body = body.trimStart();
-      return [code.slice(1, bracketEndIndex), body, { isArrowReturn: body.charCodeAt(0) !== 123 }];
+`
+      };
     }
+  },
+  beforeCompile(app) {
+    for (const route of app.routes)
+      route.compile();
+  },
+  listen(app) {
+    return (options2, callback) => {
+      console.warn("Cloudflare Worker does not support listen method. Please export default Elysia instance instead."), app.compile();
+    };
   }
-  if (/^(\w+)=>/g.test(code)) {
-    if (index = code.indexOf("=>"), index !== -1) {
-      let body = code.slice(index + 2);
-      if (body.charCodeAt(0) === 32)
-        body = body.trimStart();
-      return [code.slice(0, index), body, { isArrowReturn: body.charCodeAt(0) !== 123 }];
-    }
+};
+
+// node_modules/elysia/dist/sucrose.mjs
+var separateFunction = (code) => {
+  code.startsWith("async") && (code = code.slice(5)), code = code.trimStart();
+  let index = -1;
+  if (code.charCodeAt(0) === 40 && (index = code.indexOf("=>", code.indexOf(")")), index !== -1)) {
+    let bracketEndIndex = index;
+    for (;bracketEndIndex > 0 && code.charCodeAt(--bracketEndIndex) !== 41; )
+      ;
+    let body = code.slice(index + 2);
+    return body.charCodeAt(0) === 32 && (body = body.trimStart()), [
+      code.slice(1, bracketEndIndex),
+      body,
+      {
+        isArrowReturn: body.charCodeAt(0) !== 123
+      }
+    ];
+  }
+  if (/^(\w+)=>/g.test(code) && (index = code.indexOf("=>"), index !== -1)) {
+    let body = code.slice(index + 2);
+    return body.charCodeAt(0) === 32 && (body = body.trimStart()), [
+      code.slice(0, index),
+      body,
+      {
+        isArrowReturn: body.charCodeAt(0) !== 123
+      }
+    ];
   }
   if (code.startsWith("function")) {
     index = code.indexOf("(");
-    let end = code.indexOf(")");
-    return [code.slice(index + 1, end), code.slice(end + 2), { isArrowReturn: false }];
+    const end = code.indexOf(")");
+    return [
+      code.slice(index + 1, end),
+      code.slice(end + 2),
+      {
+        isArrowReturn: false
+      }
+    ];
   }
-  let start = code.indexOf("(");
+  const start = code.indexOf("(");
   if (start !== -1) {
-    let sep = code.indexOf(`
+    const sep = code.indexOf(`
 `, 2), parameter = code.slice(0, sep), end = parameter.lastIndexOf(")") + 1, body = code.slice(sep + 1);
-    return [parameter.slice(start, end), "{" + body, { isArrowReturn: false }];
+    return [
+      parameter.slice(start, end),
+      "{" + body,
+      {
+        isArrowReturn: false
+      }
+    ];
   }
-  let x = code.split(`
+  const x = code.split(`
 `, 2);
   return [x[0], x[1], { isArrowReturn: false }];
 };
 var bracketPairRange = (parameter) => {
-  let start = parameter.indexOf("{");
+  const start = parameter.indexOf("{");
   if (start === -1)
     return [-1, 0];
   let end = start + 1, deep = 1;
   for (;end < parameter.length; end++) {
-    let char = parameter.charCodeAt(end);
-    if (char === 123)
-      deep++;
-    else if (char === 125)
-      deep--;
-    if (deep === 0)
+    const char = parameter.charCodeAt(end);
+    if (char === 123 ? deep++ : char === 125 && deep--, deep === 0)
       break;
   }
-  if (deep !== 0)
-    return [0, parameter.length];
-  return [start, end + 1];
+  return deep !== 0 ? [0, parameter.length] : [start, end + 1];
 };
 var bracketPairRangeReverse = (parameter) => {
-  let end = parameter.lastIndexOf("}");
+  const end = parameter.lastIndexOf("}");
   if (end === -1)
     return [-1, 0];
   let start = end - 1, deep = 1;
   for (;start >= 0; start--) {
-    let char = parameter.charCodeAt(start);
-    if (char === 125)
-      deep++;
-    else if (char === 123)
-      deep--;
-    if (deep === 0)
+    const char = parameter.charCodeAt(start);
+    if (char === 125 ? deep++ : char === 123 && deep--, deep === 0)
       break;
   }
-  if (deep !== 0)
-    return [-1, 0];
-  return [start, end + 1];
+  return deep !== 0 ? [-1, 0] : [start, end + 1];
 };
 var removeColonAlias = (parameter) => {
-  while (true) {
-    let start = parameter.indexOf(":");
+  for (;; ) {
+    const start = parameter.indexOf(":");
     if (start === -1)
       break;
     let end = parameter.indexOf(",", start);
-    if (end === -1)
-      end = parameter.indexOf("}", start) - 1;
-    if (end === -2)
-      end = parameter.length;
-    parameter = parameter.slice(0, start) + parameter.slice(end);
+    end === -1 && (end = parameter.indexOf("}", start) - 1), end === -2 && (end = parameter.length), parameter = parameter.slice(0, start) + parameter.slice(end);
   }
   return parameter;
 };
 var retrieveRootParamters = (parameter) => {
   let hasParenthesis = false;
-  if (parameter.charCodeAt(0) === 40)
-    parameter = parameter.slice(1, -1);
-  if (parameter.charCodeAt(0) === 123)
-    hasParenthesis = true, parameter = parameter.slice(1, -1);
-  parameter = parameter.replace(/( |\t|\n)/g, "").trim();
+  parameter.charCodeAt(0) === 40 && (parameter = parameter.slice(1, -1)), parameter.charCodeAt(0) === 123 && (hasParenthesis = true, parameter = parameter.slice(1, -1)), parameter = parameter.replace(/( |\t|\n)/g, "").trim();
   let parameters = [];
-  while (true) {
+  for (;; ) {
     let [start, end] = bracketPairRange(parameter);
     if (start === -1)
       break;
-    if (parameters.push(parameter.slice(0, start - 1)), parameter.charCodeAt(end) === 44)
-      end++;
-    parameter = parameter.slice(end);
+    parameters.push(parameter.slice(0, start - 1)), parameter.charCodeAt(end) === 44 && end++, parameter = parameter.slice(end);
   }
-  if (parameter = removeColonAlias(parameter), parameter)
-    parameters = parameters.concat(parameter.split(","));
-  let parameterMap = Object.create(null);
-  for (let p of parameters) {
+  parameter = removeColonAlias(parameter), parameter && (parameters = parameters.concat(parameter.split(",")));
+  const parameterMap = /* @__PURE__ */ Object.create(null);
+  for (const p of parameters) {
     if (p.indexOf(",") === -1) {
       parameterMap[p] = true;
       continue;
     }
-    for (let q of p.split(","))
+    for (const q of p.split(","))
       parameterMap[q.trim()] = true;
   }
-  return { hasParenthesis, parameters: parameterMap };
+  return {
+    hasParenthesis,
+    parameters: parameterMap
+  };
 };
 var findParameterReference = (parameter, inference) => {
-  let { parameters, hasParenthesis } = retrieveRootParamters(parameter);
-  if (parameters.query)
-    inference.query = true;
-  if (parameters.headers)
-    inference.headers = true;
-  if (parameters.body)
-    inference.body = true;
-  if (parameters.cookie)
-    inference.cookie = true;
-  if (parameters.set)
-    inference.set = true;
-  if (parameters.server)
-    inference.server = true;
-  if (parameters.route)
-    inference.route = true;
-  if (parameters.url)
-    inference.url = true;
-  if (parameters.path)
-    inference.path = true;
-  if (hasParenthesis)
-    return `{ ${Object.keys(parameters).join(", ")} }`;
-  return Object.keys(parameters).join(", ");
+  const { parameters, hasParenthesis } = retrieveRootParamters(parameter);
+  return parameters.query && (inference.query = true), parameters.headers && (inference.headers = true), parameters.body && (inference.body = true), parameters.cookie && (inference.cookie = true), parameters.set && (inference.set = true), parameters.server && (inference.server = true), parameters.route && (inference.route = true), parameters.url && (inference.url = true), parameters.path && (inference.path = true), hasParenthesis ? `{ ${Object.keys(parameters).join(", ")} }` : Object.keys(parameters).join(", ");
 };
 var findEndIndex = (type, content, index) => {
-  let regex2 = new RegExp(`${type.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[\\n\\t,; ]`);
-  if (index !== undefined)
-    regex2.lastIndex = index;
-  let match = regex2.exec(content);
+  const regex2 = new RegExp(`${type.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[\\n\\t,; ]`);
+  index !== undefined && (regex2.lastIndex = index);
+  const match = regex2.exec(content);
   return match ? match.index : -1;
 };
 var findAlias = (type, body, depth = 0) => {
   if (depth > 5)
     return [];
-  let aliases = [], content = body;
-  while (true) {
+  const aliases = [];
+  let content = body;
+  for (;; ) {
     let index = findEndIndex(" = " + type, content);
-    if (index === -1)
-      index = findEndIndex("=" + type, content);
-    if (index === -1) {
+    if (index === -1 && (index = findEndIndex("=" + type, content)), index === -1) {
       let lastIndex = content.indexOf(" = " + type);
-      if (lastIndex === -1)
-        lastIndex = content.indexOf("=" + type);
-      if (lastIndex + 3 + type.length !== content.length)
+      if (lastIndex === -1 && (lastIndex = content.indexOf("=" + type)), lastIndex + 3 + type.length !== content.length)
         break;
       index = lastIndex;
     }
-    let part = content.slice(0, index), lastPart = part.lastIndexOf(" "), variable = part.slice(lastPart !== -1 ? lastPart + 1 : -1);
+    const part = content.slice(0, index), lastPart = part.lastIndexOf(" ");
+    let variable = part.slice(lastPart !== -1 ? lastPart + 1 : -1);
     if (variable === "}") {
-      let [start, end] = bracketPairRangeReverse(part);
+      const [start, end] = bracketPairRangeReverse(part);
       aliases.push(removeColonAlias(content.slice(start, end))), content = content.slice(index + 3 + type.length);
       continue;
     }
-    while (variable.charCodeAt(0) === 44)
+    for (;variable.charCodeAt(0) === 44; )
       variable = variable.slice(1);
-    while (variable.charCodeAt(0) === 9)
+    for (;variable.charCodeAt(0) === 9; )
       variable = variable.slice(1);
-    if (!variable.includes("("))
-      aliases.push(variable);
-    content = content.slice(index + 3 + type.length);
+    variable.includes("(") || aliases.push(variable), content = content.slice(index + 3 + type.length);
   }
-  for (let alias of aliases) {
+  for (const alias of aliases) {
     if (alias.charCodeAt(0) === 123)
       continue;
-    let deepAlias = findAlias(alias, body);
-    if (deepAlias.length > 0)
-      aliases.push(...deepAlias);
+    const deepAlias = findAlias(alias, body);
+    deepAlias.length > 0 && aliases.push(...deepAlias);
   }
   return aliases;
 };
@@ -23653,147 +23973,104 @@ var extractMainParameter = (parameter) => {
     return;
   if (parameter.charCodeAt(0) !== 123)
     return parameter;
-  if (parameter = parameter.slice(2, -2), !parameter.includes(",")) {
-    if (parameter.indexOf("...") !== -1)
-      return parameter.slice(parameter.indexOf("...") + 3);
-    return;
-  }
-  let spreadIndex = parameter.indexOf("...");
-  if (spreadIndex === -1)
-    return;
-  return parameter.slice(spreadIndex + 3).trimEnd();
+  if (parameter = parameter.slice(2, -2), !parameter.includes(","))
+    return parameter.indexOf("...") !== -1 ? parameter.slice(parameter.indexOf("...") + 3) : undefined;
+  const spreadIndex = parameter.indexOf("...");
+  if (spreadIndex !== -1)
+    return parameter.slice(spreadIndex + 3).trimEnd();
 };
 var inferBodyReference = (code, aliases, inference) => {
-  let access = (type, alias) => new RegExp(`${alias}\\.(${type})|${alias}\\["${type}"\\]|${alias}\\['${type}'\\]`).test(code);
-  for (let alias of aliases) {
-    if (!alias)
-      continue;
-    if (alias.charCodeAt(0) === 123) {
-      let parameters = retrieveRootParamters(alias).parameters;
-      if (parameters.query)
-        inference.query = true;
-      if (parameters.headers)
-        inference.headers = true;
-      if (parameters.body)
-        inference.body = true;
-      if (parameters.cookie)
-        inference.cookie = true;
-      if (parameters.set)
-        inference.set = true;
-      if (parameters.server)
-        inference.server = true;
-      if (parameters.url)
-        inference.url = true;
-      if (parameters.route)
-        inference.route = true;
-      if (parameters.path)
-        inference.path = true;
-      continue;
+  const access = (type, alias) => new RegExp(`${alias}\\.(${type})|${alias}\\["${type}"\\]|${alias}\\['${type}'\\]`).test(code);
+  for (const alias of aliases)
+    if (alias) {
+      if (alias.charCodeAt(0) === 123) {
+        const parameters = retrieveRootParamters(alias).parameters;
+        parameters.query && (inference.query = true), parameters.headers && (inference.headers = true), parameters.body && (inference.body = true), parameters.cookie && (inference.cookie = true), parameters.set && (inference.set = true), parameters.server && (inference.server = true), parameters.url && (inference.url = true), parameters.route && (inference.route = true), parameters.path && (inference.path = true);
+        continue;
+      }
+      if (!inference.query && (access("query", alias) || code.includes("return " + alias) || code.includes("return " + alias + ".query")) && (inference.query = true), !inference.headers && access("headers", alias) && (inference.headers = true), !inference.body && access("body", alias) && (inference.body = true), !inference.cookie && access("cookie", alias) && (inference.cookie = true), !inference.set && access("set", alias) && (inference.set = true), !inference.server && access("server", alias) && (inference.server = true), !inference.route && access("route", alias) && (inference.route = true), !inference.url && access("url", alias) && (inference.url = true), !inference.path && access("path", alias) && (inference.path = true), inference.query && inference.headers && inference.body && inference.cookie && inference.set && inference.server && inference.route && inference.url && inference.path)
+        break;
     }
-    if (!inference.query && (access("query", alias) || code.includes("return " + alias) || code.includes("return " + alias + ".query")))
-      inference.query = true;
-    if (!inference.headers && access("headers", alias))
-      inference.headers = true;
-    if (!inference.body && access("body", alias))
-      inference.body = true;
-    if (!inference.cookie && access("cookie", alias))
-      inference.cookie = true;
-    if (!inference.set && access("set", alias))
-      inference.set = true;
-    if (!inference.server && access("server", alias))
-      inference.server = true;
-    if (!inference.route && access("route", alias))
-      inference.route = true;
-    if (!inference.url && access("url", alias))
-      inference.url = true;
-    if (!inference.path && access("path", alias))
-      inference.path = true;
-    if (inference.query && inference.headers && inference.body && inference.cookie && inference.set && inference.server && inference.route && inference.url && inference.path)
-      break;
-  }
   return aliases;
 };
 var isContextPassToFunction = (context, body, inference) => {
   try {
-    let captureFunction = new RegExp(`\\w\\((.*?)?${context}`, "gs");
+    const captureFunction = new RegExp(`\\w\\((.*?)?${context}`, "gs");
     captureFunction.test(body);
-    let nextChar = body.charCodeAt(captureFunction.lastIndex);
-    if (nextChar === 41 || nextChar === 44)
-      return inference.query = true, inference.headers = true, inference.body = true, inference.cookie = true, inference.set = true, inference.server = true, inference.url = true, inference.route = true, inference.path = true, true;
-    return false;
-  } catch (error) {
+    const nextChar = body.charCodeAt(captureFunction.lastIndex);
+    return nextChar === 41 || nextChar === 44 ? (inference.query = true, inference.headers = true, inference.body = true, inference.cookie = true, inference.set = true, inference.server = true, inference.url = true, inference.route = true, inference.path = true, true) : false;
+  } catch {
     return console.log("[Sucrose] warning: unexpected isContextPassToFunction error, you may continue development as usual but please report the following to maintainers:"), console.log("--- body ---"), console.log(body), console.log("--- context ---"), console.log(context), true;
   }
 };
 var pendingGC;
 var caches2 = {};
 var clearSucroseCache = (delay) => {
-  if (delay === null || isCloudflareWorker())
-    return;
-  if (delay === undefined)
-    delay = 295000;
-  if (pendingGC)
-    clearTimeout(pendingGC);
-  pendingGC = setTimeout(() => {
-    if (caches2 = {}, pendingGC = undefined, isBun)
-      Bun.gc(false);
-  }, delay);
+  delay === null || isCloudflareWorker() || (delay === undefined && (delay = 4 * 60 * 1000 + 55 * 1000), pendingGC && clearTimeout(pendingGC), pendingGC = setTimeout(() => {
+    caches2 = {}, pendingGC = undefined, isBun && Bun.gc(false);
+  }, delay));
 };
-var mergeInference = (a, b) => {
-  return { body: a.body || b.body, cookie: a.cookie || b.cookie, headers: a.headers || b.headers, query: a.query || b.query, set: a.set || b.set, server: a.server || b.server, url: a.url || b.url, route: a.route || b.route, path: a.path || b.path };
-};
-var sucrose = (lifeCycle, inference = { query: false, headers: false, body: false, cookie: false, set: false, server: false, url: false, route: false, path: false }, settings = {}) => {
-  let events = [];
-  if (lifeCycle.request?.length)
-    events.push(...lifeCycle.request);
-  if (lifeCycle.beforeHandle?.length)
-    events.push(...lifeCycle.beforeHandle);
-  if (lifeCycle.parse?.length)
-    events.push(...lifeCycle.parse);
-  if (lifeCycle.error?.length)
-    events.push(...lifeCycle.error);
-  if (lifeCycle.transform?.length)
-    events.push(...lifeCycle.transform);
-  if (lifeCycle.afterHandle?.length)
-    events.push(...lifeCycle.afterHandle);
-  if (lifeCycle.mapResponse?.length)
-    events.push(...lifeCycle.mapResponse);
-  if (lifeCycle.afterResponse?.length)
-    events.push(...lifeCycle.afterResponse);
-  if (lifeCycle.handler && typeof lifeCycle.handler === "function")
-    events.push(lifeCycle.handler);
+var mergeInference = (a, b) => ({
+  body: a.body || b.body,
+  cookie: a.cookie || b.cookie,
+  headers: a.headers || b.headers,
+  query: a.query || b.query,
+  set: a.set || b.set,
+  server: a.server || b.server,
+  url: a.url || b.url,
+  route: a.route || b.route,
+  path: a.path || b.path
+});
+var sucrose = (lifeCycle, inference = {
+  query: false,
+  headers: false,
+  body: false,
+  cookie: false,
+  set: false,
+  server: false,
+  url: false,
+  route: false,
+  path: false
+}, settings = {}) => {
+  const events = [];
+  lifeCycle.request?.length && events.push(...lifeCycle.request), lifeCycle.beforeHandle?.length && events.push(...lifeCycle.beforeHandle), lifeCycle.parse?.length && events.push(...lifeCycle.parse), lifeCycle.error?.length && events.push(...lifeCycle.error), lifeCycle.transform?.length && events.push(...lifeCycle.transform), lifeCycle.afterHandle?.length && events.push(...lifeCycle.afterHandle), lifeCycle.mapResponse?.length && events.push(...lifeCycle.mapResponse), lifeCycle.afterResponse?.length && events.push(...lifeCycle.afterResponse), lifeCycle.handler && typeof lifeCycle.handler == "function" && events.push(lifeCycle.handler);
   for (let i = 0;i < events.length; i++) {
-    let e = events[i];
+    const e = events[i];
     if (!e)
       continue;
-    let event = typeof e === "object" ? e.fn : e;
-    if (typeof event !== "function")
+    const event = typeof e == "object" ? e.fn : e;
+    if (typeof event != "function")
       continue;
-    let content = event.toString(), key = checksum(content), cachedInference = caches2[key];
+    const content = event.toString(), key = checksum(content), cachedInference = caches2[key];
     if (cachedInference) {
       inference = mergeInference(inference, cachedInference);
       continue;
     }
     clearSucroseCache(settings.gcTime);
-    let fnInference = { query: false, headers: false, body: false, cookie: false, set: false, server: false, url: false, route: false, path: false }, [parameter, body] = separateFunction(content), rootParameters = findParameterReference(parameter, fnInference), mainParameter = extractMainParameter(rootParameters);
+    const fnInference = {
+      query: false,
+      headers: false,
+      body: false,
+      cookie: false,
+      set: false,
+      server: false,
+      url: false,
+      route: false,
+      path: false
+    }, [parameter, body] = separateFunction(content), rootParameters = findParameterReference(parameter, fnInference), mainParameter = extractMainParameter(rootParameters);
     if (mainParameter) {
-      let aliases = findAlias(mainParameter, body.slice(1, -1));
+      const aliases = findAlias(mainParameter, body.slice(1, -1));
       aliases.splice(0, -1, mainParameter);
       let code = body;
-      if (code.charCodeAt(0) === 123 && code.charCodeAt(body.length - 1) === 125)
-        code = code.slice(1, -1);
-      if (!isContextPassToFunction(mainParameter, code, fnInference))
-        inferBodyReference(code, aliases, fnInference);
-      if (!fnInference.query && code.includes("return " + mainParameter + ".query"))
-        fnInference.query = true;
+      code.charCodeAt(0) === 123 && code.charCodeAt(body.length - 1) === 125 && (code = code.slice(1, -1)), isContextPassToFunction(mainParameter, code, fnInference) || inferBodyReference(code, aliases, fnInference), !fnInference.query && code.includes("return " + mainParameter + ".query") && (fnInference.query = true);
     }
-    if (!caches2[key])
-      caches2[key] = fnInference;
-    if (inference = mergeInference(inference, fnInference), inference.query && inference.headers && inference.body && inference.cookie && inference.set && inference.server && inference.url && inference.route && inference.path)
+    if (caches2[key] || (caches2[key] = fnInference), inference = mergeInference(inference, fnInference), inference.query && inference.headers && inference.body && inference.cookie && inference.set && inference.server && inference.url && inference.route && inference.path)
       break;
   }
   return inference;
 };
+
+// node_modules/elysia/dist/adapter/bun/handler.mjs
 var mapResponse2 = (response, set2, request) => {
   if (isNotEmpty(set2.headers) || set2.status !== 200 || set2.cookie)
     switch (handleSet(set2), response?.constructor?.name) {
@@ -23811,9 +24088,7 @@ var mapResponse2 = (response, set2, request) => {
       case "ElysiaCustomStatusResponse":
         return set2.status = response.code, mapResponse2(response.response, set2, request);
       case undefined:
-        if (!response)
-          return new Response("", set2);
-        return new Response(JSON.stringify(response), set2);
+        return response ? new Response(JSON.stringify(response), set2) : new Response("", set2);
       case "Response":
         return handleResponse2(response, set2, request);
       case "Error":
@@ -23826,9 +24101,7 @@ var mapResponse2 = (response, set2, request) => {
       case "Boolean":
         return new Response(response.toString(), set2);
       case "Cookie":
-        if (response instanceof Cookie)
-          return new Response(response.value, set2);
-        return new Response(response?.toString(), set2);
+        return response instanceof Cookie ? new Response(response.value, set2) : new Response(response?.toString(), set2);
       case "FormData":
         return new Response(response, set2);
       default:
@@ -23840,155 +24113,139 @@ var mapResponse2 = (response, set2, request) => {
           return errorToResponse2(response, set2);
         if (response instanceof ElysiaCustomStatusResponse)
           return set2.status = response.code, mapResponse2(response.response, set2, request);
-        if (typeof response?.next === "function" || response instanceof ReadableStream)
+        if (typeof response?.next == "function" || response instanceof ReadableStream)
           return handleStream2(response, set2, request);
-        if (typeof response?.then === "function")
+        if (typeof response?.then == "function")
           return response.then((x) => mapResponse2(x, set2));
-        if (typeof response?.toResponse === "function")
+        if (typeof response?.toResponse == "function")
           return mapResponse2(response.toResponse(), set2);
         if ("charCodeAt" in response) {
-          let code = response.charCodeAt(0);
-          if (code === 123 || code === 91) {
-            if (!set2.headers["Content-Type"])
-              set2.headers["Content-Type"] = "application/json";
-            return new Response(JSON.stringify(response), set2);
-          }
+          const code = response.charCodeAt(0);
+          if (code === 123 || code === 91)
+            return set2.headers["Content-Type"] || (set2.headers["Content-Type"] = "application/json"), new Response(JSON.stringify(response), set2);
         }
         return new Response(response, set2);
     }
-  if (typeof response?.next === "function" || response instanceof ReadableStream)
-    return handleStream2(response, set2, request);
-  return mapCompactResponse2(response, request);
+  return typeof response?.next == "function" || response instanceof ReadableStream ? handleStream2(response, set2, request) : mapCompactResponse2(response, request);
 };
 var mapEarlyResponse2 = (response, set2, request) => {
-  if (response === undefined || response === null)
-    return;
-  if (isNotEmpty(set2.headers) || set2.status !== 200 || set2.cookie)
-    switch (handleSet(set2), response?.constructor?.name) {
-      case "String":
-        return new Response(response, set2);
-      case "Array":
-      case "Object":
-        return set2.headers["content-type"] = "application/json", new Response(JSON.stringify(response), set2);
-      case "ElysiaFile":
-        return handleFile(response.value, set2);
-      case "File":
-        return handleFile(response, set2);
-      case "Blob":
-        return handleFile(response, set2);
-      case "ElysiaCustomStatusResponse":
-        return set2.status = response.code, mapEarlyResponse2(response.response, set2, request);
-      case undefined:
-        if (!response)
-          return;
-        return new Response(JSON.stringify(response), set2);
-      case "Response":
-        return handleResponse2(response, set2, request);
-      case "Promise":
-        return response.then((x) => mapEarlyResponse2(x, set2));
-      case "Error":
-        return errorToResponse2(response, set2);
-      case "Function":
-        return mapEarlyResponse2(response(), set2);
-      case "Number":
-      case "Boolean":
-        return new Response(response.toString(), set2);
-      case "FormData":
-        return new Response(response);
-      case "Cookie":
-        if (response instanceof Cookie)
-          return new Response(response.value, set2);
-        return new Response(response?.toString(), set2);
-      default:
-        if (response instanceof Response)
+  if (response != null)
+    if (isNotEmpty(set2.headers) || set2.status !== 200 || set2.cookie)
+      switch (handleSet(set2), response?.constructor?.name) {
+        case "String":
+          return new Response(response, set2);
+        case "Array":
+        case "Object":
+          return set2.headers["content-type"] = "application/json", new Response(JSON.stringify(response), set2);
+        case "ElysiaFile":
+          return handleFile(response.value, set2);
+        case "File":
+          return handleFile(response, set2);
+        case "Blob":
+          return handleFile(response, set2);
+        case "ElysiaCustomStatusResponse":
+          return set2.status = response.code, mapEarlyResponse2(response.response, set2, request);
+        case undefined:
+          return response ? new Response(JSON.stringify(response), set2) : undefined;
+        case "Response":
           return handleResponse2(response, set2, request);
-        if (response instanceof Promise)
+        case "Promise":
           return response.then((x) => mapEarlyResponse2(x, set2));
-        if (response instanceof Error)
+        case "Error":
           return errorToResponse2(response, set2);
-        if (response instanceof ElysiaCustomStatusResponse)
-          return set2.status = response.code, mapEarlyResponse2(response.response, set2, request);
-        if (typeof response?.next === "function" || response instanceof ReadableStream)
-          return handleStream2(response, set2, request);
-        if (typeof response?.then === "function")
-          return response.then((x) => mapEarlyResponse2(x, set2));
-        if (typeof response?.toResponse === "function")
-          return mapEarlyResponse2(response.toResponse(), set2);
-        if ("charCodeAt" in response) {
-          let code = response.charCodeAt(0);
-          if (code === 123 || code === 91) {
-            if (!set2.headers["Content-Type"])
-              set2.headers["Content-Type"] = "application/json";
-            return new Response(JSON.stringify(response), set2);
+        case "Function":
+          return mapEarlyResponse2(response(), set2);
+        case "Number":
+        case "Boolean":
+          return new Response(response.toString(), set2);
+        case "FormData":
+          return new Response(response);
+        case "Cookie":
+          return response instanceof Cookie ? new Response(response.value, set2) : new Response(response?.toString(), set2);
+        default:
+          if (response instanceof Response)
+            return handleResponse2(response, set2, request);
+          if (response instanceof Promise)
+            return response.then((x) => mapEarlyResponse2(x, set2));
+          if (response instanceof Error)
+            return errorToResponse2(response, set2);
+          if (response instanceof ElysiaCustomStatusResponse)
+            return set2.status = response.code, mapEarlyResponse2(response.response, set2, request);
+          if (typeof response?.next == "function" || response instanceof ReadableStream)
+            return handleStream2(response, set2, request);
+          if (typeof response?.then == "function")
+            return response.then((x) => mapEarlyResponse2(x, set2));
+          if (typeof response?.toResponse == "function")
+            return mapEarlyResponse2(response.toResponse(), set2);
+          if ("charCodeAt" in response) {
+            const code = response.charCodeAt(0);
+            if (code === 123 || code === 91)
+              return set2.headers["Content-Type"] || (set2.headers["Content-Type"] = "application/json"), new Response(JSON.stringify(response), set2);
           }
-        }
-        return new Response(response, set2);
-    }
-  else
-    switch (response?.constructor?.name) {
-      case "String":
-        return new Response(response);
-      case "Array":
-      case "Object":
-        return set2.headers["content-type"] = "application/json", new Response(JSON.stringify(response), set2);
-      case "ElysiaFile":
-        return handleFile(response.value, set2);
-      case "File":
-        return handleFile(response, set2);
-      case "Blob":
-        return handleFile(response, set2);
-      case "ElysiaCustomStatusResponse":
-        return set2.status = response.code, mapEarlyResponse2(response.response, set2, request);
-      case undefined:
-        if (!response)
-          return new Response("");
-        return new Response(JSON.stringify(response), { headers: { "content-type": "application/json" } });
-      case "Response":
-        return response;
-      case "Promise":
-        return response.then((x) => {
-          let r = mapEarlyResponse2(x, set2);
-          if (r !== undefined)
-            return r;
-        });
-      case "Error":
-        return errorToResponse2(response, set2);
-      case "Function":
-        return mapCompactResponse2(response(), request);
-      case "Number":
-      case "Boolean":
-        return new Response(response.toString());
-      case "Cookie":
-        if (response instanceof Cookie)
-          return new Response(response.value, set2);
-        return new Response(response?.toString(), set2);
-      case "FormData":
-        return new Response(response);
-      default:
-        if (response instanceof Response)
+          return new Response(response, set2);
+      }
+    else
+      switch (response?.constructor?.name) {
+        case "String":
+          return new Response(response);
+        case "Array":
+        case "Object":
+          return set2.headers["content-type"] = "application/json", new Response(JSON.stringify(response), set2);
+        case "ElysiaFile":
+          return handleFile(response.value, set2);
+        case "File":
+          return handleFile(response, set2);
+        case "Blob":
+          return handleFile(response, set2);
+        case "ElysiaCustomStatusResponse":
+          return set2.status = response.code, mapEarlyResponse2(response.response, set2, request);
+        case undefined:
+          return response ? new Response(JSON.stringify(response), {
+            headers: {
+              "content-type": "application/json"
+            }
+          }) : new Response("");
+        case "Response":
           return response;
-        if (response instanceof Promise)
-          return response.then((x) => mapEarlyResponse2(x, set2));
-        if (response instanceof Error)
+        case "Promise":
+          return response.then((x) => {
+            const r = mapEarlyResponse2(x, set2);
+            if (r !== undefined)
+              return r;
+          });
+        case "Error":
           return errorToResponse2(response, set2);
-        if (response instanceof ElysiaCustomStatusResponse)
-          return set2.status = response.code, mapEarlyResponse2(response.response, set2, request);
-        if (typeof response?.next === "function" || response instanceof ReadableStream)
-          return handleStream2(response, set2, request);
-        if (typeof response?.then === "function")
-          return response.then((x) => mapEarlyResponse2(x, set2));
-        if (typeof response?.toResponse === "function")
-          return mapEarlyResponse2(response.toResponse(), set2);
-        if ("charCodeAt" in response) {
-          let code = response.charCodeAt(0);
-          if (code === 123 || code === 91) {
-            if (!set2.headers["Content-Type"])
-              set2.headers["Content-Type"] = "application/json";
-            return new Response(JSON.stringify(response), set2);
+        case "Function":
+          return mapCompactResponse2(response(), request);
+        case "Number":
+        case "Boolean":
+          return new Response(response.toString());
+        case "Cookie":
+          return response instanceof Cookie ? new Response(response.value, set2) : new Response(response?.toString(), set2);
+        case "FormData":
+          return new Response(response);
+        default:
+          if (response instanceof Response)
+            return response;
+          if (response instanceof Promise)
+            return response.then((x) => mapEarlyResponse2(x, set2));
+          if (response instanceof Error)
+            return errorToResponse2(response, set2);
+          if (response instanceof ElysiaCustomStatusResponse)
+            return set2.status = response.code, mapEarlyResponse2(response.response, set2, request);
+          if (typeof response?.next == "function" || response instanceof ReadableStream)
+            return handleStream2(response, set2, request);
+          if (typeof response?.then == "function")
+            return response.then((x) => mapEarlyResponse2(x, set2));
+          if (typeof response?.toResponse == "function")
+            return mapEarlyResponse2(response.toResponse(), set2);
+          if ("charCodeAt" in response) {
+            const code = response.charCodeAt(0);
+            if (code === 123 || code === 91)
+              return set2.headers["Content-Type"] || (set2.headers["Content-Type"] = "application/json"), new Response(JSON.stringify(response), set2);
           }
-        }
-        return new Response(response);
-    }
+          return new Response(response);
+      }
 };
 var mapCompactResponse2 = (response, request) => {
   switch (response?.constructor?.name) {
@@ -23996,7 +24253,11 @@ var mapCompactResponse2 = (response, request) => {
       return new Response(response);
     case "Object":
     case "Array":
-      return new Response(JSON.stringify(response), { headers: { "Content-Type": "application/json" } });
+      return new Response(JSON.stringify(response), {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
     case "ElysiaFile":
       return handleFile(response.value);
     case "File":
@@ -24004,11 +24265,16 @@ var mapCompactResponse2 = (response, request) => {
     case "Blob":
       return handleFile(response);
     case "ElysiaCustomStatusResponse":
-      return mapResponse2(response.response, { status: response.code, headers: {} });
+      return mapResponse2(response.response, {
+        status: response.code,
+        headers: {}
+      });
     case undefined:
-      if (!response)
-        return new Response("");
-      return new Response(JSON.stringify(response), { headers: { "content-type": "application/json" } });
+      return response ? new Response(JSON.stringify(response), {
+        headers: {
+          "content-type": "application/json"
+        }
+      }) : new Response("");
     case "Response":
       return response;
     case "Error":
@@ -24030,321 +24296,296 @@ var mapCompactResponse2 = (response, request) => {
       if (response instanceof Error)
         return errorToResponse2(response);
       if (response instanceof ElysiaCustomStatusResponse)
-        return mapResponse2(response.response, { status: response.code, headers: {} });
-      if (typeof response?.next === "function" || response instanceof ReadableStream)
+        return mapResponse2(response.response, {
+          status: response.code,
+          headers: {}
+        });
+      if (typeof response?.next == "function" || response instanceof ReadableStream)
         return handleStream2(response, undefined, request);
-      if (typeof response?.then === "function")
+      if (typeof response?.then == "function")
         return response.then((x) => mapResponse2(x, set));
-      if (typeof response?.toResponse === "function")
+      if (typeof response?.toResponse == "function")
         return mapCompactResponse2(response.toResponse());
       if ("charCodeAt" in response) {
-        let code = response.charCodeAt(0);
+        const code = response.charCodeAt(0);
         if (code === 123 || code === 91)
-          return new Response(JSON.stringify(response), { headers: { "Content-Type": "application/json" } });
+          return new Response(JSON.stringify(response), {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
       }
       return new Response(response);
   }
 };
 var errorToResponse2 = (error, set2) => {
-  if (typeof error?.toResponse === "function") {
-    let raw = error.toResponse(), targetSet = set2 ?? { headers: {}, status: 200, redirect: "" }, apply = (resolved) => {
-      if (resolved instanceof Response)
-        targetSet.status = resolved.status;
-      return mapResponse2(resolved, targetSet);
-    };
-    return typeof raw?.then === "function" ? raw.then(apply) : apply(raw);
+  if (typeof error?.toResponse == "function") {
+    const raw = error.toResponse(), targetSet = set2 ?? { headers: {}, status: 200, redirect: "" }, apply = (resolved) => (resolved instanceof Response && (targetSet.status = resolved.status), mapResponse2(resolved, targetSet));
+    return typeof raw?.then == "function" ? raw.then(apply) : apply(raw);
   }
-  return new Response(JSON.stringify({ name: error?.name, message: error?.message, cause: error?.cause }), { status: set2?.status !== 200 ? set2?.status ?? 500 : 500, headers: set2?.headers });
+  return new Response(JSON.stringify({
+    name: error?.name,
+    message: error?.message,
+    cause: error?.cause
+  }), {
+    status: set2?.status !== 200 ? set2?.status ?? 500 : 500,
+    headers: set2?.headers
+  });
 };
 var createStaticHandler2 = (handle, hooks, setHeaders = {}) => {
-  if (typeof handle === "function")
+  if (typeof handle == "function")
     return;
-  let response = mapResponse2(handle, { headers: setHeaders });
+  const response = mapResponse2(handle, {
+    headers: setHeaders
+  });
   if (!hooks.parse?.length && !hooks.transform?.length && !hooks.beforeHandle?.length && !hooks.afterHandle?.length)
     return () => response.clone();
 };
-var handleResponse2 = createResponseHandler({ mapResponse: mapResponse2, mapCompactResponse: mapCompactResponse2 });
-var handleStream2 = createStreamHandler({ mapResponse: mapResponse2, mapCompactResponse: mapCompactResponse2 });
-var import_fast_decode_uri_component3 = __toESM2(require_fast_decode_uri_component(), 1);
-var import_fast_decode_uri_component2 = __toESM2(require_fast_decode_uri_component(), 1);
+var handleResponse2 = createResponseHandler({
+  mapResponse: mapResponse2,
+  mapCompactResponse: mapCompactResponse2
+});
+var handleStream2 = createStreamHandler({
+  mapResponse: mapResponse2,
+  mapCompactResponse: mapCompactResponse2
+});
+
+// node_modules/elysia/dist/compose.mjs
+var import_fast_decode_uri_component3 = __toESM(require_fast_decode_uri_component(), 1);
+
+// node_modules/elysia/dist/parse-query.mjs
+var import_fast_decode_uri_component2 = __toESM(require_fast_decode_uri_component(), 1);
 var KEY_HAS_PLUS = 1;
 var KEY_NEEDS_DECODE = 2;
 var VALUE_HAS_PLUS = 4;
 var VALUE_NEEDS_DECODE = 8;
 function parseQueryFromURL(input, startIndex = 0, array, object) {
-  let result = Object.create(null), flags = 0, inputLength = input.length, startingIndex = startIndex - 1, equalityIndex = startingIndex;
+  const result = /* @__PURE__ */ Object.create(null);
+  let flags = 0;
+  const inputLength = input.length;
+  let startingIndex = startIndex - 1, equalityIndex = startingIndex;
   for (let i = 0;i < inputLength; i++)
     switch (input.charCodeAt(i)) {
       case 38:
         processKeyValuePair(input, i), startingIndex = i, equalityIndex = i, flags = 0;
         break;
       case 61:
-        if (equalityIndex <= startingIndex)
-          equalityIndex = i;
-        else
-          flags |= VALUE_NEEDS_DECODE;
+        equalityIndex <= startingIndex ? equalityIndex = i : flags |= VALUE_NEEDS_DECODE;
         break;
       case 43:
-        if (equalityIndex > startingIndex)
-          flags |= VALUE_HAS_PLUS;
-        else
-          flags |= KEY_HAS_PLUS;
+        equalityIndex > startingIndex ? flags |= VALUE_HAS_PLUS : flags |= KEY_HAS_PLUS;
         break;
       case 37:
-        if (equalityIndex > startingIndex)
-          flags |= VALUE_NEEDS_DECODE;
-        else
-          flags |= KEY_NEEDS_DECODE;
+        equalityIndex > startingIndex ? flags |= VALUE_NEEDS_DECODE : flags |= KEY_NEEDS_DECODE;
         break;
     }
-  if (startingIndex < inputLength)
-    processKeyValuePair(input, inputLength);
-  return result;
+  return startingIndex < inputLength && processKeyValuePair(input, inputLength), result;
   function processKeyValuePair(input2, endIndex) {
-    let hasBothKeyValuePair = equalityIndex > startingIndex, effectiveEqualityIndex = hasBothKeyValuePair ? equalityIndex : endIndex, keySlice = input2.slice(startingIndex + 1, effectiveEqualityIndex);
+    const hasBothKeyValuePair = equalityIndex > startingIndex, effectiveEqualityIndex = hasBothKeyValuePair ? equalityIndex : endIndex, keySlice = input2.slice(startingIndex + 1, effectiveEqualityIndex);
     if (!hasBothKeyValuePair && keySlice.length === 0)
       return;
     let finalKey = keySlice;
-    if (flags & KEY_HAS_PLUS)
-      finalKey = finalKey.replace(/\+/g, " ");
-    if (flags & KEY_NEEDS_DECODE)
-      finalKey = import_fast_decode_uri_component2.default(finalKey) || finalKey;
+    flags & KEY_HAS_PLUS && (finalKey = finalKey.replace(/\+/g, " ")), flags & KEY_NEEDS_DECODE && (finalKey = import_fast_decode_uri_component2.default(finalKey) || finalKey);
     let finalValue = "";
     if (hasBothKeyValuePair) {
       let valueSlice = input2.slice(equalityIndex + 1, endIndex);
-      if (flags & VALUE_HAS_PLUS)
-        valueSlice = valueSlice.replace(/\+/g, " ");
-      if (flags & VALUE_NEEDS_DECODE)
-        valueSlice = import_fast_decode_uri_component2.default(valueSlice) || valueSlice;
-      finalValue = valueSlice;
+      flags & VALUE_HAS_PLUS && (valueSlice = valueSlice.replace(/\+/g, " ")), flags & VALUE_NEEDS_DECODE && (valueSlice = import_fast_decode_uri_component2.default(valueSlice) || valueSlice), finalValue = valueSlice;
     }
-    let currentValue = result[finalKey];
-    if (array && array?.[finalKey])
-      if (finalValue.charCodeAt(0) === 91) {
-        if (object && object?.[finalKey])
-          finalValue = JSON.parse(finalValue);
-        else
-          finalValue = finalValue.slice(1, -1).split(",");
-        if (currentValue === undefined)
-          result[finalKey] = finalValue;
-        else if (Array.isArray(currentValue))
-          currentValue.push(...finalValue);
-        else
-          result[finalKey] = finalValue, result[finalKey].unshift(currentValue);
-      } else if (currentValue === undefined)
-        result[finalKey] = finalValue;
-      else if (Array.isArray(currentValue))
-        currentValue.push(finalValue);
-      else
-        result[finalKey] = [currentValue, finalValue];
-    else
-      result[finalKey] = finalValue;
+    const currentValue = result[finalKey];
+    array && array?.[finalKey] ? finalValue.charCodeAt(0) === 91 ? (object && object?.[finalKey] ? finalValue = JSON.parse(finalValue) : finalValue = finalValue.slice(1, -1).split(","), currentValue === undefined ? result[finalKey] = finalValue : Array.isArray(currentValue) ? currentValue.push(...finalValue) : (result[finalKey] = finalValue, result[finalKey].unshift(currentValue))) : currentValue === undefined ? result[finalKey] = finalValue : Array.isArray(currentValue) ? currentValue.push(finalValue) : result[finalKey] = [currentValue, finalValue] : result[finalKey] = finalValue;
   }
 }
 function parseQueryStandardSchema(input, startIndex = 0) {
-  let result = Object.create(null), flags = 0, inputLength = input.length, startingIndex = startIndex - 1, equalityIndex = startingIndex;
+  const result = /* @__PURE__ */ Object.create(null);
+  let flags = 0;
+  const inputLength = input.length;
+  let startingIndex = startIndex - 1, equalityIndex = startingIndex;
   for (let i = 0;i < inputLength; i++)
     switch (input.charCodeAt(i)) {
       case 38:
         processKeyValuePair(input, i), startingIndex = i, equalityIndex = i, flags = 0;
         break;
       case 61:
-        if (equalityIndex <= startingIndex)
-          equalityIndex = i;
-        else
-          flags |= VALUE_NEEDS_DECODE;
+        equalityIndex <= startingIndex ? equalityIndex = i : flags |= VALUE_NEEDS_DECODE;
         break;
       case 43:
-        if (equalityIndex > startingIndex)
-          flags |= VALUE_HAS_PLUS;
-        else
-          flags |= KEY_HAS_PLUS;
+        equalityIndex > startingIndex ? flags |= VALUE_HAS_PLUS : flags |= KEY_HAS_PLUS;
         break;
       case 37:
-        if (equalityIndex > startingIndex)
-          flags |= VALUE_NEEDS_DECODE;
-        else
-          flags |= KEY_NEEDS_DECODE;
+        equalityIndex > startingIndex ? flags |= VALUE_NEEDS_DECODE : flags |= KEY_NEEDS_DECODE;
         break;
     }
-  if (startingIndex < inputLength)
-    processKeyValuePair(input, inputLength);
-  return result;
+  return startingIndex < inputLength && processKeyValuePair(input, inputLength), result;
   function processKeyValuePair(input2, endIndex) {
-    let hasBothKeyValuePair = equalityIndex > startingIndex, effectiveEqualityIndex = hasBothKeyValuePair ? equalityIndex : endIndex, keySlice = input2.slice(startingIndex + 1, effectiveEqualityIndex);
+    const hasBothKeyValuePair = equalityIndex > startingIndex, effectiveEqualityIndex = hasBothKeyValuePair ? equalityIndex : endIndex, keySlice = input2.slice(startingIndex + 1, effectiveEqualityIndex);
     if (!hasBothKeyValuePair && keySlice.length === 0)
       return;
     let finalKey = keySlice;
-    if (flags & KEY_HAS_PLUS)
-      finalKey = finalKey.replace(/\+/g, " ");
-    if (flags & KEY_NEEDS_DECODE)
-      finalKey = import_fast_decode_uri_component2.default(finalKey) || finalKey;
+    flags & KEY_HAS_PLUS && (finalKey = finalKey.replace(/\+/g, " ")), flags & KEY_NEEDS_DECODE && (finalKey = import_fast_decode_uri_component2.default(finalKey) || finalKey);
     let finalValue = "";
     if (hasBothKeyValuePair) {
       let valueSlice = input2.slice(equalityIndex + 1, endIndex);
-      if (flags & VALUE_HAS_PLUS)
-        valueSlice = valueSlice.replace(/\+/g, " ");
-      if (flags & VALUE_NEEDS_DECODE)
-        valueSlice = import_fast_decode_uri_component2.default(valueSlice) || valueSlice;
-      finalValue = valueSlice;
+      flags & VALUE_HAS_PLUS && (valueSlice = valueSlice.replace(/\+/g, " ")), flags & VALUE_NEEDS_DECODE && (valueSlice = import_fast_decode_uri_component2.default(valueSlice) || valueSlice), finalValue = valueSlice;
     }
-    let currentValue = result[finalKey];
+    const currentValue = result[finalKey];
     if (finalValue.charCodeAt(0) === 91 && finalValue.charCodeAt(finalValue.length - 1) === 93) {
       try {
         finalValue = JSON.parse(finalValue);
       } catch {}
-      if (currentValue === undefined)
-        result[finalKey] = finalValue;
-      else if (Array.isArray(currentValue))
-        currentValue.push(finalValue);
-      else
-        result[finalKey] = [currentValue, finalValue];
+      currentValue === undefined ? result[finalKey] = finalValue : Array.isArray(currentValue) ? currentValue.push(finalValue) : result[finalKey] = [currentValue, finalValue];
     } else if (finalValue.charCodeAt(0) === 123 && finalValue.charCodeAt(finalValue.length - 1) === 125) {
       try {
         finalValue = JSON.parse(finalValue);
       } catch {}
-      if (currentValue === undefined)
-        result[finalKey] = finalValue;
-      else if (Array.isArray(currentValue))
-        currentValue.push(finalValue);
-      else
-        result[finalKey] = [currentValue, finalValue];
-    } else {
-      if (finalValue.includes(","))
-        finalValue = finalValue.split(",");
-      if (currentValue === undefined)
-        result[finalKey] = finalValue;
-      else if (Array.isArray(currentValue))
-        currentValue.push(finalValue);
-      else
-        result[finalKey] = [currentValue, finalValue];
-    }
+      currentValue === undefined ? result[finalKey] = finalValue : Array.isArray(currentValue) ? currentValue.push(finalValue) : result[finalKey] = [currentValue, finalValue];
+    } else
+      finalValue.includes(",") && (finalValue = finalValue.split(",")), currentValue === undefined ? result[finalKey] = finalValue : Array.isArray(currentValue) ? currentValue.push(finalValue) : result[finalKey] = [currentValue, finalValue];
   }
 }
 function parseQuery(input) {
-  let result = Object.create(null), flags = 0, inputLength = input.length, startingIndex = -1, equalityIndex = -1;
+  const result = /* @__PURE__ */ Object.create(null);
+  let flags = 0;
+  const inputLength = input.length;
+  let startingIndex = -1, equalityIndex = -1;
   for (let i = 0;i < inputLength; i++)
     switch (input.charCodeAt(i)) {
       case 38:
         processKeyValuePair(input, i), startingIndex = i, equalityIndex = i, flags = 0;
         break;
       case 61:
-        if (equalityIndex <= startingIndex)
-          equalityIndex = i;
-        else
-          flags |= VALUE_NEEDS_DECODE;
+        equalityIndex <= startingIndex ? equalityIndex = i : flags |= VALUE_NEEDS_DECODE;
         break;
       case 43:
-        if (equalityIndex > startingIndex)
-          flags |= VALUE_HAS_PLUS;
-        else
-          flags |= KEY_HAS_PLUS;
+        equalityIndex > startingIndex ? flags |= VALUE_HAS_PLUS : flags |= KEY_HAS_PLUS;
         break;
       case 37:
-        if (equalityIndex > startingIndex)
-          flags |= VALUE_NEEDS_DECODE;
-        else
-          flags |= KEY_NEEDS_DECODE;
+        equalityIndex > startingIndex ? flags |= VALUE_NEEDS_DECODE : flags |= KEY_NEEDS_DECODE;
         break;
     }
-  if (startingIndex < inputLength)
-    processKeyValuePair(input, inputLength);
-  return result;
+  return startingIndex < inputLength && processKeyValuePair(input, inputLength), result;
   function processKeyValuePair(input2, endIndex) {
-    let hasBothKeyValuePair = equalityIndex > startingIndex, effectiveEqualityIndex = hasBothKeyValuePair ? equalityIndex : endIndex, keySlice = input2.slice(startingIndex + 1, effectiveEqualityIndex);
+    const hasBothKeyValuePair = equalityIndex > startingIndex, effectiveEqualityIndex = hasBothKeyValuePair ? equalityIndex : endIndex, keySlice = input2.slice(startingIndex + 1, effectiveEqualityIndex);
     if (!hasBothKeyValuePair && keySlice.length === 0)
       return;
     let finalKey = keySlice;
-    if (flags & KEY_HAS_PLUS)
-      finalKey = finalKey.replace(/\+/g, " ");
-    if (flags & KEY_NEEDS_DECODE)
-      finalKey = import_fast_decode_uri_component2.default(finalKey) || finalKey;
+    flags & KEY_HAS_PLUS && (finalKey = finalKey.replace(/\+/g, " ")), flags & KEY_NEEDS_DECODE && (finalKey = import_fast_decode_uri_component2.default(finalKey) || finalKey);
     let finalValue = "";
     if (hasBothKeyValuePair) {
       let valueSlice = input2.slice(equalityIndex + 1, endIndex);
-      if (flags & VALUE_HAS_PLUS)
-        valueSlice = valueSlice.replace(/\+/g, " ");
-      if (flags & VALUE_NEEDS_DECODE)
-        valueSlice = import_fast_decode_uri_component2.default(valueSlice) || valueSlice;
-      finalValue = valueSlice;
+      flags & VALUE_HAS_PLUS && (valueSlice = valueSlice.replace(/\+/g, " ")), flags & VALUE_NEEDS_DECODE && (valueSlice = import_fast_decode_uri_component2.default(valueSlice) || valueSlice), finalValue = valueSlice;
     }
-    let currentValue = result[finalKey];
-    if (currentValue === undefined)
-      result[finalKey] = finalValue;
-    else if (Array.isArray(currentValue))
-      currentValue.push(finalValue);
-    else
-      result[finalKey] = [currentValue, finalValue];
+    const currentValue = result[finalKey];
+    currentValue === undefined ? result[finalKey] = finalValue : Array.isArray(currentValue) ? currentValue.push(finalValue) : result[finalKey] = [currentValue, finalValue];
   }
 }
+
+// node_modules/elysia/dist/trace.mjs
 var ELYSIA_TRACE = Symbol("ElysiaTrace");
 var createProcess = () => {
-  let { promise, resolve } = Promise.withResolvers(), { promise: end, resolve: resolveEnd } = Promise.withResolvers(), { promise: error, resolve: resolveError } = Promise.withResolvers(), callbacks = [], callbacksEnd = [];
-  return [(callback) => {
-    if (callback)
-      callbacks.push(callback);
-    return promise;
-  }, (process2) => {
-    let processes = [], resolvers = [], groupError = null;
-    for (let i = 0;i < (process2.total ?? 0); i++) {
-      let { promise: promise2, resolve: resolve2 } = Promise.withResolvers(), { promise: end2, resolve: resolveEnd2 } = Promise.withResolvers(), { promise: error2, resolve: resolveError2 } = Promise.withResolvers(), callbacks2 = [], callbacksEnd2 = [];
-      processes.push((callback) => {
-        if (callback)
-          callbacks2.push(callback);
-        return promise2;
-      }), resolvers.push((process3) => {
-        let result2 = { ...process3, end: end2, error: error2, index: i, onStop(callback) {
-          if (callback)
-            callbacksEnd2.push(callback);
-          return end2;
-        } };
-        resolve2(result2);
-        for (let i2 = 0;i2 < callbacks2.length; i2++)
-          callbacks2[i2](result2);
-        return (error3 = null) => {
-          let end3 = performance.now();
-          if (error3)
-            groupError = error3;
-          let detail = { end: end3, error: error3, get elapsed() {
-            return end3 - process3.begin;
-          } };
-          for (let i2 = 0;i2 < callbacksEnd2.length; i2++)
-            callbacksEnd2[i2](detail);
-          resolveEnd2(end3), resolveError2(error3);
-        };
-      });
+  const { promise, resolve } = Promise.withResolvers(), { promise: end, resolve: resolveEnd } = Promise.withResolvers(), { promise: error, resolve: resolveError } = Promise.withResolvers(), callbacks = [], callbacksEnd = [];
+  return [
+    (callback) => (callback && callbacks.push(callback), promise),
+    (process2) => {
+      const processes = [], resolvers = [];
+      let groupError = null;
+      for (let i = 0;i < (process2.total ?? 0); i++) {
+        const { promise: promise2, resolve: resolve2 } = Promise.withResolvers(), { promise: end2, resolve: resolveEnd2 } = Promise.withResolvers(), { promise: error2, resolve: resolveError2 } = Promise.withResolvers(), callbacks2 = [], callbacksEnd2 = [];
+        processes.push((callback) => (callback && callbacks2.push(callback), promise2)), resolvers.push((process22) => {
+          const result2 = {
+            ...process22,
+            end: end2,
+            error: error2,
+            index: i,
+            onStop(callback) {
+              return callback && callbacksEnd2.push(callback), end2;
+            }
+          };
+          resolve2(result2);
+          for (let i2 = 0;i2 < callbacks2.length; i2++)
+            callbacks2[i2](result2);
+          return (error3 = null) => {
+            const end3 = performance.now();
+            error3 && (groupError = error3);
+            const detail = {
+              end: end3,
+              error: error3,
+              get elapsed() {
+                return end3 - process22.begin;
+              }
+            };
+            for (let i2 = 0;i2 < callbacksEnd2.length; i2++)
+              callbacksEnd2[i2](detail);
+            resolveEnd2(end3), resolveError2(error3);
+          };
+        });
+      }
+      const result = {
+        ...process2,
+        end,
+        error,
+        onEvent(callback) {
+          for (let i = 0;i < processes.length; i++)
+            processes[i](callback);
+        },
+        onStop(callback) {
+          return callback && callbacksEnd.push(callback), end;
+        }
+      };
+      resolve(result);
+      for (let i = 0;i < callbacks.length; i++)
+        callbacks[i](result);
+      return {
+        resolveChild: resolvers,
+        resolve(error2 = null) {
+          const end2 = performance.now();
+          !error2 && groupError && (error2 = groupError);
+          const detail = {
+            end: end2,
+            error: error2,
+            get elapsed() {
+              return end2 - process2.begin;
+            }
+          };
+          for (let i = 0;i < callbacksEnd.length; i++)
+            callbacksEnd[i](detail);
+          resolveEnd(end2), resolveError(error2);
+        }
+      };
     }
-    let result = { ...process2, end, error, onEvent(callback) {
-      for (let i = 0;i < processes.length; i++)
-        processes[i](callback);
-    }, onStop(callback) {
-      if (callback)
-        callbacksEnd.push(callback);
-      return end;
-    } };
-    resolve(result);
-    for (let i = 0;i < callbacks.length; i++)
-      callbacks[i](result);
-    return { resolveChild: resolvers, resolve(error2 = null) {
-      let end2 = performance.now();
-      if (!error2 && groupError)
-        error2 = groupError;
-      let detail = { end: end2, error: error2, get elapsed() {
-        return end2 - process2.begin;
-      } };
-      for (let i = 0;i < callbacksEnd.length; i++)
-        callbacksEnd[i](detail);
-      resolveEnd(end2), resolveError(error2);
-    } };
-  }];
+  ];
 };
-var createTracer = (traceListener) => {
-  return (context) => {
-    let [onRequest, resolveRequest] = createProcess(), [onParse, resolveParse] = createProcess(), [onTransform, resolveTransform] = createProcess(), [onBeforeHandle, resolveBeforeHandle] = createProcess(), [onHandle, resolveHandle] = createProcess(), [onAfterHandle, resolveAfterHandle] = createProcess(), [onError, resolveError] = createProcess(), [onMapResponse, resolveMapResponse] = createProcess(), [onAfterResponse, resolveAfterResponse] = createProcess();
-    return traceListener({ id: context[ELYSIA_REQUEST_ID], context, set: context.set, onRequest, onParse, onTransform, onBeforeHandle, onHandle, onAfterHandle, onMapResponse, onAfterResponse, onError, time: Date.now(), store: context.store }), { request: resolveRequest, parse: resolveParse, transform: resolveTransform, beforeHandle: resolveBeforeHandle, handle: resolveHandle, afterHandle: resolveAfterHandle, error: resolveError, mapResponse: resolveMapResponse, afterResponse: resolveAfterResponse };
+var createTracer = (traceListener) => (context) => {
+  const [onRequest, resolveRequest] = createProcess(), [onParse, resolveParse] = createProcess(), [onTransform, resolveTransform] = createProcess(), [onBeforeHandle, resolveBeforeHandle] = createProcess(), [onHandle, resolveHandle] = createProcess(), [onAfterHandle, resolveAfterHandle] = createProcess(), [onError, resolveError] = createProcess(), [onMapResponse, resolveMapResponse] = createProcess(), [onAfterResponse, resolveAfterResponse] = createProcess();
+  return traceListener({
+    id: context[ELYSIA_REQUEST_ID],
+    context,
+    set: context.set,
+    onRequest,
+    onParse,
+    onTransform,
+    onBeforeHandle,
+    onHandle,
+    onAfterHandle,
+    onMapResponse,
+    onAfterResponse,
+    onError,
+    time: Date.now(),
+    store: context.store
+  }), {
+    request: resolveRequest,
+    parse: resolveParse,
+    transform: resolveTransform,
+    beforeHandle: resolveBeforeHandle,
+    handle: resolveHandle,
+    afterHandle: resolveAfterHandle,
+    error: resolveError,
+    mapResponse: resolveMapResponse,
+    afterResponse: resolveAfterResponse
   };
 };
-var Kind3 = Symbol.for("TypeBox.Kind");
+
+// node_modules/exact-mirror/dist/index.mjs
+var Kind2 = Symbol.for("TypeBox.Kind");
 var Hint2 = Symbol.for("TypeBox.Hint");
 var isSpecialProperty = (name) => /(\ |-|\t|\n|\.|\[|\]|\{|\})/.test(name) || !isNaN(+name[0]);
 var joinProperty = (v1, v2, isOptional = false) => {
@@ -24364,68 +24605,74 @@ var sanitize = (key, sanitize2 = 0, schema) => {
   return hof + key + ")".repeat(sanitize2);
 };
 var mergeObjectIntersection = (schema) => {
-  if (!schema.allOf || Kind3 in schema && (schema[Kind3] !== "Intersect" || schema.type !== "object"))
+  if (!schema.allOf || Kind2 in schema && (schema[Kind2] !== "Intersect" || schema.type !== "object"))
     return schema;
-  let { allOf, ...newSchema } = schema;
-  if (newSchema.properties = {}, Kind3 in newSchema)
-    newSchema[Kind3] = "Object";
-  for (let type of allOf) {
+  const { allOf, ...newSchema } = schema;
+  newSchema.properties = {};
+  if (Kind2 in newSchema)
+    newSchema[Kind2] = "Object";
+  for (const type of allOf) {
     if (type.type !== "object")
       continue;
-    let { properties, required, type: _2, [Kind3]: __, ...rest } = type;
+    const { properties, required, type: _, [Kind2]: __, ...rest } = type;
     if (required)
       newSchema.required = newSchema.required ? newSchema.required.concat(required) : required;
     Object.assign(newSchema, rest);
-    for (let property in type.properties)
+    for (const property in type.properties)
       newSchema.properties[property] = mergeObjectIntersection(type.properties[property]);
   }
   return newSchema;
 };
 var handleRecord = (schema, property, instruction) => {
-  let child = schema.patternProperties["^(.*)$"] ?? schema.patternProperties[Object.keys(schema.patternProperties)[0]];
+  const child = schema.patternProperties["^(.*)$"] ?? schema.patternProperties[Object.keys(schema.patternProperties)[0]];
   if (!child)
     return property;
-  let i = instruction.array;
+  const i = instruction.array;
   instruction.array++;
-  let v = `(()=>{const ar${i}s=Object.keys(${property}),ar${i}v={};for(let i=0;i<ar${i}s.length;i++){const ar${i}p=${property}[ar${i}s[i]];ar${i}v[ar${i}s[i]]=${mirror(child, `ar${i}p`, instruction)}`, optionals = instruction.optionalsInArray[i + 1];
+  let v = `(()=>{const ar${i}s=Object.keys(${property}),ar${i}v={};for(let i=0;i<ar${i}s.length;i++){const ar${i}p=${property}[ar${i}s[i]];ar${i}v[ar${i}s[i]]=${mirror(child, `ar${i}p`, instruction)}`;
+  const optionals = instruction.optionalsInArray[i + 1];
   if (optionals)
     for (let oi = 0;oi < optionals.length; oi++) {
-      let target = `ar${i}v[ar${i}s[i]]${optionals[oi]}`;
+      const target = `ar${i}v[ar${i}s[i]]${optionals[oi]}`;
       v += `;if(${target}===undefined)delete ${target}`;
     }
-  return v += `}return ar${i}v})()`, v;
+  v += `}return ar${i}v})()`;
+  return v;
 };
 var handleTuple = (schema, property, instruction) => {
-  let i = instruction.array;
+  const i = instruction.array;
   instruction.array++;
-  let isRoot = property === "v" && !instruction.unions.length, v = "";
+  const isRoot = property === "v" && !instruction.unions.length;
+  let v = "";
   if (!isRoot)
-    v = "(()=>{";
+    v = `(()=>{`;
   v += `const ar${i}v=[`;
   for (let i2 = 0;i2 < schema.length; i2++) {
     if (i2 !== 0)
       v += ",";
     v += mirror(schema[i2], joinProperty(property, i2, instruction.parentIsOptional), instruction);
   }
-  if (v += "];", !isRoot)
+  v += `];`;
+  if (!isRoot)
     v += `return ar${i}v})()`;
   return v;
 };
-function deepClone(source, weak = new WeakMap) {
+function deepClone(source, weak = /* @__PURE__ */ new WeakMap) {
   if (source === null || typeof source !== "object" || typeof source === "function")
     return source;
   if (weak.has(source))
     return weak.get(source);
   if (Array.isArray(source)) {
-    let copy = Array(source.length);
+    const copy = new Array(source.length);
     weak.set(source, copy);
     for (let i = 0;i < source.length; i++)
       copy[i] = deepClone(source[i], weak);
     return copy;
   }
   if (typeof source === "object") {
-    let keys = Object.keys(source).concat(Object.getOwnPropertySymbols(source)), cloned = {};
-    for (let key of keys)
+    const keys = Object.keys(source).concat(Object.getOwnPropertySymbols(source));
+    const cloned = {};
+    for (const key of keys)
       cloned[key] = deepClone(source[key], weak);
     return cloned;
   }
@@ -24433,50 +24680,72 @@ function deepClone(source, weak = new WeakMap) {
 }
 var handleUnion = (schemas, property, instruction) => {
   if (instruction.TypeCompiler === undefined) {
-    if (!instruction.typeCompilerWanred)
-      console.warn(Error("[exact-mirror] TypeBox's TypeCompiler is required to use Union")), instruction.typeCompilerWanred = true;
+    if (!instruction.typeCompilerWanred) {
+      console.warn(new Error("[exact-mirror] TypeBox's TypeCompiler is required to use Union"));
+      instruction.typeCompilerWanred = true;
+    }
     return property;
   }
   instruction.unionKeys[property] = 1;
-  let ui = instruction.unions.length, typeChecks = instruction.unions[ui] = [], v = `(()=>{
-`, unwrapRef = (type) => {
-    if (!(Kind3 in type) || !type.$ref)
+  const ui = instruction.unions.length;
+  const typeChecks = instruction.unions[ui] = [];
+  let v = `(()=>{
+`;
+  const unwrapRef = (type) => {
+    if (!(Kind2 in type) || !type.$ref)
       return type;
-    if (type[Kind3] === "This")
+    if (type[Kind2] === "This") {
       return deepClone(instruction.definitions[type.$ref]);
-    else if (type[Kind3] === "Ref")
+    } else if (type[Kind2] === "Ref") {
       if (!instruction.modules)
-        console.warn(Error("[exact-mirror] modules is required when using nested cyclic reference"));
+        console.warn(new Error("[exact-mirror] modules is required when using nested cyclic reference"));
       else
         return instruction.modules.Import(type.$ref);
+    }
     return type;
-  }, cleanThenCheck = "";
+  };
+  let cleanThenCheck = "";
   for (let i = 0;i < schemas.length; i++) {
     let type = unwrapRef(schemas[i]);
     if (Array.isArray(type.anyOf))
       for (let i2 = 0;i2 < type.anyOf.length; i2++)
         type.anyOf[i2] = unwrapRef(type.anyOf[i2]);
-    else if (type.items)
+    else if (type.items) {
       if (Array.isArray(type.items))
         for (let i2 = 0;i2 < type.items.length; i2++)
           type.items[i2] = unwrapRef(type.items[i2]);
       else
         type.items = unwrapRef(type.items);
-    typeChecks.push(TypeCompiler.Compile(type)), v += `if(d.unions[${ui}][${i}].Check(${property})){return ${mirror(type, property, { ...instruction, recursion: instruction.recursion + 1, parentIsOptional: true })}}
-`, cleanThenCheck += (i ? "" : "let ") + "tmp=" + mirror(type, property, { ...instruction, recursion: instruction.recursion + 1, parentIsOptional: true }) + `
+    }
+    typeChecks.push(TypeCompiler.Compile(type));
+    v += `if(d.unions[${ui}][${i}].Check(${property})){return ${mirror(type, property, {
+      ...instruction,
+      recursion: instruction.recursion + 1,
+      parentIsOptional: true
+    })}}
+`;
+    cleanThenCheck += (i ? "" : "let ") + "tmp=" + mirror(type, property, {
+      ...instruction,
+      recursion: instruction.recursion + 1,
+      parentIsOptional: true
+    }) + `
 if(d.unions[${ui}][${i}].Check(tmp))return tmp
 `;
   }
   if (cleanThenCheck)
     v += cleanThenCheck;
-  return v += `return ${instruction.removeUnknownUnionType ? "undefined" : property}`, v + "})()";
+  v += `return ${instruction.removeUnknownUnionType ? "undefined" : property}`;
+  return v + `})()`;
 };
 var mirror = (schema, property, instruction) => {
   if (!schema)
     return "";
-  let isRoot = property === "v" && !instruction.unions.length;
-  if (Kind3 in schema && schema[Kind3] === "Import" && schema.$ref in schema.$defs)
-    return mirror(schema.$defs[schema.$ref], property, { ...instruction, definitions: Object.assign(instruction.definitions, schema.$defs) });
+  const isRoot = property === "v" && !instruction.unions.length;
+  if (Kind2 in schema && schema[Kind2] === "Import" && schema.$ref in schema.$defs)
+    return mirror(schema.$defs[schema.$ref], property, {
+      ...instruction,
+      definitions: Object.assign(instruction.definitions, schema.$defs)
+    });
   if (isRoot && schema.type !== "object" && schema.type !== "array" && !schema.anyOf)
     return `return ${sanitize("v", instruction.sanitize?.length, schema)}`;
   if (instruction.recursion >= instruction.recursionLimit)
@@ -24486,40 +24755,53 @@ var mirror = (schema, property, instruction) => {
     instruction.definitions[schema.$id] = schema;
   switch (schema.type) {
     case "object":
-      if (schema[Kind3] === "Record") {
+      if (schema[Kind2] === "Record") {
         v = handleRecord(schema, property, instruction);
         break;
       }
-      if (schema = mergeObjectIntersection(schema), v += "{", schema.additionalProperties)
+      schema = mergeObjectIntersection(schema);
+      v += "{";
+      if (schema.additionalProperties)
         v += `...${property},`;
-      let keys = Object.keys(schema.properties);
+      const keys = Object.keys(schema.properties);
       for (let i2 = 0;i2 < keys.length; i2++) {
-        let key = keys[i2], isOptional = !schema.required || schema.required && !schema.required.includes(key) || Array.isArray(schema.properties[key].anyOf), name = joinProperty(property, key, instruction.parentIsOptional);
+        const key = keys[i2];
+        let isOptional = !schema.required || schema.required && !schema.required.includes(key) || Array.isArray(schema.properties[key].anyOf);
+        const name = joinProperty(property, key, instruction.parentIsOptional);
         if (isOptional) {
-          let index = instruction.array;
+          const index = instruction.array;
           if (property.startsWith("ar")) {
-            let dotIndex = name.indexOf("."), refName;
-            if (dotIndex >= 0)
+            const dotIndex = name.indexOf(".");
+            let refName;
+            if (dotIndex >= 0) {
               refName = name.slice(dotIndex);
-            else
+            } else {
               refName = name.slice(property.length);
-            if (refName.startsWith("?."))
-              if (refName.charAt(2) === "[")
+            }
+            if (refName.startsWith("?.")) {
+              if (refName.charAt(2) === "[") {
                 refName = refName.slice(2);
-              else
+              } else {
                 refName = refName.slice(1);
-            let array = instruction.optionalsInArray;
+              }
+            }
+            const array = instruction.optionalsInArray;
             if (array[index])
               array[index].push(refName);
             else
               array[index] = [refName];
-          } else
+          } else {
             instruction.optionals.push(name);
+          }
         }
-        let child = schema.properties[key];
+        const child = schema.properties[key];
         if (i2 !== 0)
           v += ",";
-        v += `${encodeProperty(key)}:${isOptional ? `${name}===undefined?undefined:` : ""}${mirror(child, name, { ...instruction, recursion: instruction.recursion + 1, parentIsOptional: isOptional })}`;
+        v += `${encodeProperty(key)}:${isOptional ? `${name}===undefined?undefined:` : ""}${mirror(child, name, {
+          ...instruction,
+          recursion: instruction.recursion + 1,
+          parentIsOptional: isOptional
+        })}`;
       }
       v += "}";
       break;
@@ -24530,28 +24812,36 @@ var mirror = (schema, property, instruction) => {
           break;
         } else if (isRoot && !Array.isArray(schema.items.anyOf))
           return "return v";
-        else if (Kind3 in schema.items && schema.items.$ref && (schema.items[Kind3] === "Ref" || schema.items[Kind3] === "This"))
-          v = mirror(deepClone(instruction.definitions[schema.items.$ref]), property, { ...instruction, parentIsOptional: true, recursion: instruction.recursion + 1 });
+        else if (Kind2 in schema.items && schema.items.$ref && (schema.items[Kind2] === "Ref" || schema.items[Kind2] === "This"))
+          v = mirror(deepClone(instruction.definitions[schema.items.$ref]), property, {
+            ...instruction,
+            parentIsOptional: true,
+            recursion: instruction.recursion + 1
+          });
         else if (!Array.isArray(schema.items.anyOf)) {
           v = property;
           break;
         }
       }
-      let i = instruction.array;
+      const i = instruction.array;
       instruction.array++;
       let reference = property;
       if (isRoot)
         v = `const ar${i}v=new Array(${property}.length);`;
-      else
-        reference = `ar${i}s`, v = `((${reference})=>{const ar${i}v=new Array(${reference}.length);`;
+      else {
+        reference = `ar${i}s`;
+        v = `((${reference})=>{const ar${i}v=new Array(${reference}.length);`;
+      }
       v += `for(let i=0;i<${reference}.length;i++){const ar${i}p=${reference}[i];ar${i}v[i]=${mirror(schema.items, `ar${i}p`, instruction)}`;
-      let optionals = instruction.optionalsInArray[i + 1];
-      if (optionals)
+      const optionals = instruction.optionalsInArray[i + 1];
+      if (optionals) {
         for (let oi = 0;oi < optionals.length; oi++) {
-          let target = `ar${i}v[i]${optionals[oi]}`;
+          const target = `ar${i}v[i]${optionals[oi]}`;
           v += `;if(${target}===undefined)delete ${target}`;
         }
-      if (v += "}", !isRoot)
+      }
+      v += `}`;
+      if (!isRoot)
         v += `return ar${i}v})(${property})`;
       break;
     default:
@@ -24566,26 +24856,50 @@ var mirror = (schema, property, instruction) => {
   }
   if (!isRoot)
     return v;
-  if (schema.type === "array")
+  if (schema.type === "array") {
     v = `${v}const x=ar0v;`;
-  else
+  } else {
     v = `const x=${v}
 `;
+  }
   for (let i = 0;i < instruction.optionals.length; i++) {
-    let key = instruction.optionals[i], prop = key.slice(1);
-    if (v += `if(${key}===undefined`, instruction.unionKeys[key])
+    const key = instruction.optionals[i];
+    const prop = key.slice(1);
+    v += `if(${key}===undefined`;
+    if (instruction.unionKeys[key])
       v += `||x${prop}===undefined`;
-    let shouldQuestion = prop.charCodeAt(0) !== 63 && schema.type !== "array";
+    const shouldQuestion = prop.charCodeAt(0) !== 63 && schema.type !== "array";
     v += `)delete x${shouldQuestion ? prop.charCodeAt(0) === 91 ? "?." : "?" : ""}${prop}
 `;
   }
   return `${v}return x`;
 };
-var createMirror = (schema, { TypeCompiler: TypeCompiler22, modules, definitions, sanitize: sanitize2, recursionLimit = 8, removeUnknownUnionType = false } = {}) => {
-  let unions = [];
+var createMirror = (schema, {
+  TypeCompiler: TypeCompiler2,
+  modules,
+  definitions,
+  sanitize: sanitize2,
+  recursionLimit = 8,
+  removeUnknownUnionType = false
+} = {}) => {
+  const unions = [];
   if (typeof sanitize2 === "function")
     sanitize2 = [sanitize2];
-  let f = mirror(schema, "v", { optionals: [], optionalsInArray: [], array: 0, parentIsOptional: false, unions, unionKeys: {}, TypeCompiler: TypeCompiler22, modules, definitions: definitions ?? modules?.$defs ?? {}, sanitize: sanitize2, recursion: 0, recursionLimit, removeUnknownUnionType });
+  const f = mirror(schema, "v", {
+    optionals: [],
+    optionalsInArray: [],
+    array: 0,
+    parentIsOptional: false,
+    unions,
+    unionKeys: {},
+    TypeCompiler: TypeCompiler2,
+    modules,
+    definitions: definitions ?? modules?.$defs ?? {},
+    sanitize: sanitize2,
+    recursion: 0,
+    recursionLimit,
+    removeUnknownUnionType
+  });
   if (!unions.length && !sanitize2?.length)
     return Function("v", f);
   let hof;
@@ -24594,21 +24908,18 @@ var createMirror = (schema, { TypeCompiler: TypeCompiler22, modules, definitions
     for (let i = 0;i < sanitize2.length; i++)
       hof[`h${i}`] = sanitize2[i];
   }
-  return Function("d", `return function mirror(v){${f}}`)({ unions, ...hof });
+  return Function("d", `return function mirror(v){${f}}`)({
+    unions,
+    ...hof
+  });
 };
-var isOptional = (schema) => {
-  if (!schema)
-    return false;
-  if (schema?.[Kind] === "Import" && schema.References)
-    return schema.References().some(isOptional);
-  if (schema.schema)
-    schema = schema.schema;
-  return !!schema && OptionalKind in schema;
-};
+
+// node_modules/elysia/dist/schema.mjs
+var isOptional = (schema) => schema ? schema?.[Kind] === "Import" && schema.References ? schema.References().some(isOptional) : (schema.schema && (schema = schema.schema), !!schema && (OptionalKind in schema)) : false;
 var hasAdditionalProperties = (_schema) => {
   if (!_schema)
     return false;
-  let schema = _schema?.schema ?? _schema;
+  const schema = _schema?.schema ?? _schema;
   if (schema[Kind] === "Import" && _schema.References)
     return _schema.References().some(hasAdditionalProperties);
   if (schema.anyOf)
@@ -24620,13 +24931,13 @@ var hasAdditionalProperties = (_schema) => {
   if (schema.not)
     return schema.not.some(hasAdditionalProperties);
   if (schema.type === "object") {
-    let properties = schema.properties;
+    const properties = schema.properties;
     if ("additionalProperties" in schema)
       return schema.additionalProperties;
     if ("patternProperties" in schema)
       return false;
-    for (let key of Object.keys(properties)) {
-      let property = properties[key];
+    for (const key of Object.keys(properties)) {
+      const property = properties[key];
       if (property.type === "object") {
         if (hasAdditionalProperties(property))
           return true;
@@ -24639,9 +24950,7 @@ var hasAdditionalProperties = (_schema) => {
     }
     return false;
   }
-  if (schema.type === "array" && schema.items && !Array.isArray(schema.items))
-    return hasAdditionalProperties(schema.items);
-  return false;
+  return schema.type === "array" && schema.items && !Array.isArray(schema.items) ? hasAdditionalProperties(schema.items) : false;
 };
 var hasType = (type, schema) => {
   if (!schema)
@@ -24649,11 +24958,11 @@ var hasType = (type, schema) => {
   if (Kind in schema && schema[Kind] === type)
     return true;
   if (schema.type === "object") {
-    let properties = schema.properties;
+    const properties = schema.properties;
     if (!properties)
       return false;
-    for (let key of Object.keys(properties)) {
-      let property = properties[key];
+    for (const key of Object.keys(properties)) {
+      const property = properties[key];
       if (property.type === "object") {
         if (hasType(type, property))
           return true;
@@ -24672,7 +24981,7 @@ var hasType = (type, schema) => {
 var hasElysiaMeta = (meta, _schema) => {
   if (!_schema)
     return false;
-  let schema = _schema?.schema ?? _schema;
+  const schema = _schema?.schema ?? _schema;
   if (schema.elysiaMeta === meta)
     return true;
   if (schema[Kind] === "Import" && _schema.References)
@@ -24686,9 +24995,9 @@ var hasElysiaMeta = (meta, _schema) => {
   if (schema.not)
     return schema.not.some((schema2) => hasElysiaMeta(meta, schema2));
   if (schema.type === "object") {
-    let properties = schema.properties;
-    for (let key of Object.keys(properties)) {
-      let property = properties[key];
+    const properties = schema.properties;
+    for (const key of Object.keys(properties)) {
+      const property = properties[key];
       if (property.type === "object") {
         if (hasElysiaMeta(meta, property))
           return true;
@@ -24701,22 +25010,20 @@ var hasElysiaMeta = (meta, _schema) => {
     }
     return false;
   }
-  if (schema.type === "array" && schema.items && !Array.isArray(schema.items))
-    return hasElysiaMeta(meta, schema.items);
-  return false;
+  return schema.type === "array" && schema.items && !Array.isArray(schema.items) ? hasElysiaMeta(meta, schema.items) : false;
 };
 var hasProperty = (expectedProperty, _schema) => {
   if (!_schema)
     return;
-  let schema = _schema.schema ?? _schema;
+  const schema = _schema.schema ?? _schema;
   if (schema[Kind] === "Import" && _schema.References)
     return _schema.References().some((schema2) => hasProperty(expectedProperty, schema2));
   if (schema.type === "object") {
-    let properties = schema.properties;
+    const properties = schema.properties;
     if (!properties)
       return false;
-    for (let key of Object.keys(properties)) {
-      let property = properties[key];
+    for (const key of Object.keys(properties)) {
+      const property = properties[key];
       if (expectedProperty in property)
         return true;
       if (property.type === "object") {
@@ -24758,18 +25065,14 @@ var hasRef = (schema) => {
   if (schema.not && hasRef(schema.not))
     return true;
   if (schema.type === "object" && schema.properties) {
-    let properties = schema.properties;
-    for (let key of Object.keys(properties)) {
-      let property = properties[key];
-      if (hasRef(property))
-        return true;
-      if (property.type === "array" && property.items && hasRef(property.items))
+    const properties = schema.properties;
+    for (const key of Object.keys(properties)) {
+      const property = properties[key];
+      if (hasRef(property) || property.type === "array" && property.items && hasRef(property.items))
         return true;
     }
   }
-  if (schema.type === "array" && schema.items && hasRef(schema.items))
-    return true;
-  return schema[Kind] === "Ref" && "$ref" in schema;
+  return schema.type === "array" && schema.items && hasRef(schema.items) ? true : schema[Kind] === "Ref" && ("$ref" in schema);
 };
 var hasTransform = (schema) => {
   if (!schema)
@@ -24794,36 +25097,32 @@ var hasTransform = (schema) => {
   if (schema.not && hasTransform(schema.not))
     return true;
   if (schema.type === "object" && schema.properties) {
-    let properties = schema.properties;
-    for (let key of Object.keys(properties)) {
-      let property = properties[key];
-      if (hasTransform(property))
-        return true;
-      if (property.type === "array" && property.items && hasTransform(property.items))
+    const properties = schema.properties;
+    for (const key of Object.keys(properties)) {
+      const property = properties[key];
+      if (hasTransform(property) || property.type === "array" && property.items && hasTransform(property.items))
         return true;
     }
   }
-  if (schema.type === "array" && schema.items && hasTransform(schema.items))
-    return true;
-  return TransformKind in schema;
+  return schema.type === "array" && schema.items && hasTransform(schema.items) ? true : (TransformKind in schema);
 };
 var replaceSchemaType = (schema, options2, _config = {}) => {
-  let config = _config;
+  const config = _config;
   if (config.root = true, !Array.isArray(options2))
     return options2.original = schema, _replaceSchemaType(schema, options2, config);
-  for (let option of options2)
+  for (const option of options2)
     option.original = schema, schema = _replaceSchemaType(schema, option, config);
   return schema;
 };
 var _replaceSchemaType = (schema, options2, config) => {
   if (!schema)
     return schema;
-  let root = config.root;
+  const root = config.root;
   if (options2.onlyFirst && schema.type === options2.onlyFirst)
     return options2.to(schema) ?? schema;
   if (options2.untilObjectFound && !root && schema.type === "object")
     return schema;
-  let fromSymbol = options2.from[Kind];
+  const fromSymbol = options2.from[Kind];
   if (schema.oneOf) {
     for (let i = 0;i < schema.oneOf.length; i++)
       schema.oneOf[i] = _replaceSchemaType(schema.oneOf[i], options2, config);
@@ -24841,40 +25140,64 @@ var _replaceSchemaType = (schema, options2, config) => {
   }
   if (schema.not)
     return _replaceSchemaType(schema.not, options2, config);
-  let isRoot = root && !!options2.excludeRoot;
+  const isRoot = root && !!options2.excludeRoot;
   if (schema[Kind] === fromSymbol) {
-    let { anyOf, oneOf, allOf, not, properties: properties2, items, ...rest } = schema, to = options2.to(rest);
+    const { anyOf, oneOf, allOf, not, properties: properties2, items, ...rest } = schema, to = options2.to(rest);
     if (!to)
       return schema;
-    let transform2, composeProperties = (schema2) => {
-      let v = _composeProperties(schema2);
-      if (v.$id)
-        delete v.$id;
-      return v;
+    let transform2;
+    const composeProperties = (schema2) => {
+      const v = _composeProperties(schema2);
+      return v.$id && delete v.$id, v;
     }, _composeProperties = (v) => {
       if (properties2 && v.type === "object") {
-        let newProperties = {};
-        for (let [key, value2] of Object.entries(properties2))
-          newProperties[key] = _replaceSchemaType(value2, options2, { ...config, root: false });
-        return { ...rest, ...v, properties: newProperties };
+        const newProperties = {};
+        for (const [key, value2] of Object.entries(properties2))
+          newProperties[key] = _replaceSchemaType(value2, options2, {
+            ...config,
+            root: false
+          });
+        return {
+          ...rest,
+          ...v,
+          properties: newProperties
+        };
       }
       if (items && v.type === "array")
-        return { ...rest, ...v, items: _replaceSchemaType(items, options2, { ...config, root: false }) };
-      let value = { ...rest, ...v };
-      if (delete value.required, properties2 && v.type === "string" && v.format === "ObjectString" && v.default === "{}")
-        transform2 = t.ObjectString(properties2, rest), value.properties = properties2;
-      else if (items && v.type === "string" && v.format === "ArrayString" && v.default === "[]")
-        transform2 = t.ArrayString(items, rest), value.items = items;
-      return value;
+        return {
+          ...rest,
+          ...v,
+          items: _replaceSchemaType(items, options2, {
+            ...config,
+            root: false
+          })
+        };
+      const value = {
+        ...rest,
+        ...v
+      };
+      return delete value.required, properties2 && v.type === "string" && v.format === "ObjectString" && v.default === "{}" ? (transform2 = t.ObjectString(properties2, rest), value.properties = properties2) : items && v.type === "string" && v.format === "ArrayString" && v.default === "[]" && (transform2 = t.ArrayString(items, rest), value.items = items), value;
     };
     if (isRoot) {
       if (properties2) {
-        let newProperties = {};
-        for (let [key, value] of Object.entries(properties2))
-          newProperties[key] = _replaceSchemaType(value, options2, { ...config, root: false });
-        return { ...rest, properties: newProperties };
+        const newProperties = {};
+        for (const [key, value] of Object.entries(properties2))
+          newProperties[key] = _replaceSchemaType(value, options2, {
+            ...config,
+            root: false
+          });
+        return {
+          ...rest,
+          properties: newProperties
+        };
       } else if (items?.map)
-        return { ...rest, items: items.map((v) => _replaceSchemaType(v, options2, { ...config, root: false })) };
+        return {
+          ...rest,
+          items: items.map((v) => _replaceSchemaType(v, options2, {
+            ...config,
+            root: false
+          }))
+        };
       return rest;
     }
     if (to.anyOf)
@@ -24886,27 +25209,42 @@ var _replaceSchemaType = (schema, options2, config) => {
     else if (to.allOf)
       for (let i = 0;i < to.allOf.length; i++)
         to.allOf[i] = composeProperties(to.allOf[i]);
-    else if (to.not)
-      to.not = composeProperties(to.not);
-    if (transform2)
-      to[TransformKind] = transform2[TransformKind];
-    if (to.anyOf || to.oneOf || to.allOf || to.not)
+    else
+      to.not && (to.not = composeProperties(to.not));
+    if (transform2 && (to[TransformKind] = transform2[TransformKind]), to.anyOf || to.oneOf || to.allOf || to.not)
       return to;
     if (properties2) {
-      let newProperties = {};
-      for (let [key, value] of Object.entries(properties2))
-        newProperties[key] = _replaceSchemaType(value, options2, { ...config, root: false });
-      return { ...rest, ...to, properties: newProperties };
+      const newProperties = {};
+      for (const [key, value] of Object.entries(properties2))
+        newProperties[key] = _replaceSchemaType(value, options2, {
+          ...config,
+          root: false
+        });
+      return {
+        ...rest,
+        ...to,
+        properties: newProperties
+      };
     } else if (items?.map)
-      return { ...rest, ...to, items: items.map((v) => _replaceSchemaType(v, options2, { ...config, root: false })) };
-    return { ...rest, ...to };
+      return {
+        ...rest,
+        ...to,
+        items: items.map((v) => _replaceSchemaType(v, options2, {
+          ...config,
+          root: false
+        }))
+      };
+    return {
+      ...rest,
+      ...to
+    };
   }
-  let properties = schema?.properties;
+  const properties = schema?.properties;
   if (properties && root && options2.rootOnly !== true)
-    for (let [key, value] of Object.entries(properties))
+    for (const [key, value] of Object.entries(properties))
       switch (value[Kind]) {
         case fromSymbol:
-          let { anyOf, oneOf, allOf, not, type, ...rest } = value, to = options2.to(rest);
+          const { anyOf, oneOf, allOf, not, type, ...rest } = value, to = options2.to(rest);
           if (!to)
             return schema;
           if (to.anyOf)
@@ -24918,120 +25256,162 @@ var _replaceSchemaType = (schema, options2, config) => {
           else if (to.allOf)
             for (let i = 0;i < to.allOf.length; i++)
               to.allOf[i] = { ...rest, ...to.allOf[i] };
-          else if (to.not)
-            to.not = { ...rest, ...to.not };
-          properties[key] = { ...rest, ..._replaceSchemaType(rest, options2, { ...config, root: false }) };
+          else
+            to.not && (to.not = { ...rest, ...to.not });
+          properties[key] = {
+            ...rest,
+            ..._replaceSchemaType(rest, options2, {
+              ...config,
+              root: false
+            })
+          };
           break;
         case "Object":
         case "Union":
-          properties[key] = _replaceSchemaType(value, options2, { ...config, root: false });
+          properties[key] = _replaceSchemaType(value, options2, {
+            ...config,
+            root: false
+          });
           break;
         default:
           if (Array.isArray(value.items))
             for (let i = 0;i < value.items.length; i++)
-              value.items[i] = _replaceSchemaType(value.items[i], options2, { ...config, root: false });
-          else if (value.anyOf || value.oneOf || value.allOf || value.not)
-            properties[key] = _replaceSchemaType(value, options2, { ...config, root: false });
-          else if (value.type === "array")
-            value.items = _replaceSchemaType(value.items, options2, { ...config, root: false });
+              value.items[i] = _replaceSchemaType(value.items[i], options2, {
+                ...config,
+                root: false
+              });
+          else
+            value.anyOf || value.oneOf || value.allOf || value.not ? properties[key] = _replaceSchemaType(value, options2, {
+              ...config,
+              root: false
+            }) : value.type === "array" && (value.items = _replaceSchemaType(value.items, options2, {
+              ...config,
+              root: false
+            }));
           break;
       }
-  if (schema.type === "array" && schema.items)
-    if (Array.isArray(schema.items))
-      schema.items = schema.items.map((item) => _replaceSchemaType(item, options2, { ...config, root: false }));
-    else
-      schema.items = _replaceSchemaType(schema.items, options2, { ...config, root: false });
-  return schema;
+  return schema.type === "array" && schema.items && (Array.isArray(schema.items) ? schema.items = schema.items.map((item) => _replaceSchemaType(item, options2, {
+    ...config,
+    root: false
+  })) : schema.items = _replaceSchemaType(schema.items, options2, {
+    ...config,
+    root: false
+  })), schema;
 };
 var createCleaner = (schema) => (value) => {
-  if (typeof value === "object")
+  if (typeof value == "object")
     try {
       return exports_value2.Clean(schema, value);
     } catch {}
   return value;
 };
-var getSchemaValidator = (s, { models = {}, dynamic = false, modules, normalize = false, additionalProperties = false, forceAdditionalProperties = false, coerce = false, additionalCoerce = [], validators, sanitize: sanitize2 } = {}) => {
+var getSchemaValidator = (s, {
+  models = {},
+  dynamic = false,
+  modules,
+  normalize = false,
+  additionalProperties = false,
+  forceAdditionalProperties = false,
+  coerce = false,
+  additionalCoerce = [],
+  validators,
+  sanitize: sanitize2
+} = {}) => {
   if (validators = validators?.filter((x) => x), !s) {
     if (!validators?.length)
       return;
     s = validators[0], validators = validators.slice(1);
   }
-  let doesHaveRef = undefined, replaceSchema = (schema2) => {
-    if (coerce)
-      return replaceSchemaType(schema2, [{ from: t.Number(), to: (options2) => t.Numeric(options2), untilObjectFound: true }, { from: t.Boolean(), to: (options2) => t.BooleanString(options2), untilObjectFound: true }, ...Array.isArray(additionalCoerce) ? additionalCoerce : [additionalCoerce]]);
-    return replaceSchemaType(schema2, additionalCoerce);
-  }, mapSchema = (s2) => {
-    if (s2 && typeof s2 !== "string" && "~standard" in s2)
+  let doesHaveRef;
+  const replaceSchema = (schema2) => coerce ? replaceSchemaType(schema2, [
+    {
+      from: t.Number(),
+      to: (options2) => t.Numeric(options2),
+      untilObjectFound: true
+    },
+    {
+      from: t.Boolean(),
+      to: (options2) => t.BooleanString(options2),
+      untilObjectFound: true
+    },
+    ...Array.isArray(additionalCoerce) ? additionalCoerce : [additionalCoerce]
+  ]) : replaceSchemaType(schema2, additionalCoerce), mapSchema = (s2) => {
+    if (s2 && typeof s2 != "string" && "~standard" in s2)
       return s2;
     if (!s2)
       return;
     let schema2;
-    if (typeof s2 !== "string")
+    if (typeof s2 != "string")
       schema2 = s2;
     else if (schema2 = modules && s2 in modules.$defs ? modules.Import(s2) : models[s2], !schema2)
       return;
-    if (Kind in schema2) {
-      if (schema2[Kind] === "Import") {
-        if (!hasRef(schema2.$defs[schema2.$ref])) {
-          if (schema2 = schema2.$defs[schema2.$ref], coerce || additionalCoerce)
-            schema2 = replaceSchema(schema2);
-        }
-      } else if (hasRef(schema2)) {
-        let id = randomId();
-        schema2 = t.Module({ ...modules?.$defs, [id]: schema2 }).Import(id);
-      } else if (coerce || additionalCoerce)
-        schema2 = replaceSchema(schema2);
-    }
+    if (Kind in schema2)
+      if (schema2[Kind] === "Import")
+        hasRef(schema2.$defs[schema2.$ref]) || (schema2 = schema2.$defs[schema2.$ref], (coerce || additionalCoerce) && (schema2 = replaceSchema(schema2)));
+      else if (hasRef(schema2)) {
+        const id = randomId();
+        schema2 = t.Module({
+          ...modules?.$defs,
+          [id]: schema2
+        }).Import(id);
+      } else
+        (coerce || additionalCoerce) && (schema2 = replaceSchema(schema2));
     return schema2;
-  }, schema = mapSchema(s), _validators = validators;
-  if ("~standard" in schema || validators?.length && validators.some((x) => x && typeof x !== "string" && ("~standard" in x))) {
-    let typeboxSubValidator = (schema2) => {
+  };
+  let schema = mapSchema(s), _validators = validators;
+  if ("~standard" in schema || validators?.length && validators.some((x) => x && typeof x != "string" && ("~standard" in x))) {
+    const typeboxSubValidator = (schema2) => {
       let mirror2;
       if (normalize === true || normalize === "exactMirror")
         try {
-          mirror2 = createMirror(schema2, { TypeCompiler, sanitize: sanitize2?.(), modules });
+          mirror2 = createMirror(schema2, {
+            TypeCompiler,
+            sanitize: sanitize2?.(),
+            modules
+          });
         } catch {
           console.warn("Failed to create exactMirror. Please report the following code to https://github.com/elysiajs/elysia/issues"), console.warn(schema2), mirror2 = createCleaner(schema2);
         }
-      let vali = getSchemaValidator(schema2, { models, modules, dynamic, normalize, additionalProperties: true, forceAdditionalProperties: true, coerce, additionalCoerce });
-      return vali.Decode = mirror2, (v) => {
-        if (vali.Check(v))
-          return { value: vali.Decode(v) };
-        else
-          return { issues: [...vali.Errors(v)] };
+      const vali = getSchemaValidator(schema2, {
+        models,
+        modules,
+        dynamic,
+        normalize,
+        additionalProperties: true,
+        forceAdditionalProperties: true,
+        coerce,
+        additionalCoerce
+      });
+      return vali.Decode = mirror2, (v) => vali.Check(v) ? {
+        value: vali.Decode(v)
+      } : {
+        issues: [...vali.Errors(v)]
       };
-    }, mainCheck = schema["~standard"] ? schema["~standard"].validate : typeboxSubValidator(schema), checkers = [];
-    if (validators?.length)
-      for (let validator2 of validators) {
-        if (!validator2)
-          continue;
-        if (typeof validator2 === "string")
-          continue;
-        if (validator2?.["~standard"]) {
-          checkers.push(validator2["~standard"]);
-          continue;
+    }, mainCheck = schema["~standard"] ? schema["~standard"].validate : typeboxSubValidator(schema);
+    let checkers = [];
+    if (validators?.length) {
+      for (const validator2 of validators)
+        if (validator2 && typeof validator2 != "string") {
+          if (validator2?.["~standard"]) {
+            checkers.push(validator2["~standard"]);
+            continue;
+          }
+          if (Kind in validator2) {
+            checkers.push(typeboxSubValidator(validator2));
+            continue;
+          }
         }
-        if (Kind in validator2) {
-          checkers.push(typeboxSubValidator(validator2));
-          continue;
-        }
-      }
+    }
     async function Check2(value) {
       let v = mainCheck(value);
-      if (v instanceof Promise)
-        v = await v;
-      if (v.issues)
+      if (v instanceof Promise && (v = await v), v.issues)
         return v;
-      let values = [];
-      if (v && typeof v === "object")
-        values.push(v.value);
+      const values = [];
+      v && typeof v == "object" && values.push(v.value);
       for (let i = 0;i < checkers.length; i++) {
-        if (v = checkers[i].validate(value), v instanceof Promise)
-          v = await v;
-        if (v.issues)
+        if (v = checkers[i].validate(value), v instanceof Promise && (v = await v), v.issues)
           return v;
-        if (v && typeof v === "object")
-          values.push(v.value);
+        v && typeof v == "object" && values.push(v.value);
       }
       if (!values.length)
         return { value: v };
@@ -25044,76 +25424,110 @@ var getSchemaValidator = (s, { models = {}, dynamic = false, modules, normalize 
         newValue = mergeDeep(newValue, values[i]);
       return { value: newValue };
     }
-    let validator = { provider: "standard", schema, references: "", checkFunc: () => {}, code: "", Check: Check2, Errors: (value) => Check2(value)?.then?.((x) => x?.issues), Code: () => "", Decode: Check2, Encode: (value) => value, hasAdditionalProperties: false, hasDefault: false, isOptional: false, hasTransform: false, hasRef: false };
+    const validator = {
+      provider: "standard",
+      schema,
+      references: "",
+      checkFunc: () => {},
+      code: "",
+      Check: Check2,
+      Errors: (value) => Check2(value)?.then?.((x) => x?.issues),
+      Code: () => "",
+      Decode: Check2,
+      Encode: (value) => value,
+      hasAdditionalProperties: false,
+      hasDefault: false,
+      isOptional: false,
+      hasTransform: false,
+      hasRef: false
+    };
     return validator.parse = (v) => {
       try {
         return validator.Decode(validator.Clean?.(v) ?? v);
-      } catch (error) {
+      } catch {
         throw [...validator.Errors(v)].map(mapValueError);
       }
     }, validator.safeParse = (v) => {
       try {
-        return { success: true, data: validator.Decode(validator.Clean?.(v) ?? v), error: null };
-      } catch (error) {
-        let errors = [...compiled.Errors(v)].map(mapValueError);
-        return { success: false, data: null, error: errors[0]?.summary, errors };
+        return {
+          success: true,
+          data: validator.Decode(validator.Clean?.(v) ?? v),
+          error: null
+        };
+      } catch {
+        const errors = [...compiled.Errors(v)].map(mapValueError);
+        return {
+          success: false,
+          data: null,
+          error: errors[0]?.summary,
+          errors
+        };
       }
     }, validator;
   } else if (validators?.length) {
-    let hasAdditional = false, validators2 = _validators, { schema: mergedObjectSchema, notObjects } = mergeObjectSchemas([schema, ...validators2.map(mapSchema)]);
-    if (notObjects) {
-      if (schema = t.Intersect([...mergedObjectSchema ? [mergedObjectSchema] : [], ...notObjects.map((x) => {
-        let schema2 = mapSchema(x);
-        if (schema2.type === "object" && "additionalProperties" in schema2) {
-          if (!hasAdditional && schema2.additionalProperties === false)
-            hasAdditional = true;
-          delete schema2.additionalProperties;
-        }
-        return schema2;
-      })]), schema.type === "object" && hasAdditional)
-        schema.additionalProperties = false;
-    }
-  } else if (schema.type === "object" && (("additionalProperties" in schema) === false || forceAdditionalProperties))
-    schema.additionalProperties = additionalProperties;
-  else
-    schema = replaceSchemaType(schema, { onlyFirst: "object", from: t.Object({}), to({ properties, ...options2 }) {
-      if (!properties)
-        return;
-      if ("additionalProperties" in schema)
-        return;
-      return t.Object(properties, { ...options2, additionalProperties: false });
-    } });
+    let hasAdditional = false;
+    const validators2 = _validators, { schema: mergedObjectSchema, notObjects } = mergeObjectSchemas([
+      schema,
+      ...validators2.map(mapSchema)
+    ]);
+    notObjects && (schema = t.Intersect([
+      ...mergedObjectSchema ? [mergedObjectSchema] : [],
+      ...notObjects.map((x) => {
+        const schema2 = mapSchema(x);
+        return schema2.type === "object" && "additionalProperties" in schema2 && (!hasAdditional && schema2.additionalProperties === false && (hasAdditional = true), delete schema2.additionalProperties), schema2;
+      })
+    ]), schema.type === "object" && hasAdditional && (schema.additionalProperties = false));
+  } else
+    schema.type === "object" && (!("additionalProperties" in schema) || forceAdditionalProperties) ? schema.additionalProperties = additionalProperties : schema = replaceSchemaType(schema, {
+      onlyFirst: "object",
+      from: t.Object({}),
+      to({ properties, ...options2 }) {
+        if (properties && !("additionalProperties" in schema))
+          return t.Object(properties, {
+            ...options2,
+            additionalProperties: false
+          });
+      }
+    });
   if (dynamic)
     if (Kind in schema) {
-      let validator = { provider: "typebox", schema, references: "", checkFunc: () => {}, code: "", Check: (value) => exports_value2.Check(schema, value), Errors: (value) => exports_value2.Errors(schema, value), Code: () => "", Clean: createCleaner(schema), Decode: (value) => exports_value2.Decode(schema, value), Encode: (value) => exports_value2.Encode(schema, value), get hasAdditionalProperties() {
-        if ("~hasAdditionalProperties" in this)
-          return this["~hasAdditionalProperties"];
-        return this["~hasAdditionalProperties"] = hasAdditionalProperties(schema);
-      }, get hasDefault() {
-        if ("~hasDefault" in this)
-          return this["~hasDefault"];
-        return this["~hasDefault"] = hasProperty("default", schema);
-      }, get isOptional() {
-        if ("~isOptional" in this)
-          return this["~isOptional"];
-        return this["~isOptional"] = isOptional(schema);
-      }, get hasTransform() {
-        if ("~hasTransform" in this)
-          return this["~hasTransform"];
-        return this["~hasTransform"] = hasTransform(schema);
-      }, "~hasRef": doesHaveRef, get hasRef() {
-        if ("~hasRef" in this)
-          return this["~hasRef"];
-        return this["~hasRef"] = hasTransform(schema);
-      } };
-      if (schema.config) {
-        if (validator.config = schema.config, validator?.schema?.config)
-          delete validator.schema.config;
-      }
-      if (normalize && schema.additionalProperties === false)
+      const validator = {
+        provider: "typebox",
+        schema,
+        references: "",
+        checkFunc: () => {},
+        code: "",
+        Check: (value) => exports_value2.Check(schema, value),
+        Errors: (value) => exports_value2.Errors(schema, value),
+        Code: () => "",
+        Clean: createCleaner(schema),
+        Decode: (value) => exports_value2.Decode(schema, value),
+        Encode: (value) => exports_value2.Encode(schema, value),
+        get hasAdditionalProperties() {
+          return "~hasAdditionalProperties" in this ? this["~hasAdditionalProperties"] : this["~hasAdditionalProperties"] = hasAdditionalProperties(schema);
+        },
+        get hasDefault() {
+          return "~hasDefault" in this ? this["~hasDefault"] : this["~hasDefault"] = hasProperty("default", schema);
+        },
+        get isOptional() {
+          return "~isOptional" in this ? this["~isOptional"] : this["~isOptional"] = isOptional(schema);
+        },
+        get hasTransform() {
+          return "~hasTransform" in this ? this["~hasTransform"] : this["~hasTransform"] = hasTransform(schema);
+        },
+        "~hasRef": doesHaveRef,
+        get hasRef() {
+          return "~hasRef" in this ? this["~hasRef"] : this["~hasRef"] = hasTransform(schema);
+        }
+      };
+      if (schema.config && (validator.config = schema.config, validator?.schema?.config && delete validator.schema.config), normalize && schema.additionalProperties === false)
         if (normalize === true || normalize === "exactMirror")
           try {
-            validator.Clean = createMirror(schema, { TypeCompiler, sanitize: sanitize2?.(), modules });
+            validator.Clean = createMirror(schema, {
+              TypeCompiler,
+              sanitize: sanitize2?.(),
+              modules
+            });
           } catch {
             console.warn("Failed to create exactMirror. Please report the following code to https://github.com/elysiajs/elysia/issues"), console.warn(schema), validator.Clean = createCleaner(schema);
           }
@@ -25122,448 +25536,605 @@ var getSchemaValidator = (s, { models = {}, dynamic = false, modules, normalize 
       return validator.parse = (v) => {
         try {
           return validator.Decode(validator.Clean?.(v) ?? v);
-        } catch (error) {
+        } catch {
           throw [...validator.Errors(v)].map(mapValueError);
         }
       }, validator.safeParse = (v) => {
         try {
-          return { success: true, data: validator.Decode(validator.Clean?.(v) ?? v), error: null };
-        } catch (error) {
-          let errors = [...compiled.Errors(v)].map(mapValueError);
-          return { success: false, data: null, error: errors[0]?.summary, errors };
+          return {
+            success: true,
+            data: validator.Decode(validator.Clean?.(v) ?? v),
+            error: null
+          };
+        } catch {
+          const errors = [...compiled.Errors(v)].map(mapValueError);
+          return {
+            success: false,
+            data: null,
+            error: errors[0]?.summary,
+            errors
+          };
         }
       }, validator;
     } else {
-      let validator = { provider: "standard", schema, references: "", checkFunc: () => {}, code: "", Check: (v) => schema["~standard"].validate(v), Errors(value) {
-        let response = schema["~standard"].validate(value);
-        if (response instanceof Promise)
-          throw Error("Async validation is not supported in non-dynamic schema");
-        return response.issues;
-      }, Code: () => "", Decode(value) {
-        let response = schema["~standard"].validate(value);
-        if (response instanceof Promise)
-          throw Error("Async validation is not supported in non-dynamic schema");
-        return response;
-      }, Encode: (value) => value, hasAdditionalProperties: false, hasDefault: false, isOptional: false, hasTransform: false, hasRef: false };
+      const validator = {
+        provider: "standard",
+        schema,
+        references: "",
+        checkFunc: () => {},
+        code: "",
+        Check: (v) => schema["~standard"].validate(v),
+        Errors(value) {
+          const response = schema["~standard"].validate(value);
+          if (response instanceof Promise)
+            throw Error("Async validation is not supported in non-dynamic schema");
+          return response.issues;
+        },
+        Code: () => "",
+        Decode(value) {
+          const response = schema["~standard"].validate(value);
+          if (response instanceof Promise)
+            throw Error("Async validation is not supported in non-dynamic schema");
+          return response;
+        },
+        Encode: (value) => value,
+        hasAdditionalProperties: false,
+        hasDefault: false,
+        isOptional: false,
+        hasTransform: false,
+        hasRef: false
+      };
       return validator.parse = (v) => {
         try {
           return validator.Decode(validator.Clean?.(v) ?? v);
-        } catch (error) {
+        } catch {
           throw [...validator.Errors(v)].map(mapValueError);
         }
       }, validator.safeParse = (v) => {
         try {
-          return { success: true, data: validator.Decode(validator.Clean?.(v) ?? v), error: null };
-        } catch (error) {
-          let errors = [...compiled.Errors(v)].map(mapValueError);
-          return { success: false, data: null, error: errors[0]?.summary, errors };
+          return {
+            success: true,
+            data: validator.Decode(validator.Clean?.(v) ?? v),
+            error: null
+          };
+        } catch {
+          const errors = [...compiled.Errors(v)].map(mapValueError);
+          return {
+            success: false,
+            data: null,
+            error: errors[0]?.summary,
+            errors
+          };
         }
       }, validator;
     }
   let compiled;
-  if (Kind in schema) {
-    if (compiled = TypeCompiler.Compile(schema, Object.values(models).filter((x) => (Kind in x))), compiled.provider = "typebox", schema.config) {
-      if (compiled.config = schema.config, compiled?.schema?.config)
-        delete compiled.schema.config;
-    }
-    if (normalize === true || normalize === "exactMirror")
+  if (Kind in schema)
+    if (compiled = TypeCompiler.Compile(schema, Object.values(models).filter((x) => (Kind in x))), compiled.provider = "typebox", schema.config && (compiled.config = schema.config, compiled?.schema?.config && delete compiled.schema.config), normalize === true || normalize === "exactMirror")
       try {
-        compiled.Clean = createMirror(schema, { TypeCompiler, sanitize: sanitize2?.(), modules });
-      } catch (error) {
-        console.warn("Failed to create exactMirror. Please report the following code to https://github.com/elysiajs/elysia/issues"), console.dir(schema, { depth: null }), compiled.Clean = createCleaner(schema);
+        compiled.Clean = createMirror(schema, {
+          TypeCompiler,
+          sanitize: sanitize2?.(),
+          modules
+        });
+      } catch {
+        console.warn("Failed to create exactMirror. Please report the following code to https://github.com/elysiajs/elysia/issues"), console.dir(schema, {
+          depth: null
+        }), compiled.Clean = createCleaner(schema);
       }
-    else if (normalize === "typebox")
-      compiled.Clean = createCleaner(schema);
-  } else
-    compiled = { provider: "standard", schema, references: "", checkFunc(value) {
-      let response = schema["~standard"].validate(value);
-      if (response instanceof Promise)
-        throw Error("Async validation is not supported in non-dynamic schema");
-      return response;
-    }, code: "", Check: (v) => schema["~standard"].validate(v), Errors(value) {
-      let response = schema["~standard"].validate(value);
-      if (response instanceof Promise)
-        throw Error("Async validation is not supported in non-dynamic schema");
-      return response.issues;
-    }, Code: () => "", Decode(value) {
-      let response = schema["~standard"].validate(value);
-      if (response instanceof Promise)
-        throw Error("Async validation is not supported in non-dynamic schema");
-      return response;
-    }, Encode: (value) => value, hasAdditionalProperties: false, hasDefault: false, isOptional: false, hasTransform: false, hasRef: false };
-  if (compiled.parse = (v) => {
+    else
+      normalize === "typebox" && (compiled.Clean = createCleaner(schema));
+  else
+    compiled = {
+      provider: "standard",
+      schema,
+      references: "",
+      checkFunc(value) {
+        const response = schema["~standard"].validate(value);
+        if (response instanceof Promise)
+          throw Error("Async validation is not supported in non-dynamic schema");
+        return response;
+      },
+      code: "",
+      Check: (v) => schema["~standard"].validate(v),
+      Errors(value) {
+        const response = schema["~standard"].validate(value);
+        if (response instanceof Promise)
+          throw Error("Async validation is not supported in non-dynamic schema");
+        return response.issues;
+      },
+      Code: () => "",
+      Decode(value) {
+        const response = schema["~standard"].validate(value);
+        if (response instanceof Promise)
+          throw Error("Async validation is not supported in non-dynamic schema");
+        return response;
+      },
+      Encode: (value) => value,
+      hasAdditionalProperties: false,
+      hasDefault: false,
+      isOptional: false,
+      hasTransform: false,
+      hasRef: false
+    };
+  return compiled.parse = (v) => {
     try {
       return compiled.Decode(compiled.Clean?.(v) ?? v);
-    } catch (error) {
+    } catch {
       throw [...compiled.Errors(v)].map(mapValueError);
     }
   }, compiled.safeParse = (v) => {
     try {
-      return { success: true, data: compiled.Decode(compiled.Clean?.(v) ?? v), error: null };
-    } catch (error) {
-      let errors = [...compiled.Errors(v)].map(mapValueError);
-      return { success: false, data: null, error: errors[0]?.summary, errors };
+      return {
+        success: true,
+        data: compiled.Decode(compiled.Clean?.(v) ?? v),
+        error: null
+      };
+    } catch {
+      const errors = [...compiled.Errors(v)].map(mapValueError);
+      return {
+        success: false,
+        data: null,
+        error: errors[0]?.summary,
+        errors
+      };
     }
-  }, Kind in schema)
-    Object.assign(compiled, { get hasAdditionalProperties() {
-      if ("~hasAdditionalProperties" in this)
-        return this["~hasAdditionalProperties"];
-      return this["~hasAdditionalProperties"] = hasAdditionalProperties(compiled);
-    }, get hasDefault() {
-      if ("~hasDefault" in this)
-        return this["~hasDefault"];
-      return this["~hasDefault"] = hasProperty("default", compiled);
-    }, get isOptional() {
-      if ("~isOptional" in this)
-        return this["~isOptional"];
-      return this["~isOptional"] = isOptional(compiled);
-    }, get hasTransform() {
-      if ("~hasTransform" in this)
-        return this["~hasTransform"];
-      return this["~hasTransform"] = hasTransform(schema);
-    }, get hasRef() {
-      if ("~hasRef" in this)
-        return this["~hasRef"];
-      return this["~hasRef"] = hasRef(schema);
-    }, "~hasRef": doesHaveRef });
-  return compiled;
+  }, Kind in schema && Object.assign(compiled, {
+    get hasAdditionalProperties() {
+      return "~hasAdditionalProperties" in this ? this["~hasAdditionalProperties"] : this["~hasAdditionalProperties"] = hasAdditionalProperties(compiled);
+    },
+    get hasDefault() {
+      return "~hasDefault" in this ? this["~hasDefault"] : this["~hasDefault"] = hasProperty("default", compiled);
+    },
+    get isOptional() {
+      return "~isOptional" in this ? this["~isOptional"] : this["~isOptional"] = isOptional(compiled);
+    },
+    get hasTransform() {
+      return "~hasTransform" in this ? this["~hasTransform"] : this["~hasTransform"] = hasTransform(schema);
+    },
+    get hasRef() {
+      return "~hasRef" in this ? this["~hasRef"] : this["~hasRef"] = hasRef(schema);
+    },
+    "~hasRef": doesHaveRef
+  }), compiled;
 };
 var isUnion = (schema) => schema[Kind] === "Union" || !schema.schema && !!schema.anyOf;
 var mergeObjectSchemas = (schemas) => {
   if (schemas.length === 0)
-    return { schema: undefined, notObjects: [] };
+    return {
+      schema: undefined,
+      notObjects: []
+    };
   if (schemas.length === 1)
-    return schemas[0].type === "object" ? { schema: schemas[0], notObjects: [] } : { schema: undefined, notObjects: schemas };
-  let newSchema, notObjects = [], additionalPropertiesIsTrue = false, additionalPropertiesIsFalse = false;
-  for (let schema of schemas) {
+    return schemas[0].type === "object" ? {
+      schema: schemas[0],
+      notObjects: []
+    } : {
+      schema: undefined,
+      notObjects: schemas
+    };
+  let newSchema;
+  const notObjects = [];
+  let additionalPropertiesIsTrue = false, additionalPropertiesIsFalse = false;
+  for (const schema of schemas) {
     if (schema.type !== "object") {
       notObjects.push(schema);
       continue;
     }
-    if ("additionalProperties" in schema) {
-      if (schema.additionalProperties === true)
-        additionalPropertiesIsTrue = true;
-      else if (schema.additionalProperties === false)
-        additionalPropertiesIsFalse = true;
-    }
-    if (!newSchema) {
+    if ("additionalProperties" in schema && (schema.additionalProperties === true ? additionalPropertiesIsTrue = true : schema.additionalProperties === false && (additionalPropertiesIsFalse = true)), !newSchema) {
       newSchema = schema;
       continue;
     }
-    newSchema = { ...newSchema, ...schema, properties: { ...newSchema.properties, ...schema.properties }, required: [...newSchema?.required ?? [], ...schema.required ?? []] };
+    newSchema = {
+      ...newSchema,
+      ...schema,
+      properties: {
+        ...newSchema.properties,
+        ...schema.properties
+      },
+      required: [...newSchema?.required ?? [], ...schema.required ?? []]
+    };
   }
-  if (newSchema) {
-    if (newSchema.required)
-      newSchema.required = [...new Set(newSchema.required)];
-    if (additionalPropertiesIsFalse)
-      newSchema.additionalProperties = false;
-    else if (additionalPropertiesIsTrue)
-      newSchema.additionalProperties = true;
-  }
-  return { schema: newSchema, notObjects };
+  return newSchema && (newSchema.required && (newSchema.required = [...new Set(newSchema.required)]), additionalPropertiesIsFalse ? newSchema.additionalProperties = false : additionalPropertiesIsTrue && (newSchema.additionalProperties = true)), {
+    schema: newSchema,
+    notObjects
+  };
 };
-var getResponseSchemaValidator = (s, { models = {}, modules, dynamic = false, normalize = false, additionalProperties = false, validators = [], sanitize: sanitize2 }) => {
+var getResponseSchemaValidator = (s, {
+  models = {},
+  modules,
+  dynamic = false,
+  normalize = false,
+  additionalProperties = false,
+  validators = [],
+  sanitize: sanitize2
+}) => {
   if (validators = validators.filter((x) => x), !s) {
     if (!validators?.length)
       return;
     s = validators[0], validators = validators.slice(1);
   }
   let maybeSchemaOrRecord;
-  if (typeof s !== "string")
+  if (typeof s != "string")
     maybeSchemaOrRecord = s;
   else if (maybeSchemaOrRecord = modules && s in modules.$defs ? modules.Import(s) : models[s], !maybeSchemaOrRecord)
     return;
   if (!maybeSchemaOrRecord)
     return;
   if (Kind in maybeSchemaOrRecord || "~standard" in maybeSchemaOrRecord)
-    return { 200: getSchemaValidator(maybeSchemaOrRecord, { modules, models, additionalProperties, dynamic, normalize, coerce: false, additionalCoerce: [], validators: validators.map((x) => x[200]), sanitize: sanitize2 }) };
-  let record = {};
+    return {
+      200: getSchemaValidator(maybeSchemaOrRecord, {
+        modules,
+        models,
+        additionalProperties,
+        dynamic,
+        normalize,
+        coerce: false,
+        additionalCoerce: [],
+        validators: validators.map((x) => x[200]),
+        sanitize: sanitize2
+      })
+    };
+  const record = {};
   return Object.keys(maybeSchemaOrRecord).forEach((status2) => {
     if (isNaN(+status2))
       return;
-    let maybeNameOrSchema = maybeSchemaOrRecord[+status2];
-    if (typeof maybeNameOrSchema === "string") {
+    const maybeNameOrSchema = maybeSchemaOrRecord[+status2];
+    if (typeof maybeNameOrSchema == "string") {
       if (maybeNameOrSchema in models) {
-        let schema = models[maybeNameOrSchema];
+        const schema = models[maybeNameOrSchema];
         if (!schema)
           return;
-        record[+status2] = Kind in schema || "~standard" in schema ? getSchemaValidator(schema, { modules, models, additionalProperties, dynamic, normalize, coerce: false, additionalCoerce: [], validators: validators.map((x) => x[+status2]), sanitize: sanitize2 }) : schema;
+        record[+status2] = Kind in schema || "~standard" in schema ? getSchemaValidator(schema, {
+          modules,
+          models,
+          additionalProperties,
+          dynamic,
+          normalize,
+          coerce: false,
+          additionalCoerce: [],
+          validators: validators.map((x) => x[+status2]),
+          sanitize: sanitize2
+        }) : schema;
       }
       return;
     }
-    record[+status2] = Kind in maybeNameOrSchema || "~standard" in maybeNameOrSchema ? getSchemaValidator(maybeNameOrSchema, { modules, models, additionalProperties, dynamic, normalize, coerce: false, additionalCoerce: [], validators: validators.map((x) => x[+status2]), sanitize: sanitize2 }) : maybeNameOrSchema;
+    record[+status2] = Kind in maybeNameOrSchema || "~standard" in maybeNameOrSchema ? getSchemaValidator(maybeNameOrSchema, {
+      modules,
+      models,
+      additionalProperties,
+      dynamic,
+      normalize,
+      coerce: false,
+      additionalCoerce: [],
+      validators: validators.map((x) => x[+status2]),
+      sanitize: sanitize2
+    }) : maybeNameOrSchema;
   }), record;
 };
 var _stringToStructureCoercions;
-var stringToStructureCoercions = () => {
-  if (!_stringToStructureCoercions)
-    _stringToStructureCoercions = [{ from: t.Object({}), to: () => t.ObjectString({}), excludeRoot: true }, { from: t.Array(t.Any()), to: () => t.ArrayString(t.Any()) }];
-  return _stringToStructureCoercions;
-};
+var stringToStructureCoercions = () => (_stringToStructureCoercions || (_stringToStructureCoercions = [
+  {
+    from: t.Object({}),
+    to: () => t.ObjectString({}),
+    excludeRoot: true
+  },
+  {
+    from: t.Array(t.Any()),
+    to: () => t.ArrayString(t.Any())
+  }
+]), _stringToStructureCoercions);
 var _queryCoercions;
-var queryCoercions = () => {
-  if (!_queryCoercions)
-    _queryCoercions = [{ from: t.Object({}), to: () => t.ObjectString({}), excludeRoot: true }, { from: t.Array(t.Any()), to: () => t.ArrayQuery(t.Any()) }];
-  return _queryCoercions;
-};
+var queryCoercions = () => (_queryCoercions || (_queryCoercions = [
+  {
+    from: t.Object({}),
+    to: () => t.ObjectString({}),
+    excludeRoot: true
+  },
+  {
+    from: t.Array(t.Any()),
+    to: () => t.ArrayQuery(t.Any())
+  }
+]), _queryCoercions);
 var _coercePrimitiveRoot;
-var coercePrimitiveRoot = () => {
-  if (!_coercePrimitiveRoot)
-    _coercePrimitiveRoot = [{ from: t.Number(), to: (options2) => t.Numeric(options2), rootOnly: true }, { from: t.Boolean(), to: (options2) => t.BooleanString(options2), rootOnly: true }];
-  return _coercePrimitiveRoot;
-};
-var getCookieValidator = ({ validator, modules, defaultConfig = {}, config, dynamic, normalize = false, models, validators, sanitize: sanitize2 }) => {
-  let cookieValidator = validator?.provider ? validator : getSchemaValidator(validator, { modules, dynamic, models, normalize, additionalProperties: true, coerce: true, additionalCoerce: stringToStructureCoercions(), validators, sanitize: sanitize2 });
-  if (cookieValidator)
-    cookieValidator.config = mergeCookie(cookieValidator.config, config);
-  else
-    cookieValidator = getSchemaValidator(t.Cookie(t.Any()), { modules, dynamic, models, additionalProperties: true, validators, sanitize: sanitize2 }), cookieValidator.config = defaultConfig;
-  return cookieValidator;
+var coercePrimitiveRoot = () => (_coercePrimitiveRoot || (_coercePrimitiveRoot = [
+  {
+    from: t.Number(),
+    to: (options2) => t.Numeric(options2),
+    rootOnly: true
+  },
+  {
+    from: t.Boolean(),
+    to: (options2) => t.BooleanString(options2),
+    rootOnly: true
+  }
+]), _coercePrimitiveRoot);
+var getCookieValidator = ({
+  validator,
+  modules,
+  defaultConfig = {},
+  config,
+  dynamic,
+  normalize = false,
+  models,
+  validators,
+  sanitize: sanitize2
+}) => {
+  let cookieValidator = validator?.provider ? validator : getSchemaValidator(validator, {
+    modules,
+    dynamic,
+    models,
+    normalize,
+    additionalProperties: true,
+    coerce: true,
+    additionalCoerce: stringToStructureCoercions(),
+    validators,
+    sanitize: sanitize2
+  });
+  return cookieValidator ? cookieValidator.config = mergeCookie(cookieValidator.config, config) : (cookieValidator = getSchemaValidator(t.Cookie(t.Any()), {
+    modules,
+    dynamic,
+    models,
+    additionalProperties: true,
+    validators,
+    sanitize: sanitize2
+  }), cookieValidator.config = defaultConfig), cookieValidator;
 };
 var unwrapImportSchema = (schema) => schema && schema[Kind] === "Import" && schema.$defs[schema.$ref][Kind] === "Object" ? schema.$defs[schema.$ref] : schema;
+
+// node_modules/elysia/dist/compose.mjs
 var allocateIf = (value, condition) => condition ? value : "";
-var defaultParsers = ["json", "text", "urlencoded", "arrayBuffer", "formdata", "application/json", "text/plain", "application/x-www-form-urlencoded", "application/octet-stream", "multipart/form-data"];
-var createReport = ({ context = "c", trace = [], addFn }) => {
+var defaultParsers = [
+  "json",
+  "text",
+  "urlencoded",
+  "arrayBuffer",
+  "formdata",
+  "application/json",
+  "text/plain",
+  "application/x-www-form-urlencoded",
+  "application/octet-stream",
+  "multipart/form-data"
+];
+var createReport = ({
+  context = "c",
+  trace = [],
+  addFn
+}) => {
   if (!trace.length)
-    return () => {
-      return { resolveChild() {
+    return () => ({
+      resolveChild() {
         return () => {};
-      }, resolve() {} };
-    };
+      },
+      resolve() {}
+    });
   for (let i = 0;i < trace.length; i++)
     addFn(`let report${i},reportChild${i},reportErr${i},reportErrChild${i};let trace${i}=${context}[ELYSIA_TRACE]?.[${i}]??trace[${i}](${context});
 `);
-  return (event, { name, total = 0, alias } = {}) => {
-    if (!name)
-      name = "anonymous";
-    let reporter = event === "error" ? "reportErr" : "report";
+  return (event, {
+    name,
+    total = 0,
+    alias
+  } = {}) => {
+    name || (name = "anonymous");
+    const reporter = event === "error" ? "reportErr" : "report";
     for (let i = 0;i < trace.length; i++)
-      if (addFn(`${alias ? "const " : ""}${alias ?? reporter}${i}=trace${i}.${event}({id,event:'${event}',name:'${name}',begin:performance.now(),total:${total}})
-`), alias)
-        addFn(`${reporter}${i}=${alias}${i}
+      addFn(`${alias ? "const " : ""}${alias ?? reporter}${i}=trace${i}.${event}({id,event:'${event}',name:'${name}',begin:performance.now(),total:${total}})
+`), alias && addFn(`${reporter}${i}=${alias}${i}
 `);
-    return { resolve() {
-      for (let i = 0;i < trace.length; i++)
-        addFn(`${alias ?? reporter}${i}.resolve()
-`);
-    }, resolveChild(name2) {
-      for (let i = 0;i < trace.length; i++)
-        addFn(`${reporter}Child${i}=${reporter}${i}.resolveChild?.shift()?.({id,event:'${event}',name:'${name2}',begin:performance.now()})
-`);
-      return (binding) => {
+    return {
+      resolve() {
         for (let i = 0;i < trace.length; i++)
-          if (binding)
-            addFn(`if(${binding} instanceof Error){${reporter}Child${i}?.(${binding}) }else{${reporter}Child${i}?.()}`);
-          else
-            addFn(`${reporter}Child${i}?.()
+          addFn(`${alias ?? reporter}${i}.resolve()
 `);
-      };
-    } };
+      },
+      resolveChild(name2) {
+        for (let i = 0;i < trace.length; i++)
+          addFn(`${reporter}Child${i}=${reporter}${i}.resolveChild?.shift()?.({id,event:'${event}',name:'${name2}',begin:performance.now()})
+`);
+        return (binding) => {
+          for (let i = 0;i < trace.length; i++)
+            addFn(binding ? `if(${binding} instanceof Error){${reporter}Child${i}?.(${binding}) }else{${reporter}Child${i}?.()}` : `${reporter}Child${i}?.()
+`);
+        };
+      }
+    };
   };
 };
-var composeCleaner = ({ schema, name, type, typeAlias = type, normalize, ignoreTryCatch = false }) => {
-  if (!normalize || !schema.Clean)
-    return "";
-  if (normalize === true || normalize === "exactMirror") {
-    if (ignoreTryCatch)
-      return `${name}=validator.${typeAlias}.Clean(${name})
+var composeCleaner = ({
+  schema,
+  name,
+  type,
+  typeAlias = type,
+  normalize,
+  ignoreTryCatch = false
+}) => !normalize || !schema.Clean ? "" : normalize === true || normalize === "exactMirror" ? ignoreTryCatch ? `${name}=validator.${typeAlias}.Clean(${name})
+` : `try{${name}=validator.${typeAlias}.Clean(${name})
+}catch{}` : normalize === "typebox" ? `${name}=validator.${typeAlias}.Clean(${name})
+` : "";
+var composeValidationFactory = ({
+  injectResponse = "",
+  normalize = false,
+  validator,
+  encodeSchema = false,
+  isStaticResponse = false,
+  hasSanitize = false,
+  allowUnsafeValidationDetails = false
+}) => ({
+  validate: (type, value = `c.${type}`, error) => `c.set.status=422;throw new ValidationError('${type}',validator.${type},${value},${allowUnsafeValidationDetails}${error ? "," + error : ""})`,
+  response: (name = "r") => {
+    if (isStaticResponse || !validator.response)
+      return "";
+    let code = injectResponse + `
 `;
-    return `try{${name}=validator.${typeAlias}.Clean(${name})
-}catch{}`;
-  }
-  if (normalize === "typebox")
-    return `${name}=validator.${typeAlias}.Clean(${name})
-`;
-  return "";
-};
-var composeValidationFactory = ({ injectResponse = "", normalize = false, validator, encodeSchema = false, isStaticResponse = false, hasSanitize = false, allowUnsafeValidationDetails = false }) => ({ validate: (type, value = `c.${type}`, error) => `c.set.status=422;throw new ValidationError('${type}',validator.${type},${value},${allowUnsafeValidationDetails}${error ? "," + error : ""})`, response: (name = "r") => {
-  if (isStaticResponse || !validator.response)
-    return "";
-  let code = injectResponse + `
-`;
-  code += `if(${name} instanceof ElysiaCustomStatusResponse){c.set.status=${name}.code
+    code += `if(${name} instanceof ElysiaCustomStatusResponse){c.set.status=${name}.code
 ${name}=${name}.response}if(${name} instanceof Response === false && typeof ${name}?.next !== 'function' && !(${name} instanceof ReadableStream))switch(c.set.status){`;
-  for (let [status2, value] of Object.entries(validator.response)) {
-    if (code += `
+    for (const [status2, value] of Object.entries(validator.response)) {
+      if (code += `
 case ${status2}:
 `, value.provider === "standard") {
-      code += `let vare${status2}=validator.response[${status2}].Check(${name})
+        code += `let vare${status2}=validator.response[${status2}].Check(${name})
 if(vare${status2} instanceof Promise)vare${status2}=await vare${status2}
 if(vare${status2}.issues)throw new ValidationError('response',validator.response[${status2}],${name},${allowUnsafeValidationDetails},vare${status2}.issues)
 ${name}=vare${status2}.value
 c.set.status=${status2}
 break
 `;
-      continue;
-    }
-    let noValidate = value.schema?.noValidate === true;
-    if (!noValidate && value.schema?.$ref && value.schema?.$defs) {
-      let refKey = value.schema.$ref, defKey = typeof refKey === "string" && refKey.includes("/") ? refKey.split("/").pop() : refKey;
-      if (value.schema.$defs[defKey]?.noValidate === true)
-        noValidate = true;
-    }
-    let appliedCleaner = noValidate || hasSanitize, clean2 = ({ ignoreTryCatch = false } = {}) => composeCleaner({ name, schema: value, type: "response", typeAlias: `response[${status2}]`, normalize, ignoreTryCatch });
-    if (appliedCleaner)
-      code += clean2();
-    let applyErrorCleaner = !appliedCleaner && normalize && !noValidate;
-    if (encodeSchema && value.hasTransform && !noValidate) {
-      if (code += `try{${name}=validator.response[${status2}].Encode(${name})
-`, !appliedCleaner)
-        code += clean2({ ignoreTryCatch: true });
-      code += `c.set.status=${status2}}catch{` + (applyErrorCleaner ? `try{
+        continue;
+      }
+      let noValidate = value.schema?.noValidate === true;
+      if (!noValidate && value.schema?.$ref && value.schema?.$defs) {
+        const refKey = value.schema.$ref, defKey = typeof refKey == "string" && refKey.includes("/") ? refKey.split("/").pop() : refKey;
+        value.schema.$defs[defKey]?.noValidate === true && (noValidate = true);
+      }
+      const appliedCleaner = noValidate || hasSanitize, clean2 = ({ ignoreTryCatch = false } = {}) => composeCleaner({
+        name,
+        schema: value,
+        type: "response",
+        typeAlias: `response[${status2}]`,
+        normalize,
+        ignoreTryCatch
+      });
+      appliedCleaner && (code += clean2());
+      const applyErrorCleaner = !appliedCleaner && normalize && !noValidate;
+      encodeSchema && value.hasTransform && !noValidate ? (code += `try{${name}=validator.response[${status2}].Encode(${name})
+`, appliedCleaner || (code += clean2({ ignoreTryCatch: true })), code += `c.set.status=${status2}}catch{` + (applyErrorCleaner ? `try{
 ` + clean2({ ignoreTryCatch: true }) + `${name}=validator.response[${status2}].Encode(${name})
-}catch{throw new ValidationError('response',validator.response[${status2}],${name},${allowUnsafeValidationDetails})}` : `throw new ValidationError('response',validator.response[${status2}],${name}),${allowUnsafeValidationDetails}`) + "}";
-    } else {
-      if (!appliedCleaner)
-        code += clean2();
-      if (!noValidate)
-        code += `if(validator.response[${status2}].Check(${name})===false)throw new ValidationError('response',validator.response[${status2}],${name},${allowUnsafeValidationDetails})
+}catch{throw new ValidationError('response',validator.response[${status2}],${name},${allowUnsafeValidationDetails})}` : `throw new ValidationError('response',validator.response[${status2}],${name}),${allowUnsafeValidationDetails}`) + "}") : (appliedCleaner || (code += clean2()), noValidate || (code += `if(validator.response[${status2}].Check(${name})===false)throw new ValidationError('response',validator.response[${status2}],${name},${allowUnsafeValidationDetails})
 c.set.status=${status2}
+`)), code += `break
 `;
     }
-    code += `break
-`;
+    return code + "}";
   }
-  return code + "}";
-} });
-var isAsyncName = (v) => {
-  return (v?.fn ?? v).constructor.name === "AsyncFunction";
-};
+});
+var isAsyncName = (v) => (v?.fn ?? v).constructor.name === "AsyncFunction";
 var matchResponseClone = /=>\s?response\.clone\(/;
 var matchFnReturn = /(?:return|=>)\s?\S+\(|a(?:sync|wait)/;
 var isAsync = (v) => {
-  let isObject2 = typeof v === "object";
+  const isObject2 = typeof v == "object";
   if (isObject2 && v.isAsync !== undefined)
     return v.isAsync;
-  let fn = isObject2 ? v.fn : v;
+  const fn = isObject2 ? v.fn : v;
   if (fn.constructor.name === "AsyncFunction")
     return true;
-  let literal = fn.toString();
-  if (matchResponseClone.test(literal)) {
-    if (isObject2)
-      v.isAsync = false;
-    return false;
-  }
-  let result = matchFnReturn.test(literal);
-  if (isObject2)
-    v.isAsync = result;
-  return result;
+  const literal = fn.toString();
+  if (matchResponseClone.test(literal))
+    return isObject2 && (v.isAsync = false), false;
+  const result = matchFnReturn.test(literal);
+  return isObject2 && (v.isAsync = result), result;
 };
 var hasReturn = (v) => {
-  let isObject2 = typeof v === "object";
+  const isObject2 = typeof v == "object";
   if (isObject2 && v.hasReturn !== undefined)
     return v.hasReturn;
-  let fnLiteral = isObject2 ? v.fn.toString() : typeof v === "string" ? v.toString() : v, parenthesisEnd = fnLiteral.indexOf(")");
-  if (fnLiteral.charCodeAt(parenthesisEnd + 2) === 61 && fnLiteral.charCodeAt(parenthesisEnd + 5) !== 123) {
-    if (isObject2)
-      v.hasReturn = true;
-    return true;
-  }
-  let result = fnLiteral.includes("return");
-  if (isObject2)
-    v.hasReturn = result;
-  return result;
+  const fnLiteral = isObject2 ? v.fn.toString() : typeof v == "string" ? v.toString() : v, parenthesisEnd = fnLiteral.indexOf(")");
+  if (fnLiteral.charCodeAt(parenthesisEnd + 2) === 61 && fnLiteral.charCodeAt(parenthesisEnd + 5) !== 123)
+    return isObject2 && (v.hasReturn = true), true;
+  const result = fnLiteral.includes("return");
+  return isObject2 && (v.hasReturn = result), result;
 };
 var isGenerator = (v) => {
-  let fn = v?.fn ?? v;
+  const fn = v?.fn ?? v;
   return fn.constructor.name === "AsyncGeneratorFunction" || fn.constructor.name === "GeneratorFunction";
 };
 var coerceTransformDecodeError = (fnLiteral, type, allowUnsafeValidationDetails = false, value = `c.${type}`) => `try{${fnLiteral}}catch(error){if(error.constructor.name === 'TransformDecodeError'){c.set.status=422
 throw error.error ?? new ValidationError('${type}',validator.${type},${value},${allowUnsafeValidationDetails})}}`;
-var composeHandler = ({ app, path, method, hooks, validator, handler, allowMeta = false, inference }) => {
-  let adapter = app["~adapter"].composeHandler, adapterHandler = app["~adapter"].handler, isHandleFn = typeof handler === "function";
+var composeHandler = ({
+  app,
+  path,
+  method,
+  hooks,
+  validator,
+  handler,
+  allowMeta = false,
+  inference
+}) => {
+  const adapter = app["~adapter"].composeHandler, adapterHandler = app["~adapter"].handler, isHandleFn = typeof handler == "function";
   if (!isHandleFn) {
-    handler = adapterHandler.mapResponse(handler, { headers: app.setHeaders ?? {} });
-    let isResponse = handler instanceof Response || handler?.constructor?.name === "Response" && typeof handler?.clone === "function";
-    if (hooks.parse?.length && hooks.transform?.length && hooks.beforeHandle?.length && hooks.afterHandle?.length) {
-      if (isResponse)
-        return Function("a", `"use strict";
-return function(){return a.clone()}`)(handler);
-      return Function("a", `"use strict";
+    handler = adapterHandler.mapResponse(handler, {
+      headers: app.setHeaders ?? {}
+    });
+    const isResponse = handler instanceof Response || handler?.constructor?.name === "Response" && typeof handler?.clone == "function";
+    if (hooks.parse?.length && hooks.transform?.length && hooks.beforeHandle?.length && hooks.afterHandle?.length)
+      return isResponse ? Function("a", `"use strict";
+return function(){return a.clone()}`)(handler) : Function("a", `"use strict";
 return function(){return a}`)(handler);
-    }
     if (isResponse) {
-      let response = handler;
+      const response = handler;
       handler = () => response.clone();
     }
   }
-  let handle = isHandleFn ? "handler(c)" : "handler", hasTrace = !!hooks.trace?.length, fnLiteral = "";
+  const handle = isHandleFn ? "handler(c)" : "handler", hasTrace = !!hooks.trace?.length;
+  let fnLiteral = "";
   if (inference = sucrose(Object.assign({ handler }, hooks), inference, app.config.sucrose), adapter.declare) {
-    let literal = adapter.declare(inference);
-    if (literal)
-      fnLiteral += literal;
+    const literal = adapter.declare(inference);
+    literal && (fnLiteral += literal);
   }
-  if (inference.server)
-    fnLiteral += `Object.defineProperty(c,'server',{get:function(){return getServer()}})
-`;
-  validator.createBody?.(), validator.createQuery?.(), validator.createHeaders?.(), validator.createParams?.(), validator.createCookie?.(), validator.createResponse?.();
-  let hasValidation = !!validator.body || !!validator.headers || !!validator.params || !!validator.query || !!validator.cookie || !!validator.response, hasQuery = inference.query || !!validator.query, requestNoBody = hooks.parse?.length === 1 && hooks.parse[0].fn === "none", hasBody = method !== "" && method !== "GET" && method !== "HEAD" && (inference.body || !!validator.body || !!hooks.parse?.length) && !requestNoBody, defaultHeaders = app.setHeaders, hasDefaultHeaders = defaultHeaders && !!Object.keys(defaultHeaders).length, hasHeaders = inference.headers || !!validator.headers || adapter.preferWebstandardHeaders !== true && inference.body, hasCookie = inference.cookie || !!validator.cookie, cookieMeta = validator.cookie?.config ? mergeCookie(validator?.cookie?.config, app.config.cookie) : app.config.cookie, _encodeCookie = "", encodeCookie = () => {
+  inference.server && (fnLiteral += `Object.defineProperty(c,'server',{get:function(){return getServer()}})
+`), validator.createBody?.(), validator.createQuery?.(), validator.createHeaders?.(), validator.createParams?.(), validator.createCookie?.(), validator.createResponse?.();
+  const hasValidation = !!validator.body || !!validator.headers || !!validator.params || !!validator.query || !!validator.cookie || !!validator.response, hasQuery = inference.query || !!validator.query, requestNoBody = hooks.parse?.length === 1 && hooks.parse[0].fn === "none", hasBody = method !== "" && method !== "GET" && method !== "HEAD" && (inference.body || !!validator.body || !!hooks.parse?.length) && !requestNoBody, defaultHeaders = app.setHeaders, hasDefaultHeaders = defaultHeaders && !!Object.keys(defaultHeaders).length, hasHeaders = inference.headers || !!validator.headers || adapter.preferWebstandardHeaders !== true && inference.body, hasCookie = inference.cookie || !!validator.cookie, cookieMeta = validator.cookie?.config ? mergeCookie(validator?.cookie?.config, app.config.cookie) : app.config.cookie;
+  let _encodeCookie = "";
+  const encodeCookie = () => {
     if (_encodeCookie)
       return _encodeCookie;
     if (cookieMeta?.sign) {
       if (!cookieMeta.secrets)
-        throw Error(`t.Cookie required secret which is not set in (${method}) ${path}.`);
-      let secret = !cookieMeta.secrets ? undefined : typeof cookieMeta.secrets === "string" ? cookieMeta.secrets : cookieMeta.secrets[0];
+        throw new Error(`t.Cookie required secret which is not set in (${method}) ${path}.`);
+      const secret = cookieMeta.secrets ? typeof cookieMeta.secrets == "string" ? cookieMeta.secrets : cookieMeta.secrets[0] : undefined;
       if (_encodeCookie += `const _setCookie = c.set.cookie
 if(_setCookie){`, cookieMeta.sign === true)
-        _encodeCookie += `for(const [key, cookie] of Object.entries(_setCookie)){c.set.cookie[key].value=await signCookie(cookie.value,${!secret ? "undefined" : JSON.stringify(secret)})}`;
+        _encodeCookie += `for(const [key, cookie] of Object.entries(_setCookie)){c.set.cookie[key].value=await signCookie(cookie.value,${secret ? JSON.stringify(secret) : "undefined"})}`;
       else {
-        if (typeof cookieMeta.sign === "string")
-          cookieMeta.sign = [cookieMeta.sign];
-        for (let name of cookieMeta.sign)
-          _encodeCookie += `if(_setCookie[${JSON.stringify(name)}]?.value)c.set.cookie[${JSON.stringify(name)}].value=await signCookie(_setCookie[${JSON.stringify(name)}].value,${!secret ? "undefined" : JSON.stringify(secret)})
+        typeof cookieMeta.sign == "string" && (cookieMeta.sign = [cookieMeta.sign]);
+        for (const name of cookieMeta.sign)
+          _encodeCookie += `if(_setCookie[${JSON.stringify(name)}]?.value)c.set.cookie[${JSON.stringify(name)}].value=await signCookie(_setCookie[${JSON.stringify(name)}].value,${secret ? JSON.stringify(secret) : "undefined"})
 `;
       }
       _encodeCookie += `}
 `;
     }
     return _encodeCookie;
-  }, normalize = app.config.normalize, encodeSchema = app.config.encodeSchema, allowUnsafeValidationDetails = app.config.allowUnsafeValidationDetails, validation = composeValidationFactory({ normalize, validator, encodeSchema, isStaticResponse: handler instanceof Response, hasSanitize: !!app.config.sanitize, allowUnsafeValidationDetails });
-  if (hasHeaders)
-    fnLiteral += adapter.headers;
-  if (hasTrace)
-    fnLiteral += `const id=c[ELYSIA_REQUEST_ID]
-`;
-  let report = createReport({ trace: hooks.trace, addFn: (word) => {
-    fnLiteral += word;
-  } });
+  }, normalize = app.config.normalize, encodeSchema = app.config.encodeSchema, allowUnsafeValidationDetails = app.config.allowUnsafeValidationDetails, validation = composeValidationFactory({
+    normalize,
+    validator,
+    encodeSchema,
+    isStaticResponse: handler instanceof Response,
+    hasSanitize: !!app.config.sanitize,
+    allowUnsafeValidationDetails
+  });
+  hasHeaders && (fnLiteral += adapter.headers), hasTrace && (fnLiteral += `const id=c[ELYSIA_REQUEST_ID]
+`);
+  const report = createReport({
+    trace: hooks.trace,
+    addFn: (word) => {
+      fnLiteral += word;
+    }
+  });
   if (fnLiteral += "try{", hasCookie) {
-    let get = (name, defaultValue) => {
-      let value = cookieMeta?.[name] ?? defaultValue;
-      if (value === undefined)
-        return "";
-      if (!value)
-        return typeof defaultValue === "string" ? `${name}:"${defaultValue}",` : `${name}:${defaultValue},`;
-      if (typeof value === "string")
-        return `${name}:${JSON.stringify(value)},`;
-      if (value instanceof Date)
-        return `${name}: new Date(${value.getTime()}),`;
-      return `${name}:${value},`;
-    }, options2 = cookieMeta ? `{secrets:${cookieMeta.secrets !== undefined ? typeof cookieMeta.secrets === "string" ? JSON.stringify(cookieMeta.secrets) : "[" + cookieMeta.secrets.map((x) => JSON.stringify(x)).join(",") + "]" : "undefined"},sign:${cookieMeta.sign === true ? true : cookieMeta.sign !== undefined ? typeof cookieMeta.sign === "string" ? JSON.stringify(cookieMeta.sign) : "[" + cookieMeta.sign.map((x) => JSON.stringify(x)).join(",") + "]" : "undefined"},` + get("domain") + get("expires") + get("httpOnly") + get("maxAge") + get("path", "/") + get("priority") + get("sameSite") + get("secure") + "}" : "undefined";
-    if (hasHeaders)
-      fnLiteral += `
+    const get = (name, defaultValue) => {
+      const value = cookieMeta?.[name] ?? defaultValue;
+      return value === undefined ? "" : value ? typeof value == "string" ? `${name}:${JSON.stringify(value)},` : value instanceof Date ? `${name}: new Date(${value.getTime()}),` : `${name}:${value},` : typeof defaultValue == "string" ? `${name}:"${defaultValue}",` : `${name}:${defaultValue},`;
+    }, options2 = cookieMeta ? `{secrets:${cookieMeta.secrets !== undefined ? typeof cookieMeta.secrets == "string" ? JSON.stringify(cookieMeta.secrets) : "[" + cookieMeta.secrets.map((x) => JSON.stringify(x)).join(",") + "]" : "undefined"},sign:${cookieMeta.sign === true ? true : cookieMeta.sign !== undefined ? typeof cookieMeta.sign == "string" ? JSON.stringify(cookieMeta.sign) : "[" + cookieMeta.sign.map((x) => JSON.stringify(x)).join(",") + "]" : "undefined"},` + get("domain") + get("expires") + get("httpOnly") + get("maxAge") + get("path", "/") + get("priority") + get("sameSite") + get("secure") + "}" : "undefined";
+    hasHeaders ? fnLiteral += `
 c.cookie=await parseCookie(c.set,c.headers.cookie,${options2})
-`;
-    else
-      fnLiteral += `
+` : fnLiteral += `
 c.cookie=await parseCookie(c.set,c.request.headers.get('cookie'),${options2})
 `;
   }
   if (hasQuery) {
     let arrayProperties = {}, objectProperties = {}, hasArrayProperty = false, hasObjectProperty = false;
     if (validator.query?.schema) {
-      let schema = unwrapImportSchema(validator.query?.schema);
+      const schema = unwrapImportSchema(validator.query?.schema);
       if (Kind in schema && schema.properties)
-        for (let [key, value] of Object.entries(schema.properties)) {
-          if (hasElysiaMeta("ArrayQuery", value))
-            arrayProperties[key] = true, hasArrayProperty = true;
-          if (hasElysiaMeta("ObjectString", value))
-            objectProperties[key] = true, hasObjectProperty = true;
-        }
+        for (const [key, value] of Object.entries(schema.properties))
+          hasElysiaMeta("ArrayQuery", value) && (arrayProperties[key] = true, hasArrayProperty = true), hasElysiaMeta("ObjectString", value) && (objectProperties[key] = true, hasObjectProperty = true);
     }
     fnLiteral += `if(c.qi===-1){c.query=Object.create(null)}else{c.query=parseQueryFromURL(c.url,c.qi+1${hasArrayProperty ? "," + JSON.stringify(arrayProperties) : hasObjectProperty ? ",undefined" : ""}${hasObjectProperty ? "," + JSON.stringify(objectProperties) : ""})}`;
   }
-  let isAsyncHandler = typeof handler === "function" && isAsync(handler), saveResponse = hasTrace || hooks.afterResponse?.length ? "c.response=c.responseValue= " : "", responseKeys = Object.keys(validator.response ?? {}), hasMultipleResponses = responseKeys.length > 1, hasSingle200 = responseKeys.length === 0 || responseKeys.length === 1 && responseKeys[0] === "200", maybeAsync = hasCookie || hasBody || isAsyncHandler || !!hooks.parse?.length || !!hooks.afterHandle?.some(isAsync) || !!hooks.beforeHandle?.some(isAsync) || !!hooks.transform?.some(isAsync) || !!hooks.mapResponse?.some(isAsync) || validator.body?.provider === "standard" || validator.headers?.provider === "standard" || validator.query?.provider === "standard" || validator.params?.provider === "standard" || validator.cookie?.provider === "standard" || Object.values(validator.response ?? {}).find((x) => x.provider === "standard"), maybeStream = (typeof handler === "function" ? isGenerator(handler) : false) || !!hooks.beforeHandle?.some(isGenerator) || !!hooks.afterHandle?.some(isGenerator) || !!hooks.transform?.some(isGenerator), hasSet = inference.cookie || inference.set || hasHeaders || hasTrace || hasMultipleResponses || !hasSingle200 || isHandleFn && hasDefaultHeaders || maybeStream, _afterResponse, afterResponse = (hasStream = true) => {
+  const isAsyncHandler = typeof handler == "function" && isAsync(handler), saveResponse = hasTrace || hooks.afterResponse?.length ? "c.response=c.responseValue= " : "", responseKeys = Object.keys(validator.response ?? {}), hasMultipleResponses = responseKeys.length > 1, hasSingle200 = responseKeys.length === 0 || responseKeys.length === 1 && responseKeys[0] === "200", maybeAsync = hasCookie || hasBody || isAsyncHandler || !!hooks.parse?.length || !!hooks.afterHandle?.some(isAsync) || !!hooks.beforeHandle?.some(isAsync) || !!hooks.transform?.some(isAsync) || !!hooks.mapResponse?.some(isAsync) || validator.body?.provider === "standard" || validator.headers?.provider === "standard" || validator.query?.provider === "standard" || validator.params?.provider === "standard" || validator.cookie?.provider === "standard" || Object.values(validator.response ?? {}).find((x) => x.provider === "standard"), maybeStream = (typeof handler == "function" ? isGenerator(handler) : false) || !!hooks.beforeHandle?.some(isGenerator) || !!hooks.afterHandle?.some(isGenerator) || !!hooks.transform?.some(isGenerator), hasSet = inference.cookie || inference.set || hasHeaders || hasTrace || hasMultipleResponses || !hasSingle200 || isHandleFn && hasDefaultHeaders || maybeStream;
+  let _afterResponse;
+  const afterResponse = (hasStream = true) => {
     if (_afterResponse !== undefined)
       return _afterResponse;
     if (!hooks.afterResponse?.length && !hasTrace)
@@ -25574,12 +26145,17 @@ setImmediate(async()=>{if(c.responseValue){if(c.responseValue instanceof ElysiaC
 ` + (hasStream ? `if(typeof afterHandlerStreamListener!=='undefined')for await(const v of afterHandlerStreamListener){}
 ` : "") + `}
 `;
-    let reporter = createReport({ trace: hooks.trace, addFn: (word) => {
-      afterResponse2 += word;
-    } })("afterResponse", { total: hooks.afterResponse?.length });
+    const reporter = createReport({
+      trace: hooks.trace,
+      addFn: (word) => {
+        afterResponse2 += word;
+      }
+    })("afterResponse", {
+      total: hooks.afterResponse?.length
+    });
     if (hooks.afterResponse?.length && hooks.afterResponse)
       for (let i = 0;i < hooks.afterResponse.length; i++) {
-        let endUnit = reporter.resolveChild(hooks.afterResponse[i].fn.name), prefix = isAsync(hooks.afterResponse[i]) ? "await " : "";
+        const endUnit = reporter.resolveChild(hooks.afterResponse[i].fn.name), prefix = isAsync(hooks.afterResponse[i]) ? "await " : "";
         afterResponse2 += `
 ${prefix}e.afterResponse[${i}](c)
 `, endUnit();
@@ -25587,33 +26163,29 @@ ${prefix}e.afterResponse[${i}](c)
     return reporter.resolve(), afterResponse2 += `})
 `, _afterResponse = afterResponse2;
   }, mapResponse3 = (r = "r") => {
-    let after = afterResponse(), response = `${hasSet ? "mapResponse" : "mapCompactResponse"}(${saveResponse}${r}${hasSet ? ",c.set" : ""}${mapResponseContext})
+    const after = afterResponse(), response = `${hasSet ? "mapResponse" : "mapCompactResponse"}(${saveResponse}${r}${hasSet ? ",c.set" : ""}${mapResponseContext})
 `;
-    if (!after)
-      return `return ${response}`;
-    return `const _res=${response}` + after + "return _res";
+    return after ? `const _res=${response}` + after + "return _res" : `return ${response}`;
   }, mapResponseContext = maybeStream && adapter.mapResponseContext ? `,${adapter.mapResponseContext}` : "";
-  if (hasTrace || inference.route)
-    fnLiteral += `c.route=\`${path}\`
-`;
-  if (hasTrace || hooks.afterResponse?.length)
-    fnLiteral += `let afterHandlerStreamListener
-`;
-  let parseReporter = report("parse", { total: hooks.parse?.length });
+  (hasTrace || inference.route) && (fnLiteral += `c.route=\`${path}\`
+`), (hasTrace || hooks.afterResponse?.length) && (fnLiteral += `let afterHandlerStreamListener
+`);
+  const parseReporter = report("parse", {
+    total: hooks.parse?.length
+  });
   if (hasBody) {
-    let hasBodyInference = !!hooks.parse?.length || inference.body || validator.body;
-    if (adapter.parser.declare)
-      fnLiteral += adapter.parser.declare;
-    fnLiteral += `
+    const hasBodyInference = !!hooks.parse?.length || inference.body || validator.body;
+    adapter.parser.declare && (fnLiteral += adapter.parser.declare), fnLiteral += `
 try{`;
-    let parser = typeof hooks.parse === "string" ? hooks.parse : Array.isArray(hooks.parse) && hooks.parse.length === 1 ? typeof hooks.parse[0] === "string" ? hooks.parse[0] : typeof hooks.parse[0].fn === "string" ? hooks.parse[0].fn : undefined : undefined;
+    let parser = typeof hooks.parse == "string" ? hooks.parse : Array.isArray(hooks.parse) && hooks.parse.length === 1 ? typeof hooks.parse[0] == "string" ? hooks.parse[0] : typeof hooks.parse[0].fn == "string" ? hooks.parse[0].fn : undefined : undefined;
     if (!parser && validator.body && !hooks.parse?.length) {
-      let schema = validator.body.schema;
-      if (schema && schema.anyOf && schema[Kind] === "Union" && schema.anyOf?.length === 2 && schema.anyOf?.find((x) => x[Kind] === "ElysiaForm"))
-        parser = "formdata";
+      const schema = validator.body.schema;
+      schema && schema.anyOf && schema[Kind] === "Union" && schema.anyOf?.length === 2 && schema.anyOf?.find((x) => x[Kind] === "ElysiaForm") && (parser = "formdata");
     }
     if (parser && defaultParsers.includes(parser)) {
-      let reporter = report("parse", { total: hooks.parse?.length }), isOptionalBody = !!validator.body?.isOptional;
+      const reporter = report("parse", {
+        total: hooks.parse?.length
+      }), isOptionalBody = !!validator.body?.isOptional;
       switch (parser) {
         case "json":
         case "application/json":
@@ -25636,8 +26208,7 @@ try{`;
           fnLiteral += adapter.parser.formData(isOptionalBody);
           break;
         default:
-          if (parser[0] in app["~parser"])
-            fnLiteral += hasHeaders ? "let contentType = c.headers['content-type']" : "let contentType = c.request.headers.get('content-type')", fnLiteral += `
+          parser[0] in app["~parser"] && (fnLiteral += hasHeaders ? "let contentType = c.headers['content-type']" : "let contentType = c.request.headers.get('content-type')", fnLiteral += `
 if(contentType){const index=contentType.indexOf(';')
 if(index!==-1)contentType=contentType.substring(0,index)}
 else{contentType=''}c.contentType=contentType
@@ -25646,7 +26217,7 @@ if(result instanceof Promise)result=await result
 if(result instanceof ElysiaCustomStatusResponse)throw result
 if(result!==undefined)c.body=result
 delete c.contentType
-`;
+`);
           break;
       }
       reporter.resolve();
@@ -25666,7 +26237,7 @@ c.contentType=contentType
 `;
       else {
         hasDefaultParser = true;
-        let isOptionalBody = !!validator.body?.isOptional;
+        const isOptionalBody = !!validator.body?.isOptional;
         fnLiteral += `if(contentType)switch(contentType.charCodeAt(12)){
 case 106:` + adapter.parser.json(isOptionalBody) + `break
 case 120:` + adapter.parser.urlencoded(isOptionalBody) + `break
@@ -25675,15 +26246,15 @@ case 114:` + adapter.parser.formData(isOptionalBody) + `break
 default:if(contentType.charCodeAt(0)===116){` + adapter.parser.text(isOptionalBody) + `}break
 }`;
       }
-      let reporter = report("parse", { total: hooks.parse?.length });
+      const reporter = report("parse", {
+        total: hooks.parse?.length
+      });
       if (hooks.parse)
         for (let i = 0;i < hooks.parse.length; i++) {
-          let name = `bo${i}`;
-          if (i !== 0)
-            fnLiteral += `
-if(!used){`;
-          if (typeof hooks.parse[i].fn === "string") {
-            let endUnit = reporter.resolveChild(hooks.parse[i].fn), isOptionalBody = !!validator.body?.isOptional;
+          const name = `bo${i}`;
+          if (i !== 0 && (fnLiteral += `
+if(!used){`), typeof hooks.parse[i].fn == "string") {
+            const endUnit = reporter.resolveChild(hooks.parse[i].fn), isOptionalBody = !!validator.body?.isOptional;
             switch (hooks.parse[i].fn) {
               case "json":
               case "application/json":
@@ -25713,57 +26284,51 @@ if(${name}!==undefined){c.body=${name};used=true;}
             }
             endUnit();
           } else {
-            let endUnit = reporter.resolveChild(hooks.parse[i].fn.name);
+            const endUnit = reporter.resolveChild(hooks.parse[i].fn.name);
             fnLiteral += `let ${name}=e.parse[${i}]
 ${name}=${name}(c,contentType)
 if(${name} instanceof Promise)${name}=await ${name}
 if(${name}!==undefined){c.body=${name};used=true}`, endUnit();
           }
-          if (i !== 0)
-            fnLiteral += "}";
-          if (hasDefaultParser)
+          if (i !== 0 && (fnLiteral += "}"), hasDefaultParser)
             break;
         }
       if (reporter.resolve(), !hasDefaultParser) {
-        let isOptionalBody = !!validator.body?.isOptional;
-        if (hooks.parse?.length)
-          fnLiteral += `
+        const isOptionalBody = !!validator.body?.isOptional;
+        hooks.parse?.length && (fnLiteral += `
 if(!used){
-`;
-        fnLiteral += `switch(contentType){case 'application/json':
+`), fnLiteral += `switch(contentType){case 'application/json':
 ` + adapter.parser.json(isOptionalBody) + `break
 case 'text/plain':` + adapter.parser.text(isOptionalBody) + `break
 case 'application/x-www-form-urlencoded':` + adapter.parser.urlencoded(isOptionalBody) + `break
 case 'application/octet-stream':` + adapter.parser.arrayBuffer(isOptionalBody) + `break
 case 'multipart/form-data':` + adapter.parser.formData(isOptionalBody) + `break
 `;
-        for (let key of Object.keys(app["~parser"]))
+        for (const key of Object.keys(app["~parser"]))
           fnLiteral += `case '${key}':let bo${key}=parser['${key}'](c,contentType)
 if(bo${key} instanceof Promise)bo${key}=await bo${key}
 if(bo${key} instanceof ElysiaCustomStatusResponse){` + mapResponse3(`bo${key}`) + `}if(bo${key}!==undefined)c.body=bo${key}
 break
 `;
-        if (hooks.parse?.length)
-          fnLiteral += "}";
-        fnLiteral += "}";
+        hooks.parse?.length && (fnLiteral += "}"), fnLiteral += "}";
       }
-      if (hooks.parse?.length)
-        fnLiteral += `
-delete c.contentType`;
+      hooks.parse?.length && (fnLiteral += `
+delete c.contentType`);
     }
     fnLiteral += "}catch(error){throw new ParseError(error)}";
   }
   if (parseReporter.resolve(), hooks?.transform || hasTrace) {
-    let reporter = report("transform", { total: hooks.transform?.length });
+    const reporter = report("transform", {
+      total: hooks.transform?.length
+    });
     if (hooks.transform?.length) {
       fnLiteral += `let transformed
 `;
       for (let i = 0;i < hooks.transform.length; i++) {
-        let transform2 = hooks.transform[i], endUnit = reporter.resolveChild(transform2.fn.name);
-        if (fnLiteral += isAsync(transform2) ? `transformed=await e.transform[${i}](c)
+        const transform2 = hooks.transform[i], endUnit = reporter.resolveChild(transform2.fn.name);
+        fnLiteral += isAsync(transform2) ? `transformed=await e.transform[${i}](c)
 ` : `transformed=e.transform[${i}](c)
-`, transform2.subType === "mapDerive")
-          fnLiteral += "if(transformed instanceof ElysiaCustomStatusResponse){" + mapResponse3("transformed") + `}else{transformed.request=c.request
+`, transform2.subType === "mapDerive" ? fnLiteral += "if(transformed instanceof ElysiaCustomStatusResponse){" + mapResponse3("transformed") + `}else{transformed.request=c.request
 transformed.store=c.store
 transformed.qi=c.qi
 transformed.path=c.path
@@ -25771,216 +26336,163 @@ transformed.url=c.url
 transformed.redirect=c.redirect
 transformed.set=c.set
 transformed.error=c.error
-c=transformed}`;
-        else
-          fnLiteral += "if(transformed instanceof ElysiaCustomStatusResponse){" + mapResponse3("transformed") + `}else Object.assign(c,transformed)
-`;
-        endUnit();
+c=transformed}` : fnLiteral += "if(transformed instanceof ElysiaCustomStatusResponse){" + mapResponse3("transformed") + `}else Object.assign(c,transformed)
+`, endUnit();
       }
     }
     reporter.resolve();
   }
-  let fileUnions = [];
+  const fileUnions = [];
   if (validator) {
     if (validator.headers) {
       if (validator.headers.hasDefault)
-        for (let [key, value] of Object.entries(exports_value2.Default(validator.headers.schema, {}))) {
-          let parsed = typeof value === "object" ? JSON.stringify(value) : typeof value === "string" ? `'${value}'` : value;
-          if (parsed !== undefined)
-            fnLiteral += `c.headers['${key}']??=${parsed}
-`;
+        for (const [key, value] of Object.entries(exports_value2.Default(validator.headers.schema, {}))) {
+          const parsed = typeof value == "object" ? JSON.stringify(value) : typeof value == "string" ? `'${value}'` : value;
+          parsed !== undefined && (fnLiteral += `c.headers['${key}']??=${parsed}
+`);
         }
-      if (fnLiteral += composeCleaner({ name: "c.headers", schema: validator.headers, type: "headers", normalize }), validator.headers.isOptional)
-        fnLiteral += "if(isNotEmpty(c.headers)){";
-      if (validator.headers?.provider === "standard")
-        fnLiteral += `let vah=validator.headers.Check(c.headers)
+      fnLiteral += composeCleaner({
+        name: "c.headers",
+        schema: validator.headers,
+        type: "headers",
+        normalize
+      }), validator.headers.isOptional && (fnLiteral += "if(isNotEmpty(c.headers)){"), validator.headers?.provider === "standard" ? fnLiteral += `let vah=validator.headers.Check(c.headers)
 if(vah instanceof Promise)vah=await vah
 if(vah.issues){` + validation.validate("headers", undefined, "vah.issues") + `}else{c.headers=vah.value}
-`;
-      else if (validator.headers?.schema?.noValidate !== true)
-        fnLiteral += "if(validator.headers.Check(c.headers) === false){" + validation.validate("headers") + "}";
-      if (validator.headers.hasTransform)
-        fnLiteral += coerceTransformDecodeError(`c.headers=validator.headers.Decode(c.headers)
-`, "headers", allowUnsafeValidationDetails);
-      if (validator.headers.isOptional)
-        fnLiteral += "}";
+` : validator.headers?.schema?.noValidate !== true && (fnLiteral += "if(validator.headers.Check(c.headers) === false){" + validation.validate("headers") + "}"), validator.headers.hasTransform && (fnLiteral += coerceTransformDecodeError(`c.headers=validator.headers.Decode(c.headers)
+`, "headers", allowUnsafeValidationDetails)), validator.headers.isOptional && (fnLiteral += "}");
     }
     if (validator.params) {
       if (validator.params.hasDefault)
-        for (let [key, value] of Object.entries(exports_value2.Default(validator.params.schema, {}))) {
-          let parsed = typeof value === "object" ? JSON.stringify(value) : typeof value === "string" ? `'${value}'` : value;
-          if (parsed !== undefined)
-            fnLiteral += `c.params['${key}']??=${parsed}
-`;
+        for (const [key, value] of Object.entries(exports_value2.Default(validator.params.schema, {}))) {
+          const parsed = typeof value == "object" ? JSON.stringify(value) : typeof value == "string" ? `'${value}'` : value;
+          parsed !== undefined && (fnLiteral += `c.params['${key}']??=${parsed}
+`);
         }
-      if (validator.params.provider === "standard")
-        fnLiteral += `let vap=validator.params.Check(c.params)
+      validator.params.provider === "standard" ? fnLiteral += `let vap=validator.params.Check(c.params)
 if(vap instanceof Promise)vap=await vap
 if(vap.issues){` + validation.validate("params", undefined, "vap.issues") + `}else{c.params=vap.value}
-`;
-      else if (validator.params?.schema?.noValidate !== true)
-        fnLiteral += "if(validator.params.Check(c.params)===false){" + validation.validate("params") + "}";
-      if (validator.params.hasTransform)
-        fnLiteral += coerceTransformDecodeError(`c.params=validator.params.Decode(c.params)
-`, "params", allowUnsafeValidationDetails);
+` : validator.params?.schema?.noValidate !== true && (fnLiteral += "if(validator.params.Check(c.params)===false){" + validation.validate("params") + "}"), validator.params.hasTransform && (fnLiteral += coerceTransformDecodeError(`c.params=validator.params.Decode(c.params)
+`, "params", allowUnsafeValidationDetails));
     }
     if (validator.query) {
       if (Kind in validator.query?.schema && validator.query.hasDefault)
-        for (let [key, value] of Object.entries(exports_value2.Default(validator.query.schema, {}))) {
-          let parsed = typeof value === "object" ? JSON.stringify(value) : typeof value === "string" ? `'${value}'` : value;
-          if (parsed !== undefined)
-            fnLiteral += `if(c.query['${key}']===undefined)c.query['${key}']=${parsed}
-`;
+        for (const [key, value] of Object.entries(exports_value2.Default(validator.query.schema, {}))) {
+          const parsed = typeof value == "object" ? JSON.stringify(value) : typeof value == "string" ? `'${value}'` : value;
+          parsed !== undefined && (fnLiteral += `if(c.query['${key}']===undefined)c.query['${key}']=${parsed}
+`);
         }
-      if (fnLiteral += composeCleaner({ name: "c.query", schema: validator.query, type: "query", normalize }), validator.query.isOptional)
-        fnLiteral += "if(isNotEmpty(c.query)){";
-      if (validator.query.provider === "standard")
-        fnLiteral += `let vaq=validator.query.Check(c.query)
+      fnLiteral += composeCleaner({
+        name: "c.query",
+        schema: validator.query,
+        type: "query",
+        normalize
+      }), validator.query.isOptional && (fnLiteral += "if(isNotEmpty(c.query)){"), validator.query.provider === "standard" ? fnLiteral += `let vaq=validator.query.Check(c.query)
 if(vaq instanceof Promise)vaq=await vaq
 if(vaq.issues){` + validation.validate("query", undefined, "vaq.issues") + `}else{c.query=vaq.value}
-`;
-      else if (validator.query?.schema?.noValidate !== true)
-        fnLiteral += "if(validator.query.Check(c.query)===false){" + validation.validate("query") + "}";
-      if (validator.query.hasTransform)
-        fnLiteral += coerceTransformDecodeError(`c.query=validator.query.Decode(c.query)
+` : validator.query?.schema?.noValidate !== true && (fnLiteral += "if(validator.query.Check(c.query)===false){" + validation.validate("query") + "}"), validator.query.hasTransform && (fnLiteral += coerceTransformDecodeError(`c.query=validator.query.Decode(c.query)
 `, "query", allowUnsafeValidationDetails), fnLiteral += coerceTransformDecodeError(`c.query=validator.query.Decode(c.query)
-`, "query", allowUnsafeValidationDetails);
-      if (validator.query.isOptional)
-        fnLiteral += "}";
+`, "query", allowUnsafeValidationDetails)), validator.query.isOptional && (fnLiteral += "}");
     }
     if (hasBody && validator.body) {
-      if (validator.body.hasTransform || validator.body.isOptional)
-        fnLiteral += `const isNotEmptyObject=c.body&&(typeof c.body==="object"&&(isNotEmpty(c.body)||c.body instanceof ArrayBuffer))
-`;
-      let hasUnion = isUnion(validator.body.schema), hasNonUnionFileWithDefault = false;
+      (validator.body.hasTransform || validator.body.isOptional) && (fnLiteral += `const isNotEmptyObject=c.body&&(typeof c.body==="object"&&(isNotEmpty(c.body)||c.body instanceof ArrayBuffer))
+`);
+      const hasUnion = isUnion(validator.body.schema);
+      let hasNonUnionFileWithDefault = false;
       if (validator.body.hasDefault) {
-        let value = exports_value2.Default(validator.body.schema, validator.body.schema.type === "object" || unwrapImportSchema(validator.body.schema)[Kind] === "Object" ? {} : undefined), schema = unwrapImportSchema(validator.body.schema);
-        if (!hasUnion && value && typeof value === "object" && (hasType("File", schema) || hasType("Files", schema))) {
+        let value = exports_value2.Default(validator.body.schema, validator.body.schema.type === "object" || unwrapImportSchema(validator.body.schema)[Kind] === "Object" ? {} : undefined);
+        const schema = unwrapImportSchema(validator.body.schema);
+        if (!hasUnion && value && typeof value == "object" && (hasType("File", schema) || hasType("Files", schema))) {
           hasNonUnionFileWithDefault = true;
-          for (let [k2, v] of Object.entries(value))
-            if (v === "File" || v === "Files")
-              delete value[k2];
-          if (!isNotEmpty(value))
-            value = undefined;
+          for (const [k, v] of Object.entries(value))
+            (v === "File" || v === "Files") && delete value[k];
+          isNotEmpty(value) || (value = undefined);
         }
-        let parsed = typeof value === "object" ? JSON.stringify(value) : typeof value === "string" ? `'${value}'` : value;
-        if (value !== undefined && value !== null)
-          if (Array.isArray(value))
-            fnLiteral += `if(!c.body)c.body=${parsed}
-`;
-          else if (typeof value === "object")
-            fnLiteral += `c.body=Object.assign(${parsed},c.body)
-`;
-          else
-            fnLiteral += `c.body=${parsed}
-`;
-        if (fnLiteral += composeCleaner({ name: "c.body", schema: validator.body, type: "body", normalize }), validator.body.provider === "standard")
-          fnLiteral += `let vab=validator.body.Check(c.body)
+        const parsed = typeof value == "object" ? JSON.stringify(value) : typeof value == "string" ? `'${value}'` : value;
+        value != null && (Array.isArray(value) ? fnLiteral += `if(!c.body)c.body=${parsed}
+` : typeof value == "object" ? fnLiteral += `c.body=Object.assign(${parsed},c.body)
+` : fnLiteral += `c.body=${parsed}
+`), fnLiteral += composeCleaner({
+          name: "c.body",
+          schema: validator.body,
+          type: "body",
+          normalize
+        }), validator.body.provider === "standard" ? fnLiteral += `let vab=validator.body.Check(c.body)
 if(vab instanceof Promise)vab=await vab
 if(vab.issues){` + validation.validate("body", undefined, "vab.issues") + `}else{c.body=vab.value}
-`;
-        else if (validator.body?.schema?.noValidate !== true)
-          if (validator.body.isOptional)
-            fnLiteral += "if(isNotEmptyObject&&validator.body.Check(c.body)===false){" + validation.validate("body") + "}";
-          else
-            fnLiteral += "if(validator.body.Check(c.body)===false){" + validation.validate("body") + "}";
-      } else if (fnLiteral += composeCleaner({ name: "c.body", schema: validator.body, type: "body", normalize }), validator.body.provider === "standard")
-        fnLiteral += `let vab=validator.body.Check(c.body)
+` : validator.body?.schema?.noValidate !== true && (validator.body.isOptional ? fnLiteral += "if(isNotEmptyObject&&validator.body.Check(c.body)===false){" + validation.validate("body") + "}" : fnLiteral += "if(validator.body.Check(c.body)===false){" + validation.validate("body") + "}");
+      } else
+        fnLiteral += composeCleaner({
+          name: "c.body",
+          schema: validator.body,
+          type: "body",
+          normalize
+        }), validator.body.provider === "standard" ? fnLiteral += `let vab=validator.body.Check(c.body)
 if(vab instanceof Promise)vab=await vab
 if(vab.issues){` + validation.validate("body", undefined, "vab.issues") + `}else{c.body=vab.value}
-`;
-      else if (validator.body?.schema?.noValidate !== true)
-        if (validator.body.isOptional)
-          fnLiteral += "if(isNotEmptyObject&&validator.body.Check(c.body)===false){" + validation.validate("body") + "}";
-        else
-          fnLiteral += "if(validator.body.Check(c.body)===false){" + validation.validate("body") + "}";
-      if (validator.body.hasTransform)
-        fnLiteral += coerceTransformDecodeError(`if(isNotEmptyObject)c.body=validator.body.Decode(c.body)
-`, "body", allowUnsafeValidationDetails);
-      if (hasUnion && validator.body.schema.anyOf?.length) {
-        let iterator = Object.values(validator.body.schema.anyOf);
+` : validator.body?.schema?.noValidate !== true && (validator.body.isOptional ? fnLiteral += "if(isNotEmptyObject&&validator.body.Check(c.body)===false){" + validation.validate("body") + "}" : fnLiteral += "if(validator.body.Check(c.body)===false){" + validation.validate("body") + "}");
+      if (validator.body.hasTransform && (fnLiteral += coerceTransformDecodeError(`if(isNotEmptyObject)c.body=validator.body.Decode(c.body)
+`, "body", allowUnsafeValidationDetails)), hasUnion && validator.body.schema.anyOf?.length) {
+        const iterator = Object.values(validator.body.schema.anyOf);
         for (let i = 0;i < iterator.length; i++) {
-          let type = iterator[i];
+          const type = iterator[i];
           if (hasType("File", type) || hasType("Files", type)) {
-            let candidate = getSchemaValidator(type, { modules: app.definitions.typebox, dynamic: !app.config.aot, models: app.definitions.type, normalize: app.config.normalize, additionalCoerce: coercePrimitiveRoot(), sanitize: () => app.config.sanitize });
+            const candidate = getSchemaValidator(type, {
+              modules: app.definitions.typebox,
+              dynamic: !app.config.aot,
+              models: app.definitions.type,
+              normalize: app.config.normalize,
+              additionalCoerce: coercePrimitiveRoot(),
+              sanitize: () => app.config.sanitize
+            });
             if (candidate) {
-              let isFirst = fileUnions.length === 0, iterator2 = Object.entries(type.properties), validator2 = isFirst ? `
+              const isFirst = fileUnions.length === 0, iterator2 = Object.entries(type.properties);
+              let validator2 = isFirst ? `
 ` : " else ";
               validator2 += `if(fileUnions[${fileUnions.length}].Check(c.body)){`;
               let validateFile2 = "", validatorLength = 0;
               for (let i2 = 0;i2 < iterator2.length; i2++) {
-                let [k2, v] = iterator2[i2];
-                if (!v.extension || v[Kind] !== "File" && v[Kind] !== "Files")
-                  continue;
-                if (validatorLength)
-                  validateFile2 += ",";
-                validateFile2 += `fileType(c.body.${k2},${JSON.stringify(v.extension)},'body.${k2}')`, validatorLength++;
+                const [k, v] = iterator2[i2];
+                !v.extension || v[Kind] !== "File" && v[Kind] !== "Files" || (validatorLength && (validateFile2 += ","), validateFile2 += `fileType(c.body.${k},${JSON.stringify(v.extension)},'body.${k}')`, validatorLength++);
               }
-              if (validateFile2) {
-                if (validatorLength === 1)
-                  validator2 += `await ${validateFile2}
-`;
-                else if (validatorLength > 1)
-                  validator2 += `await Promise.all([${validateFile2}])
-`;
-                validator2 += "}", fnLiteral += validator2, fileUnions.push(candidate);
-              }
+              validateFile2 && (validatorLength === 1 ? validator2 += `await ${validateFile2}
+` : validatorLength > 1 && (validator2 += `await Promise.all([${validateFile2}])
+`), validator2 += "}", fnLiteral += validator2, fileUnions.push(candidate));
             }
           }
         }
       } else if (hasNonUnionFileWithDefault || !hasUnion && (hasType("File", unwrapImportSchema(validator.body.schema)) || hasType("Files", unwrapImportSchema(validator.body.schema)))) {
         let validateFile2 = "", i = 0;
-        for (let [k2, v] of Object.entries(unwrapImportSchema(validator.body.schema).properties)) {
-          if (!v.extension || v[Kind] !== "File" && v[Kind] !== "Files")
-            continue;
-          if (i)
-            validateFile2 += ",";
-          validateFile2 += `fileType(c.body.${k2},${JSON.stringify(v.extension)},'body.${k2}')`, i++;
-        }
-        if (i)
-          fnLiteral += `
-`;
-        if (i === 1)
-          fnLiteral += `await ${validateFile2}
-`;
-        else if (i > 1)
-          fnLiteral += `await Promise.all([${validateFile2}])
-`;
+        for (const [k, v] of Object.entries(unwrapImportSchema(validator.body.schema).properties))
+          !v.extension || v[Kind] !== "File" && v[Kind] !== "Files" || (i && (validateFile2 += ","), validateFile2 += `fileType(c.body.${k},${JSON.stringify(v.extension)},'body.${k}')`, i++);
+        i && (fnLiteral += `
+`), i === 1 ? fnLiteral += `await ${validateFile2}
+` : i > 1 && (fnLiteral += `await Promise.all([${validateFile2}])
+`);
       }
     }
-    if (validator.cookie) {
-      if (validator.cookie.config = mergeCookie(validator.cookie.config, validator.cookie?.config ?? {}), fnLiteral += `let cookieValue={}
+    validator.cookie && (validator.cookie.config = mergeCookie(validator.cookie.config, validator.cookie?.config ?? {}), fnLiteral += `let cookieValue={}
 for(const [key,value] of Object.entries(c.cookie))cookieValue[key]=value.value
-`, validator.cookie.isOptional)
-        fnLiteral += "if(isNotEmpty(c.cookie)){";
-      if (validator.cookie.provider === "standard")
-        fnLiteral += `let vac=validator.cookie.Check(cookieValue)
+`, validator.cookie.isOptional && (fnLiteral += "if(isNotEmpty(c.cookie)){"), validator.cookie.provider === "standard" ? (fnLiteral += `let vac=validator.cookie.Check(cookieValue)
 if(vac instanceof Promise)vac=await vac
 if(vac.issues){` + validation.validate("cookie", undefined, "vac.issues") + `}else{cookieValue=vac.value}
 `, fnLiteral += `for(const k of Object.keys(cookieValue))c.cookie[k].value=cookieValue[k]
-`;
-      else if (validator.body?.schema?.noValidate !== true) {
-        if (fnLiteral += "if(validator.cookie.Check(cookieValue)===false){" + validation.validate("cookie", "cookieValue") + "}", validator.cookie.hasTransform)
-          fnLiteral += coerceTransformDecodeError("for(const [key,value] of Object.entries(validator.cookie.Decode(cookieValue))){c.cookie[key].cookie.value = value}", "cookie", allowUnsafeValidationDetails);
-      }
-      if (validator.cookie.isOptional)
-        fnLiteral += "}";
-    }
+`) : validator.body?.schema?.noValidate !== true && (fnLiteral += "if(validator.cookie.Check(cookieValue)===false){" + validation.validate("cookie", "cookieValue") + "}", validator.cookie.hasTransform && (fnLiteral += coerceTransformDecodeError("for(const [key,value] of Object.entries(validator.cookie.Decode(cookieValue))){c.cookie[key].cookie.value = value}", "cookie", allowUnsafeValidationDetails))), validator.cookie.isOptional && (fnLiteral += "}"));
   }
   if (hooks?.beforeHandle || hasTrace) {
-    let reporter = report("beforeHandle", { total: hooks.beforeHandle?.length }), hasResolve = false;
+    const reporter = report("beforeHandle", {
+      total: hooks.beforeHandle?.length
+    });
+    let hasResolve = false;
     if (hooks.beforeHandle?.length)
       for (let i = 0;i < hooks.beforeHandle.length; i++) {
-        let beforeHandle = hooks.beforeHandle[i], endUnit = reporter.resolveChild(beforeHandle.fn.name), returning = hasReturn(beforeHandle);
-        if (beforeHandle.subType === "resolve" || beforeHandle.subType === "mapResolve") {
-          if (!hasResolve)
-            hasResolve = true, fnLiteral += `
+        const beforeHandle = hooks.beforeHandle[i], endUnit = reporter.resolveChild(beforeHandle.fn.name), returning = hasReturn(beforeHandle);
+        if (beforeHandle.subType === "resolve" || beforeHandle.subType === "mapResolve")
+          hasResolve || (hasResolve = true, fnLiteral += `
 let resolved
-`;
-          if (fnLiteral += isAsync(beforeHandle) ? `resolved=await e.beforeHandle[${i}](c);
+`), fnLiteral += isAsync(beforeHandle) ? `resolved=await e.beforeHandle[${i}](c);
 ` : `resolved=e.beforeHandle[${i}](c);
-`, beforeHandle.subType === "mapResolve")
-            fnLiteral += "if(resolved instanceof ElysiaCustomStatusResponse){" + mapResponse3("resolved") + `}else{resolved.request=c.request
+`, beforeHandle.subType === "mapResolve" ? fnLiteral += "if(resolved instanceof ElysiaCustomStatusResponse){" + mapResponse3("resolved") + `}else{resolved.request=c.request
 resolved.store=c.store
 resolved.qi=c.qi
 resolved.path=c.path
@@ -25988,12 +26500,9 @@ resolved.url=c.url
 resolved.redirect=c.redirect
 resolved.set=c.set
 resolved.error=c.error
-c=resolved}`;
-          else
-            fnLiteral += "if(resolved instanceof ElysiaCustomStatusResponse){" + mapResponse3("resolved") + `}else Object.assign(c, resolved)
-`;
-          endUnit();
-        } else if (!returning)
+c=resolved}` : fnLiteral += "if(resolved instanceof ElysiaCustomStatusResponse){" + mapResponse3("resolved") + `}else Object.assign(c, resolved)
+`, endUnit();
+        else if (!returning)
           fnLiteral += isAsync(beforeHandle) ? `await e.beforeHandle[${i}](c)
 ` : `e.beforeHandle[${i}](c)
 `, endUnit();
@@ -26001,34 +26510,35 @@ c=resolved}`;
           if (fnLiteral += isAsync(beforeHandle) ? `be=await e.beforeHandle[${i}](c)
 ` : `be=e.beforeHandle[${i}](c)
 `, endUnit("be"), fnLiteral += "if(be!==undefined){", reporter.resolve(), hooks.afterHandle?.length || hasTrace) {
-            report("handle", { name: isHandleFn ? handler.name : undefined }).resolve();
-            let reporter2 = report("afterHandle", { total: hooks.afterHandle?.length });
+            report("handle", {
+              name: isHandleFn ? handler.name : undefined
+            }).resolve();
+            const reporter2 = report("afterHandle", {
+              total: hooks.afterHandle?.length
+            });
             if (hooks.afterHandle?.length)
               for (let i2 = 0;i2 < hooks.afterHandle.length; i2++) {
-                let hook = hooks.afterHandle[i2], returning2 = hasReturn(hook), endUnit2 = reporter2.resolveChild(hook.fn.name);
-                if (fnLiteral += `c.response=c.responseValue=be
-`, !returning2)
-                  fnLiteral += isAsync(hook.fn) ? `await e.afterHandle[${i2}](c, be)
-` : `e.afterHandle[${i2}](c, be)
-`;
-                else
-                  fnLiteral += isAsync(hook.fn) ? `af=await e.afterHandle[${i2}](c)
+                const hook = hooks.afterHandle[i2], returning2 = hasReturn(hook), endUnit2 = reporter2.resolveChild(hook.fn.name);
+                fnLiteral += `c.response=c.responseValue=be
+`, returning2 ? (fnLiteral += isAsync(hook.fn) ? `af=await e.afterHandle[${i2}](c)
 ` : `af=e.afterHandle[${i2}](c)
 `, fnLiteral += `if(af!==undefined) c.response=c.responseValue=be=af
-`;
-                endUnit2("af");
+`) : fnLiteral += isAsync(hook.fn) ? `await e.afterHandle[${i2}](c, be)
+` : `e.afterHandle[${i2}](c, be)
+`, endUnit2("af");
               }
             reporter2.resolve();
           }
-          if (validator.response)
-            fnLiteral += validation.response("be");
-          let mapResponseReporter = report("mapResponse", { total: hooks.mapResponse?.length });
+          validator.response && (fnLiteral += validation.response("be"));
+          const mapResponseReporter = report("mapResponse", {
+            total: hooks.mapResponse?.length
+          });
           if (hooks.mapResponse?.length) {
             fnLiteral += `c.response=c.responseValue=be
 `;
             for (let i2 = 0;i2 < hooks.mapResponse.length; i2++) {
-              let mapResponse4 = hooks.mapResponse[i2], endUnit2 = mapResponseReporter.resolveChild(mapResponse4.fn.name);
-              fnLiteral += `if(mr===undefined){mr=${isAsyncName(mapResponse4) ? "await " : ""}e.mapResponse[${i2}](c)
+              const mapResponse22 = hooks.mapResponse[i2], endUnit2 = mapResponseReporter.resolveChild(mapResponse22.fn.name);
+              fnLiteral += `if(mr===undefined){mr=${isAsyncName(mapResponse22) ? "await " : ""}e.mapResponse[${i2}](c)
 if(mr!==undefined)be=c.response=c.responseValue=mr}`, endUnit2();
             }
           }
@@ -26039,149 +26549,130 @@ if(mr!==undefined)be=c.response=c.responseValue=mr}`, endUnit2();
     reporter.resolve();
   }
   function reportHandler(name) {
-    let handleReporter = report("handle", { name, alias: "reportHandler" });
+    const handleReporter = report("handle", {
+      name,
+      alias: "reportHandler"
+    });
     return () => {
-      if (hasTrace)
-        fnLiteral += 'if(r&&(r[Symbol.iterator]||r[Symbol.asyncIterator])&&typeof r.next==="function"){' + (maybeAsync ? "" : "(async()=>{") + `const stream=await tee(r,3)
+      hasTrace && (fnLiteral += 'if(r&&(r[Symbol.iterator]||r[Symbol.asyncIterator])&&typeof r.next==="function"){' + (maybeAsync ? "" : "(async()=>{") + `const stream=await tee(r,3)
 r=stream[0]
 const listener=stream[1]
 ` + (hasTrace || hooks.afterResponse?.length ? `afterHandlerStreamListener=stream[2]
 ` : "") + `setImmediate(async ()=>{if(listener)for await(const v of listener){}
 `, handleReporter.resolve(), fnLiteral += "})" + (maybeAsync ? "" : "})()") + "}else{", handleReporter.resolve(), fnLiteral += `}
-`;
+`);
     };
   }
   if (hooks.afterHandle?.length || hasTrace) {
-    let resolveHandler = reportHandler(isHandleFn ? handler.name : undefined);
-    if (hooks.afterHandle?.length)
-      fnLiteral += isAsyncHandler ? `let r=c.response=c.responseValue=await ${handle}
+    const resolveHandler = reportHandler(isHandleFn ? handler.name : undefined);
+    hooks.afterHandle?.length ? fnLiteral += isAsyncHandler ? `let r=c.response=c.responseValue=await ${handle}
 ` : `let r=c.response=c.responseValue=${handle}
-`;
-    else
-      fnLiteral += isAsyncHandler ? `let r=await ${handle}
+` : fnLiteral += isAsyncHandler ? `let r=await ${handle}
 ` : `let r=${handle}
-`;
-    resolveHandler();
-    let reporter = report("afterHandle", { total: hooks.afterHandle?.length });
+`, resolveHandler();
+    const reporter = report("afterHandle", {
+      total: hooks.afterHandle?.length
+    });
     if (hooks.afterHandle?.length)
       for (let i = 0;i < hooks.afterHandle.length; i++) {
-        let hook = hooks.afterHandle[i], returning = hasReturn(hook), endUnit = reporter.resolveChild(hook.fn.name);
-        if (!returning)
-          fnLiteral += isAsync(hook.fn) ? `await e.afterHandle[${i}](c)
-` : `e.afterHandle[${i}](c)
-`, endUnit();
-        else if (fnLiteral += isAsync(hook.fn) ? `af=await e.afterHandle[${i}](c)
+        const hook = hooks.afterHandle[i], returning = hasReturn(hook), endUnit = reporter.resolveChild(hook.fn.name);
+        returning ? (fnLiteral += isAsync(hook.fn) ? `af=await e.afterHandle[${i}](c)
 ` : `af=e.afterHandle[${i}](c)
-`, endUnit("af"), validator.response)
-          fnLiteral += "if(af!==undefined){", reporter.resolve(), fnLiteral += validation.response("af"), fnLiteral += "c.response=c.responseValue=af}";
-        else
-          fnLiteral += "if(af!==undefined){", reporter.resolve(), fnLiteral += "c.response=c.responseValue=af}";
+`, endUnit("af"), validator.response ? (fnLiteral += "if(af!==undefined){", reporter.resolve(), fnLiteral += validation.response("af"), fnLiteral += "c.response=c.responseValue=af}") : (fnLiteral += "if(af!==undefined){", reporter.resolve(), fnLiteral += "c.response=c.responseValue=af}")) : (fnLiteral += isAsync(hook.fn) ? `await e.afterHandle[${i}](c)
+` : `e.afterHandle[${i}](c)
+`, endUnit());
       }
-    if (reporter.resolve(), hooks.afterHandle?.length)
-      fnLiteral += `r=c.response
-`;
-    if (validator.response)
-      fnLiteral += validation.response();
-    fnLiteral += encodeCookie();
-    let mapResponseReporter = report("mapResponse", { total: hooks.mapResponse?.length });
+    reporter.resolve(), hooks.afterHandle?.length && (fnLiteral += `r=c.response
+`), validator.response && (fnLiteral += validation.response()), fnLiteral += encodeCookie();
+    const mapResponseReporter = report("mapResponse", {
+      total: hooks.mapResponse?.length
+    });
     if (hooks.mapResponse?.length)
       for (let i = 0;i < hooks.mapResponse.length; i++) {
-        let mapResponse4 = hooks.mapResponse[i], endUnit = mapResponseReporter.resolveChild(mapResponse4.fn.name);
-        fnLiteral += `mr=${isAsyncName(mapResponse4) ? "await " : ""}e.mapResponse[${i}](c)
+        const mapResponse22 = hooks.mapResponse[i], endUnit = mapResponseReporter.resolveChild(mapResponse22.fn.name);
+        fnLiteral += `mr=${isAsyncName(mapResponse22) ? "await " : ""}e.mapResponse[${i}](c)
 if(mr!==undefined)r=c.response=c.responseValue=mr
 `, endUnit();
       }
     mapResponseReporter.resolve(), fnLiteral += mapResponse3();
   } else {
-    let resolveHandler = reportHandler(isHandleFn ? handler.name : undefined);
+    const resolveHandler = reportHandler(isHandleFn ? handler.name : undefined);
     if (validator.response || hooks.mapResponse?.length || hasTrace) {
-      if (fnLiteral += isAsyncHandler ? `let r=await ${handle}
+      fnLiteral += isAsyncHandler ? `let r=await ${handle}
 ` : `let r=${handle}
-`, resolveHandler(), validator.response)
-        fnLiteral += validation.response();
-      let mapResponseReporter = report("mapResponse", { total: hooks.mapResponse?.length });
+`, resolveHandler(), validator.response && (fnLiteral += validation.response());
+      const mapResponseReporter = report("mapResponse", {
+        total: hooks.mapResponse?.length
+      });
       if (hooks.mapResponse?.length) {
         fnLiteral += `
 c.response=c.responseValue=r
 `;
         for (let i = 0;i < hooks.mapResponse.length; i++) {
-          let mapResponse4 = hooks.mapResponse[i], endUnit = mapResponseReporter.resolveChild(mapResponse4.fn.name);
+          const mapResponse22 = hooks.mapResponse[i], endUnit = mapResponseReporter.resolveChild(mapResponse22.fn.name);
           fnLiteral += `
-if(mr===undefined){mr=${isAsyncName(mapResponse4) ? "await " : ""}e.mapResponse[${i}](c)
+if(mr===undefined){mr=${isAsyncName(mapResponse22) ? "await " : ""}e.mapResponse[${i}](c)
 if(mr!==undefined)r=c.response=c.responseValue=mr}
 `, endUnit();
         }
       }
-      if (mapResponseReporter.resolve(), fnLiteral += encodeCookie(), handler instanceof Response)
-        fnLiteral += afterResponse(), fnLiteral += inference.set ? `if(isNotEmpty(c.set.headers)||c.set.status!==200||c.set.redirect||c.set.cookie)return mapResponse(${saveResponse}${handle}.clone(),c.set${mapResponseContext})
+      mapResponseReporter.resolve(), fnLiteral += encodeCookie(), handler instanceof Response ? (fnLiteral += afterResponse(), fnLiteral += inference.set ? `if(isNotEmpty(c.set.headers)||c.set.status!==200||c.set.redirect||c.set.cookie)return mapResponse(${saveResponse}${handle}.clone(),c.set${mapResponseContext})
 else return ${handle}.clone()` : `return ${handle}.clone()`, fnLiteral += `
-`;
-      else
-        fnLiteral += mapResponse3();
+`) : fnLiteral += mapResponse3();
     } else if (hasCookie || hasTrace) {
       fnLiteral += isAsyncHandler ? `let r=await ${handle}
 ` : `let r=${handle}
 `, resolveHandler();
-      let mapResponseReporter = report("mapResponse", { total: hooks.mapResponse?.length });
+      const mapResponseReporter = report("mapResponse", {
+        total: hooks.mapResponse?.length
+      });
       if (hooks.mapResponse?.length) {
         fnLiteral += `c.response=c.responseValue= r
 `;
         for (let i = 0;i < hooks.mapResponse.length; i++) {
-          let mapResponse4 = hooks.mapResponse[i], endUnit = mapResponseReporter.resolveChild(mapResponse4.fn.name);
-          fnLiteral += `if(mr===undefined){mr=${isAsyncName(mapResponse4) ? "await " : ""}e.mapResponse[${i}](c)
+          const mapResponse22 = hooks.mapResponse[i], endUnit = mapResponseReporter.resolveChild(mapResponse22.fn.name);
+          fnLiteral += `if(mr===undefined){mr=${isAsyncName(mapResponse22) ? "await " : ""}e.mapResponse[${i}](c)
 if(mr!==undefined)r=c.response=c.responseValue=mr}`, endUnit();
         }
       }
       mapResponseReporter.resolve(), fnLiteral += encodeCookie() + mapResponse3();
     } else {
       resolveHandler();
-      let handled = isAsyncHandler ? `await ${handle}` : handle;
-      if (handler instanceof Response)
-        fnLiteral += afterResponse(), fnLiteral += inference.set ? `if(isNotEmpty(c.set.headers)||c.set.status!==200||c.set.redirect||c.set.cookie)return mapResponse(${saveResponse}${handle}.clone(),c.set${mapResponseContext})
+      const handled = isAsyncHandler ? `await ${handle}` : handle;
+      handler instanceof Response ? (fnLiteral += afterResponse(), fnLiteral += inference.set ? `if(isNotEmpty(c.set.headers)||c.set.status!==200||c.set.redirect||c.set.cookie)return mapResponse(${saveResponse}${handle}.clone(),c.set${mapResponseContext})
 else return ${handle}.clone()
 ` : `return ${handle}.clone()
-`;
-      else
-        fnLiteral += mapResponse3(handled);
+`) : fnLiteral += mapResponse3(handled);
     }
   }
   if (fnLiteral += `
-}catch(error){`, !maybeAsync && hooks.error?.length)
-    fnLiteral += "return(async()=>{";
-  if (fnLiteral += `const set=c.set
+}catch(error){`, !maybeAsync && hooks.error?.length && (fnLiteral += "return(async()=>{"), fnLiteral += `const set=c.set
 if(!set.status||set.status<300)set.status=error?.status||500
-`, hasCookie)
-    fnLiteral += encodeCookie();
-  if (hasTrace && hooks.trace)
+`, hasCookie && (fnLiteral += encodeCookie()), hasTrace && hooks.trace)
     for (let i = 0;i < hooks.trace.length; i++)
       fnLiteral += `report${i}?.resolve(error);reportChild${i}?.(error)
 `;
-  let errorReporter = report("error", { total: hooks.error?.length });
+  const errorReporter = report("error", {
+    total: hooks.error?.length
+  });
   if (hooks.error?.length) {
-    if (fnLiteral += `c.error=error
-`, hasValidation)
-      fnLiteral += `if(error instanceof TypeBoxError){c.code="VALIDATION"
-c.set.status=422}else{c.code=error.code??error[ERROR_CODE]??"UNKNOWN"}`;
-    else
-      fnLiteral += `c.code=error.code??error[ERROR_CODE]??"UNKNOWN"
-`;
-    if (fnLiteral += `let er
-`, hooks.mapResponse?.length)
-      fnLiteral += `let mep
-`;
+    fnLiteral += `c.error=error
+`, hasValidation ? fnLiteral += `if(error instanceof TypeBoxError){c.code="VALIDATION"
+c.set.status=422}else{c.code=error.code??error[ERROR_CODE]??"UNKNOWN"}` : fnLiteral += `c.code=error.code??error[ERROR_CODE]??"UNKNOWN"
+`, fnLiteral += `let er
+`, hooks.mapResponse?.length && (fnLiteral += `let mep
+`);
     for (let i = 0;i < hooks.error.length; i++) {
-      let endUnit = errorReporter.resolveChild(hooks.error[i].fn.name);
-      if (isAsync(hooks.error[i]))
-        fnLiteral += `er=await e.error[${i}](c)
-`;
-      else
-        fnLiteral += `er=e.error[${i}](c)
+      const endUnit = errorReporter.resolveChild(hooks.error[i].fn.name);
+      if (isAsync(hooks.error[i]) ? fnLiteral += `er=await e.error[${i}](c)
+` : fnLiteral += `er=e.error[${i}](c)
 if(er instanceof Promise)er=await er
-`;
-      if (endUnit(), hooks.mapResponse?.length) {
-        let mapResponseReporter = report("mapResponse", { total: hooks.mapResponse?.length });
+`, endUnit(), hooks.mapResponse?.length) {
+        const mapResponseReporter = report("mapResponse", {
+          total: hooks.mapResponse?.length
+        });
         for (let i2 = 0;i2 < hooks.mapResponse.length; i2++) {
-          let mapResponse4 = hooks.mapResponse[i2], endUnit2 = mapResponseReporter.resolveChild(mapResponse4.fn.name);
+          const mapResponse22 = hooks.mapResponse[i2], endUnit2 = mapResponseReporter.resolveChild(mapResponse22.fn.name);
           fnLiteral += `c.response=c.responseValue=er
 mep=e.mapResponse[${i2}](c)
 if(mep instanceof Promise)er=await er
@@ -26200,83 +26691,132 @@ if(mep!==undefined)er=mep
       fnLiteral += afterResponse(false), fnLiteral += "return er}";
     }
   }
-  if (errorReporter.resolve(), fnLiteral += "return handleError(c,error,true)", !maybeAsync && hooks.error?.length)
-    fnLiteral += "})()";
-  fnLiteral += "}";
-  let adapterVariables = adapter.inject ? Object.keys(adapter.inject).join(",") + "," : "", init = "const {handler,handleError,hooks:e, " + allocateIf("validator,", hasValidation) + "mapResponse,mapCompactResponse,mapEarlyResponse,isNotEmpty,utils:{" + allocateIf("parseQuery,", hasBody) + allocateIf("parseQueryFromURL,", hasQuery) + "},error:{" + allocateIf("ValidationError,", hasValidation) + allocateIf("ParseError", hasBody) + "},fileType,schema,definitions,tee,ERROR_CODE," + allocateIf("parseCookie,", hasCookie) + allocateIf("signCookie,", hasCookie) + allocateIf("decodeURIComponent,", hasQuery) + "ElysiaCustomStatusResponse," + allocateIf("ELYSIA_TRACE,", hasTrace) + allocateIf("ELYSIA_REQUEST_ID,", hasTrace) + allocateIf("parser,", hooks.parse?.length) + allocateIf("getServer,", inference.server) + allocateIf("fileUnions,", fileUnions.length) + adapterVariables + allocateIf("TypeBoxError", hasValidation) + `}=hooks
+  errorReporter.resolve(), fnLiteral += "return handleError(c,error,true)", !maybeAsync && hooks.error?.length && (fnLiteral += "})()"), fnLiteral += "}";
+  const adapterVariables = adapter.inject ? Object.keys(adapter.inject).join(",") + "," : "";
+  let init = "const {handler,handleError,hooks:e, " + allocateIf("validator,", hasValidation) + "mapResponse,mapCompactResponse,mapEarlyResponse,isNotEmpty,utils:{" + allocateIf("parseQuery,", hasBody) + allocateIf("parseQueryFromURL,", hasQuery) + "},error:{" + allocateIf("ValidationError,", hasValidation) + allocateIf("ParseError", hasBody) + "},fileType,schema,definitions,tee,ERROR_CODE," + allocateIf("parseCookie,", hasCookie) + allocateIf("signCookie,", hasCookie) + allocateIf("decodeURIComponent,", hasQuery) + "ElysiaCustomStatusResponse," + allocateIf("ELYSIA_TRACE,", hasTrace) + allocateIf("ELYSIA_REQUEST_ID,", hasTrace) + allocateIf("parser,", hooks.parse?.length) + allocateIf("getServer,", inference.server) + allocateIf("fileUnions,", fileUnions.length) + adapterVariables + allocateIf("TypeBoxError", hasValidation) + `}=hooks
 const trace=e.trace
 return ${maybeAsync ? "async " : ""}function handle(c){`;
-  if (hooks.beforeHandle?.length)
-    init += `let be
-`;
-  if (hooks.afterHandle?.length)
-    init += `let af
-`;
-  if (hooks.mapResponse?.length)
-    init += `let mr
-`;
-  if (allowMeta)
-    init += `c.schema=schema
+  hooks.beforeHandle?.length && (init += `let be
+`), hooks.afterHandle?.length && (init += `let af
+`), hooks.mapResponse?.length && (init += `let mr
+`), allowMeta && (init += `c.schema=schema
 c.defs=definitions
-`;
-  fnLiteral = init + fnLiteral + "}", init = "";
+`), fnLiteral = init + fnLiteral + "}", init = "";
   try {
     return Function("hooks", `"use strict";
-` + fnLiteral)({ handler, hooks: lifeCycleToFn(hooks), validator: hasValidation ? validator : undefined, handleError: app.handleError, mapResponse: adapterHandler.mapResponse, mapCompactResponse: adapterHandler.mapCompactResponse, mapEarlyResponse: adapterHandler.mapEarlyResponse, isNotEmpty, utils: { parseQuery: hasBody ? parseQuery : undefined, parseQueryFromURL: hasQuery ? validator.query?.provider === "standard" ? parseQueryStandardSchema : parseQueryFromURL : undefined }, error: { ValidationError: hasValidation ? ValidationError : undefined, ParseError: hasBody ? ParseError2 : undefined }, fileType, schema: app.router.history, definitions: app.definitions.type, tee, ERROR_CODE, parseCookie: hasCookie ? parseCookie : undefined, signCookie: hasCookie ? signCookie : undefined, Cookie: hasCookie ? Cookie : undefined, decodeURIComponent: hasQuery ? import_fast_decode_uri_component3.default : undefined, ElysiaCustomStatusResponse, ELYSIA_TRACE: hasTrace ? ELYSIA_TRACE : undefined, ELYSIA_REQUEST_ID: hasTrace ? ELYSIA_REQUEST_ID : undefined, getServer: inference.server ? () => app.getServer() : undefined, fileUnions: fileUnions.length ? fileUnions : undefined, TypeBoxError: hasValidation ? TypeBoxError : undefined, parser: app["~parser"], ...adapter.inject });
+` + fnLiteral)({
+      handler,
+      hooks: lifeCycleToFn(hooks),
+      validator: hasValidation ? validator : undefined,
+      handleError: app.handleError,
+      mapResponse: adapterHandler.mapResponse,
+      mapCompactResponse: adapterHandler.mapCompactResponse,
+      mapEarlyResponse: adapterHandler.mapEarlyResponse,
+      isNotEmpty,
+      utils: {
+        parseQuery: hasBody ? parseQuery : undefined,
+        parseQueryFromURL: hasQuery ? validator.query?.provider === "standard" ? parseQueryStandardSchema : parseQueryFromURL : undefined
+      },
+      error: {
+        ValidationError: hasValidation ? ValidationError : undefined,
+        ParseError: hasBody ? ParseError2 : undefined
+      },
+      fileType,
+      schema: app.router.history,
+      definitions: app.definitions.type,
+      tee,
+      ERROR_CODE,
+      parseCookie: hasCookie ? parseCookie : undefined,
+      signCookie: hasCookie ? signCookie : undefined,
+      Cookie: hasCookie ? Cookie : undefined,
+      decodeURIComponent: hasQuery ? import_fast_decode_uri_component3.default : undefined,
+      ElysiaCustomStatusResponse,
+      ELYSIA_TRACE: hasTrace ? ELYSIA_TRACE : undefined,
+      ELYSIA_REQUEST_ID: hasTrace ? ELYSIA_REQUEST_ID : undefined,
+      getServer: inference.server ? () => app.getServer() : undefined,
+      fileUnions: fileUnions.length ? fileUnions : undefined,
+      TypeBoxError: hasValidation ? TypeBoxError : undefined,
+      parser: app["~parser"],
+      ...adapter.inject
+    });
   } catch (error) {
-    let debugHooks = lifeCycleToFn(hooks);
-    console.log("[Composer] failed to generate optimized handler"), console.log("---"), console.log({ handler: typeof handler === "function" ? handler.toString() : handler, instruction: fnLiteral, hooks: { ...debugHooks, transform: debugHooks?.transform?.map?.((x) => x.toString()), resolve: debugHooks?.resolve?.map?.((x) => x.toString()), beforeHandle: debugHooks?.beforeHandle?.map?.((x) => x.toString()), afterHandle: debugHooks?.afterHandle?.map?.((x) => x.toString()), mapResponse: debugHooks?.mapResponse?.map?.((x) => x.toString()), parse: debugHooks?.parse?.map?.((x) => x.toString()), error: debugHooks?.error?.map?.((x) => x.toString()), afterResponse: debugHooks?.afterResponse?.map?.((x) => x.toString()), stop: debugHooks?.stop?.map?.((x) => x.toString()) }, validator, definitions: app.definitions.type, error }), console.log("---"), process.exit(1);
+    const debugHooks = lifeCycleToFn(hooks);
+    console.log("[Composer] failed to generate optimized handler"), console.log("---"), console.log({
+      handler: typeof handler == "function" ? handler.toString() : handler,
+      instruction: fnLiteral,
+      hooks: {
+        ...debugHooks,
+        transform: debugHooks?.transform?.map?.((x) => x.toString()),
+        resolve: debugHooks?.resolve?.map?.((x) => x.toString()),
+        beforeHandle: debugHooks?.beforeHandle?.map?.((x) => x.toString()),
+        afterHandle: debugHooks?.afterHandle?.map?.((x) => x.toString()),
+        mapResponse: debugHooks?.mapResponse?.map?.((x) => x.toString()),
+        parse: debugHooks?.parse?.map?.((x) => x.toString()),
+        error: debugHooks?.error?.map?.((x) => x.toString()),
+        afterResponse: debugHooks?.afterResponse?.map?.((x) => x.toString()),
+        stop: debugHooks?.stop?.map?.((x) => x.toString())
+      },
+      validator,
+      definitions: app.definitions.type,
+      error
+    }), console.log("---"), process.exit(1);
   }
 };
 var createOnRequestHandler = (app, addFn) => {
-  let fnLiteral = "", reporter = createReport({ trace: app.event.trace, addFn: addFn ?? ((word) => {
-    fnLiteral += word;
-  }) })("request", { total: app.event.request?.length });
+  let fnLiteral = "";
+  const reporter = createReport({
+    trace: app.event.trace,
+    addFn: addFn ?? ((word) => {
+      fnLiteral += word;
+    })
+  })("request", {
+    total: app.event.request?.length
+  });
   if (app.event.request?.length) {
     fnLiteral += "try{";
     for (let i = 0;i < app.event.request.length; i++) {
-      let hook = app.event.request[i], withReturn = hasReturn(hook), maybeAsync = isAsync(hook), endUnit = reporter.resolveChild(app.event.request[i].fn.name);
-      if (withReturn)
-        fnLiteral += `re=mapEarlyResponse(${maybeAsync ? "await " : ""}onRequest[${i}](c),c.set)
+      const hook = app.event.request[i], withReturn = hasReturn(hook), maybeAsync = isAsync(hook), endUnit = reporter.resolveChild(app.event.request[i].fn.name);
+      withReturn ? (fnLiteral += `re=mapEarlyResponse(${maybeAsync ? "await " : ""}onRequest[${i}](c),c.set)
 `, endUnit("re"), fnLiteral += `if(re!==undefined)return re
-`;
-      else
-        fnLiteral += `${maybeAsync ? "await " : ""}onRequest[${i}](c)
-`, endUnit();
+`) : (fnLiteral += `${maybeAsync ? "await " : ""}onRequest[${i}](c)
+`, endUnit());
     }
     fnLiteral += "}catch(error){return app.handleError(c,error,false)}";
   }
   return reporter.resolve(), fnLiteral;
 };
 var createHoc = (app, fnName = "map") => {
-  let hoc = app.extender.higherOrderFunctions;
+  const hoc = app.extender.higherOrderFunctions;
   if (!hoc.length)
     return "return " + fnName;
-  let adapter = app["~adapter"].composeGeneralHandler, handler = fnName;
+  const adapter = app["~adapter"].composeGeneralHandler;
+  let handler = fnName;
   for (let i = 0;i < hoc.length; i++)
     handler = `hoc[${i}](${handler},${adapter.parameters})`;
   return `return function hocMap(${adapter.parameters}){return ${handler}(${adapter.parameters})}`;
 };
 var composeGeneralHandler = (app) => {
-  let adapter = app["~adapter"].composeGeneralHandler;
+  const adapter = app["~adapter"].composeGeneralHandler;
   app.router.http.build();
-  let isWebstandard = app["~adapter"].isWebStandard, hasTrace = app.event.trace?.length, fnLiteral = "", router = app.router, findDynamicRoute = router.http.root.WS ? "const route=router.find(r.method==='GET'&&r.headers.get('upgrade')==='websocket'?'WS':r.method,p)" : "const route=router.find(r.method,p)";
-  if (findDynamicRoute += router.http.root.ALL ? `??router.find('ALL',p)
+  const isWebstandard = app["~adapter"].isWebStandard, hasTrace = app.event.trace?.length;
+  let fnLiteral = "";
+  const router = app.router;
+  let findDynamicRoute = router.http.root.WS ? "const route=router.find(r.method==='GET'&&r.headers.get('upgrade')==='websocket'?'WS':r.method,p)" : "const route=router.find(r.method,p)";
+  findDynamicRoute += router.http.root.ALL ? `??router.find('ALL',p)
 ` : `
-`, isWebstandard)
-    findDynamicRoute += 'if(r.method==="HEAD"){const route=router.find("GET",p);if(route){c.params=route.params;const _res=route.store.handler?route.store.handler(c):route.store.compile()(c);if(_res)return Promise.resolve(_res).then((_res)=>{if(!_res.headers)_res.headers=new Headers();return getResponseLength(_res).then((length)=>{_res.headers.set("content-length", length);return new Response(null,{status:_res.status,statusText:_res.statusText,headers:_res.headers});})});}}';
+`, isWebstandard && (findDynamicRoute += 'if(r.method==="HEAD"){const route=router.find("GET",p);if(route){c.params=route.params;const _res=route.store.handler?route.store.handler(c):route.store.compile()(c);if(_res)return Promise.resolve(_res).then((_res)=>{if(!_res.headers)_res.headers=new Headers();return getResponseLength(_res).then((length)=>{_res.headers.set("content-length", length);return new Response(null,{status:_res.status,statusText:_res.statusText,headers:_res.headers});})});}}');
   let afterResponse = `c.error=notFound
 `;
   if (app.event.afterResponse?.length && !app.event.error) {
     afterResponse = `
 c.error=notFound
 `;
-    let prefix = app.event.afterResponse.some(isAsync) ? "async" : "";
+    const prefix = app.event.afterResponse.some(isAsync) ? "async" : "";
     afterResponse += `
 setImmediate(${prefix}()=>{if(c.responseValue instanceof ElysiaCustomStatusResponse) c.set.status=c.responseValue.code
 `;
     for (let i = 0;i < app.event.afterResponse.length; i++) {
-      let fn2 = app.event.afterResponse[i].fn;
+      const fn2 = app.event.afterResponse[i].fn;
       afterResponse += `
 ${isAsyncName(fn2) ? "await " : ""}afterResponse[${i}](c)
 `;
@@ -26284,58 +26824,35 @@ ${isAsyncName(fn2) ? "await " : ""}afterResponse[${i}](c)
     afterResponse += `})
 `;
   }
-  if (app.inference.query)
-    afterResponse += `
-if(c.qi===-1){c.query={}}else{c.query=parseQueryFromURL(c.url,c.qi+1)}`;
-  let error404 = adapter.error404(!!app.event.request?.length, !!app.event.error?.length, afterResponse);
+  app.inference.query && (afterResponse += `
+if(c.qi===-1){c.query={}}else{c.query=parseQueryFromURL(c.url,c.qi+1)}`);
+  const error404 = adapter.error404(!!app.event.request?.length, !!app.event.error?.length, afterResponse);
   findDynamicRoute += error404.code, findDynamicRoute += `
 c.params=route.params
 if(route.store.handler)return route.store.handler(c)
 return route.store.compile()(c)
 `;
   let switchMap = "";
-  for (let [path, methods] of Object.entries(router.static)) {
-    if (switchMap += `case'${path}':`, app.config.strictPath !== true)
-      switchMap += `case'${getLoosePath(path)}':`;
-    let encoded = encodePath(path);
-    if (path !== encoded)
-      switchMap += `case'${encoded}':`;
-    if (switchMap += "switch(r.method){", "GET" in methods || "WS" in methods) {
-      if (switchMap += "case 'GET':", "WS" in methods) {
-        if (switchMap += `if(r.headers.get('upgrade')==='websocket')return ht[${methods.WS}].composed(c)
-`, "GET" in methods === false)
-          if ("ALL" in methods)
-            switchMap += `return ht[${methods.ALL}].composed(c)
-`;
-          else
-            switchMap += `break map
-`;
-      }
-      if ("GET" in methods)
-        switchMap += `return ht[${methods.GET}].composed(c)
-`;
-    }
-    if (isWebstandard && (("GET" in methods) || ("ALL" in methods)) && "HEAD" in methods === false)
-      switchMap += `case 'HEAD':return Promise.resolve(ht[${methods.GET ?? methods.ALL}].composed(c)).then(_ht=>getResponseLength(_ht).then((length)=>{_ht.headers.set('content-length', length)
+  for (const [path, methods] of Object.entries(router.static)) {
+    switchMap += `case'${path}':`, app.config.strictPath !== true && (switchMap += `case'${getLoosePath(path)}':`);
+    const encoded = encodePath(path);
+    path !== encoded && (switchMap += `case'${encoded}':`), switchMap += "switch(r.method){", (("GET" in methods) || ("WS" in methods)) && (switchMap += "case 'GET':", ("WS" in methods) && (switchMap += `if(r.headers.get('upgrade')==='websocket')return ht[${methods.WS}].composed(c)
+`, ("GET" in methods) || ("ALL" in methods ? switchMap += `return ht[${methods.ALL}].composed(c)
+` : switchMap += `break map
+`)), ("GET" in methods) && (switchMap += `return ht[${methods.GET}].composed(c)
+`)), isWebstandard && (("GET" in methods) || ("ALL" in methods)) && !("HEAD" in methods) && (switchMap += `case 'HEAD':return Promise.resolve(ht[${methods.GET ?? methods.ALL}].composed(c)).then(_ht=>getResponseLength(_ht).then((length)=>{_ht.headers.set('content-length', length)
 return new Response(null,{status:_ht.status,statusText:_ht.statusText,headers:_ht.headers})
 }))
-`;
-    for (let [method, index] of Object.entries(methods)) {
-      if (method === "ALL" || method === "GET" || method === "WS")
-        continue;
-      switchMap += `case '${method}':return ht[${index}].composed(c)
-`;
-    }
-    if ("ALL" in methods)
-      switchMap += `default:return ht[${methods.ALL}].composed(c)
-`;
-    else
-      switchMap += `default:break map
-`;
-    switchMap += "}";
+`);
+    for (const [method, index] of Object.entries(methods))
+      method === "ALL" || method === "GET" || method === "WS" || (switchMap += `case '${method}':return ht[${index}].composed(c)
+`);
+    "ALL" in methods ? switchMap += `default:return ht[${methods.ALL}].composed(c)
+` : switchMap += `default:break map
+`, switchMap += "}";
   }
-  let maybeAsync = !!app.event.request?.some(isAsync), adapterVariables = adapter.inject ? Object.keys(adapter.inject).join(",") + "," : "";
-  if (fnLiteral += `
+  const maybeAsync = !!app.event.request?.some(isAsync), adapterVariables = adapter.inject ? Object.keys(adapter.inject).join(",") + "," : "";
+  fnLiteral += `
 const {app,mapEarlyResponse,NotFoundError,randomId,handleError,status,redirect,getResponseLength,ElysiaCustomStatusResponse,` + allocateIf("parseQueryFromURL,", app.inference.query) + allocateIf("ELYSIA_TRACE,", hasTrace) + allocateIf("ELYSIA_REQUEST_ID,", hasTrace) + adapterVariables + `}=data
 const store=app.singleton.store
 const decorator=app.singleton.decorator
@@ -26345,55 +26862,68 @@ const router=app.router.http
 const trace=app.event.trace?.map(x=>typeof x==='function'?x:x.fn)??[]
 const notFound=new NotFoundError()
 const hoc=app.extender.higherOrderFunctions.map(x=>x.fn)
-`, app.event.request?.length)
-    fnLiteral += `const onRequest=app.event.request.map(x=>x.fn)
-`;
-  if (app.event.afterResponse?.length)
-    fnLiteral += `const afterResponse=app.event.afterResponse.map(x=>x.fn)
-`;
-  if (fnLiteral += error404.declare, app.event.trace?.length)
-    fnLiteral += "const " + app.event.trace.map((_2, i) => `tr${i}=app.event.trace[${i}].fn`).join(",") + `
-`;
-  if (fnLiteral += `${maybeAsync ? "async " : ""}function map(${adapter.parameters}){`, app.event.request?.length)
-    fnLiteral += `let re
-`;
-  if (fnLiteral += adapter.createContext(app), app.event.trace?.length)
-    fnLiteral += "c[ELYSIA_TRACE]=[" + app.event.trace.map((_2, i) => `tr${i}(c)`).join(",") + `]
-`;
-  if (fnLiteral += createOnRequestHandler(app), switchMap)
-    fnLiteral += `
+`, app.event.request?.length && (fnLiteral += `const onRequest=app.event.request.map(x=>x.fn)
+`), app.event.afterResponse?.length && (fnLiteral += `const afterResponse=app.event.afterResponse.map(x=>x.fn)
+`), fnLiteral += error404.declare, app.event.trace?.length && (fnLiteral += "const " + app.event.trace.map((_, i) => `tr${i}=app.event.trace[${i}].fn`).join(",") + `
+`), fnLiteral += `${maybeAsync ? "async " : ""}function map(${adapter.parameters}){`, app.event.request?.length && (fnLiteral += `let re
+`), fnLiteral += adapter.createContext(app), app.event.trace?.length && (fnLiteral += "c[ELYSIA_TRACE]=[" + app.event.trace.map((_, i) => `tr${i}(c)`).join(",") + `]
+`), fnLiteral += createOnRequestHandler(app), switchMap && (fnLiteral += `
 map: switch(p){
-` + switchMap + "}";
-  fnLiteral += findDynamicRoute + `}
+` + switchMap + "}"), fnLiteral += findDynamicRoute + `}
 ` + createHoc(app);
-  let handleError = composeErrorHandler(app);
+  const handleError = composeErrorHandler(app);
   app.handleError = handleError;
-  let fn = Function("data", `"use strict";
-` + fnLiteral)({ app, mapEarlyResponse: app["~adapter"].handler.mapEarlyResponse, NotFoundError, randomId, handleError, status, redirect, getResponseLength, ElysiaCustomStatusResponse, parseQueryFromURL: app.inference.query ? parseQueryFromURL : undefined, ELYSIA_TRACE: hasTrace ? ELYSIA_TRACE : undefined, ELYSIA_REQUEST_ID: hasTrace ? ELYSIA_REQUEST_ID : undefined, ...adapter.inject });
-  if (isBun)
-    Bun.gc(false);
-  return fn;
+  const fn = Function("data", `"use strict";
+` + fnLiteral)({
+    app,
+    mapEarlyResponse: app["~adapter"].handler.mapEarlyResponse,
+    NotFoundError,
+    randomId,
+    handleError,
+    status,
+    redirect,
+    getResponseLength,
+    ElysiaCustomStatusResponse,
+    parseQueryFromURL: app.inference.query ? parseQueryFromURL : undefined,
+    ELYSIA_TRACE: hasTrace ? ELYSIA_TRACE : undefined,
+    ELYSIA_REQUEST_ID: hasTrace ? ELYSIA_REQUEST_ID : undefined,
+    ...adapter.inject
+  });
+  return isBun && Bun.gc(false), fn;
 };
 var composeErrorHandler = (app) => {
-  let hooks = app.event, fnLiteral = "", adapter = app["~adapter"].composeError, adapterVariables = adapter.inject ? Object.keys(adapter.inject).join(",") + "," : "", hasTrace = !!app.event.trace?.length;
-  if (fnLiteral += "const {mapResponse,ERROR_CODE,ElysiaCustomStatusResponse,ValidationError,TransformDecodeError," + allocateIf("onError,", app.event.error) + allocateIf("afterResponse,", app.event.afterResponse) + allocateIf("trace,", app.event.trace) + allocateIf("onMapResponse,", app.event.mapResponse) + allocateIf("ELYSIA_TRACE,", hasTrace) + allocateIf("ELYSIA_REQUEST_ID,", hasTrace) + adapterVariables + `}=inject
-`, fnLiteral += "return async function(context,error,skipGlobal){", fnLiteral += "", hasTrace)
-    fnLiteral += `const id=context[ELYSIA_REQUEST_ID]
-`;
-  let report = createReport({ context: "context", trace: hooks.trace, addFn: (word) => {
-    fnLiteral += word;
-  } }), afterResponse = () => {
+  const hooks = app.event;
+  let fnLiteral = "";
+  const adapter = app["~adapter"].composeError, adapterVariables = adapter.inject ? Object.keys(adapter.inject).join(",") + "," : "", hasTrace = !!app.event.trace?.length;
+  fnLiteral += "const {mapResponse,ERROR_CODE,ElysiaCustomStatusResponse,ValidationError,TransformDecodeError," + allocateIf("onError,", app.event.error) + allocateIf("afterResponse,", app.event.afterResponse) + allocateIf("trace,", app.event.trace) + allocateIf("onMapResponse,", app.event.mapResponse) + allocateIf("ELYSIA_TRACE,", hasTrace) + allocateIf("ELYSIA_REQUEST_ID,", hasTrace) + adapterVariables + `}=inject
+`, fnLiteral += "return async function(context,error,skipGlobal){", fnLiteral += "", hasTrace && (fnLiteral += `const id=context[ELYSIA_REQUEST_ID]
+`);
+  const report = createReport({
+    context: "context",
+    trace: hooks.trace,
+    addFn: (word) => {
+      fnLiteral += word;
+    }
+  }), afterResponse = () => {
     if (!hooks.afterResponse?.length && !hasTrace)
       return "";
-    let afterResponse2 = "", prefix = hooks.afterResponse?.some(isAsync) ? "async" : "";
+    let afterResponse2 = "";
+    const prefix = hooks.afterResponse?.some(isAsync) ? "async" : "";
     afterResponse2 += `
 setImmediate(${prefix}()=>{`;
-    let reporter = createReport({ context: "context", trace: hooks.trace, addFn: (word) => {
-      afterResponse2 += word;
-    } })("afterResponse", { total: hooks.afterResponse?.length, name: "context" });
+    const reporter = createReport({
+      context: "context",
+      trace: hooks.trace,
+      addFn: (word) => {
+        afterResponse2 += word;
+      }
+    })("afterResponse", {
+      total: hooks.afterResponse?.length,
+      name: "context"
+    });
     if (hooks.afterResponse?.length && hooks.afterResponse)
       for (let i = 0;i < hooks.afterResponse.length; i++) {
-        let fn = hooks.afterResponse[i].fn, endUnit = reporter.resolveChild(fn.name);
+        const fn = hooks.afterResponse[i].fn, endUnit = reporter.resolveChild(fn.name);
         afterResponse2 += `
 ${isAsyncName(fn) ? "await " : ""}afterResponse[${i}](context)
 `, endUnit();
@@ -26401,14 +26931,13 @@ ${isAsyncName(fn) ? "await " : ""}afterResponse[${i}](context)
     return reporter.resolve(), afterResponse2 += `})
 `, afterResponse2;
   };
-  if (fnLiteral += `const set=context.set
+  fnLiteral += `const set=context.set
 let _r
 if(!context.code)context.code=error.code??error[ERROR_CODE]
 if(!(context.error instanceof Error))context.error=error
 if(error instanceof ElysiaCustomStatusResponse){set.status=error.status=error.code
-error.message=error.response}`, adapter.declare)
-    fnLiteral += adapter.declare;
-  let saveResponse = hasTrace || !!hooks.afterResponse?.length ? "context.response = " : "";
+error.message=error.response}`, adapter.declare && (fnLiteral += adapter.declare);
+  const saveResponse = hasTrace || hooks.afterResponse?.length ? "context.response = " : "";
   if (fnLiteral += `if(typeof error?.toResponse==='function'&&!(error instanceof ValidationError)&&!(error instanceof TransformDecodeError)){try{let raw=error.toResponse()
 if(typeof raw?.then==='function')raw=await raw
 if(raw instanceof Response)set.status=raw.status
@@ -26418,17 +26947,20 @@ context.response=context.responseValue=raw
 }
 `, app.event.error)
     for (let i = 0;i < app.event.error.length; i++) {
-      let handler = app.event.error[i], response = `${isAsync(handler) ? "await " : ""}onError[${i}](context)
+      const handler = app.event.error[i], response = `${isAsync(handler) ? "await " : ""}onError[${i}](context)
 `;
       if (fnLiteral += "if(skipGlobal!==true&&!context.response){", hasReturn(handler)) {
         fnLiteral += `_r=${response}
 if(_r!==undefined){if(_r instanceof Response){` + afterResponse() + `return mapResponse(_r,set${adapter.mapResponseContext})}if(_r instanceof ElysiaCustomStatusResponse){error.status=error.code
 error.message = error.response}if(set.status===200||!set.status)set.status=error.status
 `;
-        let mapResponseReporter2 = report("mapResponse", { total: hooks.mapResponse?.length, name: "context" });
+        const mapResponseReporter2 = report("mapResponse", {
+          total: hooks.mapResponse?.length,
+          name: "context"
+        });
         if (hooks.mapResponse?.length)
           for (let i2 = 0;i2 < hooks.mapResponse.length; i2++) {
-            let mapResponse3 = hooks.mapResponse[i2], endUnit = mapResponseReporter2.resolveChild(mapResponse3.fn.name);
+            const mapResponse3 = hooks.mapResponse[i2], endUnit = mapResponseReporter2.resolveChild(mapResponse3.fn.name);
             fnLiteral += `context.response=context.responseValue=_r_r=${isAsyncName(mapResponse3) ? "await " : ""}onMapResponse[${i2}](context)
 `, endUnit();
           }
@@ -26444,44 +26976,58 @@ set.status=error.status??422
 }
 `, fnLiteral += "if(!context.response&&error instanceof Error){" + afterResponse() + adapter.unknownError + `
 }`;
-  let mapResponseReporter = report("mapResponse", { total: hooks.mapResponse?.length, name: "context" });
+  const mapResponseReporter = report("mapResponse", {
+    total: hooks.mapResponse?.length,
+    name: "context"
+  });
   if (fnLiteral += `
 if(!context.response)context.response=context.responseValue=error.message??error
 `, hooks.mapResponse?.length) {
     fnLiteral += `let mr
 `;
     for (let i = 0;i < hooks.mapResponse.length; i++) {
-      let mapResponse3 = hooks.mapResponse[i], endUnit = mapResponseReporter.resolveChild(mapResponse3.fn.name);
+      const mapResponse3 = hooks.mapResponse[i], endUnit = mapResponseReporter.resolveChild(mapResponse3.fn.name);
       fnLiteral += `if(mr===undefined){mr=${isAsyncName(mapResponse3) ? "await " : ""}onMapResponse[${i}](context)
 if(mr!==undefined)error=context.response=context.responseValue=mr}`, endUnit();
     }
   }
   mapResponseReporter.resolve(), fnLiteral += afterResponse() + `
 return mapResponse(${saveResponse}error,set${adapter.mapResponseContext})}`;
-  let mapFn = (x) => typeof x === "function" ? x : x.fn;
+  const mapFn = (x) => typeof x == "function" ? x : x.fn;
   return Function("inject", `"use strict";
-` + fnLiteral)({ mapResponse: app["~adapter"].handler.mapResponse, ERROR_CODE, ElysiaCustomStatusResponse, ValidationError, TransformDecodeError, onError: app.event.error?.map(mapFn), afterResponse: app.event.afterResponse?.map(mapFn), trace: app.event.trace?.map(mapFn), onMapResponse: app.event.mapResponse?.map(mapFn), ELYSIA_TRACE: hasTrace ? ELYSIA_TRACE : undefined, ELYSIA_REQUEST_ID: hasTrace ? ELYSIA_REQUEST_ID : undefined, ...adapter.inject });
+` + fnLiteral)({
+    mapResponse: app["~adapter"].handler.mapResponse,
+    ERROR_CODE,
+    ElysiaCustomStatusResponse,
+    ValidationError,
+    TransformDecodeError,
+    onError: app.event.error?.map(mapFn),
+    afterResponse: app.event.afterResponse?.map(mapFn),
+    trace: app.event.trace?.map(mapFn),
+    onMapResponse: app.event.mapResponse?.map(mapFn),
+    ELYSIA_TRACE: hasTrace ? ELYSIA_TRACE : undefined,
+    ELYSIA_REQUEST_ID: hasTrace ? ELYSIA_REQUEST_ID : undefined,
+    ...adapter.inject
+  });
 };
+
+// node_modules/elysia/dist/adapter/bun/compose.mjs
 var allocateIf2 = (value, condition) => condition ? value : "";
 var createContext = (app, route, inference, isInline = false) => {
-  let fnLiteral = "", defaultHeaders = app.setHeaders, hasTrace = !!app.event.trace?.length;
-  if (hasTrace)
-    fnLiteral += `const id=randomId()
-`;
-  let isDynamic = /[:*]/.test(route.path), getQi = `const u=request.url,s=u.indexOf('/',${app.config.handler?.standardHostname ?? true ? 11 : 7}),qi=u.indexOf('?', s + 1)
+  let fnLiteral = "";
+  const defaultHeaders = app.setHeaders, hasTrace = !!app.event.trace?.length;
+  hasTrace && (fnLiteral += `const id=randomId()
+`);
+  const isDynamic = /[:*]/.test(route.path), getQi = `const u=request.url,s=u.indexOf('/',${app.config.handler?.standardHostname ?? true ? 11 : 7}),qi=u.indexOf('?', s + 1)
 `, needsQuery = inference.query || !!route.hooks.query || !!route.hooks.standaloneValidator?.find((x) => x.query) || app.event.request?.length;
-  if (needsQuery)
-    fnLiteral += getQi;
-  let getPath = !inference.path ? "" : !isDynamic ? `path:'${route.path}',` : "get path(){" + (needsQuery ? "" : getQi) + `if(qi===-1)return u.substring(s)
+  needsQuery && (fnLiteral += getQi);
+  const getPath = inference.path ? isDynamic ? "get path(){" + (needsQuery ? "" : getQi) + `if(qi===-1)return u.substring(s)
 return u.substring(s,qi)
-},`;
-  if (fnLiteral += allocateIf2("const c=", !isInline) + "{request,store," + allocateIf2("qi,", needsQuery) + allocateIf2("params:request.params,", isDynamic) + getPath + allocateIf2("url:request.url,", hasTrace || inference.url || needsQuery) + "redirect,status,set:{headers:" + (isNotEmpty(defaultHeaders) ? "Object.assign({},app.setHeaders)" : "Object.create(null)") + ",status:200}", inference.server)
-    fnLiteral += ",get server(){return app.getServer()}";
-  if (hasTrace)
-    fnLiteral += ",[ELYSIA_REQUEST_ID]:id";
+},` : `path:'${route.path}',` : "";
+  fnLiteral += allocateIf2("const c=", !isInline) + "{request,store," + allocateIf2("qi,", needsQuery) + allocateIf2("params:request.params,", isDynamic) + getPath + allocateIf2("url:request.url,", hasTrace || inference.url || needsQuery) + "redirect,status,set:{headers:" + (isNotEmpty(defaultHeaders) ? "Object.assign({},app.setHeaders)" : "Object.create(null)") + ",status:200}", inference.server && (fnLiteral += ",get server(){return app.getServer()}"), hasTrace && (fnLiteral += ",[ELYSIA_REQUEST_ID]:id");
   {
     let decoratorsLiteral = "";
-    for (let key of Object.keys(app.singleton.decorator))
+    for (const key of Object.keys(app.singleton.decorator))
       decoratorsLiteral += `,'${key}':decorator['${key}']`;
     fnLiteral += decoratorsLiteral;
   }
@@ -26489,59 +27035,72 @@ return u.substring(s,qi)
 `, fnLiteral;
 };
 var createBunRouteHandler = (app, route) => {
-  let hasTrace = !!app.event.trace?.length, hasHoc = !!app.extender.higherOrderFunctions.length, inference = sucrose(route.hooks, app.inference);
-  inference = sucrose({ handler: route.handler }, inference);
+  const hasTrace = !!app.event.trace?.length, hasHoc = !!app.extender.higherOrderFunctions.length;
+  let inference = sucrose(route.hooks, app.inference);
+  inference = sucrose({
+    handler: route.handler
+  }, inference);
   let fnLiteral = "const handler=data.handler,app=data.app,store=data.store,decorator=data.decorator,redirect=data.redirect,route=data.route,mapEarlyResponse=data.mapEarlyResponse," + allocateIf2("randomId=data.randomId,", hasTrace) + allocateIf2("ELYSIA_REQUEST_ID=data.ELYSIA_REQUEST_ID,", hasTrace) + allocateIf2("ELYSIA_TRACE=data.ELYSIA_TRACE,", hasTrace) + allocateIf2("trace=data.trace,", hasTrace) + allocateIf2("hoc=data.hoc,", hasHoc) + `status=data.status
 `;
-  if (app.event.request?.length)
-    fnLiteral += `const onRequest=app.event.request.map(x=>x.fn)
-`;
-  fnLiteral += `${app.event.request?.find(isAsync) ? "async" : ""} function map(request){`;
-  let needsQuery = inference.query || !!route.hooks.query || !!route.hooks.standaloneValidator?.find((x) => x.query);
-  if (hasTrace || needsQuery || app.event.request?.length)
-    fnLiteral += createContext(app, route, inference), fnLiteral += createOnRequestHandler(app), fnLiteral += "return handler(c)}";
-  else
-    fnLiteral += `return handler(${createContext(app, route, inference, true)})}`;
-  return fnLiteral += createHoc(app), Function("data", fnLiteral)({ app, handler: route.compile?.() ?? route.composed, redirect, status, hoc: app.extender.higherOrderFunctions.map((x) => x.fn), store: app.store, decorator: app.decorator, route: route.path, randomId: hasTrace ? randomId : undefined, ELYSIA_TRACE: hasTrace ? ELYSIA_TRACE : undefined, ELYSIA_REQUEST_ID: hasTrace ? ELYSIA_REQUEST_ID : undefined, trace: hasTrace ? app.event.trace?.map((x) => x?.fn ?? x) : undefined, mapEarlyResponse: mapEarlyResponse2 });
+  app.event.request?.length && (fnLiteral += `const onRequest=app.event.request.map(x=>x.fn)
+`), fnLiteral += `${app.event.request?.find(isAsync) ? "async" : ""} function map(request){`;
+  const needsQuery = inference.query || !!route.hooks.query || !!route.hooks.standaloneValidator?.find((x) => x.query);
+  return hasTrace || needsQuery || app.event.request?.length ? (fnLiteral += createContext(app, route, inference), fnLiteral += createOnRequestHandler(app), fnLiteral += "return handler(c)}") : fnLiteral += `return handler(${createContext(app, route, inference, true)})}`, fnLiteral += createHoc(app), Function("data", fnLiteral)({
+    app,
+    handler: route.compile?.() ?? route.composed,
+    redirect,
+    status,
+    hoc: app.extender.higherOrderFunctions.map((x) => x.fn),
+    store: app.store,
+    decorator: app.decorator,
+    route: route.path,
+    randomId: hasTrace ? randomId : undefined,
+    ELYSIA_TRACE: hasTrace ? ELYSIA_TRACE : undefined,
+    ELYSIA_REQUEST_ID: hasTrace ? ELYSIA_REQUEST_ID : undefined,
+    trace: hasTrace ? app.event.trace?.map((x) => x?.fn ?? x) : undefined,
+    mapEarlyResponse: mapEarlyResponse2
+  });
 };
+
+// node_modules/elysia/dist/adapter/bun/handler-native.mjs
 var createNativeStaticHandler = (handle, hooks, set2) => {
-  if (typeof handle === "function" || handle instanceof Blob)
+  if (typeof handle == "function" || handle instanceof Blob)
     return;
   if (isHTMLBundle(handle))
     return () => handle;
-  let response = mapResponse2(handle, set2 ?? { headers: {} });
-  if (!hooks.parse?.length && !hooks.transform?.length && !hooks.beforeHandle?.length && !hooks.afterHandle?.length) {
-    if (response instanceof Promise)
-      return response.then((response2) => {
-        if (!response2)
-          return;
-        if (!response2.headers.has("content-type"))
-          response2.headers.append("content-type", "text/plain");
-        return response2.clone();
-      });
-    if (!response.headers.has("content-type"))
-      response.headers.append("content-type", "text/plain");
-    return () => response.clone();
+  const response = mapResponse2(handle, set2 ?? {
+    headers: {}
+  });
+  if (!hooks.parse?.length && !hooks.transform?.length && !hooks.beforeHandle?.length && !hooks.afterHandle?.length)
+    return response instanceof Promise ? response.then((response2) => {
+      if (response2)
+        return response2.headers.has("content-type") || response2.headers.append("content-type", "text/plain"), response2.clone();
+    }) : (response.headers.has("content-type") || response.headers.append("content-type", "text/plain"), () => response.clone());
+};
+
+// node_modules/elysia/dist/ws/index.mjs
+var websocket = {
+  open(ws) {
+    ws.data.open?.(ws);
+  },
+  message(ws, message) {
+    ws.data.message?.(ws, message);
+  },
+  drain(ws) {
+    ws.data.drain?.(ws);
+  },
+  close(ws, code, reason) {
+    ws.data.close?.(ws, code, reason);
+  },
+  ping(ws) {
+    ws.data.ping?.(ws);
+  },
+  pong(ws) {
+    ws.data.pong?.(ws);
   }
 };
-var websocket = { open(ws) {
-  ws.data.open?.(ws);
-}, message(ws, message) {
-  ws.data.message?.(ws, message);
-}, drain(ws) {
-  ws.data.drain?.(ws);
-}, close(ws, code, reason) {
-  ws.data.close?.(ws, code, reason);
-}, ping(ws) {
-  ws.data.ping?.(ws);
-}, pong(ws) {
-  ws.data.pong?.(ws);
-} };
 
 class ElysiaWS {
-  raw;
-  data;
-  body;
   constructor(raw, data, body = undefined) {
     this.raw = raw;
     this.data = data;
@@ -26549,386 +27108,393 @@ class ElysiaWS {
     this.validator = raw.data?.validator, this.sendText = raw.sendText.bind(raw), this.sendBinary = raw.sendBinary.bind(raw), this.close = raw.close.bind(raw), this.terminate = raw.terminate.bind(raw), this.publishText = raw.publishText.bind(raw), this.publishBinary = raw.publishBinary.bind(raw), this.subscribe = raw.subscribe.bind(raw), this.unsubscribe = raw.unsubscribe.bind(raw), this.isSubscribed = raw.isSubscribed.bind(raw), this.cork = raw.cork.bind(raw), this.remoteAddress = raw.remoteAddress, this.binaryType = raw.binaryType, this.data = raw.data, this.send = this.send.bind(this), this.ping = this.ping.bind(this), this.pong = this.pong.bind(this), this.publish = this.publish.bind(this);
   }
   send(data, compress) {
-    if (Buffer.isBuffer(data))
-      return this.raw.send(data, compress);
-    if (this.validator?.Check(data) === false)
-      return this.raw.send(new ValidationError("message", this.validator, data).message);
-    if (typeof data === "object")
-      data = JSON.stringify(data);
-    return this.raw.send(data, compress);
+    return Buffer.isBuffer(data) ? this.raw.send(data, compress) : this.validator?.Check(data) === false ? this.raw.send(new ValidationError("message", this.validator, data).message) : (typeof data == "object" && (data = JSON.stringify(data)), this.raw.send(data, compress));
   }
   ping(data) {
-    if (Buffer.isBuffer(data))
-      return this.raw.ping(data);
-    if (this.validator?.Check(data) === false)
-      return this.raw.send(new ValidationError("message", this.validator, data).message);
-    if (typeof data === "object")
-      data = JSON.stringify(data);
-    return this.raw.ping(data);
+    return Buffer.isBuffer(data) ? this.raw.ping(data) : this.validator?.Check(data) === false ? this.raw.send(new ValidationError("message", this.validator, data).message) : (typeof data == "object" && (data = JSON.stringify(data)), this.raw.ping(data));
   }
   pong(data) {
-    if (Buffer.isBuffer(data))
-      return this.raw.pong(data);
-    if (this.validator?.Check(data) === false)
-      return this.raw.send(new ValidationError("message", this.validator, data).message);
-    if (typeof data === "object")
-      data = JSON.stringify(data);
-    return this.raw.pong(data);
+    return Buffer.isBuffer(data) ? this.raw.pong(data) : this.validator?.Check(data) === false ? this.raw.send(new ValidationError("message", this.validator, data).message) : (typeof data == "object" && (data = JSON.stringify(data)), this.raw.pong(data));
   }
   publish(topic, data, compress) {
-    if (Buffer.isBuffer(data))
-      return this.raw.publish(topic, data, compress);
-    if (this.validator?.Check(data) === false)
-      return this.raw.send(new ValidationError("message", this.validator, data).message);
-    if (typeof data === "object")
-      data = JSON.stringify(data);
-    return this.raw.publish(topic, data, compress);
+    return Buffer.isBuffer(data) ? this.raw.publish(topic, data, compress) : this.validator?.Check(data) === false ? this.raw.send(new ValidationError("message", this.validator, data).message) : (typeof data == "object" && (data = JSON.stringify(data)), this.raw.publish(topic, data, compress));
   }
-  sendText;
-  sendBinary;
-  close;
-  terminate;
-  publishText;
-  publishBinary;
-  subscribe;
-  unsubscribe;
-  isSubscribed;
-  cork;
-  remoteAddress;
-  binaryType;
   get readyState() {
     return this.raw.readyState;
   }
-  validator;
-  ["~types"];
   get id() {
     return this.data.id;
   }
 }
-var createWSMessageParser = (parse22) => {
-  let parsers = typeof parse22 === "function" ? [parse22] : parse22;
+var createWSMessageParser = (parse4) => {
+  const parsers = typeof parse4 == "function" ? [parse4] : parse4;
   return async function(ws, message) {
-    if (typeof message === "string") {
-      let start = message?.charCodeAt(0);
+    if (typeof message == "string") {
+      const start = message?.charCodeAt(0);
       if (start === 34 || start === 47 || start === 91 || start === 123)
         try {
           message = JSON.parse(message);
         } catch {}
-      else if (isNumericString(message))
-        message = +message;
-      else if (message === "true")
-        message = true;
-      else if (message === "false")
-        message = false;
-      else if (message === "null")
-        message = null;
+      else
+        isNumericString(message) ? message = +message : message === "true" ? message = true : message === "false" ? message = false : message === "null" && (message = null);
     }
     if (parsers)
       for (let i = 0;i < parsers.length; i++) {
         let temp = parsers[i](ws, message);
-        if (temp instanceof Promise)
-          temp = await temp;
-        if (temp !== undefined)
+        if (temp instanceof Promise && (temp = await temp), temp !== undefined)
           return temp;
       }
     return message;
   };
 };
 var createHandleWSResponse = (responseValidator) => {
-  let handleWSResponse = (ws, data) => {
+  const handleWSResponse = (ws, data) => {
     if (data instanceof Promise)
       return data.then((data2) => handleWSResponse(ws, data2));
     if (Buffer.isBuffer(data))
       return ws.send(data.toString());
     if (data === undefined)
       return;
-    let validateResponse = responseValidator ? responseValidator.provider === "standard" ? (data2) => responseValidator.schema["~standard"].validate(data2).issues : (data2) => responseValidator.Check(data2) === false : undefined, send = (datum) => {
+    const validateResponse = responseValidator ? responseValidator.provider === "standard" ? (data2) => responseValidator.schema["~standard"].validate(data2).issues : (data2) => responseValidator.Check(data2) === false : undefined, send = (datum) => {
       if (validateResponse && validateResponse(datum) === false)
         return ws.send(new ValidationError("message", responseValidator, datum).message);
-      if (typeof datum === "object")
+      if (typeof datum == "object")
         return ws.send(JSON.stringify(datum));
       ws.send(datum);
     };
-    if (typeof data?.next !== "function")
+    if (typeof data?.next != "function")
       return void send(data);
-    let init = data.next();
+    const init = data.next();
     if (init instanceof Promise)
       return (async () => {
-        let first = await init;
+        const first = await init;
         if (validateResponse && validateResponse(first))
           return ws.send(new ValidationError("message", responseValidator, first).message);
         if (send(first.value), !first.done)
-          for await (let datum of data)
+          for await (const datum of data)
             send(datum);
       })();
     if (send(init.value), !init.done)
-      for (let datum of data)
+      for (const datum of data)
         send(datum);
   };
   return handleWSResponse;
 };
+
+// node_modules/elysia/dist/adapter/bun/index.mjs
 var optionalParam = /:.+?\?(?=\/|$)/;
 var getPossibleParams = (path) => {
-  let match = optionalParam.exec(path);
+  const match = optionalParam.exec(path);
   if (!match)
     return [path];
-  let routes = [], head = path.slice(0, match.index), param = match[0].slice(0, -1), tail = path.slice(match.index + match[0].length);
+  const routes = [], head = path.slice(0, match.index), param = match[0].slice(0, -1), tail = path.slice(match.index + match[0].length);
   routes.push(head.slice(0, -1)), routes.push(head + param);
-  for (let fragment of getPossibleParams(tail)) {
-    if (!fragment)
-      continue;
-    if (!fragment.startsWith("/:"))
-      routes.push(head.slice(0, -1) + fragment);
-    routes.push(head + param + fragment);
-  }
+  for (const fragment of getPossibleParams(tail))
+    fragment && (fragment.startsWith("/:") || routes.push(head.slice(0, -1) + fragment), routes.push(head + param + fragment));
   return routes;
 };
-var isHTMLBundle = (handle) => {
-  return typeof handle === "object" && handle !== null && (handle.toString() === "[object HTMLBundle]" || typeof handle.index === "string");
+var isHTMLBundle = (handle) => typeof handle == "object" && handle !== null && (handle.toString() === "[object HTMLBundle]" || typeof handle.index == "string");
+var supportedMethods = {
+  GET: true,
+  HEAD: true,
+  OPTIONS: true,
+  DELETE: true,
+  PATCH: true,
+  POST: true,
+  PUT: true
 };
-var supportedMethods = { GET: true, HEAD: true, OPTIONS: true, DELETE: true, PATCH: true, POST: true, PUT: true };
 var mapRoutes = (app) => {
   if (!app.config.aot || !app.config.systemRouter)
     return;
-  let routes = {}, add = (route, handler) => {
-    let path = encodeURI(route.path);
-    if (routes[path]) {
-      if (!routes[path][route.method])
-        routes[path][route.method] = handler;
-    } else
-      routes[path] = { [route.method]: handler };
+  const routes = {}, add = (route, handler) => {
+    const path = encodeURI(route.path);
+    routes[path] ? routes[path][route.method] || (routes[path][route.method] = handler) : routes[path] = {
+      [route.method]: handler
+    };
   }, tree = app.routeTree;
-  for (let route of app.router.history) {
-    if (typeof route.handler !== "function")
+  for (const route of app.router.history) {
+    if (typeof route.handler != "function")
       continue;
-    let method = route.method;
+    const method = route.method;
     if (method === "GET" && `WS_${route.path}` in tree || method === "WS" || route.path.charCodeAt(route.path.length - 1) === 42 || !(method in supportedMethods))
       continue;
     if (method === "ALL") {
-      if (!(`WS_${route.path}` in tree))
-        routes[route.path] = route.hooks?.config?.mount ? route.hooks.trace || app.event.trace || app.extender.higherOrderFunctions ? createBunRouteHandler(app, route) : route.hooks.mount || route.handler : route.handler;
+      `WS_${route.path}` in tree || (routes[route.path] = route.hooks?.config?.mount ? route.hooks.trace || app.event.trace || app.extender.higherOrderFunctions ? createBunRouteHandler(app, route) : route.hooks.mount || route.handler : route.handler);
       continue;
     }
-    let compiled, handler = app.config.precompile ? createBunRouteHandler(app, route) : (request) => {
-      if (compiled)
-        return compiled(request);
-      return (compiled = createBunRouteHandler(app, route))(request);
-    };
-    for (let path of getPossibleParams(route.path))
-      add({ method, path }, handler);
+    let compiled;
+    const handler = app.config.precompile ? createBunRouteHandler(app, route) : (request) => compiled ? compiled(request) : (compiled = createBunRouteHandler(app, route))(request);
+    for (const path of getPossibleParams(route.path))
+      add({
+        method,
+        path
+      }, handler);
   }
   return routes;
 };
 var mergeRoutes = (r1, r2) => {
   if (!r2)
     return r1;
-  for (let key of Object.keys(r2)) {
-    if (r1[key] === r2[key])
-      continue;
-    if (!r1[key]) {
-      r1[key] = r2[key];
-      continue;
-    }
-    if (r1[key] && r2[key]) {
-      if (typeof r1[key] === "function" || r1[key] instanceof Response) {
+  for (const key of Object.keys(r2))
+    if (r1[key] !== r2[key]) {
+      if (!r1[key]) {
         r1[key] = r2[key];
         continue;
       }
-      r1[key] = { ...r1[key], ...r2[key] };
+      if (r1[key] && r2[key]) {
+        if (typeof r1[key] == "function" || r1[key] instanceof Response) {
+          r1[key] = r2[key];
+          continue;
+        }
+        r1[key] = {
+          ...r1[key],
+          ...r2[key]
+        };
+      }
     }
-  }
   return r1;
 };
-var BunAdapter = { ...WebStandardAdapter, name: "bun", handler: { mapResponse: mapResponse2, mapEarlyResponse: mapEarlyResponse2, mapCompactResponse: mapCompactResponse2, createStaticHandler: createStaticHandler2, createNativeStaticHandler }, composeHandler: { ...WebStandardAdapter.composeHandler, headers: hasHeaderShorthand ? `c.headers=c.request.headers.toJSON()
+var BunAdapter = {
+  ...WebStandardAdapter,
+  name: "bun",
+  handler: {
+    mapResponse: mapResponse2,
+    mapEarlyResponse: mapEarlyResponse2,
+    mapCompactResponse: mapCompactResponse2,
+    createStaticHandler: createStaticHandler2,
+    createNativeStaticHandler
+  },
+  composeHandler: {
+    ...WebStandardAdapter.composeHandler,
+    headers: hasHeaderShorthand ? `c.headers=c.request.headers.toJSON()
 ` : `c.headers={}
 for(const [k,v] of c.request.headers.entries())c.headers[k]=v
-` }, listen(app) {
-  return (options2, callback) => {
-    if (typeof Bun > "u")
-      throw Error(".listen() is designed to run on Bun only. If you are running Elysia in other environment please use a dedicated plugin or export the handler via Elysia.fetch");
-    if (app.compile(), typeof options2 === "string") {
-      if (!isNumericString(options2))
-        throw Error("Port must be a numeric value");
-      options2 = parseInt(options2);
-    }
-    let createStaticRoute = (iterator, { withAsync = false } = {}) => {
-      let staticRoutes = {}, ops = [];
-      for (let [path, route] of Object.entries(iterator))
-        if (path = encodeURI(path), supportPerMethodInlineHandler) {
-          if (!route)
-            continue;
-          for (let [method, value] of Object.entries(route)) {
-            if (!value || !(method in supportedMethods))
+`
+  },
+  listen(app) {
+    return (options2, callback) => {
+      if (typeof Bun > "u")
+        throw new Error(".listen() is designed to run on Bun only. If you are running Elysia in other environment please use a dedicated plugin or export the handler via Elysia.fetch");
+      if (app.compile(), typeof options2 == "string") {
+        if (!isNumericString(options2))
+          throw new Error("Port must be a numeric value");
+        options2 = parseInt(options2);
+      }
+      const createStaticRoute = (iterator, { withAsync = false } = {}) => {
+        const staticRoutes = {}, ops = [];
+        for (let [path, route] of Object.entries(iterator))
+          if (path = encodeURI(path), supportPerMethodInlineHandler) {
+            if (!route)
               continue;
-            if (value instanceof Promise) {
-              if (withAsync) {
-                if (!staticRoutes[path])
-                  staticRoutes[path] = {};
-                ops.push(value.then((awaited) => {
-                  if (awaited instanceof Response)
-                    staticRoutes[path][method] = awaited;
-                  if (isHTMLBundle(awaited))
-                    staticRoutes[path][method] = awaited;
-                }));
+            for (const [method, value] of Object.entries(route))
+              if (!(!value || !(method in supportedMethods))) {
+                if (value instanceof Promise) {
+                  withAsync && (staticRoutes[path] || (staticRoutes[path] = {}), ops.push(value.then((awaited) => {
+                    awaited instanceof Response && (staticRoutes[path][method] = awaited), isHTMLBundle(awaited) && (staticRoutes[path][method] = awaited);
+                  })));
+                  continue;
+                }
+                !(value instanceof Response) && !isHTMLBundle(value) || (staticRoutes[path] || (staticRoutes[path] = {}), staticRoutes[path][method] = value);
               }
+          } else {
+            if (!route)
+              continue;
+            if (route instanceof Promise) {
+              withAsync && (staticRoutes[path] || (staticRoutes[path] = {}), ops.push(route.then((awaited) => {
+                awaited instanceof Response && (staticRoutes[path] = awaited);
+              })));
               continue;
             }
-            if (!(value instanceof Response) && !isHTMLBundle(value))
+            if (!(route instanceof Response))
               continue;
-            if (!staticRoutes[path])
-              staticRoutes[path] = {};
-            staticRoutes[path][method] = value;
+            staticRoutes[path] = route;
           }
-        } else {
-          if (!route)
-            continue;
-          if (route instanceof Promise) {
-            if (withAsync) {
-              if (!staticRoutes[path])
-                staticRoutes[path] = {};
-              ops.push(route.then((awaited) => {
-                if (awaited instanceof Response)
-                  staticRoutes[path] = awaited;
-              }));
-            }
-            continue;
-          }
-          if (!(route instanceof Response))
-            continue;
-          staticRoutes[path] = route;
-        }
-      if (withAsync)
-        return Promise.all(ops).then(() => staticRoutes);
-      return staticRoutes;
-    }, serve = typeof options2 === "object" ? { development: !isProduction, reusePort: true, idleTimeout: 30, ...app.config.serve || {}, ...options2 || {}, routes: mergeRoutes(mergeRoutes(createStaticRoute(app.router.response), mapRoutes(app)), app.config.serve?.routes), websocket: { ...app.config.websocket || {}, ...websocket || {}, ...options2.websocket || {} }, fetch: app.fetch } : { development: !isProduction, reusePort: true, idleTimeout: 30, ...app.config.serve || {}, routes: mergeRoutes(mergeRoutes(createStaticRoute(app.router.response), mapRoutes(app)), app.config.serve?.routes), websocket: { ...app.config.websocket || {}, ...websocket || {} }, port: options2, fetch: app.fetch };
-    if (app.server = Bun.serve(serve), app.event.start)
-      for (let i = 0;i < app.event.start.length; i++)
-        app.event.start[i].fn(app);
-    if (callback)
-      callback(app.server);
-    process.on("beforeExit", async () => {
-      if (app.server) {
-        if (await app.server.stop?.(), app.server = null, app.event.stop)
+        return withAsync ? Promise.all(ops).then(() => staticRoutes) : staticRoutes;
+      }, serve = typeof options2 == "object" ? {
+        development: !isProduction,
+        reusePort: true,
+        idleTimeout: 30,
+        ...app.config.serve || {},
+        ...options2 || {},
+        routes: mergeRoutes(mergeRoutes(createStaticRoute(app.router.response), mapRoutes(app)), app.config.serve?.routes),
+        websocket: {
+          ...app.config.websocket || {},
+          ...websocket || {},
+          ...options2.websocket || {}
+        },
+        fetch: app.fetch
+      } : {
+        development: !isProduction,
+        reusePort: true,
+        idleTimeout: 30,
+        ...app.config.serve || {},
+        routes: mergeRoutes(mergeRoutes(createStaticRoute(app.router.response), mapRoutes(app)), app.config.serve?.routes),
+        websocket: {
+          ...app.config.websocket || {},
+          ...websocket || {}
+        },
+        port: options2,
+        fetch: app.fetch
+      };
+      if (app.server = Bun.serve(serve), app.event.start)
+        for (let i = 0;i < app.event.start.length; i++)
+          app.event.start[i].fn(app);
+      callback && callback(app.server), process.on("beforeExit", async () => {
+        if (app.server && (await app.server.stop?.(), app.server = null, app.event.stop))
           for (let i = 0;i < app.event.stop.length; i++)
             app.event.stop[i].fn(app);
-      }
-    }), app.promisedModules.then(async () => {
-      app.server?.reload({ ...serve, fetch: app.fetch, routes: mergeRoutes(mergeRoutes(await createStaticRoute(app.router.response, { withAsync: true }), mapRoutes(app)), app.config.serve?.routes) }), Bun?.gc(false);
-    });
-  };
-}, async stop(app, closeActiveConnections) {
-  if (app.server) {
-    if (await app.server.stop(closeActiveConnections), app.server = null, app.event.stop?.length)
-      for (let i = 0;i < app.event.stop.length; i++)
-        app.event.stop[i].fn(app);
-  } else
-    console.log("Elysia isn't running. Call `app.listen` to start the server.", Error().stack);
-}, ws(app, path, options2) {
-  let { parse: parse22, body, response, ...rest } = options2, messageValidator = getSchemaValidator(body, { modules: app.definitions.typebox, models: app.definitions.type, normalize: app.config.normalize }), validateMessage = messageValidator ? messageValidator.provider === "standard" ? (data) => messageValidator.schema["~standard"].validate(data).issues : (data) => messageValidator.Check(data) === false : undefined, responseValidator = getSchemaValidator(response, { modules: app.definitions.typebox, models: app.definitions.type, normalize: app.config.normalize });
-  app.route("WS", path, async (context) => {
-    let server = context.server ?? app.server, { set: set2, path: path2, qi, headers, query, params } = context;
-    if (context.validator = responseValidator, options2.upgrade) {
-      if (typeof options2.upgrade === "function") {
-        let temp = options2.upgrade(context);
-        if (temp instanceof Promise)
-          await temp;
-      } else if (options2.upgrade)
-        Object.assign(set2.headers, options2.upgrade);
-    }
-    if (set2.cookie && isNotEmpty(set2.cookie)) {
-      let cookie = serializeCookie(set2.cookie);
-      if (cookie)
-        set2.headers["set-cookie"] = cookie;
-    }
-    if (set2.headers["set-cookie"] && Array.isArray(set2.headers["set-cookie"]))
-      set2.headers = parseSetCookies(new Headers(set2.headers), set2.headers["set-cookie"]);
-    let handleResponse3 = createHandleWSResponse(responseValidator), parseMessage = createWSMessageParser(parse22), _id;
-    if (typeof options2.beforeHandle === "function") {
-      let result = options2.beforeHandle(context);
-      if (result instanceof Promise)
-        await result;
-    }
-    let errorHandlers = [...options2.error ? Array.isArray(options2.error) ? options2.error : [options2.error] : [], ...(app.event.error ?? []).map((x) => typeof x === "function" ? x : x.fn)].filter((x) => x), hasCustomErrorHandlers = errorHandlers.length > 0, handleErrors = !hasCustomErrorHandlers ? () => {} : async (ws, error) => {
-      for (let handleError of errorHandlers) {
-        let response2 = handleError(Object.assign(context, { error }));
-        if (response2 instanceof Promise)
-          response2 = await response2;
-        if (await handleResponse3(ws, response2), response2)
-          break;
-      }
+      }), app.promisedModules.then(async () => {
+        app.server?.reload({
+          ...serve,
+          fetch: app.fetch,
+          routes: mergeRoutes(mergeRoutes(await createStaticRoute(app.router.response, {
+            withAsync: true
+          }), mapRoutes(app)), app.config.serve?.routes)
+        }), Bun?.gc(false);
+      });
     };
-    if (server?.upgrade(context.request, { headers: isNotEmpty(set2.headers) ? set2.headers : undefined, data: { ...context, get id() {
-      if (_id)
-        return _id;
-      return _id = randomId();
-    }, validator: responseValidator, ping(ws, data) {
-      options2.ping?.(ws, data);
-    }, pong(ws, data) {
-      options2.pong?.(ws, data);
-    }, open: async (ws) => {
-      try {
-        await handleResponse3(ws, options2.open?.(new ElysiaWS(ws, context)));
-      } catch (error) {
-        handleErrors(ws, error);
+  },
+  async stop(app, closeActiveConnections) {
+    if (app.server) {
+      if (await app.server.stop(closeActiveConnections), app.server = null, app.event.stop?.length)
+        for (let i = 0;i < app.event.stop.length; i++)
+          app.event.stop[i].fn(app);
+    } else
+      console.log("Elysia isn't running. Call `app.listen` to start the server.", new Error().stack);
+  },
+  ws(app, path, options2) {
+    const { parse: parse4, body, response, ...rest } = options2, messageValidator = getSchemaValidator(body, {
+      modules: app.definitions.typebox,
+      models: app.definitions.type,
+      normalize: app.config.normalize
+    }), validateMessage = messageValidator ? messageValidator.provider === "standard" ? (data) => messageValidator.schema["~standard"].validate(data).issues : (data) => messageValidator.Check(data) === false : undefined, responseValidator = getSchemaValidator(response, {
+      modules: app.definitions.typebox,
+      models: app.definitions.type,
+      normalize: app.config.normalize
+    });
+    app.route("WS", path, async (context) => {
+      const server = context.server ?? app.server, { set: set2, path: path2, qi, headers, query, params } = context;
+      if (context.validator = responseValidator, options2.upgrade)
+        if (typeof options2.upgrade == "function") {
+          const temp = options2.upgrade(context);
+          temp instanceof Promise && await temp;
+        } else
+          options2.upgrade && Object.assign(set2.headers, options2.upgrade);
+      if (set2.cookie && isNotEmpty(set2.cookie)) {
+        const cookie = serializeCookie(set2.cookie);
+        cookie && (set2.headers["set-cookie"] = cookie);
       }
-    }, message: async (ws, _message) => {
-      let message = await parseMessage(ws, _message);
-      if (validateMessage && validateMessage(message)) {
-        let validationError = new ValidationError("message", messageValidator, message);
-        if (!hasCustomErrorHandlers)
-          return void ws.send(validationError.message);
-        return handleErrors(ws, validationError);
+      set2.headers["set-cookie"] && Array.isArray(set2.headers["set-cookie"]) && (set2.headers = parseSetCookies(new Headers(set2.headers), set2.headers["set-cookie"]));
+      const handleResponse3 = createHandleWSResponse(responseValidator), parseMessage = createWSMessageParser(parse4);
+      let _id;
+      if (typeof options2.beforeHandle == "function") {
+        const result = options2.beforeHandle(context);
+        result instanceof Promise && await result;
       }
-      try {
-        await handleResponse3(ws, options2.message?.(new ElysiaWS(ws, context, message), message));
-      } catch (error) {
-        handleErrors(ws, error);
-      }
-    }, drain: async (ws) => {
-      try {
-        await handleResponse3(ws, options2.drain?.(new ElysiaWS(ws, context)));
-      } catch (error) {
-        handleErrors(ws, error);
-      }
-    }, close: async (ws, code, reason) => {
-      try {
-        await handleResponse3(ws, options2.close?.(new ElysiaWS(ws, context), code, reason));
-      } catch (error) {
-        handleErrors(ws, error);
-      }
-    } } }))
-      return;
-    return status(400, "Expected a websocket connection");
-  }, { ...rest, websocket: options2 });
-} };
+      const errorHandlers = [
+        ...options2.error ? Array.isArray(options2.error) ? options2.error : [options2.error] : [],
+        ...(app.event.error ?? []).map((x) => typeof x == "function" ? x : x.fn)
+      ].filter((x) => x), hasCustomErrorHandlers = errorHandlers.length > 0, handleErrors = hasCustomErrorHandlers ? async (ws, error) => {
+        for (const handleError of errorHandlers) {
+          let response2 = handleError(Object.assign(context, { error }));
+          if (response2 instanceof Promise && (response2 = await response2), await handleResponse3(ws, response2), response2)
+            break;
+        }
+      } : () => {};
+      if (!server?.upgrade(context.request, {
+        headers: isNotEmpty(set2.headers) ? set2.headers : undefined,
+        data: {
+          ...context,
+          get id() {
+            return _id || (_id = randomId());
+          },
+          validator: responseValidator,
+          ping(ws, data) {
+            options2.ping?.(ws, data);
+          },
+          pong(ws, data) {
+            options2.pong?.(ws, data);
+          },
+          open: async (ws) => {
+            try {
+              await handleResponse3(ws, options2.open?.(new ElysiaWS(ws, context)));
+            } catch (error) {
+              handleErrors(ws, error);
+            }
+          },
+          message: async (ws, _message) => {
+            const message = await parseMessage(ws, _message);
+            if (validateMessage && validateMessage(message)) {
+              const validationError = new ValidationError("message", messageValidator, message);
+              return hasCustomErrorHandlers ? handleErrors(ws, validationError) : void ws.send(validationError.message);
+            }
+            try {
+              await handleResponse3(ws, options2.message?.(new ElysiaWS(ws, context, message), message));
+            } catch (error) {
+              handleErrors(ws, error);
+            }
+          },
+          drain: async (ws) => {
+            try {
+              await handleResponse3(ws, options2.drain?.(new ElysiaWS(ws, context)));
+            } catch (error) {
+              handleErrors(ws, error);
+            }
+          },
+          close: async (ws, code, reason) => {
+            try {
+              await handleResponse3(ws, options2.close?.(new ElysiaWS(ws, context), code, reason));
+            } catch (error) {
+              handleErrors(ws, error);
+            }
+          }
+        }
+      }))
+        return status(400, "Expected a websocket connection");
+    }, {
+      ...rest,
+      websocket: options2
+    });
+  }
+};
+
+// node_modules/elysia/dist/dynamic-handle.mjs
 var injectDefaultValues = (typeChecker, obj) => {
   let schema = typeChecker.schema;
-  if (!schema)
-    return;
-  if (schema.$defs?.[schema.$ref])
-    schema = schema.$defs[schema.$ref];
-  if (!schema?.properties)
-    return;
-  for (let [key, keySchema] of Object.entries(schema.properties))
-    obj[key] ??= keySchema.default;
+  if (schema && (schema.$defs?.[schema.$ref] && (schema = schema.$defs[schema.$ref]), !!schema?.properties))
+    for (const [key, keySchema] of Object.entries(schema.properties))
+      obj[key] ??= keySchema.default;
 };
 var createDynamicHandler = (app) => {
-  let { mapResponse: mapResponse3, mapEarlyResponse: mapEarlyResponse3 } = app["~adapter"].handler, defaultHeader = app.setHeaders;
+  const { mapResponse: mapResponse3, mapEarlyResponse: mapEarlyResponse3 } = app["~adapter"].handler, defaultHeader = app.setHeaders;
   return async (request) => {
-    let url = request.url, s = url.indexOf("/", 11), qi = url.indexOf("?", s + 1), path = qi === -1 ? url.substring(s) : url.substring(s, qi), set2 = { cookie: {}, status: 200, headers: defaultHeader ? { ...defaultHeader } : {} }, context = Object.assign({}, app.singleton.decorator, { set: set2, store: app.singleton.store, request, path, qi, error: status, status, redirect });
+    const url = request.url, s = url.indexOf("/", 11), qi = url.indexOf("?", s + 1), path = qi === -1 ? url.substring(s) : url.substring(s, qi), set2 = {
+      cookie: {},
+      status: 200,
+      headers: defaultHeader ? { ...defaultHeader } : {}
+    }, context = Object.assign({}, app.singleton.decorator, {
+      set: set2,
+      store: app.singleton.store,
+      request,
+      path,
+      qi,
+      error: status,
+      status,
+      redirect
+    });
     try {
       if (app.event.request)
         for (let i = 0;i < app.event.request.length; i++) {
-          let onRequest = app.event.request[i].fn, response2 = onRequest(context);
-          if (response2 instanceof Promise)
-            response2 = await response2;
-          if (response2 = mapEarlyResponse3(response2, set2), response2)
+          const onRequest = app.event.request[i].fn;
+          let response2 = onRequest(context);
+          if (response2 instanceof Promise && (response2 = await response2), response2 = mapEarlyResponse3(response2, set2), response2)
             return context.response = response2;
         }
-      let methodKey = request.method === "GET" && request.headers.get("upgrade")?.toLowerCase() === "websocket" ? "WS" : request.method, handler = app.router.dynamic.find(request.method, path) ?? app.router.dynamic.find(methodKey, path) ?? app.router.dynamic.find("ALL", path);
+      const methodKey = request.method === "GET" && request.headers.get("upgrade")?.toLowerCase() === "websocket" ? "WS" : request.method, handler = app.router.dynamic.find(request.method, path) ?? app.router.dynamic.find(methodKey, path) ?? app.router.dynamic.find("ALL", path);
       if (!handler)
         throw context.query = qi === -1 ? {} : parseQuery(url.substring(qi + 1)), new NotFoundError;
-      let { handle, hooks, validator, content, route } = handler.store, body;
+      const { handle, hooks, validator, content, route } = handler.store;
+      let body;
       if (request.method !== "GET" && request.method !== "HEAD")
         if (content)
           switch (content) {
@@ -26946,31 +27512,24 @@ var createDynamicHandler = (app) => {
               break;
             case "multipart/form-data": {
               body = {};
-              let form2 = await request.formData();
-              for (let key of form2.keys()) {
+              const form2 = await request.formData();
+              for (const key of form2.keys()) {
                 if (body[key])
                   continue;
-                let value = form2.getAll(key);
-                if (value.length === 1)
-                  body[key] = value[0];
-                else
-                  body[key] = value;
+                const value = form2.getAll(key);
+                value.length === 1 ? body[key] = value[0] : body[key] = value;
               }
               break;
             }
           }
         else {
           let contentType;
-          if (request.body)
-            contentType = request.headers.get("content-type");
-          if (contentType) {
-            let index = contentType.indexOf(";");
-            if (index !== -1)
-              contentType = contentType.slice(0, index);
-            if (context.contentType = contentType, hooks.parse)
+          if (request.body && (contentType = request.headers.get("content-type")), contentType) {
+            const index = contentType.indexOf(";");
+            if (index !== -1 && (contentType = contentType.slice(0, index)), context.contentType = contentType, hooks.parse)
               for (let i = 0;i < hooks.parse.length; i++) {
-                let hook = hooks.parse[i].fn;
-                if (typeof hook === "string")
+                const hook = hooks.parse[i].fn;
+                if (typeof hook == "string")
                   switch (hook) {
                     case "json":
                     case "application/json":
@@ -26991,25 +27550,20 @@ var createDynamicHandler = (app) => {
                     case "formdata":
                     case "multipart/form-data": {
                       body = {};
-                      let form2 = await request.formData();
-                      for (let key of form2.keys()) {
+                      const form2 = await request.formData();
+                      for (const key of form2.keys()) {
                         if (body[key])
                           continue;
-                        let value = form2.getAll(key);
-                        if (value.length === 1)
-                          body[key] = value[0];
-                        else
-                          body[key] = value;
+                        const value = form2.getAll(key);
+                        value.length === 1 ? body[key] = value[0] : body[key] = value;
                       }
                       break;
                     }
                     default: {
-                      let parser = app["~parser"][hook];
+                      const parser = app["~parser"][hook];
                       if (parser) {
                         let temp = parser(context, contentType);
-                        if (temp instanceof Promise)
-                          temp = await temp;
-                        if (temp) {
+                        if (temp instanceof Promise && (temp = await temp), temp) {
                           body = temp;
                           break;
                         }
@@ -27019,9 +27573,7 @@ var createDynamicHandler = (app) => {
                   }
                 else {
                   let temp = hook(context, contentType);
-                  if (temp instanceof Promise)
-                    temp = await temp;
-                  if (temp) {
+                  if (temp instanceof Promise && (temp = await temp), temp) {
                     body = temp;
                     break;
                   }
@@ -27043,15 +27595,12 @@ var createDynamicHandler = (app) => {
                   break;
                 case "multipart/form-data": {
                   body = {};
-                  let form2 = await request.formData();
-                  for (let key of form2.keys()) {
+                  const form2 = await request.formData();
+                  for (const key of form2.keys()) {
                     if (body[key])
                       continue;
-                    let value = form2.getAll(key);
-                    if (value.length === 1)
-                      body[key] = value[0];
-                    else
-                      body[key] = value;
+                    const value = form2.getAll(key);
+                    value.length === 1 ? body[key] = value[0] : body[key] = value;
                   }
                   break;
                 }
@@ -27059,81 +27608,78 @@ var createDynamicHandler = (app) => {
           }
         }
       context.route = route, context.body = body, context.params = handler?.params || undefined, context.query = qi === -1 ? {} : parseQuery(url.substring(qi + 1)), context.headers = {};
-      for (let [key, value] of request.headers.entries())
+      for (const [key, value] of request.headers.entries())
         context.headers[key] = value;
-      let cookieMeta = { domain: app.config.cookie?.domain ?? validator?.cookie?.config.domain, expires: app.config.cookie?.expires ?? validator?.cookie?.config.expires, httpOnly: app.config.cookie?.httpOnly ?? validator?.cookie?.config.httpOnly, maxAge: app.config.cookie?.maxAge ?? validator?.cookie?.config.maxAge, path: app.config.cookie?.path ?? validator?.cookie?.config.path, priority: app.config.cookie?.priority ?? validator?.cookie?.config.priority, partitioned: app.config.cookie?.partitioned ?? validator?.cookie?.config.partitioned, sameSite: app.config.cookie?.sameSite ?? validator?.cookie?.config.sameSite, secure: app.config.cookie?.secure ?? validator?.cookie?.config.secure, secrets: app.config.cookie?.secrets ?? validator?.cookie?.config.secrets, sign: app.config.cookie?.sign ?? validator?.cookie?.config.sign }, cookieHeaderValue = request.headers.get("cookie");
+      const cookieMeta = {
+        domain: app.config.cookie?.domain ?? validator?.cookie?.config.domain,
+        expires: app.config.cookie?.expires ?? validator?.cookie?.config.expires,
+        httpOnly: app.config.cookie?.httpOnly ?? validator?.cookie?.config.httpOnly,
+        maxAge: app.config.cookie?.maxAge ?? validator?.cookie?.config.maxAge,
+        path: app.config.cookie?.path ?? validator?.cookie?.config.path,
+        priority: app.config.cookie?.priority ?? validator?.cookie?.config.priority,
+        partitioned: app.config.cookie?.partitioned ?? validator?.cookie?.config.partitioned,
+        sameSite: app.config.cookie?.sameSite ?? validator?.cookie?.config.sameSite,
+        secure: app.config.cookie?.secure ?? validator?.cookie?.config.secure,
+        secrets: app.config.cookie?.secrets ?? validator?.cookie?.config.secrets,
+        sign: app.config.cookie?.sign ?? validator?.cookie?.config.sign
+      }, cookieHeaderValue = request.headers.get("cookie");
       context.cookie = await parseCookie(context.set, cookieHeaderValue, cookieMeta);
-      let headerValidator = validator?.createHeaders?.();
-      if (headerValidator)
-        injectDefaultValues(headerValidator, context.headers);
-      let paramsValidator = validator?.createParams?.();
-      if (paramsValidator)
-        injectDefaultValues(paramsValidator, context.params);
-      let queryValidator = validator?.createQuery?.();
-      if (queryValidator)
-        injectDefaultValues(queryValidator, context.query);
-      if (hooks.transform)
+      const headerValidator = validator?.createHeaders?.();
+      headerValidator && injectDefaultValues(headerValidator, context.headers);
+      const paramsValidator = validator?.createParams?.();
+      paramsValidator && injectDefaultValues(paramsValidator, context.params);
+      const queryValidator = validator?.createQuery?.();
+      if (queryValidator && injectDefaultValues(queryValidator, context.query), hooks.transform)
         for (let i = 0;i < hooks.transform.length; i++) {
-          let hook = hooks.transform[i], response2 = hook.fn(context);
-          if (response2 instanceof Promise)
-            response2 = await response2;
-          if (response2 instanceof ElysiaCustomStatusResponse) {
-            let result = mapEarlyResponse3(response2, context.set);
+          const hook = hooks.transform[i];
+          let response2 = hook.fn(context);
+          if (response2 instanceof Promise && (response2 = await response2), response2 instanceof ElysiaCustomStatusResponse) {
+            const result = mapEarlyResponse3(response2, context.set);
             if (result)
               return context.response = result;
           }
-          if (hook.subType === "derive")
-            Object.assign(context, response2);
+          hook.subType === "derive" && Object.assign(context, response2);
         }
       if (validator) {
         if (headerValidator) {
-          let _header = structuredClone(context.headers);
-          for (let [key, value] of request.headers)
+          const _header = structuredClone(context.headers);
+          for (const [key, value] of request.headers)
             _header[key] = value;
           if (validator.headers.Check(_header) === false)
             throw new ValidationError("header", validator.headers, _header);
-        } else if (validator.headers?.Decode)
-          context.headers = validator.headers.Decode(context.headers);
+        } else
+          validator.headers?.Decode && (context.headers = validator.headers.Decode(context.headers));
         if (paramsValidator?.Check(context.params) === false)
           throw new ValidationError("params", validator.params, context.params);
-        else if (validator.params?.Decode)
-          context.params = validator.params.Decode(context.params);
-        if (validator.query?.schema) {
+        if (validator.params?.Decode && (context.params = validator.params.Decode(context.params)), validator.query?.schema) {
           let schema = validator.query.schema;
-          if (schema.$defs?.[schema.$ref])
-            schema = schema.$defs[schema.$ref];
-          let properties = schema.properties;
-          for (let property of Object.keys(properties)) {
-            let value = properties[property];
-            if ((value.type === "array" || value.items?.type === "string") && typeof context.query[property] === "string" && context.query[property])
-              context.query[property] = context.query[property].split(",");
+          schema.$defs?.[schema.$ref] && (schema = schema.$defs[schema.$ref]);
+          const properties = schema.properties;
+          for (const property of Object.keys(properties)) {
+            const value = properties[property];
+            (value.type === "array" || value.items?.type === "string") && typeof context.query[property] == "string" && context.query[property] && (context.query[property] = context.query[property].split(","));
           }
         }
         if (queryValidator?.Check(context.query) === false)
           throw new ValidationError("query", validator.query, context.query);
-        else if (validator.query?.Decode)
-          context.query = validator.query.Decode(context.query);
-        if (validator.createCookie?.()) {
+        if (validator.query?.Decode && (context.query = validator.query.Decode(context.query)), validator.createCookie?.()) {
           let cookieValue = {};
-          for (let [key, value] of Object.entries(context.cookie))
+          for (const [key, value] of Object.entries(context.cookie))
             cookieValue[key] = value.value;
           if (validator.cookie.Check(cookieValue) === false)
             throw new ValidationError("cookie", validator.cookie, cookieValue);
-          else if (validator.cookie?.Decode)
-            cookieValue = validator.cookie.Decode(cookieValue);
+          validator.cookie?.Decode && (cookieValue = validator.cookie.Decode(cookieValue));
         }
         if (validator.createBody?.()?.Check(body) === false)
           throw new ValidationError("body", validator.body, body);
-        else if (validator.body?.Decode)
-          context.body = validator.body.Decode(body);
+        validator.body?.Decode && (context.body = validator.body.Decode(body));
       }
       if (hooks.beforeHandle)
         for (let i = 0;i < hooks.beforeHandle.length; i++) {
-          let hook = hooks.beforeHandle[i], response2 = hook.fn(context);
-          if (response2 instanceof Promise)
-            response2 = await response2;
-          if (response2 instanceof ElysiaCustomStatusResponse) {
-            let result = mapEarlyResponse3(response2, context.set);
+          const hook = hooks.beforeHandle[i];
+          let response2 = hook.fn(context);
+          if (response2 instanceof Promise && (response2 = await response2), response2 instanceof ElysiaCustomStatusResponse) {
+            const result = mapEarlyResponse3(response2, context.set);
             if (result)
               return context.response = result;
           }
@@ -27145,167 +27691,216 @@ var createDynamicHandler = (app) => {
             if (context.response = response2, hooks.afterHandle)
               for (let i2 = 0;i2 < hooks.afterHandle.length; i2++) {
                 let newResponse = hooks.afterHandle[i2].fn(context);
-                if (newResponse instanceof Promise)
-                  newResponse = await newResponse;
-                if (newResponse)
-                  response2 = newResponse;
+                newResponse instanceof Promise && (newResponse = await newResponse), newResponse && (response2 = newResponse);
               }
-            let result = mapEarlyResponse3(response2, context.set);
+            const result = mapEarlyResponse3(response2, context.set);
             if (result)
               return context.response = result;
           }
         }
-      let response = typeof handle === "function" ? handle(context) : handle;
-      if (response instanceof Promise)
-        response = await response;
-      if (!hooks.afterHandle?.length) {
-        let isCustomStatuResponse = response instanceof ElysiaCustomStatusResponse, status2 = isCustomStatuResponse ? response.code : set2.status ? typeof set2.status === "string" ? StatusMap[set2.status] : set2.status : 200;
-        if (isCustomStatuResponse)
-          set2.status = status2, response = response.response;
-        let responseValidator = validator?.createResponse?.()?.[status2];
-        if (responseValidator?.Check(response) === false)
-          if (responseValidator?.Clean) {
-            let temp = responseValidator.Clean(response);
-            if (responseValidator?.Check(temp) === false)
-              throw new ValidationError("response", responseValidator, response);
-            response = temp;
-          } else
-            throw new ValidationError("response", responseValidator, response);
-        if (responseValidator?.Encode)
-          response = responseValidator.Encode(response);
-        if (responseValidator?.Clean)
-          response = responseValidator.Clean(response);
-      } else {
+      let response = typeof handle == "function" ? handle(context) : handle;
+      if (response instanceof Promise && (response = await response), hooks.afterHandle?.length) {
         context.response = response;
         for (let i = 0;i < hooks.afterHandle.length; i++) {
           let response2 = hooks.afterHandle[i].fn(context);
-          if (response2 instanceof Promise)
-            response2 = await response2;
-          let isCustomStatuResponse = response2 instanceof ElysiaCustomStatusResponse, status2 = isCustomStatuResponse ? response2.code : set2.status ? typeof set2.status === "string" ? StatusMap[set2.status] : set2.status : 200;
-          if (isCustomStatuResponse)
-            set2.status = status2, response2 = response2.response;
-          let responseValidator = validator?.createResponse?.()?.[status2];
+          response2 instanceof Promise && (response2 = await response2);
+          const isCustomStatuResponse = response2 instanceof ElysiaCustomStatusResponse, status2 = isCustomStatuResponse ? response2.code : set2.status ? typeof set2.status == "string" ? StatusMap[set2.status] : set2.status : 200;
+          isCustomStatuResponse && (set2.status = status2, response2 = response2.response);
+          const responseValidator = validator?.createResponse?.()?.[status2];
           if (responseValidator?.Check(response2) === false)
             if (responseValidator?.Clean) {
-              let temp = responseValidator.Clean(response2);
+              const temp = responseValidator.Clean(response2);
               if (responseValidator?.Check(temp) === false)
                 throw new ValidationError("response", responseValidator, response2);
               response2 = temp;
             } else
               throw new ValidationError("response", responseValidator, response2);
-          if (responseValidator?.Encode)
-            context.response = response2 = responseValidator.Encode(response2);
-          if (responseValidator?.Clean)
-            context.response = response2 = responseValidator.Clean(response2);
-          let result = mapEarlyResponse3(response2, context.set);
+          responseValidator?.Encode && (context.response = response2 = responseValidator.Encode(response2)), responseValidator?.Clean && (context.response = response2 = responseValidator.Clean(response2));
+          const result = mapEarlyResponse3(response2, context.set);
           if (result !== undefined)
             return context.response = result;
         }
+      } else {
+        const isCustomStatuResponse = response instanceof ElysiaCustomStatusResponse, status2 = isCustomStatuResponse ? response.code : set2.status ? typeof set2.status == "string" ? StatusMap[set2.status] : set2.status : 200;
+        isCustomStatuResponse && (set2.status = status2, response = response.response);
+        const responseValidator = validator?.createResponse?.()?.[status2];
+        if (responseValidator?.Check(response) === false)
+          if (responseValidator?.Clean) {
+            const temp = responseValidator.Clean(response);
+            if (responseValidator?.Check(temp) === false)
+              throw new ValidationError("response", responseValidator, response);
+            response = temp;
+          } else
+            throw new ValidationError("response", responseValidator, response);
+        responseValidator?.Encode && (response = responseValidator.Encode(response)), responseValidator?.Clean && (response = responseValidator.Clean(response));
       }
       if (context.set.cookie && cookieMeta?.sign) {
-        let secret = !cookieMeta.secrets ? undefined : typeof cookieMeta.secrets === "string" ? cookieMeta.secrets : cookieMeta.secrets[0];
+        const secret = cookieMeta.secrets ? typeof cookieMeta.secrets == "string" ? cookieMeta.secrets : cookieMeta.secrets[0] : undefined;
         if (cookieMeta.sign === true) {
           if (secret)
-            for (let [key, cookie] of Object.entries(context.set.cookie))
+            for (const [key, cookie] of Object.entries(context.set.cookie))
               context.set.cookie[key].value = await signCookie(cookie.value, secret);
         } else {
-          let properties = validator?.cookie?.schema?.properties;
+          const properties = validator?.cookie?.schema?.properties;
           if (secret)
-            for (let name of cookieMeta.sign) {
-              if (!(name in properties))
-                continue;
-              if (context.set.cookie[name]?.value)
-                context.set.cookie[name].value = await signCookie(context.set.cookie[name].value, secret);
-            }
+            for (const name of cookieMeta.sign)
+              name in properties && context.set.cookie[name]?.value && (context.set.cookie[name].value = await signCookie(context.set.cookie[name].value, secret));
         }
       }
       return mapResponse3(context.response = response, context.set);
     } catch (error) {
-      let reportedError = error instanceof TransformDecodeError && error.error ? error.error : error;
+      const reportedError = error instanceof TransformDecodeError && error.error ? error.error : error;
       return app.handleError(context, reportedError);
     } finally {
-      if (app.event.afterResponse)
-        setImmediate(async () => {
-          for (let afterResponse of app.event.afterResponse)
-            await afterResponse.fn(context);
-        });
+      app.event.afterResponse && setImmediate(async () => {
+        for (const afterResponse of app.event.afterResponse)
+          await afterResponse.fn(context);
+      });
     }
   };
 };
 var createDynamicErrorHandler = (app) => {
-  let { mapResponse: mapResponse3 } = app["~adapter"].handler;
+  const { mapResponse: mapResponse3 } = app["~adapter"].handler;
   return async (context, error) => {
-    let errorContext = Object.assign(context, { error, code: error.code });
-    if (errorContext.set = context.set, typeof error?.toResponse === "function" && !(error instanceof ValidationError) && !(error instanceof TransformDecodeError))
+    const errorContext = Object.assign(context, { error, code: error.code });
+    if (errorContext.set = context.set, typeof error?.toResponse == "function" && !(error instanceof ValidationError) && !(error instanceof TransformDecodeError))
       try {
         let raw = error.toResponse();
-        if (typeof raw?.then === "function")
-          raw = await raw;
-        if (raw instanceof Response)
-          context.set.status = raw.status;
-        context.response = raw;
-      } catch (toResponseError) {}
+        typeof raw?.then == "function" && (raw = await raw), raw instanceof Response && (context.set.status = raw.status), context.response = raw;
+      } catch {}
     if (!context.response && app.event.error)
       for (let i = 0;i < app.event.error.length; i++) {
         let response = app.event.error[i].fn(errorContext);
-        if (response instanceof Promise)
-          response = await response;
-        if (response !== undefined && response !== null)
+        if (response instanceof Promise && (response = await response), response != null)
           return context.response = mapResponse3(response, context.set);
       }
     if (context.response) {
       if (app.event.mapResponse)
         for (let i = 0;i < app.event.mapResponse.length; i++) {
           let response = app.event.mapResponse[i].fn(errorContext);
-          if (response instanceof Promise)
-            response = await response;
-          if (response !== undefined && response !== null)
-            context.response = response;
+          response instanceof Promise && (response = await response), response != null && (context.response = response);
         }
       return mapResponse3(context.response, context.set);
     }
-    return context.set.status = error.status ?? 500, mapResponse3(typeof error.cause === "string" ? error.cause : error.message, context.set);
+    return context.set.status = error.status ?? 500, mapResponse3(typeof error.cause == "string" ? error.cause : error.message, context.set);
   };
 };
 
-class Elysia {
-  config;
-  server = null;
-  dependencies = {};
-  "~Prefix" = "";
-  "~Singleton" = null;
-  "~Definitions" = null;
-  "~Metadata" = null;
-  "~Ephemeral" = null;
-  "~Volatile" = null;
-  "~Routes" = null;
-  singleton = { decorator: {}, store: {}, derive: {}, resolve: {} };
+// node_modules/elysia/dist/index.mjs
+var _a;
+_a = Symbol.dispose;
+var _Elysia = class _Elysia2 {
+  constructor(config = {}) {
+    this.server = null;
+    this.dependencies = {};
+    this["~Prefix"] = "";
+    this["~Singleton"] = null;
+    this["~Definitions"] = null;
+    this["~Metadata"] = null;
+    this["~Ephemeral"] = null;
+    this["~Volatile"] = null;
+    this["~Routes"] = null;
+    this.singleton = {
+      decorator: {},
+      store: {},
+      derive: {},
+      resolve: {}
+    };
+    this.definitions = {
+      typebox: t.Module({}),
+      type: {},
+      error: {}
+    };
+    this.extender = {
+      macro: {},
+      higherOrderFunctions: []
+    };
+    this.validator = {
+      global: null,
+      scoped: null,
+      local: null,
+      getCandidate() {
+        return !this.global && !this.scoped && !this.local ? {
+          body: undefined,
+          headers: undefined,
+          params: undefined,
+          query: undefined,
+          cookie: undefined,
+          response: undefined
+        } : mergeSchemaValidator(mergeSchemaValidator(this.global, this.scoped), this.local);
+      }
+    };
+    this.standaloneValidator = {
+      global: null,
+      scoped: null,
+      local: null
+    };
+    this.event = {};
+    this.router = {
+      "~http": undefined,
+      get http() {
+        return this["~http"] || (this["~http"] = new Memoirist({
+          lazy: true,
+          onParam: import_fast_decode_uri_component4.default
+        })), this["~http"];
+      },
+      "~dynamic": undefined,
+      get dynamic() {
+        return this["~dynamic"] || (this["~dynamic"] = new Memoirist({
+          onParam: import_fast_decode_uri_component4.default
+        })), this["~dynamic"];
+      },
+      static: {},
+      response: {},
+      history: []
+    };
+    this.routeTree = {};
+    this.inference = {
+      body: false,
+      cookie: false,
+      headers: false,
+      query: false,
+      set: false,
+      server: false,
+      path: false,
+      route: false,
+      url: false
+    };
+    this["~parser"] = {};
+    this.handle = async (request) => this.fetch(request);
+    this.fetch = (request) => (this.fetch = this.config.aot ? composeGeneralHandler(this) : createDynamicHandler(this))(request);
+    this.handleError = async (context, error) => (this.handleError = this.config.aot ? composeErrorHandler(this) : createDynamicErrorHandler(this))(context, error);
+    this.listen = (options2, callback) => (this["~adapter"].listen(this)(options2, callback), this);
+    this.stop = async (closeActiveConnections) => (await this["~adapter"].stop?.(this, closeActiveConnections), this);
+    this[_a] = () => {
+      this.server && this.stop();
+    };
+    config.tags && (config.detail ? config.detail.tags = config.tags : config.detail = {
+      tags: config.tags
+    }), this.config = {
+      aot: env2.ELYSIA_AOT !== "false",
+      nativeStaticResponse: true,
+      systemRouter: true,
+      encodeSchema: true,
+      normalize: true,
+      ...config,
+      prefix: config.prefix ? config.prefix.charCodeAt(0) === 47 ? config.prefix : `/${config.prefix}` : undefined,
+      cookie: {
+        path: "/",
+        ...config?.cookie
+      },
+      experimental: config?.experimental ?? {},
+      seed: config?.seed === undefined ? "" : config?.seed
+    }, this["~adapter"] = config.adapter ?? (typeof Bun < "u" ? BunAdapter : WebStandardAdapter), config?.analytic && (config?.name || config?.seed !== undefined) && (this.telemetry = {
+      stack: new Error().stack
+    });
+  }
   get store() {
     return this.singleton.store;
   }
   get decorator() {
     return this.singleton.decorator;
   }
-  definitions = { typebox: t.Module({}), type: {}, error: {} };
-  extender = { macro: {}, higherOrderFunctions: [] };
-  validator = { global: null, scoped: null, local: null, getCandidate() {
-    if (!this.global && !this.scoped && !this.local)
-      return { body: undefined, headers: undefined, params: undefined, query: undefined, cookie: undefined, response: undefined };
-    return mergeSchemaValidator(mergeSchemaValidator(this.global, this.scoped), this.local);
-  } };
-  standaloneValidator = { global: null, scoped: null, local: null };
-  event = {};
-  telemetry;
-  router = { "~http": undefined, get http() {
-    if (!this["~http"])
-      this["~http"] = new _({ lazy: true, onParam: import_fast_decode_uri_component4.default });
-    return this["~http"];
-  }, "~dynamic": undefined, get dynamic() {
-    if (!this["~dynamic"])
-      this["~dynamic"] = new _({ onParam: import_fast_decode_uri_component4.default });
-    return this["~dynamic"];
-  }, static: {}, response: {}, history: [] };
-  routeTree = {};
   get routes() {
     return this.router.history;
   }
@@ -27315,64 +27910,50 @@ class Elysia {
   getGlobalDefinitions() {
     return this.definitions;
   }
-  inference = { body: false, cookie: false, headers: false, query: false, set: false, server: false, path: false, route: false, url: false };
   getServer() {
     return this.server;
   }
   getParent() {
     return null;
   }
-  "~parser" = {};
-  _promisedModules;
   get promisedModules() {
-    if (!this._promisedModules)
-      this._promisedModules = new PromiseGroup(console.error, () => {});
-    return this._promisedModules;
+    return this._promisedModules || (this._promisedModules = new PromiseGroup(console.error, () => {})), this._promisedModules;
   }
-  constructor(config = {}) {
-    if (config.tags)
-      if (!config.detail)
-        config.detail = { tags: config.tags };
-      else
-        config.detail.tags = config.tags;
-    if (this.config = { aot: env2.ELYSIA_AOT !== "false", nativeStaticResponse: true, systemRouter: true, encodeSchema: true, normalize: true, ...config, prefix: config.prefix ? config.prefix.charCodeAt(0) === 47 ? config.prefix : `/${config.prefix}` : undefined, cookie: { path: "/", ...config?.cookie }, experimental: config?.experimental ?? {}, seed: config?.seed === undefined ? "" : config?.seed }, this["~adapter"] = config.adapter ?? (typeof Bun < "u" ? BunAdapter : WebStandardAdapter), config?.analytic && (config?.name || config?.seed !== undefined))
-      this.telemetry = { stack: Error().stack };
-  }
-  "~adapter";
   env(model, _env = env2) {
-    if (getSchemaValidator(model, { modules: this.definitions.typebox, dynamic: true, additionalProperties: true, coerce: true, sanitize: () => this.config.sanitize }).Check(_env) === false) {
-      let error = new ValidationError("env", model, _env);
-      throw Error(error.all.map((x) => x.summary).join(`
+    if (getSchemaValidator(model, {
+      modules: this.definitions.typebox,
+      dynamic: true,
+      additionalProperties: true,
+      coerce: true,
+      sanitize: () => this.config.sanitize
+    }).Check(_env) === false) {
+      const error = new ValidationError("env", model, _env);
+      throw new Error(error.all.map((x) => x.summary).join(`
 `));
     }
     return this;
   }
   wrap(fn) {
-    return this.extender.higherOrderFunctions.push({ checksum: checksum(JSON.stringify({ name: this.config.name, seed: this.config.seed, content: fn.toString() })), fn }), this;
+    return this.extender.higherOrderFunctions.push({
+      checksum: checksum(JSON.stringify({
+        name: this.config.name,
+        seed: this.config.seed,
+        content: fn.toString()
+      })),
+      fn
+    }), this;
   }
   get models() {
-    let models = {};
-    for (let name of Object.keys(this.definitions.type))
+    const models = {};
+    for (const name of Object.keys(this.definitions.type))
       models[name] = getSchemaValidator(this.definitions.typebox.Import(name));
     return models.modules = this.definitions.typebox, models;
   }
   add(method, path, handle, localHook, options2) {
-    let skipPrefix = options2?.skipPrefix ?? false, allowMeta = options2?.allowMeta ?? false;
+    const skipPrefix = options2?.skipPrefix ?? false, allowMeta = options2?.allowMeta ?? false;
     localHook ??= {}, this.applyMacro(localHook);
     let standaloneValidators = [];
-    if (localHook.standaloneValidator)
-      standaloneValidators = standaloneValidators.concat(localHook.standaloneValidator);
-    if (this.standaloneValidator.local)
-      standaloneValidators = standaloneValidators.concat(this.standaloneValidator.local);
-    if (this.standaloneValidator.scoped)
-      standaloneValidators = standaloneValidators.concat(this.standaloneValidator.scoped);
-    if (this.standaloneValidator.global)
-      standaloneValidators = standaloneValidators.concat(this.standaloneValidator.global);
-    if (path !== "" && path.charCodeAt(0) !== 47)
-      path = "/" + path;
-    if (this.config.prefix && !skipPrefix)
-      path = this.config.prefix + path;
-    if (localHook?.type)
+    if (localHook.standaloneValidator && (standaloneValidators = standaloneValidators.concat(localHook.standaloneValidator)), this.standaloneValidator.local && (standaloneValidators = standaloneValidators.concat(this.standaloneValidator.local)), this.standaloneValidator.scoped && (standaloneValidators = standaloneValidators.concat(this.standaloneValidator.scoped)), this.standaloneValidator.global && (standaloneValidators = standaloneValidators.concat(this.standaloneValidator.global)), path !== "" && path.charCodeAt(0) !== 47 && (path = "/" + path), this.config.prefix && !skipPrefix && (path = this.config.prefix + path), localHook?.type)
       switch (localHook.type) {
         case "text":
           localHook.type = "text/plain";
@@ -27392,110 +27973,247 @@ class Elysia {
         default:
           break;
       }
-    let instanceValidator = this.validator.getCandidate(), cloned = { body: localHook?.body ?? instanceValidator?.body, headers: localHook?.headers ?? instanceValidator?.headers, params: localHook?.params ?? instanceValidator?.params, query: localHook?.query ?? instanceValidator?.query, cookie: localHook?.cookie ?? instanceValidator?.cookie, response: localHook?.response ?? instanceValidator?.response }, shouldPrecompile = this.config.precompile === true || typeof this.config.precompile === "object" && this.config.precompile.compose === true, createValidator = () => {
-      let models = this.definitions.type, dynamic = !this.config.aot, normalize = this.config.normalize, modules = this.definitions.typebox, sanitize2 = () => this.config.sanitize, cookieValidator = () => {
+    const instanceValidator = this.validator.getCandidate(), cloned = {
+      body: localHook?.body ?? instanceValidator?.body,
+      headers: localHook?.headers ?? instanceValidator?.headers,
+      params: localHook?.params ?? instanceValidator?.params,
+      query: localHook?.query ?? instanceValidator?.query,
+      cookie: localHook?.cookie ?? instanceValidator?.cookie,
+      response: localHook?.response ?? instanceValidator?.response
+    }, shouldPrecompile = this.config.precompile === true || typeof this.config.precompile == "object" && this.config.precompile.compose === true, createValidator = () => {
+      const models = this.definitions.type, dynamic = !this.config.aot, normalize = this.config.normalize, modules = this.definitions.typebox, sanitize2 = () => this.config.sanitize, cookieValidator = () => {
         if (cloned.cookie || standaloneValidators.find((x) => x.cookie))
-          return getCookieValidator({ modules, validator: cloned.cookie, defaultConfig: this.config.cookie, normalize, config: cloned.cookie?.config ?? {}, dynamic, models, validators: standaloneValidators.map((x) => x.cookie), sanitize: sanitize2 });
+          return getCookieValidator({
+            modules,
+            validator: cloned.cookie,
+            defaultConfig: this.config.cookie,
+            normalize,
+            config: cloned.cookie?.config ?? {},
+            dynamic,
+            models,
+            validators: standaloneValidators.map((x) => x.cookie),
+            sanitize: sanitize2
+          });
       };
-      return shouldPrecompile ? { body: getSchemaValidator(cloned.body, { modules, dynamic, models, normalize, additionalCoerce: coercePrimitiveRoot(), validators: standaloneValidators.map((x) => x.body), sanitize: sanitize2 }), headers: getSchemaValidator(cloned.headers, { modules, dynamic, models, additionalProperties: true, coerce: true, additionalCoerce: stringToStructureCoercions(), validators: standaloneValidators.map((x) => x.headers), sanitize: sanitize2 }), params: getSchemaValidator(cloned.params, { modules, dynamic, models, coerce: true, additionalCoerce: stringToStructureCoercions(), validators: standaloneValidators.map((x) => x.params), sanitize: sanitize2 }), query: getSchemaValidator(cloned.query, { modules, dynamic, models, normalize, coerce: true, additionalCoerce: queryCoercions(), validators: standaloneValidators.map((x) => x.query), sanitize: sanitize2 }), cookie: cookieValidator(), response: getResponseSchemaValidator(cloned.response, { modules, dynamic, models, normalize, validators: standaloneValidators.map((x) => x.response), sanitize: sanitize2 }) } : { createBody() {
-        if (this.body)
-          return this.body;
-        return this.body = getSchemaValidator(cloned.body, { modules, dynamic, models, normalize, additionalCoerce: coercePrimitiveRoot(), validators: standaloneValidators.map((x) => x.body), sanitize: sanitize2 });
-      }, createHeaders() {
-        if (this.headers)
-          return this.headers;
-        return this.headers = getSchemaValidator(cloned.headers, { modules, dynamic, models, normalize, additionalProperties: !normalize, coerce: true, additionalCoerce: stringToStructureCoercions(), validators: standaloneValidators.map((x) => x.headers), sanitize: sanitize2 });
-      }, createParams() {
-        if (this.params)
-          return this.params;
-        return this.params = getSchemaValidator(cloned.params, { modules, dynamic, models, normalize, coerce: true, additionalCoerce: stringToStructureCoercions(), validators: standaloneValidators.map((x) => x.params), sanitize: sanitize2 });
-      }, createQuery() {
-        if (this.query)
-          return this.query;
-        return this.query = getSchemaValidator(cloned.query, { modules, dynamic, models, normalize, coerce: true, additionalCoerce: queryCoercions(), validators: standaloneValidators.map((x) => x.query), sanitize: sanitize2 });
-      }, createCookie() {
-        if (this.cookie)
-          return this.cookie;
-        return this.cookie = cookieValidator();
-      }, createResponse() {
-        if (this.response)
-          return this.response;
-        return this.response = getResponseSchemaValidator(cloned.response, { modules, dynamic, models, normalize, validators: standaloneValidators.map((x) => x.response), sanitize: sanitize2 });
-      } };
+      return shouldPrecompile ? {
+        body: getSchemaValidator(cloned.body, {
+          modules,
+          dynamic,
+          models,
+          normalize,
+          additionalCoerce: coercePrimitiveRoot(),
+          validators: standaloneValidators.map((x) => x.body),
+          sanitize: sanitize2
+        }),
+        headers: getSchemaValidator(cloned.headers, {
+          modules,
+          dynamic,
+          models,
+          additionalProperties: true,
+          coerce: true,
+          additionalCoerce: stringToStructureCoercions(),
+          validators: standaloneValidators.map((x) => x.headers),
+          sanitize: sanitize2
+        }),
+        params: getSchemaValidator(cloned.params, {
+          modules,
+          dynamic,
+          models,
+          coerce: true,
+          additionalCoerce: stringToStructureCoercions(),
+          validators: standaloneValidators.map((x) => x.params),
+          sanitize: sanitize2
+        }),
+        query: getSchemaValidator(cloned.query, {
+          modules,
+          dynamic,
+          models,
+          normalize,
+          coerce: true,
+          additionalCoerce: queryCoercions(),
+          validators: standaloneValidators.map((x) => x.query),
+          sanitize: sanitize2
+        }),
+        cookie: cookieValidator(),
+        response: getResponseSchemaValidator(cloned.response, {
+          modules,
+          dynamic,
+          models,
+          normalize,
+          validators: standaloneValidators.map((x) => x.response),
+          sanitize: sanitize2
+        })
+      } : {
+        createBody() {
+          return this.body ? this.body : this.body = getSchemaValidator(cloned.body, {
+            modules,
+            dynamic,
+            models,
+            normalize,
+            additionalCoerce: coercePrimitiveRoot(),
+            validators: standaloneValidators.map((x) => x.body),
+            sanitize: sanitize2
+          });
+        },
+        createHeaders() {
+          return this.headers ? this.headers : this.headers = getSchemaValidator(cloned.headers, {
+            modules,
+            dynamic,
+            models,
+            normalize,
+            additionalProperties: !normalize,
+            coerce: true,
+            additionalCoerce: stringToStructureCoercions(),
+            validators: standaloneValidators.map((x) => x.headers),
+            sanitize: sanitize2
+          });
+        },
+        createParams() {
+          return this.params ? this.params : this.params = getSchemaValidator(cloned.params, {
+            modules,
+            dynamic,
+            models,
+            normalize,
+            coerce: true,
+            additionalCoerce: stringToStructureCoercions(),
+            validators: standaloneValidators.map((x) => x.params),
+            sanitize: sanitize2
+          });
+        },
+        createQuery() {
+          return this.query ? this.query : this.query = getSchemaValidator(cloned.query, {
+            modules,
+            dynamic,
+            models,
+            normalize,
+            coerce: true,
+            additionalCoerce: queryCoercions(),
+            validators: standaloneValidators.map((x) => x.query),
+            sanitize: sanitize2
+          });
+        },
+        createCookie() {
+          return this.cookie ? this.cookie : this.cookie = cookieValidator();
+        },
+        createResponse() {
+          return this.response ? this.response : this.response = getResponseSchemaValidator(cloned.response, {
+            modules,
+            dynamic,
+            models,
+            normalize,
+            validators: standaloneValidators.map((x) => x.response),
+            sanitize: sanitize2
+          });
+        }
+      };
     };
-    if (instanceValidator.body || instanceValidator.cookie || instanceValidator.headers || instanceValidator.params || instanceValidator.query || instanceValidator.response)
-      localHook = mergeHook(localHook, instanceValidator);
-    if (localHook.tags)
-      if (!localHook.detail)
-        localHook.detail = { tags: localHook.tags };
-      else
-        localHook.detail.tags = localHook.tags;
-    if (isNotEmpty(this.config.detail))
-      localHook.detail = mergeDeep(Object.assign({}, this.config.detail), localHook.detail);
-    let hooks = isNotEmpty(this.event) ? mergeHook(this.event, localHookToLifeCycleStore(localHook)) : { ...lifeCycleToArray(localHookToLifeCycleStore(localHook)) };
-    if (standaloneValidators.length)
-      Object.assign(hooks, { standaloneValidator: standaloneValidators });
-    if (this.config.aot === false) {
-      let validator = createValidator();
-      this.router.dynamic.add(method, path, { validator, hooks, content: localHook?.type, handle, route: path });
-      let encoded = encodePath(path, { dynamic: true });
-      if (path !== encoded)
-        this.router.dynamic.add(method, encoded, { validator, hooks, content: localHook?.type, handle, route: path });
-      if (!this.config.strictPath) {
-        let loosePath = getLoosePath(path);
-        this.router.dynamic.add(method, loosePath, { validator, hooks, content: localHook?.type, handle, route: path });
-        let encoded2 = encodePath(loosePath);
-        if (loosePath !== encoded2)
-          this.router.dynamic.add(method, loosePath, { validator, hooks, content: localHook?.type, handle, route: path });
+    (instanceValidator.body || instanceValidator.cookie || instanceValidator.headers || instanceValidator.params || instanceValidator.query || instanceValidator.response) && (localHook = mergeHook(localHook, instanceValidator)), localHook.tags && (localHook.detail ? localHook.detail.tags = localHook.tags : localHook.detail = {
+      tags: localHook.tags
+    }), isNotEmpty(this.config.detail) && (localHook.detail = mergeDeep(Object.assign({}, this.config.detail), localHook.detail));
+    const hooks = isNotEmpty(this.event) ? mergeHook(this.event, localHookToLifeCycleStore(localHook)) : { ...lifeCycleToArray(localHookToLifeCycleStore(localHook)) };
+    if (standaloneValidators.length && Object.assign(hooks, {
+      standaloneValidator: standaloneValidators
+    }), this.config.aot === false) {
+      const validator = createValidator();
+      this.router.dynamic.add(method, path, {
+        validator,
+        hooks,
+        content: localHook?.type,
+        handle,
+        route: path
+      });
+      const encoded = encodePath(path, { dynamic: true });
+      if (path !== encoded && this.router.dynamic.add(method, encoded, {
+        validator,
+        hooks,
+        content: localHook?.type,
+        handle,
+        route: path
+      }), !this.config.strictPath) {
+        const loosePath = getLoosePath(path);
+        this.router.dynamic.add(method, loosePath, {
+          validator,
+          hooks,
+          content: localHook?.type,
+          handle,
+          route: path
+        });
+        const encoded2 = encodePath(loosePath);
+        loosePath !== encoded2 && this.router.dynamic.add(method, loosePath, {
+          validator,
+          hooks,
+          content: localHook?.type,
+          handle,
+          route: path
+        });
       }
-      this.router.history.push({ method, path, composed: null, handler: handle, compile: undefined, hooks });
+      this.router.history.push({
+        method,
+        path,
+        composed: null,
+        handler: handle,
+        compile: undefined,
+        hooks
+      });
       return;
     }
-    let adapter = this["~adapter"].handler, nativeStaticHandler = typeof handle !== "function" ? () => {
-      let context = { redirect, request: this["~adapter"].isWebStandard ? new Request(`http://ely.sia${path}`, { method }) : undefined, server: null, set: { headers: Object.assign({}, this.setHeaders) }, status, store: this.store };
+    const adapter = this["~adapter"].handler, nativeStaticHandler = typeof handle != "function" ? () => {
+      const context = {
+        redirect,
+        request: this["~adapter"].isWebStandard ? new Request(`http://ely.sia${path}`, {
+          method
+        }) : undefined,
+        server: null,
+        set: {
+          headers: Object.assign({}, this.setHeaders)
+        },
+        status,
+        store: this.store
+      };
       try {
         this.event.request?.map((x) => {
-          if (typeof x.fn === "function")
+          if (typeof x.fn == "function")
             return x.fn(context);
-          if (typeof x === "function")
+          if (typeof x == "function")
             return x(context);
         });
       } catch (error) {
         let res;
-        if (context.error = error, this.event.error?.some((x) => {
-          if (typeof x.fn === "function")
+        context.error = error, this.event.error?.some((x) => {
+          if (typeof x.fn == "function")
             return res = x.fn(context);
-          if (typeof x === "function")
+          if (typeof x == "function")
             return res = x(context);
-        }), res !== undefined)
-          handle = res;
+        }), res !== undefined && (handle = res);
       }
-      let fn = adapter.createNativeStaticHandler?.(handle, hooks, context.set);
+      const fn = adapter.createNativeStaticHandler?.(handle, hooks, context.set);
       return fn instanceof Promise ? fn.then((fn2) => {
         if (fn2)
           return fn2;
       }) : fn?.();
     } : undefined, useNativeStaticResponse = this.config.nativeStaticResponse === true, addResponsePath = (path2) => {
-      if (!useNativeStaticResponse || !nativeStaticHandler)
-        return;
-      if (supportPerMethodInlineHandler)
-        if (this.router.response[path2])
-          this.router.response[path2][method] = nativeStaticHandler();
-        else
-          this.router.response[path2] = { [method]: nativeStaticHandler() };
-      else
-        this.router.response[path2] = nativeStaticHandler();
+      !useNativeStaticResponse || !nativeStaticHandler || (supportPerMethodInlineHandler ? this.router.response[path2] ? this.router.response[path2][method] = nativeStaticHandler() : this.router.response[path2] = {
+        [method]: nativeStaticHandler()
+      } : this.router.response[path2] = nativeStaticHandler());
     };
     addResponsePath(path);
-    let compile2 = () => {
-      let compiled = composeHandler({ app: this, path, method, hooks, validator: createValidator(), handler: typeof handle !== "function" && typeof adapter.createStaticHandler !== "function" ? () => handle : handle, allowMeta, inference: this.inference });
-      if (this.router.history[index])
-        this.router.history[index].composed = compiled;
-      return compiled;
-    }, oldIndex;
+    const compile2 = () => {
+      const compiled = composeHandler({
+        app: this,
+        path,
+        method,
+        hooks,
+        validator: createValidator(),
+        handler: typeof handle != "function" && typeof adapter.createStaticHandler != "function" ? () => handle : handle,
+        allowMeta,
+        inference: this.inference
+      });
+      return this.router.history[index] && (this.router.history[index].composed = compiled), compiled;
+    };
+    let oldIndex;
     if (`${method}_${path}` in this.routeTree)
       for (let i = 0;i < this.router.history.length; i++) {
-        let route2 = this.router.history[i];
+        const route2 = this.router.history[i];
         if (route2.path === path && route2.method === method) {
           oldIndex = i;
           break;
@@ -27503,53 +28221,57 @@ class Elysia {
       }
     else
       this.routeTree[`${method}_${path}`] = this.router.history.length;
-    let index = oldIndex ?? this.router.history.length, route = this.router.history, mainHandler = shouldPrecompile ? compile2() : (ctx) => (route[index].composed = compile2())(ctx);
-    if (oldIndex !== undefined)
-      this.router.history[oldIndex] = Object.assign({ method, path, composed: mainHandler, compile: compile2, handler: handle, hooks }, standaloneValidators.length ? { standaloneValidators } : undefined, localHook.webSocket ? { websocket: localHook.websocket } : undefined);
-    else
-      this.router.history.push(Object.assign({ method, path, composed: mainHandler, compile: compile2, handler: handle, hooks }, localHook.webSocket ? { websocket: localHook.websocket } : undefined));
-    let handler = { handler: shouldPrecompile ? route[index].composed : undefined, compile() {
-      return this.handler = compile2();
-    } }, staticRouter = this.router.static, isStaticPath = path.indexOf(":") === -1 && path.indexOf("*") === -1;
+    const index = oldIndex ?? this.router.history.length, route = this.router.history, mainHandler = shouldPrecompile ? compile2() : (ctx) => (route[index].composed = compile2())(ctx);
+    oldIndex !== undefined ? this.router.history[oldIndex] = Object.assign({
+      method,
+      path,
+      composed: mainHandler,
+      compile: compile2,
+      handler: handle,
+      hooks
+    }, standaloneValidators.length ? {
+      standaloneValidators
+    } : undefined, localHook.webSocket ? { websocket: localHook.websocket } : undefined) : this.router.history.push(Object.assign({
+      method,
+      path,
+      composed: mainHandler,
+      compile: compile2,
+      handler: handle,
+      hooks
+    }, localHook.webSocket ? { websocket: localHook.websocket } : undefined));
+    const handler = {
+      handler: shouldPrecompile ? route[index].composed : undefined,
+      compile() {
+        return this.handler = compile2();
+      }
+    }, staticRouter = this.router.static, isStaticPath = path.indexOf(":") === -1 && path.indexOf("*") === -1;
     if (method === "WS") {
       if (isStaticPath) {
-        if (path in staticRouter)
-          staticRouter[path][method] = index;
-        else
-          staticRouter[path] = { [method]: index };
+        path in staticRouter ? staticRouter[path][method] = index : staticRouter[path] = {
+          [method]: index
+        };
         return;
       }
-      if (this.router.http.add("WS", path, handler), !this.config.strictPath)
-        this.router.http.add("WS", getLoosePath(path), handler);
-      let encoded = encodePath(path, { dynamic: true });
-      if (path !== encoded)
-        this.router.http.add("WS", encoded, handler);
+      this.router.http.add("WS", path, handler), this.config.strictPath || this.router.http.add("WS", getLoosePath(path), handler);
+      const encoded = encodePath(path, { dynamic: true });
+      path !== encoded && this.router.http.add("WS", encoded, handler);
       return;
     }
-    if (isStaticPath) {
-      if (path in staticRouter)
-        staticRouter[path][method] = index;
-      else
-        staticRouter[path] = { [method]: index };
-      if (!this.config.strictPath)
-        addResponsePath(getLoosePath(path));
-    } else {
+    if (isStaticPath)
+      path in staticRouter ? staticRouter[path][method] = index : staticRouter[path] = {
+        [method]: index
+      }, this.config.strictPath || addResponsePath(getLoosePath(path));
+    else {
       if (this.router.http.add(method, path, handler), !this.config.strictPath) {
-        let loosePath = getLoosePath(path);
+        const loosePath = getLoosePath(path);
         addResponsePath(loosePath), this.router.http.add(method, loosePath, handler);
       }
-      let encoded = encodePath(path, { dynamic: true });
-      if (path !== encoded)
-        this.router.http.add(method, encoded, handler), addResponsePath(encoded);
+      const encoded = encodePath(path, { dynamic: true });
+      path !== encoded && (this.router.http.add(method, encoded, handler), addResponsePath(encoded));
     }
   }
-  setHeaders;
   headers(header) {
-    if (!header)
-      return this;
-    if (!this.setHeaders)
-      this.setHeaders = {};
-    return this.setHeaders = mergeDeep(this.setHeaders, header), this;
+    return header ? (this.setHeaders || (this.setHeaders = {}), this.setHeaders = mergeDeep(this.setHeaders, header), this) : this;
   }
   onStart(handler) {
     return this.on("start", handler), this;
@@ -27558,59 +28280,45 @@ class Elysia {
     return this.on("request", handler), this;
   }
   onParse(options2, handler) {
-    if (!handler) {
-      if (typeof options2 === "string")
-        return this.on("parse", this["~parser"][options2]);
-      return this.on("parse", options2);
-    }
-    return this.on(options2, "parse", handler);
+    return handler ? this.on(options2, "parse", handler) : typeof options2 == "string" ? this.on("parse", this["~parser"][options2]) : this.on("parse", options2);
   }
   parser(name, parser) {
     return this["~parser"][name] = parser, this;
   }
   onTransform(options2, handler) {
-    if (!handler)
-      return this.on("transform", options2);
-    return this.on(options2, "transform", handler);
+    return handler ? this.on(options2, "transform", handler) : this.on("transform", options2);
   }
   resolve(optionsOrResolve, resolve) {
-    if (!resolve)
-      resolve = optionsOrResolve, optionsOrResolve = { as: "local" };
-    let hook = { subType: "resolve", fn: resolve };
+    resolve || (resolve = optionsOrResolve, optionsOrResolve = { as: "local" });
+    const hook = {
+      subType: "resolve",
+      fn: resolve
+    };
     return this.onBeforeHandle(optionsOrResolve, hook);
   }
   mapResolve(optionsOrResolve, mapper) {
-    if (!mapper)
-      mapper = optionsOrResolve, optionsOrResolve = { as: "local" };
-    let hook = { subType: "mapResolve", fn: mapper };
+    mapper || (mapper = optionsOrResolve, optionsOrResolve = { as: "local" });
+    const hook = {
+      subType: "mapResolve",
+      fn: mapper
+    };
     return this.onBeforeHandle(optionsOrResolve, hook);
   }
   onBeforeHandle(options2, handler) {
-    if (!handler)
-      return this.on("beforeHandle", options2);
-    return this.on(options2, "beforeHandle", handler);
+    return handler ? this.on(options2, "beforeHandle", handler) : this.on("beforeHandle", options2);
   }
   onAfterHandle(options2, handler) {
-    if (!handler)
-      return this.on("afterHandle", options2);
-    return this.on(options2, "afterHandle", handler);
+    return handler ? this.on(options2, "afterHandle", handler) : this.on("afterHandle", options2);
   }
   mapResponse(options2, handler) {
-    if (!handler)
-      return this.on("mapResponse", options2);
-    return this.on(options2, "mapResponse", handler);
+    return handler ? this.on(options2, "mapResponse", handler) : this.on("mapResponse", options2);
   }
   onAfterResponse(options2, handler) {
-    if (!handler)
-      return this.on("afterResponse", options2);
-    return this.on(options2, "afterResponse", handler);
+    return handler ? this.on(options2, "afterResponse", handler) : this.on("afterResponse", options2);
   }
   trace(options2, handler) {
-    if (!handler)
-      handler = options2, options2 = { as: "local" };
-    if (!Array.isArray(handler))
-      handler = [handler];
-    for (let fn of handler)
+    handler || (handler = options2, options2 = { as: "local" }), Array.isArray(handler) || (handler = [handler]);
+    for (const fn of handler)
       this.on(options2, "trace", createTracer(fn));
     return this;
   }
@@ -27621,14 +28329,12 @@ class Elysia {
       case "function":
         return this.definitions.error = name(this.definitions.error), this;
     }
-    for (let [code, error2] of Object.entries(name))
+    for (const [code, error2] of Object.entries(name))
       error2.prototype[ERROR_CODE] = code, this.definitions.error[code] = error2;
     return this;
   }
   onError(options2, handler) {
-    if (!handler)
-      return this.on("error", options2);
-    return this.on(options2, "error", handler);
+    return handler ? this.on(options2, "error", handler) : this.on("error", options2);
   }
   onStop(handler) {
     return this.on("stop", handler), this;
@@ -27640,24 +28346,22 @@ class Elysia {
         type = optionsOrType, handlers = typeOrHandlers;
         break;
       case "object":
-        if (type = typeOrHandlers, !Array.isArray(typeOrHandlers) && typeof typeOrHandlers === "object")
-          handlers = typeOrHandlers;
+        type = typeOrHandlers, !Array.isArray(typeOrHandlers) && typeof typeOrHandlers == "object" && (handlers = typeOrHandlers);
         break;
     }
-    if (Array.isArray(handlers))
-      handlers = fnToContainer(handlers);
-    else if (typeof handlers === "function")
-      handlers = [{ fn: handlers }];
-    else
-      handlers = [handlers];
-    let handles = handlers;
-    for (let handle of handles)
-      if (handle.scope = typeof optionsOrType === "string" ? "local" : optionsOrType?.as ?? "local", type === "resolve" || type === "derive")
-        handle.subType = type;
-    if (type !== "trace")
-      this.inference = sucrose({ [type]: handles.map((x) => x.fn) }, this.inference, this.config.sucrose);
-    for (let handle of handles) {
-      let fn = asHookType(handle, "global", { skipIfHasType: true });
+    Array.isArray(handlers) ? handlers = fnToContainer(handlers) : typeof handlers == "function" ? handlers = [
+      {
+        fn: handlers
+      }
+    ] : handlers = [handlers];
+    const handles = handlers;
+    for (const handle of handles)
+      handle.scope = typeof optionsOrType == "string" ? "local" : optionsOrType?.as ?? "local", (type === "resolve" || type === "derive") && (handle.subType = type);
+    type !== "trace" && (this.inference = sucrose({
+      [type]: handles.map((x) => x.fn)
+    }, this.inference, this.config.sucrose));
+    for (const handle of handles) {
+      const fn = asHookType(handle, "global", { skipIfHasType: true });
       switch (type) {
         case "start":
           this.event.start ??= [], this.event.start.push(fn);
@@ -27703,86 +28407,141 @@ class Elysia {
     return this;
   }
   as(type) {
-    if (promoteEvent(this.event.parse, type), promoteEvent(this.event.transform, type), promoteEvent(this.event.beforeHandle, type), promoteEvent(this.event.afterHandle, type), promoteEvent(this.event.mapResponse, type), promoteEvent(this.event.afterResponse, type), promoteEvent(this.event.trace, type), promoteEvent(this.event.error, type), type === "scoped") {
-      if (this.validator.scoped = mergeSchemaValidator(this.validator.scoped, this.validator.local), this.validator.local = null, this.standaloneValidator.local !== null)
-        this.standaloneValidator.scoped ||= [], this.standaloneValidator.scoped.push(...this.standaloneValidator.local), this.standaloneValidator.local = null;
-    } else if (type === "global") {
-      if (this.validator.global = mergeSchemaValidator(this.validator.global, mergeSchemaValidator(this.validator.scoped, this.validator.local)), this.validator.scoped = null, this.validator.local = null, this.standaloneValidator.local !== null)
-        this.standaloneValidator.scoped ||= [], this.standaloneValidator.scoped.push(...this.standaloneValidator.local), this.standaloneValidator.local = null;
-      if (this.standaloneValidator.scoped !== null)
-        this.standaloneValidator.global ||= [], this.standaloneValidator.global.push(...this.standaloneValidator.scoped), this.standaloneValidator.scoped = null;
-    }
-    return this;
+    return promoteEvent(this.event.parse, type), promoteEvent(this.event.transform, type), promoteEvent(this.event.beforeHandle, type), promoteEvent(this.event.afterHandle, type), promoteEvent(this.event.mapResponse, type), promoteEvent(this.event.afterResponse, type), promoteEvent(this.event.trace, type), promoteEvent(this.event.error, type), type === "scoped" ? (this.validator.scoped = mergeSchemaValidator(this.validator.scoped, this.validator.local), this.validator.local = null, this.standaloneValidator.local !== null && (this.standaloneValidator.scoped ||= [], this.standaloneValidator.scoped.push(...this.standaloneValidator.local), this.standaloneValidator.local = null)) : type === "global" && (this.validator.global = mergeSchemaValidator(this.validator.global, mergeSchemaValidator(this.validator.scoped, this.validator.local)), this.validator.scoped = null, this.validator.local = null, this.standaloneValidator.local !== null && (this.standaloneValidator.scoped ||= [], this.standaloneValidator.scoped.push(...this.standaloneValidator.local), this.standaloneValidator.local = null), this.standaloneValidator.scoped !== null && (this.standaloneValidator.global ||= [], this.standaloneValidator.global.push(...this.standaloneValidator.scoped), this.standaloneValidator.scoped = null)), this;
   }
   group(prefix, schemaOrRun, run) {
-    let instance = new Elysia({ ...this.config, prefix: "" });
-    instance.singleton = { ...this.singleton }, instance.definitions = { ...this.definitions }, instance.getServer = () => this.getServer(), instance.inference = cloneInference(this.inference), instance.extender = { ...this.extender }, instance["~parser"] = this["~parser"], instance.standaloneValidator = { local: [...this.standaloneValidator.local ?? []], scoped: [...this.standaloneValidator.scoped ?? []], global: [...this.standaloneValidator.global ?? []] };
-    let isSchema = typeof schemaOrRun === "object", sandbox = (isSchema ? run : schemaOrRun)(instance);
-    if (this.singleton = mergeDeep(this.singleton, instance.singleton), this.definitions = mergeDeep(this.definitions, instance.definitions), sandbox.event.request?.length)
-      this.event.request = [...this.event.request || [], ...sandbox.event.request || []];
-    if (sandbox.event.mapResponse?.length)
-      this.event.mapResponse = [...this.event.mapResponse || [], ...sandbox.event.mapResponse || []];
-    return this.model(sandbox.definitions.type), Object.values(instance.router.history).forEach(({ method, path, handler, hooks }) => {
+    const instance = new _Elysia2({
+      ...this.config,
+      prefix: ""
+    });
+    instance.singleton = { ...this.singleton }, instance.definitions = { ...this.definitions }, instance.getServer = () => this.getServer(), instance.inference = cloneInference(this.inference), instance.extender = { ...this.extender }, instance["~parser"] = this["~parser"], instance.standaloneValidator = {
+      local: [...this.standaloneValidator.local ?? []],
+      scoped: [...this.standaloneValidator.scoped ?? []],
+      global: [...this.standaloneValidator.global ?? []]
+    };
+    const isSchema = typeof schemaOrRun == "object", sandbox = (isSchema ? run : schemaOrRun)(instance);
+    return this.singleton = mergeDeep(this.singleton, instance.singleton), this.definitions = mergeDeep(this.definitions, instance.definitions), sandbox.event.request?.length && (this.event.request = [
+      ...this.event.request || [],
+      ...sandbox.event.request || []
+    ]), sandbox.event.mapResponse?.length && (this.event.mapResponse = [
+      ...this.event.mapResponse || [],
+      ...sandbox.event.mapResponse || []
+    ]), this.model(sandbox.definitions.type), Object.values(instance.router.history).forEach(({ method, path, handler, hooks }) => {
       if (path = (isSchema ? "" : this.config.prefix ?? "") + prefix + path, isSchema) {
-        let { body, headers, query, params, cookie, response, ...hook } = schemaOrRun, localHook = hooks, hasStandaloneSchema = body || headers || query || params || cookie || response;
-        this.add(method, path, handler, mergeHook(hook, { ...localHook || {}, error: !localHook.error ? sandbox.event.error : Array.isArray(localHook.error) ? [...localHook.error ?? [], ...sandbox.event.error ?? []] : [localHook.error, ...sandbox.event.error ?? []], standaloneValidator: !hasStandaloneSchema ? localHook.standaloneValidator : [...localHook.standaloneValidator ?? [], { body, headers, query, params, cookie, response }] }), undefined);
+        const {
+          body,
+          headers,
+          query,
+          params,
+          cookie,
+          response,
+          ...hook
+        } = schemaOrRun, localHook = hooks, hasStandaloneSchema = body || headers || query || params || cookie || response;
+        this.add(method, path, handler, mergeHook(hook, {
+          ...localHook || {},
+          error: localHook.error ? Array.isArray(localHook.error) ? [
+            ...localHook.error ?? [],
+            ...sandbox.event.error ?? []
+          ] : [
+            localHook.error,
+            ...sandbox.event.error ?? []
+          ] : sandbox.event.error,
+          standaloneValidator: hasStandaloneSchema ? [
+            ...localHook.standaloneValidator ?? [],
+            {
+              body,
+              headers,
+              query,
+              params,
+              cookie,
+              response
+            }
+          ] : localHook.standaloneValidator
+        }), undefined);
       } else
-        this.add(method, path, handler, mergeHook(hooks, { error: sandbox.event.error }), { skipPrefix: true });
+        this.add(method, path, handler, mergeHook(hooks, {
+          error: sandbox.event.error
+        }), {
+          skipPrefix: true
+        });
     }), this;
   }
   guard(hook, run) {
     if (!run) {
-      if (typeof hook === "object") {
-        if (this.applyMacro(hook), hook.detail)
-          if (this.config.detail)
-            this.config.detail = mergeDeep(Object.assign({}, this.config.detail), hook.detail);
-          else
-            this.config.detail = hook.detail;
-        if (hook.tags)
-          if (!this.config.detail)
-            this.config.detail = { tags: hook.tags };
-          else
-            this.config.detail.tags = hook.tags;
-        let type = hook.as ?? "local";
+      if (typeof hook == "object") {
+        this.applyMacro(hook), hook.detail && (this.config.detail ? this.config.detail = mergeDeep(Object.assign({}, this.config.detail), hook.detail) : this.config.detail = hook.detail), hook.tags && (this.config.detail ? this.config.detail.tags = hook.tags : this.config.detail = {
+          tags: hook.tags
+        });
+        const type = hook.as ?? "local";
         if (hook.schema === "standalone") {
-          if (!this.standaloneValidator[type])
-            this.standaloneValidator[type] = [];
-          let response = !hook?.response ? undefined : typeof hook.response === "string" || (Kind in hook.response) || ("~standard" in hook.response) ? { 200: hook.response } : hook?.response;
-          this.standaloneValidator[type].push({ body: hook.body, headers: hook.headers, params: hook.params, query: hook.query, response, cookie: hook.cookie });
+          this.standaloneValidator[type] || (this.standaloneValidator[type] = []);
+          const response = hook?.response ? typeof hook.response == "string" || Kind in hook.response || "~standard" in hook.response ? {
+            200: hook.response
+          } : hook?.response : undefined;
+          this.standaloneValidator[type].push({
+            body: hook.body,
+            headers: hook.headers,
+            params: hook.params,
+            query: hook.query,
+            response,
+            cookie: hook.cookie
+          });
         } else
-          this.validator[type] = { body: hook.body ?? this.validator[type]?.body, headers: hook.headers ?? this.validator[type]?.headers, params: hook.params ?? this.validator[type]?.params, query: hook.query ?? this.validator[type]?.query, response: hook.response ?? this.validator[type]?.response, cookie: hook.cookie ?? this.validator[type]?.cookie };
-        if (hook.parse)
-          this.on({ as: type }, "parse", hook.parse);
-        if (hook.transform)
-          this.on({ as: type }, "transform", hook.transform);
-        if (hook.derive)
-          this.on({ as: type }, "derive", hook.derive);
-        if (hook.beforeHandle)
-          this.on({ as: type }, "beforeHandle", hook.beforeHandle);
-        if (hook.resolve)
-          this.on({ as: type }, "resolve", hook.resolve);
-        if (hook.afterHandle)
-          this.on({ as: type }, "afterHandle", hook.afterHandle);
-        if (hook.mapResponse)
-          this.on({ as: type }, "mapResponse", hook.mapResponse);
-        if (hook.afterResponse)
-          this.on({ as: type }, "afterResponse", hook.afterResponse);
-        if (hook.error)
-          this.on({ as: type }, "error", hook.error);
-        return this;
+          this.validator[type] = {
+            body: hook.body ?? this.validator[type]?.body,
+            headers: hook.headers ?? this.validator[type]?.headers,
+            params: hook.params ?? this.validator[type]?.params,
+            query: hook.query ?? this.validator[type]?.query,
+            response: hook.response ?? this.validator[type]?.response,
+            cookie: hook.cookie ?? this.validator[type]?.cookie
+          };
+        return hook.parse && this.on({ as: type }, "parse", hook.parse), hook.transform && this.on({ as: type }, "transform", hook.transform), hook.derive && this.on({ as: type }, "derive", hook.derive), hook.beforeHandle && this.on({ as: type }, "beforeHandle", hook.beforeHandle), hook.resolve && this.on({ as: type }, "resolve", hook.resolve), hook.afterHandle && this.on({ as: type }, "afterHandle", hook.afterHandle), hook.mapResponse && this.on({ as: type }, "mapResponse", hook.mapResponse), hook.afterResponse && this.on({ as: type }, "afterResponse", hook.afterResponse), hook.error && this.on({ as: type }, "error", hook.error), this;
       }
       return this.guard({}, hook);
     }
-    let instance = new Elysia({ ...this.config, prefix: "" });
+    const instance = new _Elysia2({
+      ...this.config,
+      prefix: ""
+    });
     instance.singleton = { ...this.singleton }, instance.definitions = { ...this.definitions }, instance.inference = cloneInference(this.inference), instance.extender = { ...this.extender }, instance.getServer = () => this.getServer();
-    let sandbox = run(instance);
-    if (this.singleton = mergeDeep(this.singleton, instance.singleton), this.definitions = mergeDeep(this.definitions, instance.definitions), sandbox.getServer = () => this.server, sandbox.event.request?.length)
-      this.event.request = [...this.event.request || [], ...sandbox.event.request || []];
-    if (sandbox.event.mapResponse?.length)
-      this.event.mapResponse = [...this.event.mapResponse || [], ...sandbox.event.mapResponse || []];
-    return this.model(sandbox.definitions.type), Object.values(instance.router.history).forEach(({ method, path, handler, hooks: localHook }) => {
-      let { body, headers, query, params, cookie, response, ...guardHook } = hook, hasStandaloneSchema = body || headers || query || params || cookie || response;
-      this.add(method, path, handler, mergeHook(guardHook, { ...localHook || {}, error: !localHook.error ? sandbox.event.error : Array.isArray(localHook.error) ? [...localHook.error ?? [], ...sandbox.event.error ?? []] : [localHook.error, ...sandbox.event.error ?? []], standaloneValidator: !hasStandaloneSchema ? localHook.standaloneValidator : [...localHook.standaloneValidator ?? [], { body, headers, query, params, cookie, response }] }));
+    const sandbox = run(instance);
+    return this.singleton = mergeDeep(this.singleton, instance.singleton), this.definitions = mergeDeep(this.definitions, instance.definitions), sandbox.getServer = () => this.server, sandbox.event.request?.length && (this.event.request = [
+      ...this.event.request || [],
+      ...sandbox.event.request || []
+    ]), sandbox.event.mapResponse?.length && (this.event.mapResponse = [
+      ...this.event.mapResponse || [],
+      ...sandbox.event.mapResponse || []
+    ]), this.model(sandbox.definitions.type), Object.values(instance.router.history).forEach(({ method, path, handler, hooks: localHook }) => {
+      const {
+        body,
+        headers,
+        query,
+        params,
+        cookie,
+        response,
+        ...guardHook
+      } = hook, hasStandaloneSchema = body || headers || query || params || cookie || response;
+      this.add(method, path, handler, mergeHook(guardHook, {
+        ...localHook || {},
+        error: localHook.error ? Array.isArray(localHook.error) ? [
+          ...localHook.error ?? [],
+          ...sandbox.event.error ?? []
+        ] : [
+          localHook.error,
+          ...sandbox.event.error ?? []
+        ] : sandbox.event.error,
+        standaloneValidator: hasStandaloneSchema ? [
+          ...localHook.standaloneValidator ?? [],
+          {
+            body,
+            headers,
+            query,
+            params,
+            cookie,
+            response
+          }
+        ] : localHook.standaloneValidator
+      }));
     }), this;
   }
   use(plugin) {
@@ -27790,226 +28549,261 @@ class Elysia {
       return this;
     if (Array.isArray(plugin)) {
       let app = this;
-      for (let p of plugin)
+      for (const p of plugin)
         app = app.use(p);
       return app;
     }
-    if (plugin instanceof Promise)
-      return this.promisedModules.add(plugin.then((plugin2) => {
-        if (typeof plugin2 === "function")
-          return plugin2(this);
-        if (plugin2 instanceof Elysia)
-          return this._use(plugin2).compile();
-        if (plugin2.constructor?.name === "Elysia")
-          return this._use(plugin2).compile();
-        if (typeof plugin2.default === "function")
-          return plugin2.default(this);
-        if (plugin2.default instanceof Elysia)
-          return this._use(plugin2.default);
-        if (plugin2.constructor?.name === "Elysia")
-          return this._use(plugin2.default);
-        if (plugin2.constructor?.name === "_Elysia")
-          return this._use(plugin2.default);
-        try {
-          return this._use(plugin2.default);
-        } catch (error) {
-          throw console.error('Invalid plugin type. Expected Elysia instance, function, or module with "default" as Elysia instance or function that returns Elysia instance.'), error;
-        }
-      }).then((v) => {
-        if (v && typeof v.compile === "function")
-          v.compile();
-        return v;
-      })), this;
-    return this._use(plugin);
+    return plugin instanceof Promise ? (this.promisedModules.add(plugin.then((plugin2) => {
+      if (typeof plugin2 == "function")
+        return plugin2(this);
+      if (plugin2 instanceof _Elysia2)
+        return this._use(plugin2).compile();
+      if (plugin2.constructor?.name === "Elysia")
+        return this._use(plugin2).compile();
+      if (typeof plugin2.default == "function")
+        return plugin2.default(this);
+      if (plugin2.default instanceof _Elysia2)
+        return this._use(plugin2.default);
+      if (plugin2.constructor?.name === "Elysia")
+        return this._use(plugin2.default);
+      if (plugin2.constructor?.name === "_Elysia")
+        return this._use(plugin2.default);
+      try {
+        return this._use(plugin2.default);
+      } catch (error) {
+        throw console.error('Invalid plugin type. Expected Elysia instance, function, or module with "default" as Elysia instance or function that returns Elysia instance.'), error;
+      }
+    }).then((v) => (v && typeof v.compile == "function" && v.compile(), v))), this) : this._use(plugin);
   }
   propagatePromiseModules(plugin) {
     if (plugin.promisedModules.size <= 0)
       return this;
-    for (let promise of plugin.promisedModules.promises)
+    for (const promise of plugin.promisedModules.promises)
       this.promisedModules.add(promise.then((v) => {
         if (!v)
           return;
-        let t2 = this._use(v);
-        if (t2 instanceof Promise)
-          return t2.then((v2) => {
-            if (v2)
-              v2.compile();
-            else
-              v.compile();
-          });
-        return v.compile();
+        const t3 = this._use(v);
+        return t3 instanceof Promise ? t3.then((v2) => {
+          v2 ? v2.compile() : v.compile();
+        }) : v.compile();
       }));
     return this;
   }
   _use(plugin) {
-    if (typeof plugin === "function") {
-      let instance = plugin(this);
-      if (instance instanceof Promise)
-        return this.promisedModules.add(instance.then((plugin2) => {
-          if (plugin2 instanceof Elysia) {
-            plugin2.getServer = () => this.getServer(), plugin2.getGlobalRoutes = () => this.getGlobalRoutes(), plugin2.getGlobalDefinitions = () => this.getGlobalDefinitions(), plugin2.model(this.definitions.type), plugin2.error(this.definitions.error);
-            for (let { method, path, handler, hooks } of Object.values(plugin2.router.history))
-              this.add(method, path, handler, hooks, undefined);
-            if (plugin2 === this)
-              return;
-            return this.propagatePromiseModules(plugin2), plugin2;
-          }
-          if (typeof plugin2 === "function")
-            return plugin2(this);
-          if (typeof plugin2.default === "function")
-            return plugin2.default(this);
-          return this._use(plugin2);
-        }).then((v) => {
-          if (v && typeof v.compile === "function")
-            v.compile();
-          return v;
-        })), this;
-      return instance;
+    if (typeof plugin == "function") {
+      const instance = plugin(this);
+      return instance instanceof Promise ? (this.promisedModules.add(instance.then((plugin2) => {
+        if (plugin2 instanceof _Elysia2) {
+          plugin2.getServer = () => this.getServer(), plugin2.getGlobalRoutes = () => this.getGlobalRoutes(), plugin2.getGlobalDefinitions = () => this.getGlobalDefinitions(), plugin2.model(this.definitions.type), plugin2.error(this.definitions.error);
+          for (const {
+            method,
+            path,
+            handler,
+            hooks
+          } of Object.values(plugin2.router.history))
+            this.add(method, path, handler, hooks, undefined);
+          return plugin2 === this ? undefined : (this.propagatePromiseModules(plugin2), plugin2);
+        }
+        return typeof plugin2 == "function" ? plugin2(this) : typeof plugin2.default == "function" ? plugin2.default(this) : this._use(plugin2);
+      }).then((v) => (v && typeof v.compile == "function" && v.compile(), v))), this) : instance;
     }
     this.propagatePromiseModules(plugin);
-    let name = plugin.config.name, seed = plugin.config.seed;
-    if (plugin.getParent = () => this, plugin.getServer = () => this.getServer(), plugin.getGlobalRoutes = () => this.getGlobalRoutes(), plugin.getGlobalDefinitions = () => this.getGlobalDefinitions(), plugin.standaloneValidator?.scoped)
-      if (this.standaloneValidator.local)
-        this.standaloneValidator.local = this.standaloneValidator.local.concat(plugin.standaloneValidator.scoped);
-      else
-        this.standaloneValidator.local = plugin.standaloneValidator.scoped;
-    if (plugin.standaloneValidator?.global)
-      if (this.standaloneValidator.global)
-        this.standaloneValidator.global = this.standaloneValidator.global.concat(plugin.standaloneValidator.global);
-      else
-        this.standaloneValidator.global = plugin.standaloneValidator.global;
-    if (isNotEmpty(plugin["~parser"]))
-      this["~parser"] = { ...plugin["~parser"], ...this["~parser"] };
-    if (plugin.setHeaders)
-      this.headers(plugin.setHeaders);
-    if (name) {
-      if (!(name in this.dependencies))
-        this.dependencies[name] = [];
-      let current = seed !== undefined ? checksum(name + JSON.stringify(seed)) : 0;
-      if (!this.dependencies[name].some(({ checksum: checksum2 }) => current === checksum2))
-        this.extender.macro = { ...this.extender.macro, ...plugin.extender.macro }, this.extender.higherOrderFunctions = this.extender.higherOrderFunctions.concat(plugin.extender.higherOrderFunctions);
-    } else {
-      if (isNotEmpty(plugin.extender.macro))
-        this.extender.macro = { ...this.extender.macro, ...plugin.extender.macro };
-      if (plugin.extender.higherOrderFunctions.length)
-        this.extender.higherOrderFunctions = this.extender.higherOrderFunctions.concat(plugin.extender.higherOrderFunctions);
-    }
+    const name = plugin.config.name, seed = plugin.config.seed;
+    if (plugin.getParent = () => this, plugin.getServer = () => this.getServer(), plugin.getGlobalRoutes = () => this.getGlobalRoutes(), plugin.getGlobalDefinitions = () => this.getGlobalDefinitions(), plugin.standaloneValidator?.scoped && (this.standaloneValidator.local ? this.standaloneValidator.local = this.standaloneValidator.local.concat(plugin.standaloneValidator.scoped) : this.standaloneValidator.local = plugin.standaloneValidator.scoped), plugin.standaloneValidator?.global && (this.standaloneValidator.global ? this.standaloneValidator.global = this.standaloneValidator.global.concat(plugin.standaloneValidator.global) : this.standaloneValidator.global = plugin.standaloneValidator.global), isNotEmpty(plugin["~parser"]) && (this["~parser"] = {
+      ...plugin["~parser"],
+      ...this["~parser"]
+    }), plugin.setHeaders && this.headers(plugin.setHeaders), name) {
+      name in this.dependencies || (this.dependencies[name] = []);
+      const current = seed !== undefined ? checksum(name + JSON.stringify(seed)) : 0;
+      this.dependencies[name].some(({ checksum: checksum3 }) => current === checksum3) || (this.extender.macro = {
+        ...this.extender.macro,
+        ...plugin.extender.macro
+      }, this.extender.higherOrderFunctions = this.extender.higherOrderFunctions.concat(plugin.extender.higherOrderFunctions));
+    } else
+      isNotEmpty(plugin.extender.macro) && (this.extender.macro = {
+        ...this.extender.macro,
+        ...plugin.extender.macro
+      }), plugin.extender.higherOrderFunctions.length && (this.extender.higherOrderFunctions = this.extender.higherOrderFunctions.concat(plugin.extender.higherOrderFunctions));
     if (plugin.extender.higherOrderFunctions.length) {
       deduplicateChecksum(this.extender.higherOrderFunctions);
-      let hofHashes = [];
+      const hofHashes = [];
       for (let i = 0;i < this.extender.higherOrderFunctions.length; i++) {
-        let hof = this.extender.higherOrderFunctions[i];
-        if (hof.checksum) {
-          if (hofHashes.includes(hof.checksum))
-            this.extender.higherOrderFunctions.splice(i, 1), i--;
-          hofHashes.push(hof.checksum);
-        }
+        const hof = this.extender.higherOrderFunctions[i];
+        hof.checksum && (hofHashes.includes(hof.checksum) && (this.extender.higherOrderFunctions.splice(i, 1), i--), hofHashes.push(hof.checksum));
       }
       hofHashes.length = 0;
     }
-    if (this.inference = mergeInference(this.inference, plugin.inference), isNotEmpty(plugin.singleton.decorator))
-      this.decorate(plugin.singleton.decorator);
-    if (isNotEmpty(plugin.singleton.store))
-      this.state(plugin.singleton.store);
-    if (isNotEmpty(plugin.definitions.type))
-      this.model(plugin.definitions.type);
-    if (isNotEmpty(plugin.definitions.error))
-      this.error(plugin.definitions.error);
-    if (isNotEmpty(plugin.extender.macro))
-      this.extender.macro = { ...this.extender.macro, ...plugin.extender.macro };
-    for (let { method, path, handler, hooks } of Object.values(plugin.router.history))
+    this.inference = mergeInference(this.inference, plugin.inference), isNotEmpty(plugin.singleton.decorator) && this.decorate(plugin.singleton.decorator), isNotEmpty(plugin.singleton.store) && this.state(plugin.singleton.store), isNotEmpty(plugin.definitions.type) && this.model(plugin.definitions.type), isNotEmpty(plugin.definitions.error) && this.error(plugin.definitions.error), isNotEmpty(plugin.extender.macro) && (this.extender.macro = {
+      ...this.extender.macro,
+      ...plugin.extender.macro
+    });
+    for (const { method, path, handler, hooks } of Object.values(plugin.router.history))
       this.add(method, path, handler, hooks);
     if (name) {
-      if (!(name in this.dependencies))
-        this.dependencies[name] = [];
-      let current = seed !== undefined ? checksum(name + JSON.stringify(seed)) : 0;
-      if (this.dependencies[name].some(({ checksum: checksum2 }) => current === checksum2))
+      name in this.dependencies || (this.dependencies[name] = []);
+      const current = seed !== undefined ? checksum(name + JSON.stringify(seed)) : 0;
+      if (this.dependencies[name].some(({ checksum: checksum3 }) => current === checksum3))
         return this;
-      if (this.dependencies[name].push(this.config?.analytic ? { name: plugin.config.name, seed: plugin.config.seed, checksum: current, dependencies: plugin.dependencies, stack: plugin.telemetry?.stack, routes: plugin.router.history, decorators: plugin.singleton, store: plugin.singleton.store, error: plugin.definitions.error, derive: plugin.event.transform?.filter((x) => x?.subType === "derive").map((x) => ({ fn: x.toString(), stack: Error().stack ?? "" })), resolve: plugin.event.transform?.filter((x) => x?.subType === "resolve").map((x) => ({ fn: x.toString(), stack: Error().stack ?? "" })) } : { name: plugin.config.name, seed: plugin.config.seed, checksum: current, dependencies: plugin.dependencies }), isNotEmpty(plugin.event))
-        this.event = mergeLifeCycle(this.event, filterGlobalHook(plugin.event), current);
-    } else if (isNotEmpty(plugin.event))
-      this.event = mergeLifeCycle(this.event, filterGlobalHook(plugin.event));
-    if (plugin.validator.global)
-      this.validator.global = mergeHook(this.validator.global, { ...plugin.validator.global });
-    if (plugin.validator.scoped)
-      this.validator.local = mergeHook(this.validator.local, { ...plugin.validator.scoped });
-    return this;
+      this.dependencies[name].push(this.config?.analytic ? {
+        name: plugin.config.name,
+        seed: plugin.config.seed,
+        checksum: current,
+        dependencies: plugin.dependencies,
+        stack: plugin.telemetry?.stack,
+        routes: plugin.router.history,
+        decorators: plugin.singleton,
+        store: plugin.singleton.store,
+        error: plugin.definitions.error,
+        derive: plugin.event.transform?.filter((x) => x?.subType === "derive").map((x) => ({
+          fn: x.toString(),
+          stack: new Error().stack ?? ""
+        })),
+        resolve: plugin.event.transform?.filter((x) => x?.subType === "resolve").map((x) => ({
+          fn: x.toString(),
+          stack: new Error().stack ?? ""
+        }))
+      } : {
+        name: plugin.config.name,
+        seed: plugin.config.seed,
+        checksum: current,
+        dependencies: plugin.dependencies
+      }), isNotEmpty(plugin.event) && (this.event = mergeLifeCycle(this.event, filterGlobalHook(plugin.event), current));
+    } else
+      isNotEmpty(plugin.event) && (this.event = mergeLifeCycle(this.event, filterGlobalHook(plugin.event)));
+    return plugin.validator.global && (this.validator.global = mergeHook(this.validator.global, {
+      ...plugin.validator.global
+    })), plugin.validator.scoped && (this.validator.local = mergeHook(this.validator.local, {
+      ...plugin.validator.scoped
+    })), this;
   }
   macro(macroOrName, macro) {
-    if (typeof macroOrName === "string" && !macro)
-      throw Error("Macro function is required");
-    if (typeof macroOrName === "string")
-      this.extender.macro[macroOrName] = macro;
-    else
-      this.extender.macro = { ...this.extender.macro, ...macroOrName };
-    return this;
+    if (typeof macroOrName == "string" && !macro)
+      throw new Error("Macro function is required");
+    return typeof macroOrName == "string" ? this.extender.macro[macroOrName] = macro : this.extender.macro = {
+      ...this.extender.macro,
+      ...macroOrName
+    }, this;
   }
-  applyMacro(localHook, appliable = localHook, { iteration = 0, applied = {} } = {}) {
+  applyMacro(localHook, appliable = localHook, {
+    iteration = 0,
+    applied = {}
+  } = {}) {
     if (iteration >= 16)
       return;
-    let macro = this.extender.macro;
+    const macro = this.extender.macro;
     for (let [key, value] of Object.entries(appliable)) {
-      if (key in macro === false)
+      if (!(key in macro))
         continue;
-      let macroHook = typeof macro[key] === "function" ? macro[key](value) : macro[key];
-      if (!macroHook || typeof macro[key] === "object" && value === false)
+      const macroHook = typeof macro[key] == "function" ? macro[key](value) : macro[key];
+      if (!macroHook || typeof macro[key] == "object" && value === false)
         return;
-      let seed = checksum(key + JSON.stringify(macroHook.seed ?? value));
-      if (seed in applied)
-        continue;
-      applied[seed] = true;
-      for (let [k2, value2] of Object.entries(macroHook)) {
-        if (k2 === "seed")
-          continue;
-        if (k2 in emptySchema) {
-          insertStandaloneValidator(localHook, k2, value2), delete localHook[key];
-          continue;
-        }
-        if (k2 === "introspect") {
-          value2?.(localHook), delete localHook[key];
-          continue;
-        }
-        if (k2 === "detail") {
-          if (!localHook.detail)
-            localHook.detail = {};
-          localHook.detail = mergeDeep(localHook.detail, value2, { mergeArray: true }), delete localHook[key];
-          continue;
-        }
-        if (k2 in macro) {
-          this.applyMacro(localHook, { [k2]: value2 }, { applied, iteration: iteration + 1 }), delete localHook[key];
-          continue;
-        }
-        if ((k2 === "derive" || k2 === "resolve") && typeof value2 === "function")
-          value2 = { fn: value2, subType: k2 };
-        switch (typeof localHook[k2]) {
-          case "function":
-            localHook[k2] = [localHook[k2], value2];
-            break;
-          case "object":
-            if (Array.isArray(localHook[k2]))
-              localHook[k2].push(value2);
-            else
-              localHook[k2] = [localHook[k2], value2];
-            break;
-          case "undefined":
-            localHook[k2] = value2;
-            break;
-        }
-        delete localHook[key];
+      const seed = checksum(key + JSON.stringify(macroHook.seed ?? value));
+      if (!(seed in applied)) {
+        applied[seed] = true;
+        for (let [k, value2] of Object.entries(macroHook))
+          if (k !== "seed") {
+            if (k in emptySchema) {
+              insertStandaloneValidator(localHook, k, value2), delete localHook[key];
+              continue;
+            }
+            if (k === "introspect") {
+              value2?.(localHook), delete localHook[key];
+              continue;
+            }
+            if (k === "detail") {
+              localHook.detail || (localHook.detail = {}), localHook.detail = mergeDeep(localHook.detail, value2, {
+                mergeArray: true
+              }), delete localHook[key];
+              continue;
+            }
+            if (k in macro) {
+              this.applyMacro(localHook, { [k]: value2 }, { applied, iteration: iteration + 1 }), delete localHook[key];
+              continue;
+            }
+            switch ((k === "derive" || k === "resolve") && typeof value2 == "function" && (value2 = {
+              fn: value2,
+              subType: k
+            }), typeof localHook[k]) {
+              case "function":
+                localHook[k] = [localHook[k], value2];
+                break;
+              case "object":
+                Array.isArray(localHook[k]) ? localHook[k].push(value2) : localHook[k] = [localHook[k], value2];
+                break;
+              case "undefined":
+                localHook[k] = value2;
+                break;
+            }
+            delete localHook[key];
+          }
       }
     }
   }
   mount(path, handleOrConfig, config) {
-    if (path instanceof Elysia || typeof path === "function" || path.length === 0 || path === "/") {
-      let run = typeof path === "function" ? path : path instanceof Elysia ? path.compile().fetch : handleOrConfig instanceof Elysia ? handleOrConfig.compile().fetch : typeof handleOrConfig === "function" ? handleOrConfig : (() => {
-        throw Error("Invalid handler");
-      })(), handler2 = ({ request, path: path2 }) => run(new Request(replaceUrlPath(request.url, path2), { method: request.method, headers: request.headers, signal: request.signal, credentials: request.credentials, referrerPolicy: request.referrerPolicy, duplex: request.duplex, redirect: request.redirect, mode: request.mode, keepalive: request.keepalive, integrity: request.integrity, body: request.body }));
-      return this.route("ALL", "/*", handler2, { parse: "none", ...config, detail: { ...config?.detail, hide: true }, config: { mount: run } }), this;
+    if (path instanceof _Elysia2 || typeof path == "function" || path.length === 0 || path === "/") {
+      const run = typeof path == "function" ? path : path instanceof _Elysia2 ? path.compile().fetch : handleOrConfig instanceof _Elysia2 ? handleOrConfig.compile().fetch : typeof handleOrConfig == "function" ? handleOrConfig : (() => {
+        throw new Error("Invalid handler");
+      })(), handler2 = ({ request, path: path2 }) => run(new Request(replaceUrlPath(request.url, path2), {
+        method: request.method,
+        headers: request.headers,
+        signal: request.signal,
+        credentials: request.credentials,
+        referrerPolicy: request.referrerPolicy,
+        duplex: request.duplex,
+        redirect: request.redirect,
+        mode: request.mode,
+        keepalive: request.keepalive,
+        integrity: request.integrity,
+        body: request.body
+      }));
+      return this.route("ALL", "/*", handler2, {
+        parse: "none",
+        ...config,
+        detail: {
+          ...config?.detail,
+          hide: true
+        },
+        config: {
+          mount: run
+        }
+      }), this;
     }
-    let handle = handleOrConfig instanceof Elysia ? handleOrConfig.compile().fetch : typeof handleOrConfig === "function" ? handleOrConfig : (() => {
-      throw Error("Invalid handler");
-    })(), length = path.length - (path.endsWith("*") ? 1 : 0), handler = ({ request, path: path2 }) => handle(new Request(replaceUrlPath(request.url, path2.slice(length) || "/"), { method: request.method, headers: request.headers, signal: request.signal, credentials: request.credentials, referrerPolicy: request.referrerPolicy, duplex: request.duplex, redirect: request.redirect, mode: request.mode, keepalive: request.keepalive, integrity: request.integrity, body: request.body }));
-    return this.route("ALL", path, handler, { parse: "none", ...config, detail: { ...config?.detail, hide: true }, config: { mount: handle } }), this.route("ALL", path + (path.endsWith("/") ? "*" : "/*"), handler, { parse: "none", ...config, detail: { ...config?.detail, hide: true }, config: { mount: handle } }), this;
+    const handle = handleOrConfig instanceof _Elysia2 ? handleOrConfig.compile().fetch : typeof handleOrConfig == "function" ? handleOrConfig : (() => {
+      throw new Error("Invalid handler");
+    })(), length = path.length - (path.endsWith("*") ? 1 : 0), handler = ({ request, path: path2 }) => handle(new Request(replaceUrlPath(request.url, path2.slice(length) || "/"), {
+      method: request.method,
+      headers: request.headers,
+      signal: request.signal,
+      credentials: request.credentials,
+      referrerPolicy: request.referrerPolicy,
+      duplex: request.duplex,
+      redirect: request.redirect,
+      mode: request.mode,
+      keepalive: request.keepalive,
+      integrity: request.integrity,
+      body: request.body
+    }));
+    return this.route("ALL", path, handler, {
+      parse: "none",
+      ...config,
+      detail: {
+        ...config?.detail,
+        hide: true
+      },
+      config: {
+        mount: handle
+      }
+    }), this.route("ALL", path + (path.endsWith("/") ? "*" : "/*"), handler, {
+      parse: "none",
+      ...config,
+      detail: {
+        ...config?.detail,
+        hide: true
+      },
+      config: {
+        mount: handle
+      }
+    }), this;
   }
   get(path, handler, hook) {
     return this.add("GET", path, handler, hook), this;
@@ -28042,171 +28836,132 @@ class Elysia {
     return this.add(method.toUpperCase(), path, handler, hook, hook?.config), this;
   }
   ws(path, options2) {
-    if (this["~adapter"].ws)
-      this["~adapter"].ws(this, path, options2);
-    else
-      console.warn("Current adapter doesn't support WebSocket");
-    return this;
+    return this["~adapter"].ws ? this["~adapter"].ws(this, path, options2) : console.warn("Current adapter doesn't support WebSocket"), this;
   }
   state(options2, name, value) {
-    if (name === undefined)
-      value = options2, options2 = { as: "append" }, name = "";
-    else if (value === undefined) {
-      if (typeof options2 === "string")
-        value = name, name = options2, options2 = { as: "append" };
-      else if (typeof options2 === "object")
-        value = name, name = "";
-    }
-    let { as } = options2;
-    if (typeof name !== "string")
+    name === undefined ? (value = options2, options2 = { as: "append" }, name = "") : value === undefined && (typeof options2 == "string" ? (value = name, name = options2, options2 = { as: "append" }) : typeof options2 == "object" && (value = name, name = ""));
+    const { as } = options2;
+    if (typeof name != "string")
       return this;
     switch (typeof value) {
       case "object":
-        if (!value || !isNotEmpty(value))
-          return this;
-        if (name) {
-          if (name in this.singleton.store)
-            this.singleton.store[name] = mergeDeep(this.singleton.store[name], value, { override: as === "override" });
-          else
-            this.singleton.store[name] = value;
-          return this;
-        }
-        if (value === null)
-          return this;
-        return this.singleton.store = mergeDeep(this.singleton.store, value, { override: as === "override" }), this;
+        return !value || !isNotEmpty(value) ? this : name ? ((name in this.singleton.store) ? this.singleton.store[name] = mergeDeep(this.singleton.store[name], value, {
+          override: as === "override"
+        }) : this.singleton.store[name] = value, this) : value === null ? this : (this.singleton.store = mergeDeep(this.singleton.store, value, {
+          override: as === "override"
+        }), this);
       case "function":
-        if (name) {
-          if (as === "override" || !(name in this.singleton.store))
-            this.singleton.store[name] = value;
-        } else
-          this.singleton.store = value(this.singleton.store);
-        return this;
+        return name ? (as === "override" || !(name in this.singleton.store)) && (this.singleton.store[name] = value) : this.singleton.store = value(this.singleton.store), this;
       default:
-        if (as === "override" || !(name in this.singleton.store))
-          this.singleton.store[name] = value;
-        return this;
+        return (as === "override" || !(name in this.singleton.store)) && (this.singleton.store[name] = value), this;
     }
   }
   decorate(options2, name, value) {
-    if (name === undefined)
-      value = options2, options2 = { as: "append" }, name = "";
-    else if (value === undefined) {
-      if (typeof options2 === "string")
-        value = name, name = options2, options2 = { as: "append" };
-      else if (typeof options2 === "object")
-        value = name, name = "";
-    }
-    let { as } = options2;
-    if (typeof name !== "string")
+    name === undefined ? (value = options2, options2 = { as: "append" }, name = "") : value === undefined && (typeof options2 == "string" ? (value = name, name = options2, options2 = { as: "append" }) : typeof options2 == "object" && (value = name, name = ""));
+    const { as } = options2;
+    if (typeof name != "string")
       return this;
     switch (typeof value) {
       case "object":
-        if (name) {
-          if (name in this.singleton.decorator)
-            this.singleton.decorator[name] = mergeDeep(this.singleton.decorator[name], value, { override: as === "override" });
-          else
-            this.singleton.decorator[name] = value;
-          return this;
-        }
-        if (value === null)
-          return this;
-        return this.singleton.decorator = mergeDeep(this.singleton.decorator, value, { override: as === "override" }), this;
+        return name ? ((name in this.singleton.decorator) ? this.singleton.decorator[name] = mergeDeep(this.singleton.decorator[name], value, {
+          override: as === "override"
+        }) : this.singleton.decorator[name] = value, this) : value === null ? this : (this.singleton.decorator = mergeDeep(this.singleton.decorator, value, {
+          override: as === "override"
+        }), this);
       case "function":
-        if (name) {
-          if (as === "override" || !(name in this.singleton.decorator))
-            this.singleton.decorator[name] = value;
-        } else
-          this.singleton.decorator = value(this.singleton.decorator);
-        return this;
+        return name ? (as === "override" || !(name in this.singleton.decorator)) && (this.singleton.decorator[name] = value) : this.singleton.decorator = value(this.singleton.decorator), this;
       default:
-        if (as === "override" || !(name in this.singleton.decorator))
-          this.singleton.decorator[name] = value;
-        return this;
+        return (as === "override" || !(name in this.singleton.decorator)) && (this.singleton.decorator[name] = value), this;
     }
   }
   derive(optionsOrTransform, transform2) {
-    if (!transform2)
-      transform2 = optionsOrTransform, optionsOrTransform = { as: "local" };
-    let hook = { subType: "derive", fn: transform2 };
+    transform2 || (transform2 = optionsOrTransform, optionsOrTransform = { as: "local" });
+    const hook = {
+      subType: "derive",
+      fn: transform2
+    };
     return this.onTransform(optionsOrTransform, hook);
   }
   model(name, model) {
-    let onlyTypebox = (a) => {
-      let res = {};
-      for (let key in a)
-        if (!("~standard" in a[key]))
-          res[key] = a[key];
+    const onlyTypebox = (a) => {
+      const res = {};
+      for (const key in a)
+        "~standard" in a[key] || (res[key] = a[key]);
       return res;
     };
     switch (typeof name) {
       case "object":
-        let parsedTypebox = {}, kvs = Object.entries(name);
+        const parsedTypebox = {}, kvs = Object.entries(name);
         if (!kvs.length)
           return this;
-        for (let [key, value] of kvs) {
-          if (key in this.definitions.type)
-            continue;
-          if ("~standard" in value)
-            this.definitions.type[key] = value;
-          else
-            parsedTypebox[key] = this.definitions.type[key] = value, parsedTypebox[key].$id ??= `#/components/schemas/${key}`;
-        }
-        return this.definitions.typebox = t.Module({ ...this.definitions.typebox.$defs, ...parsedTypebox }), this;
+        for (const [key, value] of kvs)
+          key in this.definitions.type || ("~standard" in value ? this.definitions.type[key] = value : (parsedTypebox[key] = this.definitions.type[key] = value, parsedTypebox[key].$id ??= `#/components/schemas/${key}`));
+        return this.definitions.typebox = t.Module({
+          ...this.definitions.typebox.$defs,
+          ...parsedTypebox
+        }), this;
       case "function":
-        let result = name(this.definitions.type);
+        const result = name(this.definitions.type);
         return this.definitions.type = result, this.definitions.typebox = t.Module(onlyTypebox(result)), this;
       case "string":
         if (!model)
           break;
         if (this.definitions.type[name] = model, "~standard" in model)
           return this;
-        let newModel = { ...model, id: model.$id ?? `#/components/schemas/${name}` };
-        return this.definitions.typebox = t.Module({ ...this.definitions.typebox.$defs, ...newModel }), this;
+        const newModel = {
+          ...model,
+          id: model.$id ?? `#/components/schemas/${name}`
+        };
+        return this.definitions.typebox = t.Module({
+          ...this.definitions.typebox.$defs,
+          ...newModel
+        }), this;
     }
-    if (!model)
-      return this;
-    if (this.definitions.type[name] = model, "~standard" in model)
-      return this;
-    return this.definitions.typebox = t.Module({ ...this.definitions.typebox.$defs, [name]: model }), this;
+    return model ? (this.definitions.type[name] = model, ("~standard" in model) ? this : (this.definitions.typebox = t.Module({
+      ...this.definitions.typebox.$defs,
+      [name]: model
+    }), this)) : this;
   }
   Ref(key) {
     return t.Ref(key);
   }
   mapDerive(optionsOrDerive, mapper) {
-    if (!mapper)
-      mapper = optionsOrDerive, optionsOrDerive = { as: "local" };
-    let hook = { subType: "mapDerive", fn: mapper };
+    mapper || (mapper = optionsOrDerive, optionsOrDerive = { as: "local" });
+    const hook = {
+      subType: "mapDerive",
+      fn: mapper
+    };
     return this.onTransform(optionsOrDerive, hook);
   }
   affix(base, type, word) {
     if (word === "")
       return this;
-    let delimieter = ["_", "-", " "], capitalize = (word2) => word2[0].toUpperCase() + word2.slice(1), joinKey = base === "prefix" ? (prefix, word2) => delimieter.includes(prefix.at(-1) ?? "") ? prefix + word2 : prefix + capitalize(word2) : delimieter.includes(word.at(-1) ?? "") ? (suffix, word2) => word2 + suffix : (suffix, word2) => word2 + capitalize(suffix), remap = (type2) => {
-      let store = {};
+    const delimieter = ["_", "-", " "], capitalize = (word2) => word2[0].toUpperCase() + word2.slice(1), joinKey = base === "prefix" ? (prefix, word2) => delimieter.includes(prefix.at(-1) ?? "") ? prefix + word2 : prefix + capitalize(word2) : delimieter.includes(word.at(-1) ?? "") ? (suffix, word2) => word2 + suffix : (suffix, word2) => word2 + capitalize(suffix), remap = (type2) => {
+      const store = {};
       switch (type2) {
         case "decorator":
-          for (let key in this.singleton.decorator)
+          for (const key in this.singleton.decorator)
             store[joinKey(word, key)] = this.singleton.decorator[key];
           this.singleton.decorator = store;
           break;
         case "state":
-          for (let key in this.singleton.store)
+          for (const key in this.singleton.store)
             store[joinKey(word, key)] = this.singleton.store[key];
           this.singleton.store = store;
           break;
         case "model":
-          for (let key in this.definitions.type)
+          for (const key in this.definitions.type)
             store[joinKey(word, key)] = this.definitions.type[key];
           this.definitions.type = store;
           break;
         case "error":
-          for (let key in this.definitions.error)
+          for (const key in this.definitions.error)
             store[joinKey(word, key)] = this.definitions.error[key];
           this.definitions.error = store;
           break;
       }
     }, types = Array.isArray(type) ? type : [type];
-    for (let type2 of types.some((x) => x === "all") ? ["decorator", "state", "model", "error"] : types)
+    for (const type2 of types.some((x) => x === "all") ? ["decorator", "state", "model", "error"] : types)
       remap(type2);
     return this;
   }
@@ -28217,36 +28972,16 @@ class Elysia {
     return this.affix("suffix", type, word);
   }
   compile() {
-    if (this["~adapter"].beforeCompile?.(this), this["~adapter"].isWebStandard) {
-      if (this.fetch = this.config.aot ? composeGeneralHandler(this) : createDynamicHandler(this), typeof this.server?.reload === "function")
-        this.server.reload({ ...this.server || {}, fetch: this.fetch });
-      return this;
-    }
-    if (typeof this.server?.reload === "function")
-      this.server.reload(this.server || {});
-    return this._handle = composeGeneralHandler(this), this;
+    return this["~adapter"].beforeCompile?.(this), this["~adapter"].isWebStandard ? (this.fetch = this.config.aot ? composeGeneralHandler(this) : createDynamicHandler(this), typeof this.server?.reload == "function" && this.server.reload({
+      ...this.server || {},
+      fetch: this.fetch
+    }), this) : (typeof this.server?.reload == "function" && this.server.reload(this.server || {}), this._handle = composeGeneralHandler(this), this);
   }
-  handle = async (request) => this.fetch(request);
-  fetch = (request) => {
-    return (this.fetch = this.config.aot ? composeGeneralHandler(this) : createDynamicHandler(this))(request);
-  };
-  handleError = async (context, error) => {
-    return (this.handleError = this.config.aot ? composeErrorHandler(this) : createDynamicErrorHandler(this))(context, error);
-  };
-  listen = (options2, callback) => {
-    return this["~adapter"].listen(this)(options2, callback), this;
-  };
-  stop = async (closeActiveConnections) => {
-    return await this["~adapter"].stop?.(this, closeActiveConnections), this;
-  };
-  [Symbol.dispose] = () => {
-    if (this.server)
-      this.stop();
-  };
   get modules() {
     return this.promisedModules;
   }
-}
+};
+var Elysia = _Elysia;
 
 // node_modules/@elysiajs/cors/dist/index.mjs
 var isBun3 = typeof new Headers()?.toJSON === "function";
@@ -28255,7 +28990,7 @@ var processHeaders = (headers) => {
     return Object.keys(headers.toJSON()).join(", ");
   let keys = "";
   let i = 0;
-  headers.forEach((_2, key) => {
+  headers.forEach((_, key) => {
     if (i)
       keys = keys + ", " + key;
     else
@@ -28393,12 +29128,12 @@ var cors = (config) => {
 var index_default = cors;
 
 // node_modules/@elysiajs/static/dist/index.mjs
-var import_fast_decode_uri_component5 = __toESM(require_fast_decode_uri_component2(), 1);
+var import_fast_decode_uri_component5 = __toESM(require_fast_decode_uri_component(), 1);
 
 // node_modules/@elysiajs/static/dist/utils.mjs
 var fs;
 var path;
-var isBun5 = typeof Bun < "u" && !!Bun.file;
+var isBun4 = typeof Bun < "u" && !!Bun.file;
 function getBuiltinModule() {
   if (fs || (fs = process.getBuiltinModule("fs/promises")), path || (path = process.getBuiltinModule("path")), !path) {
     console.warn("@elysiajs/static require path to be available.");
@@ -28407,25 +29142,25 @@ function getBuiltinModule() {
   return [fs, path];
 }
 async function listHTMLFiles(dir) {
-  if (fs || getBuiltinModule(), isBun5) {
+  if (fs || getBuiltinModule(), isBun4) {
     const glob = new Bun.Glob("**/*.html"), files = [];
-    for await (const file of glob.scan(dir))
-      files.push(path.join(dir, file));
+    for await (const file2 of glob.scan(dir))
+      files.push(path.join(dir, file2));
     return files;
   }
   return [];
 }
 async function listFiles(dir) {
-  if (fs || getBuiltinModule(), isBun5) {
+  if (fs || getBuiltinModule(), isBun4) {
     const glob = new Bun.Glob("**/*"), files2 = [];
-    for await (const file of glob.scan(dir))
-      files2.push(path.join(dir, file));
+    for await (const file2 of glob.scan(dir))
+      files2.push(path.join(dir, file2));
     return files2;
   }
   const files = await fs.readdir(dir).catch(() => []);
   return (await Promise.all(files.map(async (name) => {
-    const file = dir + path.sep + name, stats = await fs.stat(file).catch(() => null);
-    return stats ? stats.isDirectory() ? await listFiles(file) : [path.resolve(dir, file)] : [];
+    const file2 = dir + path.sep + name, stats = await fs.stat(file2).catch(() => null);
+    return stats ? stats.isDirectory() ? await listFiles(file2) : [path.resolve(dir, file2)] : [];
   }))).flat();
 }
 function fileExists(path2) {
@@ -28489,15 +29224,15 @@ function isCached(headers, etag, filePath) {
 }
 var Crypto;
 function getFile(path2) {
-  return isBun5 ? Bun.file(path2) : (fs || getBuiltinModule(), fs.readFile(path2));
+  return isBun4 ? Bun.file(path2) : (fs || getBuiltinModule(), fs.readFile(path2));
 }
-async function generateETag(file) {
-  return isBun5 ? new Bun.CryptoHasher("md5").update(await file.arrayBuffer()).digest("base64") : (Crypto || (Crypto = process.getBuiltinModule("crypto")), Crypto ? Crypto.createHash("md5").update(file).digest("base64") : void console.warn("[@elysiajs/static] crypto is required to generate etag."));
+async function generateETag(file2) {
+  return isBun4 ? new Bun.CryptoHasher("md5").update(await file2.arrayBuffer()).digest("base64") : (Crypto || (Crypto = process.getBuiltinModule("crypto")), Crypto ? Crypto.createHash("md5").update(file2).digest("base64") : void console.warn("[@elysiajs/static] crypto is required to generate etag."));
 }
 var isNotEmpty2 = (obj) => {
   if (!obj)
     return false;
-  for (const _2 in obj)
+  for (const _ in obj)
     return true;
   return false;
 };
@@ -28525,7 +29260,7 @@ async function staticPlugin({
     return new Elysia;
   const [fs2, path2] = builtinModule, normalizePath = path2.sep !== "/" ? (p) => p.replace(/\\/g, "/") : (p) => p, fileCache = new LRUCache;
   prefix === path2.sep && (prefix = "");
-  const assetsDir = path2.resolve(assets), shouldIgnore = ignorePatterns.length ? (file) => ignorePatterns.find((pattern) => typeof pattern == "string" ? pattern.includes(file) : pattern.test(file)) : () => false, app = new Elysia({
+  const assetsDir = path2.resolve(assets), shouldIgnore = ignorePatterns.length ? (file2) => ignorePatterns.find((pattern) => typeof pattern == "string" ? pattern.includes(file2) : pattern.test(file2)) : () => false, app = new Elysia({
     name: "static",
     seed: prefix
   });
@@ -28551,7 +29286,7 @@ async function staticPlugin({
                     status: 304,
                     headers: initialHeaders || undefined
                   });
-                const response2 = new Response(file, {
+                const response2 = new Response(file2, {
                   headers: Object.assign({
                     "Cache-Control": maxAge ? `${directive}, max-age=${maxAge}` : directive
                   }, initialHeaders, etag ? { Etag: etag } : {})
@@ -28563,7 +29298,7 @@ async function staticPlugin({
           const cache = fileCache.get(pathName);
           if (cache)
             return cache.clone();
-          const response = new Response(file, {
+          const response = new Response(file2, {
             headers: Object.assign({
               "Cache-Control": maxAge ? `${directive}, max-age=${maxAge}` : directive
             }, initialHeaders, etag ? { Etag: etag } : {})
@@ -28576,26 +29311,26 @@ async function staticPlugin({
         let relativePath = absolutePath.replace(assetsDir, "");
         decodeURI && (relativePath = import_fast_decode_uri_component5.default(relativePath) ?? relativePath);
         let pathName = normalizePath(path2.join(prefix, relativePath));
-        if (isBun5 && absolutePath.endsWith(".html")) {
+        if (isBun4 && absolutePath.endsWith(".html")) {
           const htmlBundle = await import(absolutePath);
           app.get(pathName, htmlBundle.default), indexHTML && pathName.endsWith("/index.html") && app.get(pathName.replace("/index.html", ""), htmlBundle.default);
           continue;
         }
         extension || (pathName = normalizePath(pathName.slice(0, pathName.lastIndexOf("."))));
-        const file = isBun5 ? getFile(absolutePath) : await getFile(absolutePath);
-        if (!file)
+        const file2 = isBun4 ? getFile(absolutePath) : await getFile(absolutePath);
+        if (!file2)
           return silent || console.warn(`[@elysiajs/static] Failed to load file: ${absolutePath}`), new Elysia;
-        const etag = await generateETag(file);
-        app.get(pathName, useETag ? handleCache2 : new Response(file, isNotEmpty2(initialHeaders) ? {
+        const etag = await generateETag(file2);
+        app.get(pathName, useETag ? handleCache2 : new Response(file2, isNotEmpty2(initialHeaders) ? {
           headers: initialHeaders
-        } : undefined)), indexHTML && pathName.endsWith("/index.html") && app.get(pathName.replace("/index.html", ""), useETag ? handleCache2 : new Response(file, isNotEmpty2(initialHeaders) ? {
+        } : undefined)), indexHTML && pathName.endsWith("/index.html") && app.get(pathName.replace("/index.html", ""), useETag ? handleCache2 : new Response(file2, isNotEmpty2(initialHeaders) ? {
           headers: initialHeaders
         } : undefined));
       }
     return app;
   }
   if (!(`GET_${prefix}/*` in app.routeTree)) {
-    if (isBun5) {
+    if (isBun4) {
       const htmls = await listHTMLFiles(path2.resolve(assets));
       for (const absolutePath of htmls) {
         if (!absolutePath || shouldIgnore(absolutePath))
@@ -28618,25 +29353,25 @@ async function staticPlugin({
           throw new NotFoundError;
         if (!indexHTML && fileStat.isDirectory())
           throw new NotFoundError;
-        let file;
-        if (!isBun5 && indexHTML) {
+        let file2;
+        if (!isBun4 && indexHTML) {
           const htmlPath = path2.join(pathName, "index.html"), cache2 = fileCache.get(htmlPath);
           if (cache2)
             return cache2.clone();
-          await fileExists(htmlPath) && (file = await getFile(htmlPath));
+          await fileExists(htmlPath) && (file2 = await getFile(htmlPath));
         }
-        if (!file && !fileStat.isDirectory() && await fileExists(pathName))
-          file = await getFile(pathName);
+        if (!file2 && !fileStat.isDirectory() && await fileExists(pathName))
+          file2 = await getFile(pathName);
         else
           throw new NotFoundError;
         if (!useETag)
-          return new Response(file, isNotEmpty2(initialHeaders) ? { headers: initialHeaders } : undefined);
-        const etag = await generateETag(file);
+          return new Response(file2, isNotEmpty2(initialHeaders) ? { headers: initialHeaders } : undefined);
+        const etag = await generateETag(file2);
         if (etag && await isCached(requestHeaders, etag, pathName))
           return new Response(null, {
             status: 304
           });
-        const response = new Response(file, {
+        const response = new Response(file2, {
           headers: Object.assign({
             "Cache-Control": maxAge ? `${directive}, max-age=${maxAge}` : directive
           }, initialHeaders, etag ? { Etag: etag } : {})
@@ -28718,2132 +29453,2132 @@ function node(value) {
 }
 // node_modules/character-entities/index.js
 var characterEntities = {
-  AElig: "\xC6",
+  AElig: "Æ",
   AMP: "&",
-  Aacute: "\xC1",
-  Abreve: "\u0102",
-  Acirc: "\xC2",
-  Acy: "\u0410",
+  Aacute: "Á",
+  Abreve: "Ă",
+  Acirc: "Â",
+  Acy: "А",
   Afr: "\uD835\uDD04",
-  Agrave: "\xC0",
-  Alpha: "\u0391",
-  Amacr: "\u0100",
-  And: "\u2A53",
-  Aogon: "\u0104",
+  Agrave: "À",
+  Alpha: "Α",
+  Amacr: "Ā",
+  And: "⩓",
+  Aogon: "Ą",
   Aopf: "\uD835\uDD38",
-  ApplyFunction: "\u2061",
-  Aring: "\xC5",
+  ApplyFunction: "⁡",
+  Aring: "Å",
   Ascr: "\uD835\uDC9C",
-  Assign: "\u2254",
-  Atilde: "\xC3",
-  Auml: "\xC4",
-  Backslash: "\u2216",
-  Barv: "\u2AE7",
-  Barwed: "\u2306",
-  Bcy: "\u0411",
-  Because: "\u2235",
-  Bernoullis: "\u212C",
-  Beta: "\u0392",
+  Assign: "≔",
+  Atilde: "Ã",
+  Auml: "Ä",
+  Backslash: "∖",
+  Barv: "⫧",
+  Barwed: "⌆",
+  Bcy: "Б",
+  Because: "∵",
+  Bernoullis: "ℬ",
+  Beta: "Β",
   Bfr: "\uD835\uDD05",
   Bopf: "\uD835\uDD39",
-  Breve: "\u02D8",
-  Bscr: "\u212C",
-  Bumpeq: "\u224E",
-  CHcy: "\u0427",
-  COPY: "\xA9",
-  Cacute: "\u0106",
-  Cap: "\u22D2",
-  CapitalDifferentialD: "\u2145",
-  Cayleys: "\u212D",
-  Ccaron: "\u010C",
-  Ccedil: "\xC7",
-  Ccirc: "\u0108",
-  Cconint: "\u2230",
-  Cdot: "\u010A",
-  Cedilla: "\xB8",
-  CenterDot: "\xB7",
-  Cfr: "\u212D",
-  Chi: "\u03A7",
-  CircleDot: "\u2299",
-  CircleMinus: "\u2296",
-  CirclePlus: "\u2295",
-  CircleTimes: "\u2297",
-  ClockwiseContourIntegral: "\u2232",
-  CloseCurlyDoubleQuote: "\u201D",
-  CloseCurlyQuote: "\u2019",
-  Colon: "\u2237",
-  Colone: "\u2A74",
-  Congruent: "\u2261",
-  Conint: "\u222F",
-  ContourIntegral: "\u222E",
-  Copf: "\u2102",
-  Coproduct: "\u2210",
-  CounterClockwiseContourIntegral: "\u2233",
-  Cross: "\u2A2F",
+  Breve: "˘",
+  Bscr: "ℬ",
+  Bumpeq: "≎",
+  CHcy: "Ч",
+  COPY: "©",
+  Cacute: "Ć",
+  Cap: "⋒",
+  CapitalDifferentialD: "ⅅ",
+  Cayleys: "ℭ",
+  Ccaron: "Č",
+  Ccedil: "Ç",
+  Ccirc: "Ĉ",
+  Cconint: "∰",
+  Cdot: "Ċ",
+  Cedilla: "¸",
+  CenterDot: "·",
+  Cfr: "ℭ",
+  Chi: "Χ",
+  CircleDot: "⊙",
+  CircleMinus: "⊖",
+  CirclePlus: "⊕",
+  CircleTimes: "⊗",
+  ClockwiseContourIntegral: "∲",
+  CloseCurlyDoubleQuote: "”",
+  CloseCurlyQuote: "’",
+  Colon: "∷",
+  Colone: "⩴",
+  Congruent: "≡",
+  Conint: "∯",
+  ContourIntegral: "∮",
+  Copf: "ℂ",
+  Coproduct: "∐",
+  CounterClockwiseContourIntegral: "∳",
+  Cross: "⨯",
   Cscr: "\uD835\uDC9E",
-  Cup: "\u22D3",
-  CupCap: "\u224D",
-  DD: "\u2145",
-  DDotrahd: "\u2911",
-  DJcy: "\u0402",
-  DScy: "\u0405",
-  DZcy: "\u040F",
-  Dagger: "\u2021",
-  Darr: "\u21A1",
-  Dashv: "\u2AE4",
-  Dcaron: "\u010E",
-  Dcy: "\u0414",
-  Del: "\u2207",
-  Delta: "\u0394",
+  Cup: "⋓",
+  CupCap: "≍",
+  DD: "ⅅ",
+  DDotrahd: "⤑",
+  DJcy: "Ђ",
+  DScy: "Ѕ",
+  DZcy: "Џ",
+  Dagger: "‡",
+  Darr: "↡",
+  Dashv: "⫤",
+  Dcaron: "Ď",
+  Dcy: "Д",
+  Del: "∇",
+  Delta: "Δ",
   Dfr: "\uD835\uDD07",
-  DiacriticalAcute: "\xB4",
-  DiacriticalDot: "\u02D9",
-  DiacriticalDoubleAcute: "\u02DD",
+  DiacriticalAcute: "´",
+  DiacriticalDot: "˙",
+  DiacriticalDoubleAcute: "˝",
   DiacriticalGrave: "`",
-  DiacriticalTilde: "\u02DC",
-  Diamond: "\u22C4",
-  DifferentialD: "\u2146",
+  DiacriticalTilde: "˜",
+  Diamond: "⋄",
+  DifferentialD: "ⅆ",
   Dopf: "\uD835\uDD3B",
-  Dot: "\xA8",
-  DotDot: "\u20DC",
-  DotEqual: "\u2250",
-  DoubleContourIntegral: "\u222F",
-  DoubleDot: "\xA8",
-  DoubleDownArrow: "\u21D3",
-  DoubleLeftArrow: "\u21D0",
-  DoubleLeftRightArrow: "\u21D4",
-  DoubleLeftTee: "\u2AE4",
-  DoubleLongLeftArrow: "\u27F8",
-  DoubleLongLeftRightArrow: "\u27FA",
-  DoubleLongRightArrow: "\u27F9",
-  DoubleRightArrow: "\u21D2",
-  DoubleRightTee: "\u22A8",
-  DoubleUpArrow: "\u21D1",
-  DoubleUpDownArrow: "\u21D5",
-  DoubleVerticalBar: "\u2225",
-  DownArrow: "\u2193",
-  DownArrowBar: "\u2913",
-  DownArrowUpArrow: "\u21F5",
-  DownBreve: "\u0311",
-  DownLeftRightVector: "\u2950",
-  DownLeftTeeVector: "\u295E",
-  DownLeftVector: "\u21BD",
-  DownLeftVectorBar: "\u2956",
-  DownRightTeeVector: "\u295F",
-  DownRightVector: "\u21C1",
-  DownRightVectorBar: "\u2957",
-  DownTee: "\u22A4",
-  DownTeeArrow: "\u21A7",
-  Downarrow: "\u21D3",
+  Dot: "¨",
+  DotDot: "⃜",
+  DotEqual: "≐",
+  DoubleContourIntegral: "∯",
+  DoubleDot: "¨",
+  DoubleDownArrow: "⇓",
+  DoubleLeftArrow: "⇐",
+  DoubleLeftRightArrow: "⇔",
+  DoubleLeftTee: "⫤",
+  DoubleLongLeftArrow: "⟸",
+  DoubleLongLeftRightArrow: "⟺",
+  DoubleLongRightArrow: "⟹",
+  DoubleRightArrow: "⇒",
+  DoubleRightTee: "⊨",
+  DoubleUpArrow: "⇑",
+  DoubleUpDownArrow: "⇕",
+  DoubleVerticalBar: "∥",
+  DownArrow: "↓",
+  DownArrowBar: "⤓",
+  DownArrowUpArrow: "⇵",
+  DownBreve: "̑",
+  DownLeftRightVector: "⥐",
+  DownLeftTeeVector: "⥞",
+  DownLeftVector: "↽",
+  DownLeftVectorBar: "⥖",
+  DownRightTeeVector: "⥟",
+  DownRightVector: "⇁",
+  DownRightVectorBar: "⥗",
+  DownTee: "⊤",
+  DownTeeArrow: "↧",
+  Downarrow: "⇓",
   Dscr: "\uD835\uDC9F",
-  Dstrok: "\u0110",
-  ENG: "\u014A",
-  ETH: "\xD0",
-  Eacute: "\xC9",
-  Ecaron: "\u011A",
-  Ecirc: "\xCA",
-  Ecy: "\u042D",
-  Edot: "\u0116",
+  Dstrok: "Đ",
+  ENG: "Ŋ",
+  ETH: "Ð",
+  Eacute: "É",
+  Ecaron: "Ě",
+  Ecirc: "Ê",
+  Ecy: "Э",
+  Edot: "Ė",
   Efr: "\uD835\uDD08",
-  Egrave: "\xC8",
-  Element: "\u2208",
-  Emacr: "\u0112",
-  EmptySmallSquare: "\u25FB",
-  EmptyVerySmallSquare: "\u25AB",
-  Eogon: "\u0118",
+  Egrave: "È",
+  Element: "∈",
+  Emacr: "Ē",
+  EmptySmallSquare: "◻",
+  EmptyVerySmallSquare: "▫",
+  Eogon: "Ę",
   Eopf: "\uD835\uDD3C",
-  Epsilon: "\u0395",
-  Equal: "\u2A75",
-  EqualTilde: "\u2242",
-  Equilibrium: "\u21CC",
-  Escr: "\u2130",
-  Esim: "\u2A73",
-  Eta: "\u0397",
-  Euml: "\xCB",
-  Exists: "\u2203",
-  ExponentialE: "\u2147",
-  Fcy: "\u0424",
+  Epsilon: "Ε",
+  Equal: "⩵",
+  EqualTilde: "≂",
+  Equilibrium: "⇌",
+  Escr: "ℰ",
+  Esim: "⩳",
+  Eta: "Η",
+  Euml: "Ë",
+  Exists: "∃",
+  ExponentialE: "ⅇ",
+  Fcy: "Ф",
   Ffr: "\uD835\uDD09",
-  FilledSmallSquare: "\u25FC",
-  FilledVerySmallSquare: "\u25AA",
+  FilledSmallSquare: "◼",
+  FilledVerySmallSquare: "▪",
   Fopf: "\uD835\uDD3D",
-  ForAll: "\u2200",
-  Fouriertrf: "\u2131",
-  Fscr: "\u2131",
-  GJcy: "\u0403",
+  ForAll: "∀",
+  Fouriertrf: "ℱ",
+  Fscr: "ℱ",
+  GJcy: "Ѓ",
   GT: ">",
-  Gamma: "\u0393",
-  Gammad: "\u03DC",
-  Gbreve: "\u011E",
-  Gcedil: "\u0122",
-  Gcirc: "\u011C",
-  Gcy: "\u0413",
-  Gdot: "\u0120",
+  Gamma: "Γ",
+  Gammad: "Ϝ",
+  Gbreve: "Ğ",
+  Gcedil: "Ģ",
+  Gcirc: "Ĝ",
+  Gcy: "Г",
+  Gdot: "Ġ",
   Gfr: "\uD835\uDD0A",
-  Gg: "\u22D9",
+  Gg: "⋙",
   Gopf: "\uD835\uDD3E",
-  GreaterEqual: "\u2265",
-  GreaterEqualLess: "\u22DB",
-  GreaterFullEqual: "\u2267",
-  GreaterGreater: "\u2AA2",
-  GreaterLess: "\u2277",
-  GreaterSlantEqual: "\u2A7E",
-  GreaterTilde: "\u2273",
+  GreaterEqual: "≥",
+  GreaterEqualLess: "⋛",
+  GreaterFullEqual: "≧",
+  GreaterGreater: "⪢",
+  GreaterLess: "≷",
+  GreaterSlantEqual: "⩾",
+  GreaterTilde: "≳",
   Gscr: "\uD835\uDCA2",
-  Gt: "\u226B",
-  HARDcy: "\u042A",
-  Hacek: "\u02C7",
+  Gt: "≫",
+  HARDcy: "Ъ",
+  Hacek: "ˇ",
   Hat: "^",
-  Hcirc: "\u0124",
-  Hfr: "\u210C",
-  HilbertSpace: "\u210B",
-  Hopf: "\u210D",
-  HorizontalLine: "\u2500",
-  Hscr: "\u210B",
-  Hstrok: "\u0126",
-  HumpDownHump: "\u224E",
-  HumpEqual: "\u224F",
-  IEcy: "\u0415",
-  IJlig: "\u0132",
-  IOcy: "\u0401",
-  Iacute: "\xCD",
-  Icirc: "\xCE",
-  Icy: "\u0418",
-  Idot: "\u0130",
-  Ifr: "\u2111",
-  Igrave: "\xCC",
-  Im: "\u2111",
-  Imacr: "\u012A",
-  ImaginaryI: "\u2148",
-  Implies: "\u21D2",
-  Int: "\u222C",
-  Integral: "\u222B",
-  Intersection: "\u22C2",
-  InvisibleComma: "\u2063",
-  InvisibleTimes: "\u2062",
-  Iogon: "\u012E",
+  Hcirc: "Ĥ",
+  Hfr: "ℌ",
+  HilbertSpace: "ℋ",
+  Hopf: "ℍ",
+  HorizontalLine: "─",
+  Hscr: "ℋ",
+  Hstrok: "Ħ",
+  HumpDownHump: "≎",
+  HumpEqual: "≏",
+  IEcy: "Е",
+  IJlig: "Ĳ",
+  IOcy: "Ё",
+  Iacute: "Í",
+  Icirc: "Î",
+  Icy: "И",
+  Idot: "İ",
+  Ifr: "ℑ",
+  Igrave: "Ì",
+  Im: "ℑ",
+  Imacr: "Ī",
+  ImaginaryI: "ⅈ",
+  Implies: "⇒",
+  Int: "∬",
+  Integral: "∫",
+  Intersection: "⋂",
+  InvisibleComma: "⁣",
+  InvisibleTimes: "⁢",
+  Iogon: "Į",
   Iopf: "\uD835\uDD40",
-  Iota: "\u0399",
-  Iscr: "\u2110",
-  Itilde: "\u0128",
-  Iukcy: "\u0406",
-  Iuml: "\xCF",
-  Jcirc: "\u0134",
-  Jcy: "\u0419",
+  Iota: "Ι",
+  Iscr: "ℐ",
+  Itilde: "Ĩ",
+  Iukcy: "І",
+  Iuml: "Ï",
+  Jcirc: "Ĵ",
+  Jcy: "Й",
   Jfr: "\uD835\uDD0D",
   Jopf: "\uD835\uDD41",
   Jscr: "\uD835\uDCA5",
-  Jsercy: "\u0408",
-  Jukcy: "\u0404",
-  KHcy: "\u0425",
-  KJcy: "\u040C",
-  Kappa: "\u039A",
-  Kcedil: "\u0136",
-  Kcy: "\u041A",
+  Jsercy: "Ј",
+  Jukcy: "Є",
+  KHcy: "Х",
+  KJcy: "Ќ",
+  Kappa: "Κ",
+  Kcedil: "Ķ",
+  Kcy: "К",
   Kfr: "\uD835\uDD0E",
   Kopf: "\uD835\uDD42",
   Kscr: "\uD835\uDCA6",
-  LJcy: "\u0409",
+  LJcy: "Љ",
   LT: "<",
-  Lacute: "\u0139",
-  Lambda: "\u039B",
-  Lang: "\u27EA",
-  Laplacetrf: "\u2112",
-  Larr: "\u219E",
-  Lcaron: "\u013D",
-  Lcedil: "\u013B",
-  Lcy: "\u041B",
-  LeftAngleBracket: "\u27E8",
-  LeftArrow: "\u2190",
-  LeftArrowBar: "\u21E4",
-  LeftArrowRightArrow: "\u21C6",
-  LeftCeiling: "\u2308",
-  LeftDoubleBracket: "\u27E6",
-  LeftDownTeeVector: "\u2961",
-  LeftDownVector: "\u21C3",
-  LeftDownVectorBar: "\u2959",
-  LeftFloor: "\u230A",
-  LeftRightArrow: "\u2194",
-  LeftRightVector: "\u294E",
-  LeftTee: "\u22A3",
-  LeftTeeArrow: "\u21A4",
-  LeftTeeVector: "\u295A",
-  LeftTriangle: "\u22B2",
-  LeftTriangleBar: "\u29CF",
-  LeftTriangleEqual: "\u22B4",
-  LeftUpDownVector: "\u2951",
-  LeftUpTeeVector: "\u2960",
-  LeftUpVector: "\u21BF",
-  LeftUpVectorBar: "\u2958",
-  LeftVector: "\u21BC",
-  LeftVectorBar: "\u2952",
-  Leftarrow: "\u21D0",
-  Leftrightarrow: "\u21D4",
-  LessEqualGreater: "\u22DA",
-  LessFullEqual: "\u2266",
-  LessGreater: "\u2276",
-  LessLess: "\u2AA1",
-  LessSlantEqual: "\u2A7D",
-  LessTilde: "\u2272",
+  Lacute: "Ĺ",
+  Lambda: "Λ",
+  Lang: "⟪",
+  Laplacetrf: "ℒ",
+  Larr: "↞",
+  Lcaron: "Ľ",
+  Lcedil: "Ļ",
+  Lcy: "Л",
+  LeftAngleBracket: "⟨",
+  LeftArrow: "←",
+  LeftArrowBar: "⇤",
+  LeftArrowRightArrow: "⇆",
+  LeftCeiling: "⌈",
+  LeftDoubleBracket: "⟦",
+  LeftDownTeeVector: "⥡",
+  LeftDownVector: "⇃",
+  LeftDownVectorBar: "⥙",
+  LeftFloor: "⌊",
+  LeftRightArrow: "↔",
+  LeftRightVector: "⥎",
+  LeftTee: "⊣",
+  LeftTeeArrow: "↤",
+  LeftTeeVector: "⥚",
+  LeftTriangle: "⊲",
+  LeftTriangleBar: "⧏",
+  LeftTriangleEqual: "⊴",
+  LeftUpDownVector: "⥑",
+  LeftUpTeeVector: "⥠",
+  LeftUpVector: "↿",
+  LeftUpVectorBar: "⥘",
+  LeftVector: "↼",
+  LeftVectorBar: "⥒",
+  Leftarrow: "⇐",
+  Leftrightarrow: "⇔",
+  LessEqualGreater: "⋚",
+  LessFullEqual: "≦",
+  LessGreater: "≶",
+  LessLess: "⪡",
+  LessSlantEqual: "⩽",
+  LessTilde: "≲",
   Lfr: "\uD835\uDD0F",
-  Ll: "\u22D8",
-  Lleftarrow: "\u21DA",
-  Lmidot: "\u013F",
-  LongLeftArrow: "\u27F5",
-  LongLeftRightArrow: "\u27F7",
-  LongRightArrow: "\u27F6",
-  Longleftarrow: "\u27F8",
-  Longleftrightarrow: "\u27FA",
-  Longrightarrow: "\u27F9",
+  Ll: "⋘",
+  Lleftarrow: "⇚",
+  Lmidot: "Ŀ",
+  LongLeftArrow: "⟵",
+  LongLeftRightArrow: "⟷",
+  LongRightArrow: "⟶",
+  Longleftarrow: "⟸",
+  Longleftrightarrow: "⟺",
+  Longrightarrow: "⟹",
   Lopf: "\uD835\uDD43",
-  LowerLeftArrow: "\u2199",
-  LowerRightArrow: "\u2198",
-  Lscr: "\u2112",
-  Lsh: "\u21B0",
-  Lstrok: "\u0141",
-  Lt: "\u226A",
-  Map: "\u2905",
-  Mcy: "\u041C",
-  MediumSpace: "\u205F",
-  Mellintrf: "\u2133",
+  LowerLeftArrow: "↙",
+  LowerRightArrow: "↘",
+  Lscr: "ℒ",
+  Lsh: "↰",
+  Lstrok: "Ł",
+  Lt: "≪",
+  Map: "⤅",
+  Mcy: "М",
+  MediumSpace: " ",
+  Mellintrf: "ℳ",
   Mfr: "\uD835\uDD10",
-  MinusPlus: "\u2213",
+  MinusPlus: "∓",
   Mopf: "\uD835\uDD44",
-  Mscr: "\u2133",
-  Mu: "\u039C",
-  NJcy: "\u040A",
-  Nacute: "\u0143",
-  Ncaron: "\u0147",
-  Ncedil: "\u0145",
-  Ncy: "\u041D",
-  NegativeMediumSpace: "\u200B",
-  NegativeThickSpace: "\u200B",
-  NegativeThinSpace: "\u200B",
-  NegativeVeryThinSpace: "\u200B",
-  NestedGreaterGreater: "\u226B",
-  NestedLessLess: "\u226A",
+  Mscr: "ℳ",
+  Mu: "Μ",
+  NJcy: "Њ",
+  Nacute: "Ń",
+  Ncaron: "Ň",
+  Ncedil: "Ņ",
+  Ncy: "Н",
+  NegativeMediumSpace: "​",
+  NegativeThickSpace: "​",
+  NegativeThinSpace: "​",
+  NegativeVeryThinSpace: "​",
+  NestedGreaterGreater: "≫",
+  NestedLessLess: "≪",
   NewLine: `
 `,
   Nfr: "\uD835\uDD11",
-  NoBreak: "\u2060",
-  NonBreakingSpace: "\xA0",
-  Nopf: "\u2115",
-  Not: "\u2AEC",
-  NotCongruent: "\u2262",
-  NotCupCap: "\u226D",
-  NotDoubleVerticalBar: "\u2226",
-  NotElement: "\u2209",
-  NotEqual: "\u2260",
-  NotEqualTilde: "\u2242\u0338",
-  NotExists: "\u2204",
-  NotGreater: "\u226F",
-  NotGreaterEqual: "\u2271",
-  NotGreaterFullEqual: "\u2267\u0338",
-  NotGreaterGreater: "\u226B\u0338",
-  NotGreaterLess: "\u2279",
-  NotGreaterSlantEqual: "\u2A7E\u0338",
-  NotGreaterTilde: "\u2275",
-  NotHumpDownHump: "\u224E\u0338",
-  NotHumpEqual: "\u224F\u0338",
-  NotLeftTriangle: "\u22EA",
-  NotLeftTriangleBar: "\u29CF\u0338",
-  NotLeftTriangleEqual: "\u22EC",
-  NotLess: "\u226E",
-  NotLessEqual: "\u2270",
-  NotLessGreater: "\u2278",
-  NotLessLess: "\u226A\u0338",
-  NotLessSlantEqual: "\u2A7D\u0338",
-  NotLessTilde: "\u2274",
-  NotNestedGreaterGreater: "\u2AA2\u0338",
-  NotNestedLessLess: "\u2AA1\u0338",
-  NotPrecedes: "\u2280",
-  NotPrecedesEqual: "\u2AAF\u0338",
-  NotPrecedesSlantEqual: "\u22E0",
-  NotReverseElement: "\u220C",
-  NotRightTriangle: "\u22EB",
-  NotRightTriangleBar: "\u29D0\u0338",
-  NotRightTriangleEqual: "\u22ED",
-  NotSquareSubset: "\u228F\u0338",
-  NotSquareSubsetEqual: "\u22E2",
-  NotSquareSuperset: "\u2290\u0338",
-  NotSquareSupersetEqual: "\u22E3",
-  NotSubset: "\u2282\u20D2",
-  NotSubsetEqual: "\u2288",
-  NotSucceeds: "\u2281",
-  NotSucceedsEqual: "\u2AB0\u0338",
-  NotSucceedsSlantEqual: "\u22E1",
-  NotSucceedsTilde: "\u227F\u0338",
-  NotSuperset: "\u2283\u20D2",
-  NotSupersetEqual: "\u2289",
-  NotTilde: "\u2241",
-  NotTildeEqual: "\u2244",
-  NotTildeFullEqual: "\u2247",
-  NotTildeTilde: "\u2249",
-  NotVerticalBar: "\u2224",
+  NoBreak: "⁠",
+  NonBreakingSpace: " ",
+  Nopf: "ℕ",
+  Not: "⫬",
+  NotCongruent: "≢",
+  NotCupCap: "≭",
+  NotDoubleVerticalBar: "∦",
+  NotElement: "∉",
+  NotEqual: "≠",
+  NotEqualTilde: "≂̸",
+  NotExists: "∄",
+  NotGreater: "≯",
+  NotGreaterEqual: "≱",
+  NotGreaterFullEqual: "≧̸",
+  NotGreaterGreater: "≫̸",
+  NotGreaterLess: "≹",
+  NotGreaterSlantEqual: "⩾̸",
+  NotGreaterTilde: "≵",
+  NotHumpDownHump: "≎̸",
+  NotHumpEqual: "≏̸",
+  NotLeftTriangle: "⋪",
+  NotLeftTriangleBar: "⧏̸",
+  NotLeftTriangleEqual: "⋬",
+  NotLess: "≮",
+  NotLessEqual: "≰",
+  NotLessGreater: "≸",
+  NotLessLess: "≪̸",
+  NotLessSlantEqual: "⩽̸",
+  NotLessTilde: "≴",
+  NotNestedGreaterGreater: "⪢̸",
+  NotNestedLessLess: "⪡̸",
+  NotPrecedes: "⊀",
+  NotPrecedesEqual: "⪯̸",
+  NotPrecedesSlantEqual: "⋠",
+  NotReverseElement: "∌",
+  NotRightTriangle: "⋫",
+  NotRightTriangleBar: "⧐̸",
+  NotRightTriangleEqual: "⋭",
+  NotSquareSubset: "⊏̸",
+  NotSquareSubsetEqual: "⋢",
+  NotSquareSuperset: "⊐̸",
+  NotSquareSupersetEqual: "⋣",
+  NotSubset: "⊂⃒",
+  NotSubsetEqual: "⊈",
+  NotSucceeds: "⊁",
+  NotSucceedsEqual: "⪰̸",
+  NotSucceedsSlantEqual: "⋡",
+  NotSucceedsTilde: "≿̸",
+  NotSuperset: "⊃⃒",
+  NotSupersetEqual: "⊉",
+  NotTilde: "≁",
+  NotTildeEqual: "≄",
+  NotTildeFullEqual: "≇",
+  NotTildeTilde: "≉",
+  NotVerticalBar: "∤",
   Nscr: "\uD835\uDCA9",
-  Ntilde: "\xD1",
-  Nu: "\u039D",
-  OElig: "\u0152",
-  Oacute: "\xD3",
-  Ocirc: "\xD4",
-  Ocy: "\u041E",
-  Odblac: "\u0150",
+  Ntilde: "Ñ",
+  Nu: "Ν",
+  OElig: "Œ",
+  Oacute: "Ó",
+  Ocirc: "Ô",
+  Ocy: "О",
+  Odblac: "Ő",
   Ofr: "\uD835\uDD12",
-  Ograve: "\xD2",
-  Omacr: "\u014C",
-  Omega: "\u03A9",
-  Omicron: "\u039F",
+  Ograve: "Ò",
+  Omacr: "Ō",
+  Omega: "Ω",
+  Omicron: "Ο",
   Oopf: "\uD835\uDD46",
-  OpenCurlyDoubleQuote: "\u201C",
-  OpenCurlyQuote: "\u2018",
-  Or: "\u2A54",
+  OpenCurlyDoubleQuote: "“",
+  OpenCurlyQuote: "‘",
+  Or: "⩔",
   Oscr: "\uD835\uDCAA",
-  Oslash: "\xD8",
-  Otilde: "\xD5",
-  Otimes: "\u2A37",
-  Ouml: "\xD6",
-  OverBar: "\u203E",
-  OverBrace: "\u23DE",
-  OverBracket: "\u23B4",
-  OverParenthesis: "\u23DC",
-  PartialD: "\u2202",
-  Pcy: "\u041F",
+  Oslash: "Ø",
+  Otilde: "Õ",
+  Otimes: "⨷",
+  Ouml: "Ö",
+  OverBar: "‾",
+  OverBrace: "⏞",
+  OverBracket: "⎴",
+  OverParenthesis: "⏜",
+  PartialD: "∂",
+  Pcy: "П",
   Pfr: "\uD835\uDD13",
-  Phi: "\u03A6",
-  Pi: "\u03A0",
-  PlusMinus: "\xB1",
-  Poincareplane: "\u210C",
-  Popf: "\u2119",
-  Pr: "\u2ABB",
-  Precedes: "\u227A",
-  PrecedesEqual: "\u2AAF",
-  PrecedesSlantEqual: "\u227C",
-  PrecedesTilde: "\u227E",
-  Prime: "\u2033",
-  Product: "\u220F",
-  Proportion: "\u2237",
-  Proportional: "\u221D",
+  Phi: "Φ",
+  Pi: "Π",
+  PlusMinus: "±",
+  Poincareplane: "ℌ",
+  Popf: "ℙ",
+  Pr: "⪻",
+  Precedes: "≺",
+  PrecedesEqual: "⪯",
+  PrecedesSlantEqual: "≼",
+  PrecedesTilde: "≾",
+  Prime: "″",
+  Product: "∏",
+  Proportion: "∷",
+  Proportional: "∝",
   Pscr: "\uD835\uDCAB",
-  Psi: "\u03A8",
+  Psi: "Ψ",
   QUOT: '"',
   Qfr: "\uD835\uDD14",
-  Qopf: "\u211A",
+  Qopf: "ℚ",
   Qscr: "\uD835\uDCAC",
-  RBarr: "\u2910",
-  REG: "\xAE",
-  Racute: "\u0154",
-  Rang: "\u27EB",
-  Rarr: "\u21A0",
-  Rarrtl: "\u2916",
-  Rcaron: "\u0158",
-  Rcedil: "\u0156",
-  Rcy: "\u0420",
-  Re: "\u211C",
-  ReverseElement: "\u220B",
-  ReverseEquilibrium: "\u21CB",
-  ReverseUpEquilibrium: "\u296F",
-  Rfr: "\u211C",
-  Rho: "\u03A1",
-  RightAngleBracket: "\u27E9",
-  RightArrow: "\u2192",
-  RightArrowBar: "\u21E5",
-  RightArrowLeftArrow: "\u21C4",
-  RightCeiling: "\u2309",
-  RightDoubleBracket: "\u27E7",
-  RightDownTeeVector: "\u295D",
-  RightDownVector: "\u21C2",
-  RightDownVectorBar: "\u2955",
-  RightFloor: "\u230B",
-  RightTee: "\u22A2",
-  RightTeeArrow: "\u21A6",
-  RightTeeVector: "\u295B",
-  RightTriangle: "\u22B3",
-  RightTriangleBar: "\u29D0",
-  RightTriangleEqual: "\u22B5",
-  RightUpDownVector: "\u294F",
-  RightUpTeeVector: "\u295C",
-  RightUpVector: "\u21BE",
-  RightUpVectorBar: "\u2954",
-  RightVector: "\u21C0",
-  RightVectorBar: "\u2953",
-  Rightarrow: "\u21D2",
-  Ropf: "\u211D",
-  RoundImplies: "\u2970",
-  Rrightarrow: "\u21DB",
-  Rscr: "\u211B",
-  Rsh: "\u21B1",
-  RuleDelayed: "\u29F4",
-  SHCHcy: "\u0429",
-  SHcy: "\u0428",
-  SOFTcy: "\u042C",
-  Sacute: "\u015A",
-  Sc: "\u2ABC",
-  Scaron: "\u0160",
-  Scedil: "\u015E",
-  Scirc: "\u015C",
-  Scy: "\u0421",
+  RBarr: "⤐",
+  REG: "®",
+  Racute: "Ŕ",
+  Rang: "⟫",
+  Rarr: "↠",
+  Rarrtl: "⤖",
+  Rcaron: "Ř",
+  Rcedil: "Ŗ",
+  Rcy: "Р",
+  Re: "ℜ",
+  ReverseElement: "∋",
+  ReverseEquilibrium: "⇋",
+  ReverseUpEquilibrium: "⥯",
+  Rfr: "ℜ",
+  Rho: "Ρ",
+  RightAngleBracket: "⟩",
+  RightArrow: "→",
+  RightArrowBar: "⇥",
+  RightArrowLeftArrow: "⇄",
+  RightCeiling: "⌉",
+  RightDoubleBracket: "⟧",
+  RightDownTeeVector: "⥝",
+  RightDownVector: "⇂",
+  RightDownVectorBar: "⥕",
+  RightFloor: "⌋",
+  RightTee: "⊢",
+  RightTeeArrow: "↦",
+  RightTeeVector: "⥛",
+  RightTriangle: "⊳",
+  RightTriangleBar: "⧐",
+  RightTriangleEqual: "⊵",
+  RightUpDownVector: "⥏",
+  RightUpTeeVector: "⥜",
+  RightUpVector: "↾",
+  RightUpVectorBar: "⥔",
+  RightVector: "⇀",
+  RightVectorBar: "⥓",
+  Rightarrow: "⇒",
+  Ropf: "ℝ",
+  RoundImplies: "⥰",
+  Rrightarrow: "⇛",
+  Rscr: "ℛ",
+  Rsh: "↱",
+  RuleDelayed: "⧴",
+  SHCHcy: "Щ",
+  SHcy: "Ш",
+  SOFTcy: "Ь",
+  Sacute: "Ś",
+  Sc: "⪼",
+  Scaron: "Š",
+  Scedil: "Ş",
+  Scirc: "Ŝ",
+  Scy: "С",
   Sfr: "\uD835\uDD16",
-  ShortDownArrow: "\u2193",
-  ShortLeftArrow: "\u2190",
-  ShortRightArrow: "\u2192",
-  ShortUpArrow: "\u2191",
-  Sigma: "\u03A3",
-  SmallCircle: "\u2218",
+  ShortDownArrow: "↓",
+  ShortLeftArrow: "←",
+  ShortRightArrow: "→",
+  ShortUpArrow: "↑",
+  Sigma: "Σ",
+  SmallCircle: "∘",
   Sopf: "\uD835\uDD4A",
-  Sqrt: "\u221A",
-  Square: "\u25A1",
-  SquareIntersection: "\u2293",
-  SquareSubset: "\u228F",
-  SquareSubsetEqual: "\u2291",
-  SquareSuperset: "\u2290",
-  SquareSupersetEqual: "\u2292",
-  SquareUnion: "\u2294",
+  Sqrt: "√",
+  Square: "□",
+  SquareIntersection: "⊓",
+  SquareSubset: "⊏",
+  SquareSubsetEqual: "⊑",
+  SquareSuperset: "⊐",
+  SquareSupersetEqual: "⊒",
+  SquareUnion: "⊔",
   Sscr: "\uD835\uDCAE",
-  Star: "\u22C6",
-  Sub: "\u22D0",
-  Subset: "\u22D0",
-  SubsetEqual: "\u2286",
-  Succeeds: "\u227B",
-  SucceedsEqual: "\u2AB0",
-  SucceedsSlantEqual: "\u227D",
-  SucceedsTilde: "\u227F",
-  SuchThat: "\u220B",
-  Sum: "\u2211",
-  Sup: "\u22D1",
-  Superset: "\u2283",
-  SupersetEqual: "\u2287",
-  Supset: "\u22D1",
-  THORN: "\xDE",
-  TRADE: "\u2122",
-  TSHcy: "\u040B",
-  TScy: "\u0426",
+  Star: "⋆",
+  Sub: "⋐",
+  Subset: "⋐",
+  SubsetEqual: "⊆",
+  Succeeds: "≻",
+  SucceedsEqual: "⪰",
+  SucceedsSlantEqual: "≽",
+  SucceedsTilde: "≿",
+  SuchThat: "∋",
+  Sum: "∑",
+  Sup: "⋑",
+  Superset: "⊃",
+  SupersetEqual: "⊇",
+  Supset: "⋑",
+  THORN: "Þ",
+  TRADE: "™",
+  TSHcy: "Ћ",
+  TScy: "Ц",
   Tab: "\t",
-  Tau: "\u03A4",
-  Tcaron: "\u0164",
-  Tcedil: "\u0162",
-  Tcy: "\u0422",
+  Tau: "Τ",
+  Tcaron: "Ť",
+  Tcedil: "Ţ",
+  Tcy: "Т",
   Tfr: "\uD835\uDD17",
-  Therefore: "\u2234",
-  Theta: "\u0398",
-  ThickSpace: "\u205F\u200A",
-  ThinSpace: "\u2009",
-  Tilde: "\u223C",
-  TildeEqual: "\u2243",
-  TildeFullEqual: "\u2245",
-  TildeTilde: "\u2248",
+  Therefore: "∴",
+  Theta: "Θ",
+  ThickSpace: "  ",
+  ThinSpace: " ",
+  Tilde: "∼",
+  TildeEqual: "≃",
+  TildeFullEqual: "≅",
+  TildeTilde: "≈",
   Topf: "\uD835\uDD4B",
-  TripleDot: "\u20DB",
+  TripleDot: "⃛",
   Tscr: "\uD835\uDCAF",
-  Tstrok: "\u0166",
-  Uacute: "\xDA",
-  Uarr: "\u219F",
-  Uarrocir: "\u2949",
-  Ubrcy: "\u040E",
-  Ubreve: "\u016C",
-  Ucirc: "\xDB",
-  Ucy: "\u0423",
-  Udblac: "\u0170",
+  Tstrok: "Ŧ",
+  Uacute: "Ú",
+  Uarr: "↟",
+  Uarrocir: "⥉",
+  Ubrcy: "Ў",
+  Ubreve: "Ŭ",
+  Ucirc: "Û",
+  Ucy: "У",
+  Udblac: "Ű",
   Ufr: "\uD835\uDD18",
-  Ugrave: "\xD9",
-  Umacr: "\u016A",
+  Ugrave: "Ù",
+  Umacr: "Ū",
   UnderBar: "_",
-  UnderBrace: "\u23DF",
-  UnderBracket: "\u23B5",
-  UnderParenthesis: "\u23DD",
-  Union: "\u22C3",
-  UnionPlus: "\u228E",
-  Uogon: "\u0172",
+  UnderBrace: "⏟",
+  UnderBracket: "⎵",
+  UnderParenthesis: "⏝",
+  Union: "⋃",
+  UnionPlus: "⊎",
+  Uogon: "Ų",
   Uopf: "\uD835\uDD4C",
-  UpArrow: "\u2191",
-  UpArrowBar: "\u2912",
-  UpArrowDownArrow: "\u21C5",
-  UpDownArrow: "\u2195",
-  UpEquilibrium: "\u296E",
-  UpTee: "\u22A5",
-  UpTeeArrow: "\u21A5",
-  Uparrow: "\u21D1",
-  Updownarrow: "\u21D5",
-  UpperLeftArrow: "\u2196",
-  UpperRightArrow: "\u2197",
-  Upsi: "\u03D2",
-  Upsilon: "\u03A5",
-  Uring: "\u016E",
+  UpArrow: "↑",
+  UpArrowBar: "⤒",
+  UpArrowDownArrow: "⇅",
+  UpDownArrow: "↕",
+  UpEquilibrium: "⥮",
+  UpTee: "⊥",
+  UpTeeArrow: "↥",
+  Uparrow: "⇑",
+  Updownarrow: "⇕",
+  UpperLeftArrow: "↖",
+  UpperRightArrow: "↗",
+  Upsi: "ϒ",
+  Upsilon: "Υ",
+  Uring: "Ů",
   Uscr: "\uD835\uDCB0",
-  Utilde: "\u0168",
-  Uuml: "\xDC",
-  VDash: "\u22AB",
-  Vbar: "\u2AEB",
-  Vcy: "\u0412",
-  Vdash: "\u22A9",
-  Vdashl: "\u2AE6",
-  Vee: "\u22C1",
-  Verbar: "\u2016",
-  Vert: "\u2016",
-  VerticalBar: "\u2223",
+  Utilde: "Ũ",
+  Uuml: "Ü",
+  VDash: "⊫",
+  Vbar: "⫫",
+  Vcy: "В",
+  Vdash: "⊩",
+  Vdashl: "⫦",
+  Vee: "⋁",
+  Verbar: "‖",
+  Vert: "‖",
+  VerticalBar: "∣",
   VerticalLine: "|",
-  VerticalSeparator: "\u2758",
-  VerticalTilde: "\u2240",
-  VeryThinSpace: "\u200A",
+  VerticalSeparator: "❘",
+  VerticalTilde: "≀",
+  VeryThinSpace: " ",
   Vfr: "\uD835\uDD19",
   Vopf: "\uD835\uDD4D",
   Vscr: "\uD835\uDCB1",
-  Vvdash: "\u22AA",
-  Wcirc: "\u0174",
-  Wedge: "\u22C0",
+  Vvdash: "⊪",
+  Wcirc: "Ŵ",
+  Wedge: "⋀",
   Wfr: "\uD835\uDD1A",
   Wopf: "\uD835\uDD4E",
   Wscr: "\uD835\uDCB2",
   Xfr: "\uD835\uDD1B",
-  Xi: "\u039E",
+  Xi: "Ξ",
   Xopf: "\uD835\uDD4F",
   Xscr: "\uD835\uDCB3",
-  YAcy: "\u042F",
-  YIcy: "\u0407",
-  YUcy: "\u042E",
-  Yacute: "\xDD",
-  Ycirc: "\u0176",
-  Ycy: "\u042B",
+  YAcy: "Я",
+  YIcy: "Ї",
+  YUcy: "Ю",
+  Yacute: "Ý",
+  Ycirc: "Ŷ",
+  Ycy: "Ы",
   Yfr: "\uD835\uDD1C",
   Yopf: "\uD835\uDD50",
   Yscr: "\uD835\uDCB4",
-  Yuml: "\u0178",
-  ZHcy: "\u0416",
-  Zacute: "\u0179",
-  Zcaron: "\u017D",
-  Zcy: "\u0417",
-  Zdot: "\u017B",
-  ZeroWidthSpace: "\u200B",
-  Zeta: "\u0396",
-  Zfr: "\u2128",
-  Zopf: "\u2124",
+  Yuml: "Ÿ",
+  ZHcy: "Ж",
+  Zacute: "Ź",
+  Zcaron: "Ž",
+  Zcy: "З",
+  Zdot: "Ż",
+  ZeroWidthSpace: "​",
+  Zeta: "Ζ",
+  Zfr: "ℨ",
+  Zopf: "ℤ",
   Zscr: "\uD835\uDCB5",
-  aacute: "\xE1",
-  abreve: "\u0103",
-  ac: "\u223E",
-  acE: "\u223E\u0333",
-  acd: "\u223F",
-  acirc: "\xE2",
-  acute: "\xB4",
-  acy: "\u0430",
-  aelig: "\xE6",
-  af: "\u2061",
+  aacute: "á",
+  abreve: "ă",
+  ac: "∾",
+  acE: "∾̳",
+  acd: "∿",
+  acirc: "â",
+  acute: "´",
+  acy: "а",
+  aelig: "æ",
+  af: "⁡",
   afr: "\uD835\uDD1E",
-  agrave: "\xE0",
-  alefsym: "\u2135",
-  aleph: "\u2135",
-  alpha: "\u03B1",
-  amacr: "\u0101",
-  amalg: "\u2A3F",
+  agrave: "à",
+  alefsym: "ℵ",
+  aleph: "ℵ",
+  alpha: "α",
+  amacr: "ā",
+  amalg: "⨿",
   amp: "&",
-  and: "\u2227",
-  andand: "\u2A55",
-  andd: "\u2A5C",
-  andslope: "\u2A58",
-  andv: "\u2A5A",
-  ang: "\u2220",
-  ange: "\u29A4",
-  angle: "\u2220",
-  angmsd: "\u2221",
-  angmsdaa: "\u29A8",
-  angmsdab: "\u29A9",
-  angmsdac: "\u29AA",
-  angmsdad: "\u29AB",
-  angmsdae: "\u29AC",
-  angmsdaf: "\u29AD",
-  angmsdag: "\u29AE",
-  angmsdah: "\u29AF",
-  angrt: "\u221F",
-  angrtvb: "\u22BE",
-  angrtvbd: "\u299D",
-  angsph: "\u2222",
-  angst: "\xC5",
-  angzarr: "\u237C",
-  aogon: "\u0105",
+  and: "∧",
+  andand: "⩕",
+  andd: "⩜",
+  andslope: "⩘",
+  andv: "⩚",
+  ang: "∠",
+  ange: "⦤",
+  angle: "∠",
+  angmsd: "∡",
+  angmsdaa: "⦨",
+  angmsdab: "⦩",
+  angmsdac: "⦪",
+  angmsdad: "⦫",
+  angmsdae: "⦬",
+  angmsdaf: "⦭",
+  angmsdag: "⦮",
+  angmsdah: "⦯",
+  angrt: "∟",
+  angrtvb: "⊾",
+  angrtvbd: "⦝",
+  angsph: "∢",
+  angst: "Å",
+  angzarr: "⍼",
+  aogon: "ą",
   aopf: "\uD835\uDD52",
-  ap: "\u2248",
-  apE: "\u2A70",
-  apacir: "\u2A6F",
-  ape: "\u224A",
-  apid: "\u224B",
+  ap: "≈",
+  apE: "⩰",
+  apacir: "⩯",
+  ape: "≊",
+  apid: "≋",
   apos: "'",
-  approx: "\u2248",
-  approxeq: "\u224A",
-  aring: "\xE5",
+  approx: "≈",
+  approxeq: "≊",
+  aring: "å",
   ascr: "\uD835\uDCB6",
   ast: "*",
-  asymp: "\u2248",
-  asympeq: "\u224D",
-  atilde: "\xE3",
-  auml: "\xE4",
-  awconint: "\u2233",
-  awint: "\u2A11",
-  bNot: "\u2AED",
-  backcong: "\u224C",
-  backepsilon: "\u03F6",
-  backprime: "\u2035",
-  backsim: "\u223D",
-  backsimeq: "\u22CD",
-  barvee: "\u22BD",
-  barwed: "\u2305",
-  barwedge: "\u2305",
-  bbrk: "\u23B5",
-  bbrktbrk: "\u23B6",
-  bcong: "\u224C",
-  bcy: "\u0431",
-  bdquo: "\u201E",
-  becaus: "\u2235",
-  because: "\u2235",
-  bemptyv: "\u29B0",
-  bepsi: "\u03F6",
-  bernou: "\u212C",
-  beta: "\u03B2",
-  beth: "\u2136",
-  between: "\u226C",
+  asymp: "≈",
+  asympeq: "≍",
+  atilde: "ã",
+  auml: "ä",
+  awconint: "∳",
+  awint: "⨑",
+  bNot: "⫭",
+  backcong: "≌",
+  backepsilon: "϶",
+  backprime: "‵",
+  backsim: "∽",
+  backsimeq: "⋍",
+  barvee: "⊽",
+  barwed: "⌅",
+  barwedge: "⌅",
+  bbrk: "⎵",
+  bbrktbrk: "⎶",
+  bcong: "≌",
+  bcy: "б",
+  bdquo: "„",
+  becaus: "∵",
+  because: "∵",
+  bemptyv: "⦰",
+  bepsi: "϶",
+  bernou: "ℬ",
+  beta: "β",
+  beth: "ℶ",
+  between: "≬",
   bfr: "\uD835\uDD1F",
-  bigcap: "\u22C2",
-  bigcirc: "\u25EF",
-  bigcup: "\u22C3",
-  bigodot: "\u2A00",
-  bigoplus: "\u2A01",
-  bigotimes: "\u2A02",
-  bigsqcup: "\u2A06",
-  bigstar: "\u2605",
-  bigtriangledown: "\u25BD",
-  bigtriangleup: "\u25B3",
-  biguplus: "\u2A04",
-  bigvee: "\u22C1",
-  bigwedge: "\u22C0",
-  bkarow: "\u290D",
-  blacklozenge: "\u29EB",
-  blacksquare: "\u25AA",
-  blacktriangle: "\u25B4",
-  blacktriangledown: "\u25BE",
-  blacktriangleleft: "\u25C2",
-  blacktriangleright: "\u25B8",
-  blank: "\u2423",
-  blk12: "\u2592",
-  blk14: "\u2591",
-  blk34: "\u2593",
-  block: "\u2588",
-  bne: "=\u20E5",
-  bnequiv: "\u2261\u20E5",
-  bnot: "\u2310",
+  bigcap: "⋂",
+  bigcirc: "◯",
+  bigcup: "⋃",
+  bigodot: "⨀",
+  bigoplus: "⨁",
+  bigotimes: "⨂",
+  bigsqcup: "⨆",
+  bigstar: "★",
+  bigtriangledown: "▽",
+  bigtriangleup: "△",
+  biguplus: "⨄",
+  bigvee: "⋁",
+  bigwedge: "⋀",
+  bkarow: "⤍",
+  blacklozenge: "⧫",
+  blacksquare: "▪",
+  blacktriangle: "▴",
+  blacktriangledown: "▾",
+  blacktriangleleft: "◂",
+  blacktriangleright: "▸",
+  blank: "␣",
+  blk12: "▒",
+  blk14: "░",
+  blk34: "▓",
+  block: "█",
+  bne: "=⃥",
+  bnequiv: "≡⃥",
+  bnot: "⌐",
   bopf: "\uD835\uDD53",
-  bot: "\u22A5",
-  bottom: "\u22A5",
-  bowtie: "\u22C8",
-  boxDL: "\u2557",
-  boxDR: "\u2554",
-  boxDl: "\u2556",
-  boxDr: "\u2553",
-  boxH: "\u2550",
-  boxHD: "\u2566",
-  boxHU: "\u2569",
-  boxHd: "\u2564",
-  boxHu: "\u2567",
-  boxUL: "\u255D",
-  boxUR: "\u255A",
-  boxUl: "\u255C",
-  boxUr: "\u2559",
-  boxV: "\u2551",
-  boxVH: "\u256C",
-  boxVL: "\u2563",
-  boxVR: "\u2560",
-  boxVh: "\u256B",
-  boxVl: "\u2562",
-  boxVr: "\u255F",
-  boxbox: "\u29C9",
-  boxdL: "\u2555",
-  boxdR: "\u2552",
-  boxdl: "\u2510",
-  boxdr: "\u250C",
-  boxh: "\u2500",
-  boxhD: "\u2565",
-  boxhU: "\u2568",
-  boxhd: "\u252C",
-  boxhu: "\u2534",
-  boxminus: "\u229F",
-  boxplus: "\u229E",
-  boxtimes: "\u22A0",
-  boxuL: "\u255B",
-  boxuR: "\u2558",
-  boxul: "\u2518",
-  boxur: "\u2514",
-  boxv: "\u2502",
-  boxvH: "\u256A",
-  boxvL: "\u2561",
-  boxvR: "\u255E",
-  boxvh: "\u253C",
-  boxvl: "\u2524",
-  boxvr: "\u251C",
-  bprime: "\u2035",
-  breve: "\u02D8",
-  brvbar: "\xA6",
+  bot: "⊥",
+  bottom: "⊥",
+  bowtie: "⋈",
+  boxDL: "╗",
+  boxDR: "╔",
+  boxDl: "╖",
+  boxDr: "╓",
+  boxH: "═",
+  boxHD: "╦",
+  boxHU: "╩",
+  boxHd: "╤",
+  boxHu: "╧",
+  boxUL: "╝",
+  boxUR: "╚",
+  boxUl: "╜",
+  boxUr: "╙",
+  boxV: "║",
+  boxVH: "╬",
+  boxVL: "╣",
+  boxVR: "╠",
+  boxVh: "╫",
+  boxVl: "╢",
+  boxVr: "╟",
+  boxbox: "⧉",
+  boxdL: "╕",
+  boxdR: "╒",
+  boxdl: "┐",
+  boxdr: "┌",
+  boxh: "─",
+  boxhD: "╥",
+  boxhU: "╨",
+  boxhd: "┬",
+  boxhu: "┴",
+  boxminus: "⊟",
+  boxplus: "⊞",
+  boxtimes: "⊠",
+  boxuL: "╛",
+  boxuR: "╘",
+  boxul: "┘",
+  boxur: "└",
+  boxv: "│",
+  boxvH: "╪",
+  boxvL: "╡",
+  boxvR: "╞",
+  boxvh: "┼",
+  boxvl: "┤",
+  boxvr: "├",
+  bprime: "‵",
+  breve: "˘",
+  brvbar: "¦",
   bscr: "\uD835\uDCB7",
-  bsemi: "\u204F",
-  bsim: "\u223D",
-  bsime: "\u22CD",
+  bsemi: "⁏",
+  bsim: "∽",
+  bsime: "⋍",
   bsol: "\\",
-  bsolb: "\u29C5",
-  bsolhsub: "\u27C8",
-  bull: "\u2022",
-  bullet: "\u2022",
-  bump: "\u224E",
-  bumpE: "\u2AAE",
-  bumpe: "\u224F",
-  bumpeq: "\u224F",
-  cacute: "\u0107",
-  cap: "\u2229",
-  capand: "\u2A44",
-  capbrcup: "\u2A49",
-  capcap: "\u2A4B",
-  capcup: "\u2A47",
-  capdot: "\u2A40",
-  caps: "\u2229\uFE00",
-  caret: "\u2041",
-  caron: "\u02C7",
-  ccaps: "\u2A4D",
-  ccaron: "\u010D",
-  ccedil: "\xE7",
-  ccirc: "\u0109",
-  ccups: "\u2A4C",
-  ccupssm: "\u2A50",
-  cdot: "\u010B",
-  cedil: "\xB8",
-  cemptyv: "\u29B2",
-  cent: "\xA2",
-  centerdot: "\xB7",
+  bsolb: "⧅",
+  bsolhsub: "⟈",
+  bull: "•",
+  bullet: "•",
+  bump: "≎",
+  bumpE: "⪮",
+  bumpe: "≏",
+  bumpeq: "≏",
+  cacute: "ć",
+  cap: "∩",
+  capand: "⩄",
+  capbrcup: "⩉",
+  capcap: "⩋",
+  capcup: "⩇",
+  capdot: "⩀",
+  caps: "∩︀",
+  caret: "⁁",
+  caron: "ˇ",
+  ccaps: "⩍",
+  ccaron: "č",
+  ccedil: "ç",
+  ccirc: "ĉ",
+  ccups: "⩌",
+  ccupssm: "⩐",
+  cdot: "ċ",
+  cedil: "¸",
+  cemptyv: "⦲",
+  cent: "¢",
+  centerdot: "·",
   cfr: "\uD835\uDD20",
-  chcy: "\u0447",
-  check: "\u2713",
-  checkmark: "\u2713",
-  chi: "\u03C7",
-  cir: "\u25CB",
-  cirE: "\u29C3",
-  circ: "\u02C6",
-  circeq: "\u2257",
-  circlearrowleft: "\u21BA",
-  circlearrowright: "\u21BB",
-  circledR: "\xAE",
-  circledS: "\u24C8",
-  circledast: "\u229B",
-  circledcirc: "\u229A",
-  circleddash: "\u229D",
-  cire: "\u2257",
-  cirfnint: "\u2A10",
-  cirmid: "\u2AEF",
-  cirscir: "\u29C2",
-  clubs: "\u2663",
-  clubsuit: "\u2663",
+  chcy: "ч",
+  check: "✓",
+  checkmark: "✓",
+  chi: "χ",
+  cir: "○",
+  cirE: "⧃",
+  circ: "ˆ",
+  circeq: "≗",
+  circlearrowleft: "↺",
+  circlearrowright: "↻",
+  circledR: "®",
+  circledS: "Ⓢ",
+  circledast: "⊛",
+  circledcirc: "⊚",
+  circleddash: "⊝",
+  cire: "≗",
+  cirfnint: "⨐",
+  cirmid: "⫯",
+  cirscir: "⧂",
+  clubs: "♣",
+  clubsuit: "♣",
   colon: ":",
-  colone: "\u2254",
-  coloneq: "\u2254",
+  colone: "≔",
+  coloneq: "≔",
   comma: ",",
   commat: "@",
-  comp: "\u2201",
-  compfn: "\u2218",
-  complement: "\u2201",
-  complexes: "\u2102",
-  cong: "\u2245",
-  congdot: "\u2A6D",
-  conint: "\u222E",
+  comp: "∁",
+  compfn: "∘",
+  complement: "∁",
+  complexes: "ℂ",
+  cong: "≅",
+  congdot: "⩭",
+  conint: "∮",
   copf: "\uD835\uDD54",
-  coprod: "\u2210",
-  copy: "\xA9",
-  copysr: "\u2117",
-  crarr: "\u21B5",
-  cross: "\u2717",
+  coprod: "∐",
+  copy: "©",
+  copysr: "℗",
+  crarr: "↵",
+  cross: "✗",
   cscr: "\uD835\uDCB8",
-  csub: "\u2ACF",
-  csube: "\u2AD1",
-  csup: "\u2AD0",
-  csupe: "\u2AD2",
-  ctdot: "\u22EF",
-  cudarrl: "\u2938",
-  cudarrr: "\u2935",
-  cuepr: "\u22DE",
-  cuesc: "\u22DF",
-  cularr: "\u21B6",
-  cularrp: "\u293D",
-  cup: "\u222A",
-  cupbrcap: "\u2A48",
-  cupcap: "\u2A46",
-  cupcup: "\u2A4A",
-  cupdot: "\u228D",
-  cupor: "\u2A45",
-  cups: "\u222A\uFE00",
-  curarr: "\u21B7",
-  curarrm: "\u293C",
-  curlyeqprec: "\u22DE",
-  curlyeqsucc: "\u22DF",
-  curlyvee: "\u22CE",
-  curlywedge: "\u22CF",
-  curren: "\xA4",
-  curvearrowleft: "\u21B6",
-  curvearrowright: "\u21B7",
-  cuvee: "\u22CE",
-  cuwed: "\u22CF",
-  cwconint: "\u2232",
-  cwint: "\u2231",
-  cylcty: "\u232D",
-  dArr: "\u21D3",
-  dHar: "\u2965",
-  dagger: "\u2020",
-  daleth: "\u2138",
-  darr: "\u2193",
-  dash: "\u2010",
-  dashv: "\u22A3",
-  dbkarow: "\u290F",
-  dblac: "\u02DD",
-  dcaron: "\u010F",
-  dcy: "\u0434",
-  dd: "\u2146",
-  ddagger: "\u2021",
-  ddarr: "\u21CA",
-  ddotseq: "\u2A77",
-  deg: "\xB0",
-  delta: "\u03B4",
-  demptyv: "\u29B1",
-  dfisht: "\u297F",
+  csub: "⫏",
+  csube: "⫑",
+  csup: "⫐",
+  csupe: "⫒",
+  ctdot: "⋯",
+  cudarrl: "⤸",
+  cudarrr: "⤵",
+  cuepr: "⋞",
+  cuesc: "⋟",
+  cularr: "↶",
+  cularrp: "⤽",
+  cup: "∪",
+  cupbrcap: "⩈",
+  cupcap: "⩆",
+  cupcup: "⩊",
+  cupdot: "⊍",
+  cupor: "⩅",
+  cups: "∪︀",
+  curarr: "↷",
+  curarrm: "⤼",
+  curlyeqprec: "⋞",
+  curlyeqsucc: "⋟",
+  curlyvee: "⋎",
+  curlywedge: "⋏",
+  curren: "¤",
+  curvearrowleft: "↶",
+  curvearrowright: "↷",
+  cuvee: "⋎",
+  cuwed: "⋏",
+  cwconint: "∲",
+  cwint: "∱",
+  cylcty: "⌭",
+  dArr: "⇓",
+  dHar: "⥥",
+  dagger: "†",
+  daleth: "ℸ",
+  darr: "↓",
+  dash: "‐",
+  dashv: "⊣",
+  dbkarow: "⤏",
+  dblac: "˝",
+  dcaron: "ď",
+  dcy: "д",
+  dd: "ⅆ",
+  ddagger: "‡",
+  ddarr: "⇊",
+  ddotseq: "⩷",
+  deg: "°",
+  delta: "δ",
+  demptyv: "⦱",
+  dfisht: "⥿",
   dfr: "\uD835\uDD21",
-  dharl: "\u21C3",
-  dharr: "\u21C2",
-  diam: "\u22C4",
-  diamond: "\u22C4",
-  diamondsuit: "\u2666",
-  diams: "\u2666",
-  die: "\xA8",
-  digamma: "\u03DD",
-  disin: "\u22F2",
-  div: "\xF7",
-  divide: "\xF7",
-  divideontimes: "\u22C7",
-  divonx: "\u22C7",
-  djcy: "\u0452",
-  dlcorn: "\u231E",
-  dlcrop: "\u230D",
+  dharl: "⇃",
+  dharr: "⇂",
+  diam: "⋄",
+  diamond: "⋄",
+  diamondsuit: "♦",
+  diams: "♦",
+  die: "¨",
+  digamma: "ϝ",
+  disin: "⋲",
+  div: "÷",
+  divide: "÷",
+  divideontimes: "⋇",
+  divonx: "⋇",
+  djcy: "ђ",
+  dlcorn: "⌞",
+  dlcrop: "⌍",
   dollar: "$",
   dopf: "\uD835\uDD55",
-  dot: "\u02D9",
-  doteq: "\u2250",
-  doteqdot: "\u2251",
-  dotminus: "\u2238",
-  dotplus: "\u2214",
-  dotsquare: "\u22A1",
-  doublebarwedge: "\u2306",
-  downarrow: "\u2193",
-  downdownarrows: "\u21CA",
-  downharpoonleft: "\u21C3",
-  downharpoonright: "\u21C2",
-  drbkarow: "\u2910",
-  drcorn: "\u231F",
-  drcrop: "\u230C",
+  dot: "˙",
+  doteq: "≐",
+  doteqdot: "≑",
+  dotminus: "∸",
+  dotplus: "∔",
+  dotsquare: "⊡",
+  doublebarwedge: "⌆",
+  downarrow: "↓",
+  downdownarrows: "⇊",
+  downharpoonleft: "⇃",
+  downharpoonright: "⇂",
+  drbkarow: "⤐",
+  drcorn: "⌟",
+  drcrop: "⌌",
   dscr: "\uD835\uDCB9",
-  dscy: "\u0455",
-  dsol: "\u29F6",
-  dstrok: "\u0111",
-  dtdot: "\u22F1",
-  dtri: "\u25BF",
-  dtrif: "\u25BE",
-  duarr: "\u21F5",
-  duhar: "\u296F",
-  dwangle: "\u29A6",
-  dzcy: "\u045F",
-  dzigrarr: "\u27FF",
-  eDDot: "\u2A77",
-  eDot: "\u2251",
-  eacute: "\xE9",
-  easter: "\u2A6E",
-  ecaron: "\u011B",
-  ecir: "\u2256",
-  ecirc: "\xEA",
-  ecolon: "\u2255",
-  ecy: "\u044D",
-  edot: "\u0117",
-  ee: "\u2147",
-  efDot: "\u2252",
+  dscy: "ѕ",
+  dsol: "⧶",
+  dstrok: "đ",
+  dtdot: "⋱",
+  dtri: "▿",
+  dtrif: "▾",
+  duarr: "⇵",
+  duhar: "⥯",
+  dwangle: "⦦",
+  dzcy: "џ",
+  dzigrarr: "⟿",
+  eDDot: "⩷",
+  eDot: "≑",
+  eacute: "é",
+  easter: "⩮",
+  ecaron: "ě",
+  ecir: "≖",
+  ecirc: "ê",
+  ecolon: "≕",
+  ecy: "э",
+  edot: "ė",
+  ee: "ⅇ",
+  efDot: "≒",
   efr: "\uD835\uDD22",
-  eg: "\u2A9A",
-  egrave: "\xE8",
-  egs: "\u2A96",
-  egsdot: "\u2A98",
-  el: "\u2A99",
-  elinters: "\u23E7",
-  ell: "\u2113",
-  els: "\u2A95",
-  elsdot: "\u2A97",
-  emacr: "\u0113",
-  empty: "\u2205",
-  emptyset: "\u2205",
-  emptyv: "\u2205",
-  emsp13: "\u2004",
-  emsp14: "\u2005",
-  emsp: "\u2003",
-  eng: "\u014B",
-  ensp: "\u2002",
-  eogon: "\u0119",
+  eg: "⪚",
+  egrave: "è",
+  egs: "⪖",
+  egsdot: "⪘",
+  el: "⪙",
+  elinters: "⏧",
+  ell: "ℓ",
+  els: "⪕",
+  elsdot: "⪗",
+  emacr: "ē",
+  empty: "∅",
+  emptyset: "∅",
+  emptyv: "∅",
+  emsp13: " ",
+  emsp14: " ",
+  emsp: " ",
+  eng: "ŋ",
+  ensp: " ",
+  eogon: "ę",
   eopf: "\uD835\uDD56",
-  epar: "\u22D5",
-  eparsl: "\u29E3",
-  eplus: "\u2A71",
-  epsi: "\u03B5",
-  epsilon: "\u03B5",
-  epsiv: "\u03F5",
-  eqcirc: "\u2256",
-  eqcolon: "\u2255",
-  eqsim: "\u2242",
-  eqslantgtr: "\u2A96",
-  eqslantless: "\u2A95",
+  epar: "⋕",
+  eparsl: "⧣",
+  eplus: "⩱",
+  epsi: "ε",
+  epsilon: "ε",
+  epsiv: "ϵ",
+  eqcirc: "≖",
+  eqcolon: "≕",
+  eqsim: "≂",
+  eqslantgtr: "⪖",
+  eqslantless: "⪕",
   equals: "=",
-  equest: "\u225F",
-  equiv: "\u2261",
-  equivDD: "\u2A78",
-  eqvparsl: "\u29E5",
-  erDot: "\u2253",
-  erarr: "\u2971",
-  escr: "\u212F",
-  esdot: "\u2250",
-  esim: "\u2242",
-  eta: "\u03B7",
-  eth: "\xF0",
-  euml: "\xEB",
-  euro: "\u20AC",
+  equest: "≟",
+  equiv: "≡",
+  equivDD: "⩸",
+  eqvparsl: "⧥",
+  erDot: "≓",
+  erarr: "⥱",
+  escr: "ℯ",
+  esdot: "≐",
+  esim: "≂",
+  eta: "η",
+  eth: "ð",
+  euml: "ë",
+  euro: "€",
   excl: "!",
-  exist: "\u2203",
-  expectation: "\u2130",
-  exponentiale: "\u2147",
-  fallingdotseq: "\u2252",
-  fcy: "\u0444",
-  female: "\u2640",
-  ffilig: "\uFB03",
-  fflig: "\uFB00",
-  ffllig: "\uFB04",
+  exist: "∃",
+  expectation: "ℰ",
+  exponentiale: "ⅇ",
+  fallingdotseq: "≒",
+  fcy: "ф",
+  female: "♀",
+  ffilig: "ﬃ",
+  fflig: "ﬀ",
+  ffllig: "ﬄ",
   ffr: "\uD835\uDD23",
-  filig: "\uFB01",
+  filig: "ﬁ",
   fjlig: "fj",
-  flat: "\u266D",
-  fllig: "\uFB02",
-  fltns: "\u25B1",
-  fnof: "\u0192",
+  flat: "♭",
+  fllig: "ﬂ",
+  fltns: "▱",
+  fnof: "ƒ",
   fopf: "\uD835\uDD57",
-  forall: "\u2200",
-  fork: "\u22D4",
-  forkv: "\u2AD9",
-  fpartint: "\u2A0D",
-  frac12: "\xBD",
-  frac13: "\u2153",
-  frac14: "\xBC",
-  frac15: "\u2155",
-  frac16: "\u2159",
-  frac18: "\u215B",
-  frac23: "\u2154",
-  frac25: "\u2156",
-  frac34: "\xBE",
-  frac35: "\u2157",
-  frac38: "\u215C",
-  frac45: "\u2158",
-  frac56: "\u215A",
-  frac58: "\u215D",
-  frac78: "\u215E",
-  frasl: "\u2044",
-  frown: "\u2322",
+  forall: "∀",
+  fork: "⋔",
+  forkv: "⫙",
+  fpartint: "⨍",
+  frac12: "½",
+  frac13: "⅓",
+  frac14: "¼",
+  frac15: "⅕",
+  frac16: "⅙",
+  frac18: "⅛",
+  frac23: "⅔",
+  frac25: "⅖",
+  frac34: "¾",
+  frac35: "⅗",
+  frac38: "⅜",
+  frac45: "⅘",
+  frac56: "⅚",
+  frac58: "⅝",
+  frac78: "⅞",
+  frasl: "⁄",
+  frown: "⌢",
   fscr: "\uD835\uDCBB",
-  gE: "\u2267",
-  gEl: "\u2A8C",
-  gacute: "\u01F5",
-  gamma: "\u03B3",
-  gammad: "\u03DD",
-  gap: "\u2A86",
-  gbreve: "\u011F",
-  gcirc: "\u011D",
-  gcy: "\u0433",
-  gdot: "\u0121",
-  ge: "\u2265",
-  gel: "\u22DB",
-  geq: "\u2265",
-  geqq: "\u2267",
-  geqslant: "\u2A7E",
-  ges: "\u2A7E",
-  gescc: "\u2AA9",
-  gesdot: "\u2A80",
-  gesdoto: "\u2A82",
-  gesdotol: "\u2A84",
-  gesl: "\u22DB\uFE00",
-  gesles: "\u2A94",
+  gE: "≧",
+  gEl: "⪌",
+  gacute: "ǵ",
+  gamma: "γ",
+  gammad: "ϝ",
+  gap: "⪆",
+  gbreve: "ğ",
+  gcirc: "ĝ",
+  gcy: "г",
+  gdot: "ġ",
+  ge: "≥",
+  gel: "⋛",
+  geq: "≥",
+  geqq: "≧",
+  geqslant: "⩾",
+  ges: "⩾",
+  gescc: "⪩",
+  gesdot: "⪀",
+  gesdoto: "⪂",
+  gesdotol: "⪄",
+  gesl: "⋛︀",
+  gesles: "⪔",
   gfr: "\uD835\uDD24",
-  gg: "\u226B",
-  ggg: "\u22D9",
-  gimel: "\u2137",
-  gjcy: "\u0453",
-  gl: "\u2277",
-  glE: "\u2A92",
-  gla: "\u2AA5",
-  glj: "\u2AA4",
-  gnE: "\u2269",
-  gnap: "\u2A8A",
-  gnapprox: "\u2A8A",
-  gne: "\u2A88",
-  gneq: "\u2A88",
-  gneqq: "\u2269",
-  gnsim: "\u22E7",
+  gg: "≫",
+  ggg: "⋙",
+  gimel: "ℷ",
+  gjcy: "ѓ",
+  gl: "≷",
+  glE: "⪒",
+  gla: "⪥",
+  glj: "⪤",
+  gnE: "≩",
+  gnap: "⪊",
+  gnapprox: "⪊",
+  gne: "⪈",
+  gneq: "⪈",
+  gneqq: "≩",
+  gnsim: "⋧",
   gopf: "\uD835\uDD58",
   grave: "`",
-  gscr: "\u210A",
-  gsim: "\u2273",
-  gsime: "\u2A8E",
-  gsiml: "\u2A90",
+  gscr: "ℊ",
+  gsim: "≳",
+  gsime: "⪎",
+  gsiml: "⪐",
   gt: ">",
-  gtcc: "\u2AA7",
-  gtcir: "\u2A7A",
-  gtdot: "\u22D7",
-  gtlPar: "\u2995",
-  gtquest: "\u2A7C",
-  gtrapprox: "\u2A86",
-  gtrarr: "\u2978",
-  gtrdot: "\u22D7",
-  gtreqless: "\u22DB",
-  gtreqqless: "\u2A8C",
-  gtrless: "\u2277",
-  gtrsim: "\u2273",
-  gvertneqq: "\u2269\uFE00",
-  gvnE: "\u2269\uFE00",
-  hArr: "\u21D4",
-  hairsp: "\u200A",
-  half: "\xBD",
-  hamilt: "\u210B",
-  hardcy: "\u044A",
-  harr: "\u2194",
-  harrcir: "\u2948",
-  harrw: "\u21AD",
-  hbar: "\u210F",
-  hcirc: "\u0125",
-  hearts: "\u2665",
-  heartsuit: "\u2665",
-  hellip: "\u2026",
-  hercon: "\u22B9",
+  gtcc: "⪧",
+  gtcir: "⩺",
+  gtdot: "⋗",
+  gtlPar: "⦕",
+  gtquest: "⩼",
+  gtrapprox: "⪆",
+  gtrarr: "⥸",
+  gtrdot: "⋗",
+  gtreqless: "⋛",
+  gtreqqless: "⪌",
+  gtrless: "≷",
+  gtrsim: "≳",
+  gvertneqq: "≩︀",
+  gvnE: "≩︀",
+  hArr: "⇔",
+  hairsp: " ",
+  half: "½",
+  hamilt: "ℋ",
+  hardcy: "ъ",
+  harr: "↔",
+  harrcir: "⥈",
+  harrw: "↭",
+  hbar: "ℏ",
+  hcirc: "ĥ",
+  hearts: "♥",
+  heartsuit: "♥",
+  hellip: "…",
+  hercon: "⊹",
   hfr: "\uD835\uDD25",
-  hksearow: "\u2925",
-  hkswarow: "\u2926",
-  hoarr: "\u21FF",
-  homtht: "\u223B",
-  hookleftarrow: "\u21A9",
-  hookrightarrow: "\u21AA",
+  hksearow: "⤥",
+  hkswarow: "⤦",
+  hoarr: "⇿",
+  homtht: "∻",
+  hookleftarrow: "↩",
+  hookrightarrow: "↪",
   hopf: "\uD835\uDD59",
-  horbar: "\u2015",
+  horbar: "―",
   hscr: "\uD835\uDCBD",
-  hslash: "\u210F",
-  hstrok: "\u0127",
-  hybull: "\u2043",
-  hyphen: "\u2010",
-  iacute: "\xED",
-  ic: "\u2063",
-  icirc: "\xEE",
-  icy: "\u0438",
-  iecy: "\u0435",
-  iexcl: "\xA1",
-  iff: "\u21D4",
+  hslash: "ℏ",
+  hstrok: "ħ",
+  hybull: "⁃",
+  hyphen: "‐",
+  iacute: "í",
+  ic: "⁣",
+  icirc: "î",
+  icy: "и",
+  iecy: "е",
+  iexcl: "¡",
+  iff: "⇔",
   ifr: "\uD835\uDD26",
-  igrave: "\xEC",
-  ii: "\u2148",
-  iiiint: "\u2A0C",
-  iiint: "\u222D",
-  iinfin: "\u29DC",
-  iiota: "\u2129",
-  ijlig: "\u0133",
-  imacr: "\u012B",
-  image: "\u2111",
-  imagline: "\u2110",
-  imagpart: "\u2111",
-  imath: "\u0131",
-  imof: "\u22B7",
-  imped: "\u01B5",
-  in: "\u2208",
-  incare: "\u2105",
-  infin: "\u221E",
-  infintie: "\u29DD",
-  inodot: "\u0131",
-  int: "\u222B",
-  intcal: "\u22BA",
-  integers: "\u2124",
-  intercal: "\u22BA",
-  intlarhk: "\u2A17",
-  intprod: "\u2A3C",
-  iocy: "\u0451",
-  iogon: "\u012F",
+  igrave: "ì",
+  ii: "ⅈ",
+  iiiint: "⨌",
+  iiint: "∭",
+  iinfin: "⧜",
+  iiota: "℩",
+  ijlig: "ĳ",
+  imacr: "ī",
+  image: "ℑ",
+  imagline: "ℐ",
+  imagpart: "ℑ",
+  imath: "ı",
+  imof: "⊷",
+  imped: "Ƶ",
+  in: "∈",
+  incare: "℅",
+  infin: "∞",
+  infintie: "⧝",
+  inodot: "ı",
+  int: "∫",
+  intcal: "⊺",
+  integers: "ℤ",
+  intercal: "⊺",
+  intlarhk: "⨗",
+  intprod: "⨼",
+  iocy: "ё",
+  iogon: "į",
   iopf: "\uD835\uDD5A",
-  iota: "\u03B9",
-  iprod: "\u2A3C",
-  iquest: "\xBF",
+  iota: "ι",
+  iprod: "⨼",
+  iquest: "¿",
   iscr: "\uD835\uDCBE",
-  isin: "\u2208",
-  isinE: "\u22F9",
-  isindot: "\u22F5",
-  isins: "\u22F4",
-  isinsv: "\u22F3",
-  isinv: "\u2208",
-  it: "\u2062",
-  itilde: "\u0129",
-  iukcy: "\u0456",
-  iuml: "\xEF",
-  jcirc: "\u0135",
-  jcy: "\u0439",
+  isin: "∈",
+  isinE: "⋹",
+  isindot: "⋵",
+  isins: "⋴",
+  isinsv: "⋳",
+  isinv: "∈",
+  it: "⁢",
+  itilde: "ĩ",
+  iukcy: "і",
+  iuml: "ï",
+  jcirc: "ĵ",
+  jcy: "й",
   jfr: "\uD835\uDD27",
-  jmath: "\u0237",
+  jmath: "ȷ",
   jopf: "\uD835\uDD5B",
   jscr: "\uD835\uDCBF",
-  jsercy: "\u0458",
-  jukcy: "\u0454",
-  kappa: "\u03BA",
-  kappav: "\u03F0",
-  kcedil: "\u0137",
-  kcy: "\u043A",
+  jsercy: "ј",
+  jukcy: "є",
+  kappa: "κ",
+  kappav: "ϰ",
+  kcedil: "ķ",
+  kcy: "к",
   kfr: "\uD835\uDD28",
-  kgreen: "\u0138",
-  khcy: "\u0445",
-  kjcy: "\u045C",
+  kgreen: "ĸ",
+  khcy: "х",
+  kjcy: "ќ",
   kopf: "\uD835\uDD5C",
   kscr: "\uD835\uDCC0",
-  lAarr: "\u21DA",
-  lArr: "\u21D0",
-  lAtail: "\u291B",
-  lBarr: "\u290E",
-  lE: "\u2266",
-  lEg: "\u2A8B",
-  lHar: "\u2962",
-  lacute: "\u013A",
-  laemptyv: "\u29B4",
-  lagran: "\u2112",
-  lambda: "\u03BB",
-  lang: "\u27E8",
-  langd: "\u2991",
-  langle: "\u27E8",
-  lap: "\u2A85",
-  laquo: "\xAB",
-  larr: "\u2190",
-  larrb: "\u21E4",
-  larrbfs: "\u291F",
-  larrfs: "\u291D",
-  larrhk: "\u21A9",
-  larrlp: "\u21AB",
-  larrpl: "\u2939",
-  larrsim: "\u2973",
-  larrtl: "\u21A2",
-  lat: "\u2AAB",
-  latail: "\u2919",
-  late: "\u2AAD",
-  lates: "\u2AAD\uFE00",
-  lbarr: "\u290C",
-  lbbrk: "\u2772",
+  lAarr: "⇚",
+  lArr: "⇐",
+  lAtail: "⤛",
+  lBarr: "⤎",
+  lE: "≦",
+  lEg: "⪋",
+  lHar: "⥢",
+  lacute: "ĺ",
+  laemptyv: "⦴",
+  lagran: "ℒ",
+  lambda: "λ",
+  lang: "⟨",
+  langd: "⦑",
+  langle: "⟨",
+  lap: "⪅",
+  laquo: "«",
+  larr: "←",
+  larrb: "⇤",
+  larrbfs: "⤟",
+  larrfs: "⤝",
+  larrhk: "↩",
+  larrlp: "↫",
+  larrpl: "⤹",
+  larrsim: "⥳",
+  larrtl: "↢",
+  lat: "⪫",
+  latail: "⤙",
+  late: "⪭",
+  lates: "⪭︀",
+  lbarr: "⤌",
+  lbbrk: "❲",
   lbrace: "{",
   lbrack: "[",
-  lbrke: "\u298B",
-  lbrksld: "\u298F",
-  lbrkslu: "\u298D",
-  lcaron: "\u013E",
-  lcedil: "\u013C",
-  lceil: "\u2308",
+  lbrke: "⦋",
+  lbrksld: "⦏",
+  lbrkslu: "⦍",
+  lcaron: "ľ",
+  lcedil: "ļ",
+  lceil: "⌈",
   lcub: "{",
-  lcy: "\u043B",
-  ldca: "\u2936",
-  ldquo: "\u201C",
-  ldquor: "\u201E",
-  ldrdhar: "\u2967",
-  ldrushar: "\u294B",
-  ldsh: "\u21B2",
-  le: "\u2264",
-  leftarrow: "\u2190",
-  leftarrowtail: "\u21A2",
-  leftharpoondown: "\u21BD",
-  leftharpoonup: "\u21BC",
-  leftleftarrows: "\u21C7",
-  leftrightarrow: "\u2194",
-  leftrightarrows: "\u21C6",
-  leftrightharpoons: "\u21CB",
-  leftrightsquigarrow: "\u21AD",
-  leftthreetimes: "\u22CB",
-  leg: "\u22DA",
-  leq: "\u2264",
-  leqq: "\u2266",
-  leqslant: "\u2A7D",
-  les: "\u2A7D",
-  lescc: "\u2AA8",
-  lesdot: "\u2A7F",
-  lesdoto: "\u2A81",
-  lesdotor: "\u2A83",
-  lesg: "\u22DA\uFE00",
-  lesges: "\u2A93",
-  lessapprox: "\u2A85",
-  lessdot: "\u22D6",
-  lesseqgtr: "\u22DA",
-  lesseqqgtr: "\u2A8B",
-  lessgtr: "\u2276",
-  lesssim: "\u2272",
-  lfisht: "\u297C",
-  lfloor: "\u230A",
+  lcy: "л",
+  ldca: "⤶",
+  ldquo: "“",
+  ldquor: "„",
+  ldrdhar: "⥧",
+  ldrushar: "⥋",
+  ldsh: "↲",
+  le: "≤",
+  leftarrow: "←",
+  leftarrowtail: "↢",
+  leftharpoondown: "↽",
+  leftharpoonup: "↼",
+  leftleftarrows: "⇇",
+  leftrightarrow: "↔",
+  leftrightarrows: "⇆",
+  leftrightharpoons: "⇋",
+  leftrightsquigarrow: "↭",
+  leftthreetimes: "⋋",
+  leg: "⋚",
+  leq: "≤",
+  leqq: "≦",
+  leqslant: "⩽",
+  les: "⩽",
+  lescc: "⪨",
+  lesdot: "⩿",
+  lesdoto: "⪁",
+  lesdotor: "⪃",
+  lesg: "⋚︀",
+  lesges: "⪓",
+  lessapprox: "⪅",
+  lessdot: "⋖",
+  lesseqgtr: "⋚",
+  lesseqqgtr: "⪋",
+  lessgtr: "≶",
+  lesssim: "≲",
+  lfisht: "⥼",
+  lfloor: "⌊",
   lfr: "\uD835\uDD29",
-  lg: "\u2276",
-  lgE: "\u2A91",
-  lhard: "\u21BD",
-  lharu: "\u21BC",
-  lharul: "\u296A",
-  lhblk: "\u2584",
-  ljcy: "\u0459",
-  ll: "\u226A",
-  llarr: "\u21C7",
-  llcorner: "\u231E",
-  llhard: "\u296B",
-  lltri: "\u25FA",
-  lmidot: "\u0140",
-  lmoust: "\u23B0",
-  lmoustache: "\u23B0",
-  lnE: "\u2268",
-  lnap: "\u2A89",
-  lnapprox: "\u2A89",
-  lne: "\u2A87",
-  lneq: "\u2A87",
-  lneqq: "\u2268",
-  lnsim: "\u22E6",
-  loang: "\u27EC",
-  loarr: "\u21FD",
-  lobrk: "\u27E6",
-  longleftarrow: "\u27F5",
-  longleftrightarrow: "\u27F7",
-  longmapsto: "\u27FC",
-  longrightarrow: "\u27F6",
-  looparrowleft: "\u21AB",
-  looparrowright: "\u21AC",
-  lopar: "\u2985",
+  lg: "≶",
+  lgE: "⪑",
+  lhard: "↽",
+  lharu: "↼",
+  lharul: "⥪",
+  lhblk: "▄",
+  ljcy: "љ",
+  ll: "≪",
+  llarr: "⇇",
+  llcorner: "⌞",
+  llhard: "⥫",
+  lltri: "◺",
+  lmidot: "ŀ",
+  lmoust: "⎰",
+  lmoustache: "⎰",
+  lnE: "≨",
+  lnap: "⪉",
+  lnapprox: "⪉",
+  lne: "⪇",
+  lneq: "⪇",
+  lneqq: "≨",
+  lnsim: "⋦",
+  loang: "⟬",
+  loarr: "⇽",
+  lobrk: "⟦",
+  longleftarrow: "⟵",
+  longleftrightarrow: "⟷",
+  longmapsto: "⟼",
+  longrightarrow: "⟶",
+  looparrowleft: "↫",
+  looparrowright: "↬",
+  lopar: "⦅",
   lopf: "\uD835\uDD5D",
-  loplus: "\u2A2D",
-  lotimes: "\u2A34",
-  lowast: "\u2217",
+  loplus: "⨭",
+  lotimes: "⨴",
+  lowast: "∗",
   lowbar: "_",
-  loz: "\u25CA",
-  lozenge: "\u25CA",
-  lozf: "\u29EB",
+  loz: "◊",
+  lozenge: "◊",
+  lozf: "⧫",
   lpar: "(",
-  lparlt: "\u2993",
-  lrarr: "\u21C6",
-  lrcorner: "\u231F",
-  lrhar: "\u21CB",
-  lrhard: "\u296D",
-  lrm: "\u200E",
-  lrtri: "\u22BF",
-  lsaquo: "\u2039",
+  lparlt: "⦓",
+  lrarr: "⇆",
+  lrcorner: "⌟",
+  lrhar: "⇋",
+  lrhard: "⥭",
+  lrm: "‎",
+  lrtri: "⊿",
+  lsaquo: "‹",
   lscr: "\uD835\uDCC1",
-  lsh: "\u21B0",
-  lsim: "\u2272",
-  lsime: "\u2A8D",
-  lsimg: "\u2A8F",
+  lsh: "↰",
+  lsim: "≲",
+  lsime: "⪍",
+  lsimg: "⪏",
   lsqb: "[",
-  lsquo: "\u2018",
-  lsquor: "\u201A",
-  lstrok: "\u0142",
+  lsquo: "‘",
+  lsquor: "‚",
+  lstrok: "ł",
   lt: "<",
-  ltcc: "\u2AA6",
-  ltcir: "\u2A79",
-  ltdot: "\u22D6",
-  lthree: "\u22CB",
-  ltimes: "\u22C9",
-  ltlarr: "\u2976",
-  ltquest: "\u2A7B",
-  ltrPar: "\u2996",
-  ltri: "\u25C3",
-  ltrie: "\u22B4",
-  ltrif: "\u25C2",
-  lurdshar: "\u294A",
-  luruhar: "\u2966",
-  lvertneqq: "\u2268\uFE00",
-  lvnE: "\u2268\uFE00",
-  mDDot: "\u223A",
-  macr: "\xAF",
-  male: "\u2642",
-  malt: "\u2720",
-  maltese: "\u2720",
-  map: "\u21A6",
-  mapsto: "\u21A6",
-  mapstodown: "\u21A7",
-  mapstoleft: "\u21A4",
-  mapstoup: "\u21A5",
-  marker: "\u25AE",
-  mcomma: "\u2A29",
-  mcy: "\u043C",
-  mdash: "\u2014",
-  measuredangle: "\u2221",
+  ltcc: "⪦",
+  ltcir: "⩹",
+  ltdot: "⋖",
+  lthree: "⋋",
+  ltimes: "⋉",
+  ltlarr: "⥶",
+  ltquest: "⩻",
+  ltrPar: "⦖",
+  ltri: "◃",
+  ltrie: "⊴",
+  ltrif: "◂",
+  lurdshar: "⥊",
+  luruhar: "⥦",
+  lvertneqq: "≨︀",
+  lvnE: "≨︀",
+  mDDot: "∺",
+  macr: "¯",
+  male: "♂",
+  malt: "✠",
+  maltese: "✠",
+  map: "↦",
+  mapsto: "↦",
+  mapstodown: "↧",
+  mapstoleft: "↤",
+  mapstoup: "↥",
+  marker: "▮",
+  mcomma: "⨩",
+  mcy: "м",
+  mdash: "—",
+  measuredangle: "∡",
   mfr: "\uD835\uDD2A",
-  mho: "\u2127",
-  micro: "\xB5",
-  mid: "\u2223",
+  mho: "℧",
+  micro: "µ",
+  mid: "∣",
   midast: "*",
-  midcir: "\u2AF0",
-  middot: "\xB7",
-  minus: "\u2212",
-  minusb: "\u229F",
-  minusd: "\u2238",
-  minusdu: "\u2A2A",
-  mlcp: "\u2ADB",
-  mldr: "\u2026",
-  mnplus: "\u2213",
-  models: "\u22A7",
+  midcir: "⫰",
+  middot: "·",
+  minus: "−",
+  minusb: "⊟",
+  minusd: "∸",
+  minusdu: "⨪",
+  mlcp: "⫛",
+  mldr: "…",
+  mnplus: "∓",
+  models: "⊧",
   mopf: "\uD835\uDD5E",
-  mp: "\u2213",
+  mp: "∓",
   mscr: "\uD835\uDCC2",
-  mstpos: "\u223E",
-  mu: "\u03BC",
-  multimap: "\u22B8",
-  mumap: "\u22B8",
-  nGg: "\u22D9\u0338",
-  nGt: "\u226B\u20D2",
-  nGtv: "\u226B\u0338",
-  nLeftarrow: "\u21CD",
-  nLeftrightarrow: "\u21CE",
-  nLl: "\u22D8\u0338",
-  nLt: "\u226A\u20D2",
-  nLtv: "\u226A\u0338",
-  nRightarrow: "\u21CF",
-  nVDash: "\u22AF",
-  nVdash: "\u22AE",
-  nabla: "\u2207",
-  nacute: "\u0144",
-  nang: "\u2220\u20D2",
-  nap: "\u2249",
-  napE: "\u2A70\u0338",
-  napid: "\u224B\u0338",
-  napos: "\u0149",
-  napprox: "\u2249",
-  natur: "\u266E",
-  natural: "\u266E",
-  naturals: "\u2115",
-  nbsp: "\xA0",
-  nbump: "\u224E\u0338",
-  nbumpe: "\u224F\u0338",
-  ncap: "\u2A43",
-  ncaron: "\u0148",
-  ncedil: "\u0146",
-  ncong: "\u2247",
-  ncongdot: "\u2A6D\u0338",
-  ncup: "\u2A42",
-  ncy: "\u043D",
-  ndash: "\u2013",
-  ne: "\u2260",
-  neArr: "\u21D7",
-  nearhk: "\u2924",
-  nearr: "\u2197",
-  nearrow: "\u2197",
-  nedot: "\u2250\u0338",
-  nequiv: "\u2262",
-  nesear: "\u2928",
-  nesim: "\u2242\u0338",
-  nexist: "\u2204",
-  nexists: "\u2204",
+  mstpos: "∾",
+  mu: "μ",
+  multimap: "⊸",
+  mumap: "⊸",
+  nGg: "⋙̸",
+  nGt: "≫⃒",
+  nGtv: "≫̸",
+  nLeftarrow: "⇍",
+  nLeftrightarrow: "⇎",
+  nLl: "⋘̸",
+  nLt: "≪⃒",
+  nLtv: "≪̸",
+  nRightarrow: "⇏",
+  nVDash: "⊯",
+  nVdash: "⊮",
+  nabla: "∇",
+  nacute: "ń",
+  nang: "∠⃒",
+  nap: "≉",
+  napE: "⩰̸",
+  napid: "≋̸",
+  napos: "ŉ",
+  napprox: "≉",
+  natur: "♮",
+  natural: "♮",
+  naturals: "ℕ",
+  nbsp: " ",
+  nbump: "≎̸",
+  nbumpe: "≏̸",
+  ncap: "⩃",
+  ncaron: "ň",
+  ncedil: "ņ",
+  ncong: "≇",
+  ncongdot: "⩭̸",
+  ncup: "⩂",
+  ncy: "н",
+  ndash: "–",
+  ne: "≠",
+  neArr: "⇗",
+  nearhk: "⤤",
+  nearr: "↗",
+  nearrow: "↗",
+  nedot: "≐̸",
+  nequiv: "≢",
+  nesear: "⤨",
+  nesim: "≂̸",
+  nexist: "∄",
+  nexists: "∄",
   nfr: "\uD835\uDD2B",
-  ngE: "\u2267\u0338",
-  nge: "\u2271",
-  ngeq: "\u2271",
-  ngeqq: "\u2267\u0338",
-  ngeqslant: "\u2A7E\u0338",
-  nges: "\u2A7E\u0338",
-  ngsim: "\u2275",
-  ngt: "\u226F",
-  ngtr: "\u226F",
-  nhArr: "\u21CE",
-  nharr: "\u21AE",
-  nhpar: "\u2AF2",
-  ni: "\u220B",
-  nis: "\u22FC",
-  nisd: "\u22FA",
-  niv: "\u220B",
-  njcy: "\u045A",
-  nlArr: "\u21CD",
-  nlE: "\u2266\u0338",
-  nlarr: "\u219A",
-  nldr: "\u2025",
-  nle: "\u2270",
-  nleftarrow: "\u219A",
-  nleftrightarrow: "\u21AE",
-  nleq: "\u2270",
-  nleqq: "\u2266\u0338",
-  nleqslant: "\u2A7D\u0338",
-  nles: "\u2A7D\u0338",
-  nless: "\u226E",
-  nlsim: "\u2274",
-  nlt: "\u226E",
-  nltri: "\u22EA",
-  nltrie: "\u22EC",
-  nmid: "\u2224",
+  ngE: "≧̸",
+  nge: "≱",
+  ngeq: "≱",
+  ngeqq: "≧̸",
+  ngeqslant: "⩾̸",
+  nges: "⩾̸",
+  ngsim: "≵",
+  ngt: "≯",
+  ngtr: "≯",
+  nhArr: "⇎",
+  nharr: "↮",
+  nhpar: "⫲",
+  ni: "∋",
+  nis: "⋼",
+  nisd: "⋺",
+  niv: "∋",
+  njcy: "њ",
+  nlArr: "⇍",
+  nlE: "≦̸",
+  nlarr: "↚",
+  nldr: "‥",
+  nle: "≰",
+  nleftarrow: "↚",
+  nleftrightarrow: "↮",
+  nleq: "≰",
+  nleqq: "≦̸",
+  nleqslant: "⩽̸",
+  nles: "⩽̸",
+  nless: "≮",
+  nlsim: "≴",
+  nlt: "≮",
+  nltri: "⋪",
+  nltrie: "⋬",
+  nmid: "∤",
   nopf: "\uD835\uDD5F",
-  not: "\xAC",
-  notin: "\u2209",
-  notinE: "\u22F9\u0338",
-  notindot: "\u22F5\u0338",
-  notinva: "\u2209",
-  notinvb: "\u22F7",
-  notinvc: "\u22F6",
-  notni: "\u220C",
-  notniva: "\u220C",
-  notnivb: "\u22FE",
-  notnivc: "\u22FD",
-  npar: "\u2226",
-  nparallel: "\u2226",
-  nparsl: "\u2AFD\u20E5",
-  npart: "\u2202\u0338",
-  npolint: "\u2A14",
-  npr: "\u2280",
-  nprcue: "\u22E0",
-  npre: "\u2AAF\u0338",
-  nprec: "\u2280",
-  npreceq: "\u2AAF\u0338",
-  nrArr: "\u21CF",
-  nrarr: "\u219B",
-  nrarrc: "\u2933\u0338",
-  nrarrw: "\u219D\u0338",
-  nrightarrow: "\u219B",
-  nrtri: "\u22EB",
-  nrtrie: "\u22ED",
-  nsc: "\u2281",
-  nsccue: "\u22E1",
-  nsce: "\u2AB0\u0338",
+  not: "¬",
+  notin: "∉",
+  notinE: "⋹̸",
+  notindot: "⋵̸",
+  notinva: "∉",
+  notinvb: "⋷",
+  notinvc: "⋶",
+  notni: "∌",
+  notniva: "∌",
+  notnivb: "⋾",
+  notnivc: "⋽",
+  npar: "∦",
+  nparallel: "∦",
+  nparsl: "⫽⃥",
+  npart: "∂̸",
+  npolint: "⨔",
+  npr: "⊀",
+  nprcue: "⋠",
+  npre: "⪯̸",
+  nprec: "⊀",
+  npreceq: "⪯̸",
+  nrArr: "⇏",
+  nrarr: "↛",
+  nrarrc: "⤳̸",
+  nrarrw: "↝̸",
+  nrightarrow: "↛",
+  nrtri: "⋫",
+  nrtrie: "⋭",
+  nsc: "⊁",
+  nsccue: "⋡",
+  nsce: "⪰̸",
   nscr: "\uD835\uDCC3",
-  nshortmid: "\u2224",
-  nshortparallel: "\u2226",
-  nsim: "\u2241",
-  nsime: "\u2244",
-  nsimeq: "\u2244",
-  nsmid: "\u2224",
-  nspar: "\u2226",
-  nsqsube: "\u22E2",
-  nsqsupe: "\u22E3",
-  nsub: "\u2284",
-  nsubE: "\u2AC5\u0338",
-  nsube: "\u2288",
-  nsubset: "\u2282\u20D2",
-  nsubseteq: "\u2288",
-  nsubseteqq: "\u2AC5\u0338",
-  nsucc: "\u2281",
-  nsucceq: "\u2AB0\u0338",
-  nsup: "\u2285",
-  nsupE: "\u2AC6\u0338",
-  nsupe: "\u2289",
-  nsupset: "\u2283\u20D2",
-  nsupseteq: "\u2289",
-  nsupseteqq: "\u2AC6\u0338",
-  ntgl: "\u2279",
-  ntilde: "\xF1",
-  ntlg: "\u2278",
-  ntriangleleft: "\u22EA",
-  ntrianglelefteq: "\u22EC",
-  ntriangleright: "\u22EB",
-  ntrianglerighteq: "\u22ED",
-  nu: "\u03BD",
+  nshortmid: "∤",
+  nshortparallel: "∦",
+  nsim: "≁",
+  nsime: "≄",
+  nsimeq: "≄",
+  nsmid: "∤",
+  nspar: "∦",
+  nsqsube: "⋢",
+  nsqsupe: "⋣",
+  nsub: "⊄",
+  nsubE: "⫅̸",
+  nsube: "⊈",
+  nsubset: "⊂⃒",
+  nsubseteq: "⊈",
+  nsubseteqq: "⫅̸",
+  nsucc: "⊁",
+  nsucceq: "⪰̸",
+  nsup: "⊅",
+  nsupE: "⫆̸",
+  nsupe: "⊉",
+  nsupset: "⊃⃒",
+  nsupseteq: "⊉",
+  nsupseteqq: "⫆̸",
+  ntgl: "≹",
+  ntilde: "ñ",
+  ntlg: "≸",
+  ntriangleleft: "⋪",
+  ntrianglelefteq: "⋬",
+  ntriangleright: "⋫",
+  ntrianglerighteq: "⋭",
+  nu: "ν",
   num: "#",
-  numero: "\u2116",
-  numsp: "\u2007",
-  nvDash: "\u22AD",
-  nvHarr: "\u2904",
-  nvap: "\u224D\u20D2",
-  nvdash: "\u22AC",
-  nvge: "\u2265\u20D2",
-  nvgt: ">\u20D2",
-  nvinfin: "\u29DE",
-  nvlArr: "\u2902",
-  nvle: "\u2264\u20D2",
-  nvlt: "<\u20D2",
-  nvltrie: "\u22B4\u20D2",
-  nvrArr: "\u2903",
-  nvrtrie: "\u22B5\u20D2",
-  nvsim: "\u223C\u20D2",
-  nwArr: "\u21D6",
-  nwarhk: "\u2923",
-  nwarr: "\u2196",
-  nwarrow: "\u2196",
-  nwnear: "\u2927",
-  oS: "\u24C8",
-  oacute: "\xF3",
-  oast: "\u229B",
-  ocir: "\u229A",
-  ocirc: "\xF4",
-  ocy: "\u043E",
-  odash: "\u229D",
-  odblac: "\u0151",
-  odiv: "\u2A38",
-  odot: "\u2299",
-  odsold: "\u29BC",
-  oelig: "\u0153",
-  ofcir: "\u29BF",
+  numero: "№",
+  numsp: " ",
+  nvDash: "⊭",
+  nvHarr: "⤄",
+  nvap: "≍⃒",
+  nvdash: "⊬",
+  nvge: "≥⃒",
+  nvgt: ">⃒",
+  nvinfin: "⧞",
+  nvlArr: "⤂",
+  nvle: "≤⃒",
+  nvlt: "<⃒",
+  nvltrie: "⊴⃒",
+  nvrArr: "⤃",
+  nvrtrie: "⊵⃒",
+  nvsim: "∼⃒",
+  nwArr: "⇖",
+  nwarhk: "⤣",
+  nwarr: "↖",
+  nwarrow: "↖",
+  nwnear: "⤧",
+  oS: "Ⓢ",
+  oacute: "ó",
+  oast: "⊛",
+  ocir: "⊚",
+  ocirc: "ô",
+  ocy: "о",
+  odash: "⊝",
+  odblac: "ő",
+  odiv: "⨸",
+  odot: "⊙",
+  odsold: "⦼",
+  oelig: "œ",
+  ofcir: "⦿",
   ofr: "\uD835\uDD2C",
-  ogon: "\u02DB",
-  ograve: "\xF2",
-  ogt: "\u29C1",
-  ohbar: "\u29B5",
-  ohm: "\u03A9",
-  oint: "\u222E",
-  olarr: "\u21BA",
-  olcir: "\u29BE",
-  olcross: "\u29BB",
-  oline: "\u203E",
-  olt: "\u29C0",
-  omacr: "\u014D",
-  omega: "\u03C9",
-  omicron: "\u03BF",
-  omid: "\u29B6",
-  ominus: "\u2296",
+  ogon: "˛",
+  ograve: "ò",
+  ogt: "⧁",
+  ohbar: "⦵",
+  ohm: "Ω",
+  oint: "∮",
+  olarr: "↺",
+  olcir: "⦾",
+  olcross: "⦻",
+  oline: "‾",
+  olt: "⧀",
+  omacr: "ō",
+  omega: "ω",
+  omicron: "ο",
+  omid: "⦶",
+  ominus: "⊖",
   oopf: "\uD835\uDD60",
-  opar: "\u29B7",
-  operp: "\u29B9",
-  oplus: "\u2295",
-  or: "\u2228",
-  orarr: "\u21BB",
-  ord: "\u2A5D",
-  order: "\u2134",
-  orderof: "\u2134",
-  ordf: "\xAA",
-  ordm: "\xBA",
-  origof: "\u22B6",
-  oror: "\u2A56",
-  orslope: "\u2A57",
-  orv: "\u2A5B",
-  oscr: "\u2134",
-  oslash: "\xF8",
-  osol: "\u2298",
-  otilde: "\xF5",
-  otimes: "\u2297",
-  otimesas: "\u2A36",
-  ouml: "\xF6",
-  ovbar: "\u233D",
-  par: "\u2225",
-  para: "\xB6",
-  parallel: "\u2225",
-  parsim: "\u2AF3",
-  parsl: "\u2AFD",
-  part: "\u2202",
-  pcy: "\u043F",
+  opar: "⦷",
+  operp: "⦹",
+  oplus: "⊕",
+  or: "∨",
+  orarr: "↻",
+  ord: "⩝",
+  order: "ℴ",
+  orderof: "ℴ",
+  ordf: "ª",
+  ordm: "º",
+  origof: "⊶",
+  oror: "⩖",
+  orslope: "⩗",
+  orv: "⩛",
+  oscr: "ℴ",
+  oslash: "ø",
+  osol: "⊘",
+  otilde: "õ",
+  otimes: "⊗",
+  otimesas: "⨶",
+  ouml: "ö",
+  ovbar: "⌽",
+  par: "∥",
+  para: "¶",
+  parallel: "∥",
+  parsim: "⫳",
+  parsl: "⫽",
+  part: "∂",
+  pcy: "п",
   percnt: "%",
   period: ".",
-  permil: "\u2030",
-  perp: "\u22A5",
-  pertenk: "\u2031",
+  permil: "‰",
+  perp: "⊥",
+  pertenk: "‱",
   pfr: "\uD835\uDD2D",
-  phi: "\u03C6",
-  phiv: "\u03D5",
-  phmmat: "\u2133",
-  phone: "\u260E",
-  pi: "\u03C0",
-  pitchfork: "\u22D4",
-  piv: "\u03D6",
-  planck: "\u210F",
-  planckh: "\u210E",
-  plankv: "\u210F",
+  phi: "φ",
+  phiv: "ϕ",
+  phmmat: "ℳ",
+  phone: "☎",
+  pi: "π",
+  pitchfork: "⋔",
+  piv: "ϖ",
+  planck: "ℏ",
+  planckh: "ℎ",
+  plankv: "ℏ",
   plus: "+",
-  plusacir: "\u2A23",
-  plusb: "\u229E",
-  pluscir: "\u2A22",
-  plusdo: "\u2214",
-  plusdu: "\u2A25",
-  pluse: "\u2A72",
-  plusmn: "\xB1",
-  plussim: "\u2A26",
-  plustwo: "\u2A27",
-  pm: "\xB1",
-  pointint: "\u2A15",
+  plusacir: "⨣",
+  plusb: "⊞",
+  pluscir: "⨢",
+  plusdo: "∔",
+  plusdu: "⨥",
+  pluse: "⩲",
+  plusmn: "±",
+  plussim: "⨦",
+  plustwo: "⨧",
+  pm: "±",
+  pointint: "⨕",
   popf: "\uD835\uDD61",
-  pound: "\xA3",
-  pr: "\u227A",
-  prE: "\u2AB3",
-  prap: "\u2AB7",
-  prcue: "\u227C",
-  pre: "\u2AAF",
-  prec: "\u227A",
-  precapprox: "\u2AB7",
-  preccurlyeq: "\u227C",
-  preceq: "\u2AAF",
-  precnapprox: "\u2AB9",
-  precneqq: "\u2AB5",
-  precnsim: "\u22E8",
-  precsim: "\u227E",
-  prime: "\u2032",
-  primes: "\u2119",
-  prnE: "\u2AB5",
-  prnap: "\u2AB9",
-  prnsim: "\u22E8",
-  prod: "\u220F",
-  profalar: "\u232E",
-  profline: "\u2312",
-  profsurf: "\u2313",
-  prop: "\u221D",
-  propto: "\u221D",
-  prsim: "\u227E",
-  prurel: "\u22B0",
+  pound: "£",
+  pr: "≺",
+  prE: "⪳",
+  prap: "⪷",
+  prcue: "≼",
+  pre: "⪯",
+  prec: "≺",
+  precapprox: "⪷",
+  preccurlyeq: "≼",
+  preceq: "⪯",
+  precnapprox: "⪹",
+  precneqq: "⪵",
+  precnsim: "⋨",
+  precsim: "≾",
+  prime: "′",
+  primes: "ℙ",
+  prnE: "⪵",
+  prnap: "⪹",
+  prnsim: "⋨",
+  prod: "∏",
+  profalar: "⌮",
+  profline: "⌒",
+  profsurf: "⌓",
+  prop: "∝",
+  propto: "∝",
+  prsim: "≾",
+  prurel: "⊰",
   pscr: "\uD835\uDCC5",
-  psi: "\u03C8",
-  puncsp: "\u2008",
+  psi: "ψ",
+  puncsp: " ",
   qfr: "\uD835\uDD2E",
-  qint: "\u2A0C",
+  qint: "⨌",
   qopf: "\uD835\uDD62",
-  qprime: "\u2057",
+  qprime: "⁗",
   qscr: "\uD835\uDCC6",
-  quaternions: "\u210D",
-  quatint: "\u2A16",
+  quaternions: "ℍ",
+  quatint: "⨖",
   quest: "?",
-  questeq: "\u225F",
+  questeq: "≟",
   quot: '"',
-  rAarr: "\u21DB",
-  rArr: "\u21D2",
-  rAtail: "\u291C",
-  rBarr: "\u290F",
-  rHar: "\u2964",
-  race: "\u223D\u0331",
-  racute: "\u0155",
-  radic: "\u221A",
-  raemptyv: "\u29B3",
-  rang: "\u27E9",
-  rangd: "\u2992",
-  range: "\u29A5",
-  rangle: "\u27E9",
-  raquo: "\xBB",
-  rarr: "\u2192",
-  rarrap: "\u2975",
-  rarrb: "\u21E5",
-  rarrbfs: "\u2920",
-  rarrc: "\u2933",
-  rarrfs: "\u291E",
-  rarrhk: "\u21AA",
-  rarrlp: "\u21AC",
-  rarrpl: "\u2945",
-  rarrsim: "\u2974",
-  rarrtl: "\u21A3",
-  rarrw: "\u219D",
-  ratail: "\u291A",
-  ratio: "\u2236",
-  rationals: "\u211A",
-  rbarr: "\u290D",
-  rbbrk: "\u2773",
+  rAarr: "⇛",
+  rArr: "⇒",
+  rAtail: "⤜",
+  rBarr: "⤏",
+  rHar: "⥤",
+  race: "∽̱",
+  racute: "ŕ",
+  radic: "√",
+  raemptyv: "⦳",
+  rang: "⟩",
+  rangd: "⦒",
+  range: "⦥",
+  rangle: "⟩",
+  raquo: "»",
+  rarr: "→",
+  rarrap: "⥵",
+  rarrb: "⇥",
+  rarrbfs: "⤠",
+  rarrc: "⤳",
+  rarrfs: "⤞",
+  rarrhk: "↪",
+  rarrlp: "↬",
+  rarrpl: "⥅",
+  rarrsim: "⥴",
+  rarrtl: "↣",
+  rarrw: "↝",
+  ratail: "⤚",
+  ratio: "∶",
+  rationals: "ℚ",
+  rbarr: "⤍",
+  rbbrk: "❳",
   rbrace: "}",
   rbrack: "]",
-  rbrke: "\u298C",
-  rbrksld: "\u298E",
-  rbrkslu: "\u2990",
-  rcaron: "\u0159",
-  rcedil: "\u0157",
-  rceil: "\u2309",
+  rbrke: "⦌",
+  rbrksld: "⦎",
+  rbrkslu: "⦐",
+  rcaron: "ř",
+  rcedil: "ŗ",
+  rceil: "⌉",
   rcub: "}",
-  rcy: "\u0440",
-  rdca: "\u2937",
-  rdldhar: "\u2969",
-  rdquo: "\u201D",
-  rdquor: "\u201D",
-  rdsh: "\u21B3",
-  real: "\u211C",
-  realine: "\u211B",
-  realpart: "\u211C",
-  reals: "\u211D",
-  rect: "\u25AD",
-  reg: "\xAE",
-  rfisht: "\u297D",
-  rfloor: "\u230B",
+  rcy: "р",
+  rdca: "⤷",
+  rdldhar: "⥩",
+  rdquo: "”",
+  rdquor: "”",
+  rdsh: "↳",
+  real: "ℜ",
+  realine: "ℛ",
+  realpart: "ℜ",
+  reals: "ℝ",
+  rect: "▭",
+  reg: "®",
+  rfisht: "⥽",
+  rfloor: "⌋",
   rfr: "\uD835\uDD2F",
-  rhard: "\u21C1",
-  rharu: "\u21C0",
-  rharul: "\u296C",
-  rho: "\u03C1",
-  rhov: "\u03F1",
-  rightarrow: "\u2192",
-  rightarrowtail: "\u21A3",
-  rightharpoondown: "\u21C1",
-  rightharpoonup: "\u21C0",
-  rightleftarrows: "\u21C4",
-  rightleftharpoons: "\u21CC",
-  rightrightarrows: "\u21C9",
-  rightsquigarrow: "\u219D",
-  rightthreetimes: "\u22CC",
-  ring: "\u02DA",
-  risingdotseq: "\u2253",
-  rlarr: "\u21C4",
-  rlhar: "\u21CC",
-  rlm: "\u200F",
-  rmoust: "\u23B1",
-  rmoustache: "\u23B1",
-  rnmid: "\u2AEE",
-  roang: "\u27ED",
-  roarr: "\u21FE",
-  robrk: "\u27E7",
-  ropar: "\u2986",
+  rhard: "⇁",
+  rharu: "⇀",
+  rharul: "⥬",
+  rho: "ρ",
+  rhov: "ϱ",
+  rightarrow: "→",
+  rightarrowtail: "↣",
+  rightharpoondown: "⇁",
+  rightharpoonup: "⇀",
+  rightleftarrows: "⇄",
+  rightleftharpoons: "⇌",
+  rightrightarrows: "⇉",
+  rightsquigarrow: "↝",
+  rightthreetimes: "⋌",
+  ring: "˚",
+  risingdotseq: "≓",
+  rlarr: "⇄",
+  rlhar: "⇌",
+  rlm: "‏",
+  rmoust: "⎱",
+  rmoustache: "⎱",
+  rnmid: "⫮",
+  roang: "⟭",
+  roarr: "⇾",
+  robrk: "⟧",
+  ropar: "⦆",
   ropf: "\uD835\uDD63",
-  roplus: "\u2A2E",
-  rotimes: "\u2A35",
+  roplus: "⨮",
+  rotimes: "⨵",
   rpar: ")",
-  rpargt: "\u2994",
-  rppolint: "\u2A12",
-  rrarr: "\u21C9",
-  rsaquo: "\u203A",
+  rpargt: "⦔",
+  rppolint: "⨒",
+  rrarr: "⇉",
+  rsaquo: "›",
   rscr: "\uD835\uDCC7",
-  rsh: "\u21B1",
+  rsh: "↱",
   rsqb: "]",
-  rsquo: "\u2019",
-  rsquor: "\u2019",
-  rthree: "\u22CC",
-  rtimes: "\u22CA",
-  rtri: "\u25B9",
-  rtrie: "\u22B5",
-  rtrif: "\u25B8",
-  rtriltri: "\u29CE",
-  ruluhar: "\u2968",
-  rx: "\u211E",
-  sacute: "\u015B",
-  sbquo: "\u201A",
-  sc: "\u227B",
-  scE: "\u2AB4",
-  scap: "\u2AB8",
-  scaron: "\u0161",
-  sccue: "\u227D",
-  sce: "\u2AB0",
-  scedil: "\u015F",
-  scirc: "\u015D",
-  scnE: "\u2AB6",
-  scnap: "\u2ABA",
-  scnsim: "\u22E9",
-  scpolint: "\u2A13",
-  scsim: "\u227F",
-  scy: "\u0441",
-  sdot: "\u22C5",
-  sdotb: "\u22A1",
-  sdote: "\u2A66",
-  seArr: "\u21D8",
-  searhk: "\u2925",
-  searr: "\u2198",
-  searrow: "\u2198",
-  sect: "\xA7",
+  rsquo: "’",
+  rsquor: "’",
+  rthree: "⋌",
+  rtimes: "⋊",
+  rtri: "▹",
+  rtrie: "⊵",
+  rtrif: "▸",
+  rtriltri: "⧎",
+  ruluhar: "⥨",
+  rx: "℞",
+  sacute: "ś",
+  sbquo: "‚",
+  sc: "≻",
+  scE: "⪴",
+  scap: "⪸",
+  scaron: "š",
+  sccue: "≽",
+  sce: "⪰",
+  scedil: "ş",
+  scirc: "ŝ",
+  scnE: "⪶",
+  scnap: "⪺",
+  scnsim: "⋩",
+  scpolint: "⨓",
+  scsim: "≿",
+  scy: "с",
+  sdot: "⋅",
+  sdotb: "⊡",
+  sdote: "⩦",
+  seArr: "⇘",
+  searhk: "⤥",
+  searr: "↘",
+  searrow: "↘",
+  sect: "§",
   semi: ";",
-  seswar: "\u2929",
-  setminus: "\u2216",
-  setmn: "\u2216",
-  sext: "\u2736",
+  seswar: "⤩",
+  setminus: "∖",
+  setmn: "∖",
+  sext: "✶",
   sfr: "\uD835\uDD30",
-  sfrown: "\u2322",
-  sharp: "\u266F",
-  shchcy: "\u0449",
-  shcy: "\u0448",
-  shortmid: "\u2223",
-  shortparallel: "\u2225",
-  shy: "\xAD",
-  sigma: "\u03C3",
-  sigmaf: "\u03C2",
-  sigmav: "\u03C2",
-  sim: "\u223C",
-  simdot: "\u2A6A",
-  sime: "\u2243",
-  simeq: "\u2243",
-  simg: "\u2A9E",
-  simgE: "\u2AA0",
-  siml: "\u2A9D",
-  simlE: "\u2A9F",
-  simne: "\u2246",
-  simplus: "\u2A24",
-  simrarr: "\u2972",
-  slarr: "\u2190",
-  smallsetminus: "\u2216",
-  smashp: "\u2A33",
-  smeparsl: "\u29E4",
-  smid: "\u2223",
-  smile: "\u2323",
-  smt: "\u2AAA",
-  smte: "\u2AAC",
-  smtes: "\u2AAC\uFE00",
-  softcy: "\u044C",
+  sfrown: "⌢",
+  sharp: "♯",
+  shchcy: "щ",
+  shcy: "ш",
+  shortmid: "∣",
+  shortparallel: "∥",
+  shy: "­",
+  sigma: "σ",
+  sigmaf: "ς",
+  sigmav: "ς",
+  sim: "∼",
+  simdot: "⩪",
+  sime: "≃",
+  simeq: "≃",
+  simg: "⪞",
+  simgE: "⪠",
+  siml: "⪝",
+  simlE: "⪟",
+  simne: "≆",
+  simplus: "⨤",
+  simrarr: "⥲",
+  slarr: "←",
+  smallsetminus: "∖",
+  smashp: "⨳",
+  smeparsl: "⧤",
+  smid: "∣",
+  smile: "⌣",
+  smt: "⪪",
+  smte: "⪬",
+  smtes: "⪬︀",
+  softcy: "ь",
   sol: "/",
-  solb: "\u29C4",
-  solbar: "\u233F",
+  solb: "⧄",
+  solbar: "⌿",
   sopf: "\uD835\uDD64",
-  spades: "\u2660",
-  spadesuit: "\u2660",
-  spar: "\u2225",
-  sqcap: "\u2293",
-  sqcaps: "\u2293\uFE00",
-  sqcup: "\u2294",
-  sqcups: "\u2294\uFE00",
-  sqsub: "\u228F",
-  sqsube: "\u2291",
-  sqsubset: "\u228F",
-  sqsubseteq: "\u2291",
-  sqsup: "\u2290",
-  sqsupe: "\u2292",
-  sqsupset: "\u2290",
-  sqsupseteq: "\u2292",
-  squ: "\u25A1",
-  square: "\u25A1",
-  squarf: "\u25AA",
-  squf: "\u25AA",
-  srarr: "\u2192",
+  spades: "♠",
+  spadesuit: "♠",
+  spar: "∥",
+  sqcap: "⊓",
+  sqcaps: "⊓︀",
+  sqcup: "⊔",
+  sqcups: "⊔︀",
+  sqsub: "⊏",
+  sqsube: "⊑",
+  sqsubset: "⊏",
+  sqsubseteq: "⊑",
+  sqsup: "⊐",
+  sqsupe: "⊒",
+  sqsupset: "⊐",
+  sqsupseteq: "⊒",
+  squ: "□",
+  square: "□",
+  squarf: "▪",
+  squf: "▪",
+  srarr: "→",
   sscr: "\uD835\uDCC8",
-  ssetmn: "\u2216",
-  ssmile: "\u2323",
-  sstarf: "\u22C6",
-  star: "\u2606",
-  starf: "\u2605",
-  straightepsilon: "\u03F5",
-  straightphi: "\u03D5",
-  strns: "\xAF",
-  sub: "\u2282",
-  subE: "\u2AC5",
-  subdot: "\u2ABD",
-  sube: "\u2286",
-  subedot: "\u2AC3",
-  submult: "\u2AC1",
-  subnE: "\u2ACB",
-  subne: "\u228A",
-  subplus: "\u2ABF",
-  subrarr: "\u2979",
-  subset: "\u2282",
-  subseteq: "\u2286",
-  subseteqq: "\u2AC5",
-  subsetneq: "\u228A",
-  subsetneqq: "\u2ACB",
-  subsim: "\u2AC7",
-  subsub: "\u2AD5",
-  subsup: "\u2AD3",
-  succ: "\u227B",
-  succapprox: "\u2AB8",
-  succcurlyeq: "\u227D",
-  succeq: "\u2AB0",
-  succnapprox: "\u2ABA",
-  succneqq: "\u2AB6",
-  succnsim: "\u22E9",
-  succsim: "\u227F",
-  sum: "\u2211",
-  sung: "\u266A",
-  sup1: "\xB9",
-  sup2: "\xB2",
-  sup3: "\xB3",
-  sup: "\u2283",
-  supE: "\u2AC6",
-  supdot: "\u2ABE",
-  supdsub: "\u2AD8",
-  supe: "\u2287",
-  supedot: "\u2AC4",
-  suphsol: "\u27C9",
-  suphsub: "\u2AD7",
-  suplarr: "\u297B",
-  supmult: "\u2AC2",
-  supnE: "\u2ACC",
-  supne: "\u228B",
-  supplus: "\u2AC0",
-  supset: "\u2283",
-  supseteq: "\u2287",
-  supseteqq: "\u2AC6",
-  supsetneq: "\u228B",
-  supsetneqq: "\u2ACC",
-  supsim: "\u2AC8",
-  supsub: "\u2AD4",
-  supsup: "\u2AD6",
-  swArr: "\u21D9",
-  swarhk: "\u2926",
-  swarr: "\u2199",
-  swarrow: "\u2199",
-  swnwar: "\u292A",
-  szlig: "\xDF",
-  target: "\u2316",
-  tau: "\u03C4",
-  tbrk: "\u23B4",
-  tcaron: "\u0165",
-  tcedil: "\u0163",
-  tcy: "\u0442",
-  tdot: "\u20DB",
-  telrec: "\u2315",
+  ssetmn: "∖",
+  ssmile: "⌣",
+  sstarf: "⋆",
+  star: "☆",
+  starf: "★",
+  straightepsilon: "ϵ",
+  straightphi: "ϕ",
+  strns: "¯",
+  sub: "⊂",
+  subE: "⫅",
+  subdot: "⪽",
+  sube: "⊆",
+  subedot: "⫃",
+  submult: "⫁",
+  subnE: "⫋",
+  subne: "⊊",
+  subplus: "⪿",
+  subrarr: "⥹",
+  subset: "⊂",
+  subseteq: "⊆",
+  subseteqq: "⫅",
+  subsetneq: "⊊",
+  subsetneqq: "⫋",
+  subsim: "⫇",
+  subsub: "⫕",
+  subsup: "⫓",
+  succ: "≻",
+  succapprox: "⪸",
+  succcurlyeq: "≽",
+  succeq: "⪰",
+  succnapprox: "⪺",
+  succneqq: "⪶",
+  succnsim: "⋩",
+  succsim: "≿",
+  sum: "∑",
+  sung: "♪",
+  sup1: "¹",
+  sup2: "²",
+  sup3: "³",
+  sup: "⊃",
+  supE: "⫆",
+  supdot: "⪾",
+  supdsub: "⫘",
+  supe: "⊇",
+  supedot: "⫄",
+  suphsol: "⟉",
+  suphsub: "⫗",
+  suplarr: "⥻",
+  supmult: "⫂",
+  supnE: "⫌",
+  supne: "⊋",
+  supplus: "⫀",
+  supset: "⊃",
+  supseteq: "⊇",
+  supseteqq: "⫆",
+  supsetneq: "⊋",
+  supsetneqq: "⫌",
+  supsim: "⫈",
+  supsub: "⫔",
+  supsup: "⫖",
+  swArr: "⇙",
+  swarhk: "⤦",
+  swarr: "↙",
+  swarrow: "↙",
+  swnwar: "⤪",
+  szlig: "ß",
+  target: "⌖",
+  tau: "τ",
+  tbrk: "⎴",
+  tcaron: "ť",
+  tcedil: "ţ",
+  tcy: "т",
+  tdot: "⃛",
+  telrec: "⌕",
   tfr: "\uD835\uDD31",
-  there4: "\u2234",
-  therefore: "\u2234",
-  theta: "\u03B8",
-  thetasym: "\u03D1",
-  thetav: "\u03D1",
-  thickapprox: "\u2248",
-  thicksim: "\u223C",
-  thinsp: "\u2009",
-  thkap: "\u2248",
-  thksim: "\u223C",
-  thorn: "\xFE",
-  tilde: "\u02DC",
-  times: "\xD7",
-  timesb: "\u22A0",
-  timesbar: "\u2A31",
-  timesd: "\u2A30",
-  tint: "\u222D",
-  toea: "\u2928",
-  top: "\u22A4",
-  topbot: "\u2336",
-  topcir: "\u2AF1",
+  there4: "∴",
+  therefore: "∴",
+  theta: "θ",
+  thetasym: "ϑ",
+  thetav: "ϑ",
+  thickapprox: "≈",
+  thicksim: "∼",
+  thinsp: " ",
+  thkap: "≈",
+  thksim: "∼",
+  thorn: "þ",
+  tilde: "˜",
+  times: "×",
+  timesb: "⊠",
+  timesbar: "⨱",
+  timesd: "⨰",
+  tint: "∭",
+  toea: "⤨",
+  top: "⊤",
+  topbot: "⌶",
+  topcir: "⫱",
   topf: "\uD835\uDD65",
-  topfork: "\u2ADA",
-  tosa: "\u2929",
-  tprime: "\u2034",
-  trade: "\u2122",
-  triangle: "\u25B5",
-  triangledown: "\u25BF",
-  triangleleft: "\u25C3",
-  trianglelefteq: "\u22B4",
-  triangleq: "\u225C",
-  triangleright: "\u25B9",
-  trianglerighteq: "\u22B5",
-  tridot: "\u25EC",
-  trie: "\u225C",
-  triminus: "\u2A3A",
-  triplus: "\u2A39",
-  trisb: "\u29CD",
-  tritime: "\u2A3B",
-  trpezium: "\u23E2",
+  topfork: "⫚",
+  tosa: "⤩",
+  tprime: "‴",
+  trade: "™",
+  triangle: "▵",
+  triangledown: "▿",
+  triangleleft: "◃",
+  trianglelefteq: "⊴",
+  triangleq: "≜",
+  triangleright: "▹",
+  trianglerighteq: "⊵",
+  tridot: "◬",
+  trie: "≜",
+  triminus: "⨺",
+  triplus: "⨹",
+  trisb: "⧍",
+  tritime: "⨻",
+  trpezium: "⏢",
   tscr: "\uD835\uDCC9",
-  tscy: "\u0446",
-  tshcy: "\u045B",
-  tstrok: "\u0167",
-  twixt: "\u226C",
-  twoheadleftarrow: "\u219E",
-  twoheadrightarrow: "\u21A0",
-  uArr: "\u21D1",
-  uHar: "\u2963",
-  uacute: "\xFA",
-  uarr: "\u2191",
-  ubrcy: "\u045E",
-  ubreve: "\u016D",
-  ucirc: "\xFB",
-  ucy: "\u0443",
-  udarr: "\u21C5",
-  udblac: "\u0171",
-  udhar: "\u296E",
-  ufisht: "\u297E",
+  tscy: "ц",
+  tshcy: "ћ",
+  tstrok: "ŧ",
+  twixt: "≬",
+  twoheadleftarrow: "↞",
+  twoheadrightarrow: "↠",
+  uArr: "⇑",
+  uHar: "⥣",
+  uacute: "ú",
+  uarr: "↑",
+  ubrcy: "ў",
+  ubreve: "ŭ",
+  ucirc: "û",
+  ucy: "у",
+  udarr: "⇅",
+  udblac: "ű",
+  udhar: "⥮",
+  ufisht: "⥾",
   ufr: "\uD835\uDD32",
-  ugrave: "\xF9",
-  uharl: "\u21BF",
-  uharr: "\u21BE",
-  uhblk: "\u2580",
-  ulcorn: "\u231C",
-  ulcorner: "\u231C",
-  ulcrop: "\u230F",
-  ultri: "\u25F8",
-  umacr: "\u016B",
-  uml: "\xA8",
-  uogon: "\u0173",
+  ugrave: "ù",
+  uharl: "↿",
+  uharr: "↾",
+  uhblk: "▀",
+  ulcorn: "⌜",
+  ulcorner: "⌜",
+  ulcrop: "⌏",
+  ultri: "◸",
+  umacr: "ū",
+  uml: "¨",
+  uogon: "ų",
   uopf: "\uD835\uDD66",
-  uparrow: "\u2191",
-  updownarrow: "\u2195",
-  upharpoonleft: "\u21BF",
-  upharpoonright: "\u21BE",
-  uplus: "\u228E",
-  upsi: "\u03C5",
-  upsih: "\u03D2",
-  upsilon: "\u03C5",
-  upuparrows: "\u21C8",
-  urcorn: "\u231D",
-  urcorner: "\u231D",
-  urcrop: "\u230E",
-  uring: "\u016F",
-  urtri: "\u25F9",
+  uparrow: "↑",
+  updownarrow: "↕",
+  upharpoonleft: "↿",
+  upharpoonright: "↾",
+  uplus: "⊎",
+  upsi: "υ",
+  upsih: "ϒ",
+  upsilon: "υ",
+  upuparrows: "⇈",
+  urcorn: "⌝",
+  urcorner: "⌝",
+  urcrop: "⌎",
+  uring: "ů",
+  urtri: "◹",
   uscr: "\uD835\uDCCA",
-  utdot: "\u22F0",
-  utilde: "\u0169",
-  utri: "\u25B5",
-  utrif: "\u25B4",
-  uuarr: "\u21C8",
-  uuml: "\xFC",
-  uwangle: "\u29A7",
-  vArr: "\u21D5",
-  vBar: "\u2AE8",
-  vBarv: "\u2AE9",
-  vDash: "\u22A8",
-  vangrt: "\u299C",
-  varepsilon: "\u03F5",
-  varkappa: "\u03F0",
-  varnothing: "\u2205",
-  varphi: "\u03D5",
-  varpi: "\u03D6",
-  varpropto: "\u221D",
-  varr: "\u2195",
-  varrho: "\u03F1",
-  varsigma: "\u03C2",
-  varsubsetneq: "\u228A\uFE00",
-  varsubsetneqq: "\u2ACB\uFE00",
-  varsupsetneq: "\u228B\uFE00",
-  varsupsetneqq: "\u2ACC\uFE00",
-  vartheta: "\u03D1",
-  vartriangleleft: "\u22B2",
-  vartriangleright: "\u22B3",
-  vcy: "\u0432",
-  vdash: "\u22A2",
-  vee: "\u2228",
-  veebar: "\u22BB",
-  veeeq: "\u225A",
-  vellip: "\u22EE",
+  utdot: "⋰",
+  utilde: "ũ",
+  utri: "▵",
+  utrif: "▴",
+  uuarr: "⇈",
+  uuml: "ü",
+  uwangle: "⦧",
+  vArr: "⇕",
+  vBar: "⫨",
+  vBarv: "⫩",
+  vDash: "⊨",
+  vangrt: "⦜",
+  varepsilon: "ϵ",
+  varkappa: "ϰ",
+  varnothing: "∅",
+  varphi: "ϕ",
+  varpi: "ϖ",
+  varpropto: "∝",
+  varr: "↕",
+  varrho: "ϱ",
+  varsigma: "ς",
+  varsubsetneq: "⊊︀",
+  varsubsetneqq: "⫋︀",
+  varsupsetneq: "⊋︀",
+  varsupsetneqq: "⫌︀",
+  vartheta: "ϑ",
+  vartriangleleft: "⊲",
+  vartriangleright: "⊳",
+  vcy: "в",
+  vdash: "⊢",
+  vee: "∨",
+  veebar: "⊻",
+  veeeq: "≚",
+  vellip: "⋮",
   verbar: "|",
   vert: "|",
   vfr: "\uD835\uDD33",
-  vltri: "\u22B2",
-  vnsub: "\u2282\u20D2",
-  vnsup: "\u2283\u20D2",
+  vltri: "⊲",
+  vnsub: "⊂⃒",
+  vnsup: "⊃⃒",
   vopf: "\uD835\uDD67",
-  vprop: "\u221D",
-  vrtri: "\u22B3",
+  vprop: "∝",
+  vrtri: "⊳",
   vscr: "\uD835\uDCCB",
-  vsubnE: "\u2ACB\uFE00",
-  vsubne: "\u228A\uFE00",
-  vsupnE: "\u2ACC\uFE00",
-  vsupne: "\u228B\uFE00",
-  vzigzag: "\u299A",
-  wcirc: "\u0175",
-  wedbar: "\u2A5F",
-  wedge: "\u2227",
-  wedgeq: "\u2259",
-  weierp: "\u2118",
+  vsubnE: "⫋︀",
+  vsubne: "⊊︀",
+  vsupnE: "⫌︀",
+  vsupne: "⊋︀",
+  vzigzag: "⦚",
+  wcirc: "ŵ",
+  wedbar: "⩟",
+  wedge: "∧",
+  wedgeq: "≙",
+  weierp: "℘",
   wfr: "\uD835\uDD34",
   wopf: "\uD835\uDD68",
-  wp: "\u2118",
-  wr: "\u2240",
-  wreath: "\u2240",
+  wp: "℘",
+  wr: "≀",
+  wreath: "≀",
   wscr: "\uD835\uDCCC",
-  xcap: "\u22C2",
-  xcirc: "\u25EF",
-  xcup: "\u22C3",
-  xdtri: "\u25BD",
+  xcap: "⋂",
+  xcirc: "◯",
+  xcup: "⋃",
+  xdtri: "▽",
   xfr: "\uD835\uDD35",
-  xhArr: "\u27FA",
-  xharr: "\u27F7",
-  xi: "\u03BE",
-  xlArr: "\u27F8",
-  xlarr: "\u27F5",
-  xmap: "\u27FC",
-  xnis: "\u22FB",
-  xodot: "\u2A00",
+  xhArr: "⟺",
+  xharr: "⟷",
+  xi: "ξ",
+  xlArr: "⟸",
+  xlarr: "⟵",
+  xmap: "⟼",
+  xnis: "⋻",
+  xodot: "⨀",
   xopf: "\uD835\uDD69",
-  xoplus: "\u2A01",
-  xotime: "\u2A02",
-  xrArr: "\u27F9",
-  xrarr: "\u27F6",
+  xoplus: "⨁",
+  xotime: "⨂",
+  xrArr: "⟹",
+  xrarr: "⟶",
   xscr: "\uD835\uDCCD",
-  xsqcup: "\u2A06",
-  xuplus: "\u2A04",
-  xutri: "\u25B3",
-  xvee: "\u22C1",
-  xwedge: "\u22C0",
-  yacute: "\xFD",
-  yacy: "\u044F",
-  ycirc: "\u0177",
-  ycy: "\u044B",
-  yen: "\xA5",
+  xsqcup: "⨆",
+  xuplus: "⨄",
+  xutri: "△",
+  xvee: "⋁",
+  xwedge: "⋀",
+  yacute: "ý",
+  yacy: "я",
+  ycirc: "ŷ",
+  ycy: "ы",
+  yen: "¥",
   yfr: "\uD835\uDD36",
-  yicy: "\u0457",
+  yicy: "ї",
   yopf: "\uD835\uDD6A",
   yscr: "\uD835\uDCCE",
-  yucy: "\u044E",
-  yuml: "\xFF",
-  zacute: "\u017A",
-  zcaron: "\u017E",
-  zcy: "\u0437",
-  zdot: "\u017C",
-  zeetrf: "\u2128",
-  zeta: "\u03B6",
+  yucy: "ю",
+  yuml: "ÿ",
+  zacute: "ź",
+  zcaron: "ž",
+  zcy: "з",
+  zdot: "ż",
+  zeetrf: "ℨ",
+  zeta: "ζ",
   zfr: "\uD835\uDD37",
-  zhcy: "\u0436",
-  zigrarr: "\u21DD",
+  zhcy: "ж",
+  zigrarr: "⇝",
   zopf: "\uD835\uDD6B",
   zscr: "\uD835\uDCCF",
-  zwj: "\u200D",
-  zwnj: "\u200C"
+  zwj: "‍",
+  zwnj: "‌"
 };
 
 // node_modules/decode-named-character-reference/index.js
@@ -31235,7 +31970,7 @@ var values = {
   verticalBar: "|",
   rightCurlyBrace: "}",
   tilde: "~",
-  replacementCharacter: "\uFFFD"
+  replacementCharacter: "�"
 };
 // node_modules/micromark-util-chunked/dev/index.js
 function splice(list, start, remove, items) {
@@ -34799,7 +35534,7 @@ function createTokenizer(parser, initialize, from) {
   function onsuccessfulconstruct(construct, info) {
     addResult(construct, info.from);
   }
-  function onsuccessfulcheck(_2, info) {
+  function onsuccessfulcheck(_, info) {
     info.restore();
   }
   function constructFactory(onreturn, fields) {
@@ -34971,7 +35706,7 @@ function serializeChunks(chunks, expandTabs) {
 }
 
 // node_modules/micromark/dev/lib/parse.js
-function parse3(options2) {
+function parse4(options2) {
   const settings = options2 || {};
   const constructs2 = combineExtensions([exports_constructs, ...settings.extensions || []]);
   const parser = {
@@ -35083,9 +35818,9 @@ function preprocess() {
 // node_modules/micromark-util-decode-string/dev/index.js
 var characterEscapeOrReference = /\\([!-/:-@[-`{-~])|&(#(?:\d{1,7}|x[\da-f]{1,6})|[\da-z]{1,31});/gi;
 function decodeString(value) {
-  return value.replace(characterEscapeOrReference, decode2);
+  return value.replace(characterEscapeOrReference, decode5);
 }
-function decode2($0, $1, $2) {
+function decode5($0, $1, $2) {
   if ($1) {
     return $1;
   }
@@ -35130,7 +35865,7 @@ function fromMarkdown(value, encoding, options2) {
     options2 = encoding;
     encoding = undefined;
   }
-  return compiler(options2)(postprocess(parse3(options2).document().write(preprocess()(value, encoding, true))));
+  return compiler(options2)(postprocess(parse4(options2).document().write(preprocess()(value, encoding, true))));
 }
 function compiler(options2) {
   const config = {
@@ -35406,7 +36141,7 @@ function compiler(options2) {
     ok(node2, "expected `node`");
     const open = this.tokenStack.pop();
     if (!open) {
-      throw new Error("Cannot close `" + token.type + "` (" + stringifyPosition({ start: token.start, end: token.end }) + "): it\u2019s not open");
+      throw new Error("Cannot close `" + token.type + "` (" + stringifyPosition({ start: token.start, end: token.end }) + "): it’s not open");
     } else if (open[0].type !== token.type) {
       if (onExitError) {
         onExitError.call(this, token, open[0]);
@@ -35907,7 +36642,7 @@ function map3(left, right) {
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/blockquote.js
-function blockquote(node2, _2, state, info) {
+function blockquote(node2, _, state, info) {
   const exit2 = state.enter("blockquote");
   const tracker = state.createTracker(info);
   tracker.move("> ");
@@ -35916,7 +36651,7 @@ function blockquote(node2, _2, state, info) {
   exit2();
   return value;
 }
-function map4(line, _2, blank) {
+function map4(line, _, blank) {
   return ">" + (blank ? "" : " ") + line;
 }
 
@@ -35941,7 +36676,7 @@ function listInScope(stack, list3, none) {
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/break.js
-function hardBreak(_2, _1, state, info) {
+function hardBreak(_, _1, state, info) {
   let index2 = -1;
   while (++index2 < state.unsafe.length) {
     if (state.unsafe[index2].character === `
@@ -35991,7 +36726,7 @@ function checkFence(state) {
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/code.js
-function code(node2, _2, state, info) {
+function code(node2, _, state, info) {
   const marker = checkFence(state);
   const raw = node2.value || "";
   const suffix = marker === "`" ? "GraveAccent" : "Tilde";
@@ -36037,7 +36772,7 @@ function code(node2, _2, state, info) {
   exit2();
   return value;
 }
-function map5(line, _2, blank) {
+function map5(line, _, blank) {
   return (blank ? "" : "    ") + line;
 }
 
@@ -36051,7 +36786,7 @@ function checkQuote(state) {
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/definition.js
-function definition2(node2, _2, state, info) {
+function definition2(node2, _, state, info) {
   const quote = checkQuote(state);
   const suffix = quote === '"' ? "Quote" : "Apostrophe";
   const exit2 = state.enter("definition");
@@ -36124,7 +36859,7 @@ function encodeInfo(outside, inside, marker) {
 
 // node_modules/mdast-util-to-markdown/lib/handle/emphasis.js
 emphasis.peek = emphasisPeek;
-function emphasis(node2, _2, state, info) {
+function emphasis(node2, _, state, info) {
   const marker = checkEmphasis(state);
   const exit2 = state.enter("emphasis");
   const tracker = state.createTracker(info);
@@ -36152,7 +36887,7 @@ function emphasis(node2, _2, state, info) {
   };
   return before + between + after;
 }
-function emphasisPeek(_2, _1, state) {
+function emphasisPeek(_, _1, state) {
   return state.options.emphasis || "*";
 }
 
@@ -36322,7 +37057,7 @@ function formatHeadingAsSetext(node2, state) {
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/heading.js
-function heading(node2, _2, state, info) {
+function heading(node2, _, state, info) {
   const rank = Math.max(Math.min(6, node2.depth || 1), 1);
   const tracker = state.createTracker(info);
   if (formatHeadingAsSetext(node2, state)) {
@@ -36374,7 +37109,7 @@ function htmlPeek() {
 
 // node_modules/mdast-util-to-markdown/lib/handle/image.js
 image.peek = imagePeek;
-function image(node2, _2, state, info) {
+function image(node2, _, state, info) {
   const quote = checkQuote(state);
   const suffix = quote === '"' ? "Quote" : "Apostrophe";
   const exit2 = state.enter("image");
@@ -36419,7 +37154,7 @@ function imagePeek() {
 
 // node_modules/mdast-util-to-markdown/lib/handle/image-reference.js
 imageReference.peek = imageReferencePeek;
-function imageReference(node2, _2, state, info) {
+function imageReference(node2, _, state, info) {
   const type = node2.referenceType;
   const exit2 = state.enter("imageReference");
   let subexit = state.enter("label");
@@ -36458,7 +37193,7 @@ function imageReferencePeek() {
 
 // node_modules/mdast-util-to-markdown/lib/handle/inline-code.js
 inlineCode.peek = inlineCodePeek;
-function inlineCode(node2, _2, state) {
+function inlineCode(node2, _, state) {
   let value = node2.value || "";
   let sequence = "`";
   let index2 = -1;
@@ -36496,7 +37231,7 @@ function formatLinkAsAutolink(node2, state) {
 
 // node_modules/mdast-util-to-markdown/lib/handle/link.js
 link.peek = linkPeek;
-function link(node2, _2, state, info) {
+function link(node2, _, state, info) {
   const quote = checkQuote(state);
   const suffix = quote === '"' ? "Quote" : "Apostrophe";
   const tracker = state.createTracker(info);
@@ -36556,13 +37291,13 @@ function link(node2, _2, state, info) {
   exit2();
   return value;
 }
-function linkPeek(node2, _2, state) {
+function linkPeek(node2, _, state) {
   return formatLinkAsAutolink(node2, state) ? "<" : "[";
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/link-reference.js
 linkReference.peek = linkReferencePeek;
-function linkReference(node2, _2, state, info) {
+function linkReference(node2, _, state, info) {
   const type = node2.referenceType;
   const exit2 = state.enter("linkReference");
   let subexit = state.enter("label");
@@ -36712,7 +37447,7 @@ function listItem(node2, parent, state, info) {
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/paragraph.js
-function paragraph(node2, _2, state, info) {
+function paragraph(node2, _, state, info) {
   const exit2 = state.enter("paragraph");
   const subexit = state.enter("phrasing");
   const value = state.containerPhrasing(node2, info);
@@ -36741,7 +37476,7 @@ var phrasing = convert2([
   "textDirective"
 ]);
 // node_modules/mdast-util-to-markdown/lib/handle/root.js
-function root(node2, _2, state, info) {
+function root(node2, _, state, info) {
   const hasPhrasing = node2.children.some(function(d) {
     return phrasing(d);
   });
@@ -36760,7 +37495,7 @@ function checkStrong(state) {
 
 // node_modules/mdast-util-to-markdown/lib/handle/strong.js
 strong.peek = strongPeek;
-function strong(node2, _2, state, info) {
+function strong(node2, _, state, info) {
   const marker = checkStrong(state);
   const exit2 = state.enter("strong");
   const tracker = state.createTracker(info);
@@ -36788,12 +37523,12 @@ function strong(node2, _2, state, info) {
   };
   return before + between + after;
 }
-function strongPeek(_2, _1, state) {
+function strongPeek(_, _1, state) {
   return state.options.strong || "*";
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/text.js
-function text3(node2, _2, state, info) {
+function text3(node2, _, state, info) {
   return state.safe(node2.value, info);
 }
 
@@ -36807,7 +37542,7 @@ function checkRuleRepetition(state) {
 }
 
 // node_modules/mdast-util-to-markdown/lib/handle/thematic-break.js
-function thematicBreak2(_2, _1, state) {
+function thematicBreak2(_, _1, state) {
   const value = (checkRule(state) + (state.options.ruleSpaces ? " " : "")).repeat(checkRuleRepetition(state));
   return state.options.ruleSpaces ? value.slice(0, -1) : value;
 }
@@ -37467,13 +38202,13 @@ VFileMessage.prototype.place = undefined;
 VFileMessage.prototype.ruleId = undefined;
 VFileMessage.prototype.source = undefined;
 // node_modules/vfile/lib/minpath.js
-import { default as default3 } from "path";
+import { default as default3 } from "node:path";
 
 // node_modules/vfile/lib/minproc.js
-import { default as default4 } from "process";
+import { default as default4 } from "node:process";
 
 // node_modules/vfile/lib/minurl.js
-import { fileURLToPath } from "url";
+import { fileURLToPath } from "node:url";
 
 // node_modules/vfile/lib/minurl.shared.js
 function isUrl(fileUrlOrPath) {
@@ -37700,77 +38435,77 @@ class Processor extends CallableInstance {
     this.freezeIndex = Number.POSITIVE_INFINITY;
     return this;
   }
-  parse(file) {
+  parse(file2) {
     this.freeze();
-    const realFile = vfile(file);
+    const realFile = vfile(file2);
     const parser = this.parser || this.Parser;
     assertParser("parse", parser);
     return parser(String(realFile), realFile);
   }
-  process(file, done) {
+  process(file2, done) {
     const self2 = this;
     this.freeze();
     assertParser("process", this.parser || this.Parser);
     assertCompiler("process", this.compiler || this.Compiler);
     return done ? executor(undefined, done) : new Promise(executor);
     function executor(resolve, reject) {
-      const realFile = vfile(file);
+      const realFile = vfile(file2);
       const parseTree = self2.parse(realFile);
-      self2.run(parseTree, realFile, function(error, tree, file2) {
-        if (error || !tree || !file2) {
+      self2.run(parseTree, realFile, function(error, tree, file3) {
+        if (error || !tree || !file3) {
           return realDone(error);
         }
         const compileTree = tree;
-        const compileResult = self2.stringify(compileTree, file2);
+        const compileResult = self2.stringify(compileTree, file3);
         if (looksLikeAValue(compileResult)) {
-          file2.value = compileResult;
+          file3.value = compileResult;
         } else {
-          file2.result = compileResult;
+          file3.result = compileResult;
         }
-        realDone(error, file2);
+        realDone(error, file3);
       });
-      function realDone(error, file2) {
-        if (error || !file2) {
+      function realDone(error, file3) {
+        if (error || !file3) {
           reject(error);
         } else if (resolve) {
-          resolve(file2);
+          resolve(file3);
         } else {
           ok(done, "`done` is defined if `resolve` is not");
-          done(undefined, file2);
+          done(undefined, file3);
         }
       }
     }
   }
-  processSync(file) {
+  processSync(file2) {
     let complete = false;
     let result;
     this.freeze();
     assertParser("processSync", this.parser || this.Parser);
     assertCompiler("processSync", this.compiler || this.Compiler);
-    this.process(file, realDone);
+    this.process(file2, realDone);
     assertDone("processSync", "process", complete);
     ok(result, "we either bailed on an error or have a tree");
     return result;
-    function realDone(error, file2) {
+    function realDone(error, file3) {
       complete = true;
       bail(error);
-      result = file2;
+      result = file3;
     }
   }
-  run(tree, file, done) {
+  run(tree, file2, done) {
     assertNode(tree);
     this.freeze();
     const transformers = this.transformers;
-    if (!done && typeof file === "function") {
-      done = file;
-      file = undefined;
+    if (!done && typeof file2 === "function") {
+      done = file2;
+      file2 = undefined;
     }
     return done ? executor(undefined, done) : new Promise(executor);
     function executor(resolve, reject) {
-      ok(typeof file !== "function", "`file` can\u2019t be a `done` anymore, we checked");
-      const realFile = vfile(file);
+      ok(typeof file2 !== "function", "`file` can’t be a `done` anymore, we checked");
+      const realFile = vfile(file2);
       transformers.run(tree, realFile, realDone);
-      function realDone(error, outputTree, file2) {
+      function realDone(error, outputTree, file3) {
         const resultingTree = outputTree || tree;
         if (error) {
           reject(error);
@@ -37778,15 +38513,15 @@ class Processor extends CallableInstance {
           resolve(resultingTree);
         } else {
           ok(done, "`done` is defined if `resolve` is not");
-          done(undefined, resultingTree, file2);
+          done(undefined, resultingTree, file3);
         }
       }
     }
   }
-  runSync(tree, file) {
+  runSync(tree, file2) {
     let complete = false;
     let result;
-    this.run(tree, file, realDone);
+    this.run(tree, file2, realDone);
     assertDone("runSync", "run", complete);
     ok(result, "we either bailed on an error or have a tree");
     return result;
@@ -37796,9 +38531,9 @@ class Processor extends CallableInstance {
       complete = true;
     }
   }
-  stringify(tree, file) {
+  stringify(tree, file2) {
     this.freeze();
-    const realFile = vfile(file);
+    const realFile = vfile(file2);
     const compiler2 = this.compiler || this.Compiler;
     assertCompiler("stringify", compiler2);
     assertNode(tree);
@@ -37931,15 +38666,15 @@ var BIGINT = 8;
 
 // node_modules/@ungap/structured-clone/esm/deserialize.js
 var env3 = typeof self === "object" ? self : globalThis;
-var deserializer = ($2, _2) => {
+var deserializer = ($, _) => {
   const as = (out, index2) => {
-    $2.set(index2, out);
+    $.set(index2, out);
     return out;
   };
   const unpair = (index2) => {
-    if ($2.has(index2))
-      return $2.get(index2);
-    const [type, value] = _2[index2];
+    if ($.has(index2))
+      return $.get(index2);
+    const [type, value] = _[index2];
     switch (type) {
       case PRIMITIVE:
       case VOID:
@@ -38027,15 +38762,15 @@ var typeOf = (value) => {
   return [OBJECT, asString];
 };
 var shouldSkip = ([TYPE, type]) => TYPE === PRIMITIVE && (type === "function" || type === "symbol");
-var serializer = (strict, json, $2, _2) => {
+var serializer = (strict, json, $, _) => {
   const as = (out, value) => {
-    const index2 = _2.push(out) - 1;
-    $2.set(value, index2);
+    const index2 = _.push(out) - 1;
+    $.set(value, index2);
     return index2;
   };
   const pair = (value) => {
-    if ($2.has(value))
-      return $2.get(value);
+    if ($.has(value))
+      return $.get(value);
     let [TYPE, type] = typeOf(value);
     switch (TYPE) {
       case PRIMITIVE: {
@@ -38123,13 +38858,13 @@ var serializer = (strict, json, $2, _2) => {
   };
   return pair;
 };
-var serialize = (value, { json, lossy } = {}) => {
-  const _2 = [];
-  return serializer(!(json || lossy), !!json, new Map, _2)(value), _2;
+var serialize2 = (value, { json, lossy } = {}) => {
+  const _ = [];
+  return serializer(!(json || lossy), !!json, new Map, _)(value), _;
 };
 
 // node_modules/@ungap/structured-clone/esm/index.js
-var esm_default = typeof structuredClone === "function" ? (any, options2) => options2 && (("json" in options2) || ("lossy" in options2)) ? deserialize(serialize(any, options2)) : structuredClone(any) : (any, options2) => deserialize(serialize(any, options2));
+var esm_default = typeof structuredClone === "function" ? (any, options2) => options2 && (("json" in options2) || ("lossy" in options2)) ? deserialize(serialize2(any, options2)) : structuredClone(any) : (any, options2) => deserialize(serialize2(any, options2));
 
 // node_modules/unist-util-position/lib/index.js
 var pointEnd = point3("end");
@@ -38429,7 +39164,7 @@ function root2(state, unsafe2) {
   patch(node2, unsafe2);
   return node2;
 }
-function text4(_2, unsafe2) {
+function text4(_, unsafe2) {
   const value = typeof unsafe2.value === "string" ? unsafe2.value : "";
   const node2 = { type: "text", value };
   patch(node2, unsafe2);
@@ -39108,8 +39843,8 @@ function ignore() {
 }
 
 // node_modules/mdast-util-to-hast/lib/footer.js
-function defaultFootnoteBackContent(_2, rereferenceIndex) {
-  const result = [{ type: "text", value: "\u21A9" }];
+function defaultFootnoteBackContent(_, rereferenceIndex) {
+  const result = [{ type: "text", value: "↩" }];
   if (rereferenceIndex > 1) {
     result.push({
       type: "element",
@@ -39566,7 +40301,7 @@ var aria2 = create2({
     ariaValueText: null,
     role: null
   },
-  transform(_2, property) {
+  transform(_, property) {
     return property === "role" ? property : "aria-" + property.slice(4).toLowerCase();
   }
 });
@@ -40458,7 +41193,7 @@ var xlink = create2({
     xLinkType: null
   },
   space: "xlink",
-  transform(_2, property) {
+  transform(_, property) {
     return "xlink:" + property.slice(5).toLowerCase();
   }
 });
@@ -40475,7 +41210,7 @@ var xmlns = create2({
 var xml = create2({
   properties: { xmlBase: null, xmlLang: null, xmlSpace: null },
   space: "xml",
-  transform(_2, property) {
+  transform(_, property) {
     return "xml:" + property.slice(3).toLowerCase();
   }
 });
@@ -40681,258 +41416,258 @@ var characterEntitiesLegacy = [
 
 // node_modules/character-entities-html4/index.js
 var characterEntitiesHtml4 = {
-  nbsp: "\xA0",
-  iexcl: "\xA1",
-  cent: "\xA2",
-  pound: "\xA3",
-  curren: "\xA4",
-  yen: "\xA5",
-  brvbar: "\xA6",
-  sect: "\xA7",
-  uml: "\xA8",
-  copy: "\xA9",
-  ordf: "\xAA",
-  laquo: "\xAB",
-  not: "\xAC",
-  shy: "\xAD",
-  reg: "\xAE",
-  macr: "\xAF",
-  deg: "\xB0",
-  plusmn: "\xB1",
-  sup2: "\xB2",
-  sup3: "\xB3",
-  acute: "\xB4",
-  micro: "\xB5",
-  para: "\xB6",
-  middot: "\xB7",
-  cedil: "\xB8",
-  sup1: "\xB9",
-  ordm: "\xBA",
-  raquo: "\xBB",
-  frac14: "\xBC",
-  frac12: "\xBD",
-  frac34: "\xBE",
-  iquest: "\xBF",
-  Agrave: "\xC0",
-  Aacute: "\xC1",
-  Acirc: "\xC2",
-  Atilde: "\xC3",
-  Auml: "\xC4",
-  Aring: "\xC5",
-  AElig: "\xC6",
-  Ccedil: "\xC7",
-  Egrave: "\xC8",
-  Eacute: "\xC9",
-  Ecirc: "\xCA",
-  Euml: "\xCB",
-  Igrave: "\xCC",
-  Iacute: "\xCD",
-  Icirc: "\xCE",
-  Iuml: "\xCF",
-  ETH: "\xD0",
-  Ntilde: "\xD1",
-  Ograve: "\xD2",
-  Oacute: "\xD3",
-  Ocirc: "\xD4",
-  Otilde: "\xD5",
-  Ouml: "\xD6",
-  times: "\xD7",
-  Oslash: "\xD8",
-  Ugrave: "\xD9",
-  Uacute: "\xDA",
-  Ucirc: "\xDB",
-  Uuml: "\xDC",
-  Yacute: "\xDD",
-  THORN: "\xDE",
-  szlig: "\xDF",
-  agrave: "\xE0",
-  aacute: "\xE1",
-  acirc: "\xE2",
-  atilde: "\xE3",
-  auml: "\xE4",
-  aring: "\xE5",
-  aelig: "\xE6",
-  ccedil: "\xE7",
-  egrave: "\xE8",
-  eacute: "\xE9",
-  ecirc: "\xEA",
-  euml: "\xEB",
-  igrave: "\xEC",
-  iacute: "\xED",
-  icirc: "\xEE",
-  iuml: "\xEF",
-  eth: "\xF0",
-  ntilde: "\xF1",
-  ograve: "\xF2",
-  oacute: "\xF3",
-  ocirc: "\xF4",
-  otilde: "\xF5",
-  ouml: "\xF6",
-  divide: "\xF7",
-  oslash: "\xF8",
-  ugrave: "\xF9",
-  uacute: "\xFA",
-  ucirc: "\xFB",
-  uuml: "\xFC",
-  yacute: "\xFD",
-  thorn: "\xFE",
-  yuml: "\xFF",
-  fnof: "\u0192",
-  Alpha: "\u0391",
-  Beta: "\u0392",
-  Gamma: "\u0393",
-  Delta: "\u0394",
-  Epsilon: "\u0395",
-  Zeta: "\u0396",
-  Eta: "\u0397",
-  Theta: "\u0398",
-  Iota: "\u0399",
-  Kappa: "\u039A",
-  Lambda: "\u039B",
-  Mu: "\u039C",
-  Nu: "\u039D",
-  Xi: "\u039E",
-  Omicron: "\u039F",
-  Pi: "\u03A0",
-  Rho: "\u03A1",
-  Sigma: "\u03A3",
-  Tau: "\u03A4",
-  Upsilon: "\u03A5",
-  Phi: "\u03A6",
-  Chi: "\u03A7",
-  Psi: "\u03A8",
-  Omega: "\u03A9",
-  alpha: "\u03B1",
-  beta: "\u03B2",
-  gamma: "\u03B3",
-  delta: "\u03B4",
-  epsilon: "\u03B5",
-  zeta: "\u03B6",
-  eta: "\u03B7",
-  theta: "\u03B8",
-  iota: "\u03B9",
-  kappa: "\u03BA",
-  lambda: "\u03BB",
-  mu: "\u03BC",
-  nu: "\u03BD",
-  xi: "\u03BE",
-  omicron: "\u03BF",
-  pi: "\u03C0",
-  rho: "\u03C1",
-  sigmaf: "\u03C2",
-  sigma: "\u03C3",
-  tau: "\u03C4",
-  upsilon: "\u03C5",
-  phi: "\u03C6",
-  chi: "\u03C7",
-  psi: "\u03C8",
-  omega: "\u03C9",
-  thetasym: "\u03D1",
-  upsih: "\u03D2",
-  piv: "\u03D6",
-  bull: "\u2022",
-  hellip: "\u2026",
-  prime: "\u2032",
-  Prime: "\u2033",
-  oline: "\u203E",
-  frasl: "\u2044",
-  weierp: "\u2118",
-  image: "\u2111",
-  real: "\u211C",
-  trade: "\u2122",
-  alefsym: "\u2135",
-  larr: "\u2190",
-  uarr: "\u2191",
-  rarr: "\u2192",
-  darr: "\u2193",
-  harr: "\u2194",
-  crarr: "\u21B5",
-  lArr: "\u21D0",
-  uArr: "\u21D1",
-  rArr: "\u21D2",
-  dArr: "\u21D3",
-  hArr: "\u21D4",
-  forall: "\u2200",
-  part: "\u2202",
-  exist: "\u2203",
-  empty: "\u2205",
-  nabla: "\u2207",
-  isin: "\u2208",
-  notin: "\u2209",
-  ni: "\u220B",
-  prod: "\u220F",
-  sum: "\u2211",
-  minus: "\u2212",
-  lowast: "\u2217",
-  radic: "\u221A",
-  prop: "\u221D",
-  infin: "\u221E",
-  ang: "\u2220",
-  and: "\u2227",
-  or: "\u2228",
-  cap: "\u2229",
-  cup: "\u222A",
-  int: "\u222B",
-  there4: "\u2234",
-  sim: "\u223C",
-  cong: "\u2245",
-  asymp: "\u2248",
-  ne: "\u2260",
-  equiv: "\u2261",
-  le: "\u2264",
-  ge: "\u2265",
-  sub: "\u2282",
-  sup: "\u2283",
-  nsub: "\u2284",
-  sube: "\u2286",
-  supe: "\u2287",
-  oplus: "\u2295",
-  otimes: "\u2297",
-  perp: "\u22A5",
-  sdot: "\u22C5",
-  lceil: "\u2308",
-  rceil: "\u2309",
-  lfloor: "\u230A",
-  rfloor: "\u230B",
-  lang: "\u2329",
-  rang: "\u232A",
-  loz: "\u25CA",
-  spades: "\u2660",
-  clubs: "\u2663",
-  hearts: "\u2665",
-  diams: "\u2666",
+  nbsp: " ",
+  iexcl: "¡",
+  cent: "¢",
+  pound: "£",
+  curren: "¤",
+  yen: "¥",
+  brvbar: "¦",
+  sect: "§",
+  uml: "¨",
+  copy: "©",
+  ordf: "ª",
+  laquo: "«",
+  not: "¬",
+  shy: "­",
+  reg: "®",
+  macr: "¯",
+  deg: "°",
+  plusmn: "±",
+  sup2: "²",
+  sup3: "³",
+  acute: "´",
+  micro: "µ",
+  para: "¶",
+  middot: "·",
+  cedil: "¸",
+  sup1: "¹",
+  ordm: "º",
+  raquo: "»",
+  frac14: "¼",
+  frac12: "½",
+  frac34: "¾",
+  iquest: "¿",
+  Agrave: "À",
+  Aacute: "Á",
+  Acirc: "Â",
+  Atilde: "Ã",
+  Auml: "Ä",
+  Aring: "Å",
+  AElig: "Æ",
+  Ccedil: "Ç",
+  Egrave: "È",
+  Eacute: "É",
+  Ecirc: "Ê",
+  Euml: "Ë",
+  Igrave: "Ì",
+  Iacute: "Í",
+  Icirc: "Î",
+  Iuml: "Ï",
+  ETH: "Ð",
+  Ntilde: "Ñ",
+  Ograve: "Ò",
+  Oacute: "Ó",
+  Ocirc: "Ô",
+  Otilde: "Õ",
+  Ouml: "Ö",
+  times: "×",
+  Oslash: "Ø",
+  Ugrave: "Ù",
+  Uacute: "Ú",
+  Ucirc: "Û",
+  Uuml: "Ü",
+  Yacute: "Ý",
+  THORN: "Þ",
+  szlig: "ß",
+  agrave: "à",
+  aacute: "á",
+  acirc: "â",
+  atilde: "ã",
+  auml: "ä",
+  aring: "å",
+  aelig: "æ",
+  ccedil: "ç",
+  egrave: "è",
+  eacute: "é",
+  ecirc: "ê",
+  euml: "ë",
+  igrave: "ì",
+  iacute: "í",
+  icirc: "î",
+  iuml: "ï",
+  eth: "ð",
+  ntilde: "ñ",
+  ograve: "ò",
+  oacute: "ó",
+  ocirc: "ô",
+  otilde: "õ",
+  ouml: "ö",
+  divide: "÷",
+  oslash: "ø",
+  ugrave: "ù",
+  uacute: "ú",
+  ucirc: "û",
+  uuml: "ü",
+  yacute: "ý",
+  thorn: "þ",
+  yuml: "ÿ",
+  fnof: "ƒ",
+  Alpha: "Α",
+  Beta: "Β",
+  Gamma: "Γ",
+  Delta: "Δ",
+  Epsilon: "Ε",
+  Zeta: "Ζ",
+  Eta: "Η",
+  Theta: "Θ",
+  Iota: "Ι",
+  Kappa: "Κ",
+  Lambda: "Λ",
+  Mu: "Μ",
+  Nu: "Ν",
+  Xi: "Ξ",
+  Omicron: "Ο",
+  Pi: "Π",
+  Rho: "Ρ",
+  Sigma: "Σ",
+  Tau: "Τ",
+  Upsilon: "Υ",
+  Phi: "Φ",
+  Chi: "Χ",
+  Psi: "Ψ",
+  Omega: "Ω",
+  alpha: "α",
+  beta: "β",
+  gamma: "γ",
+  delta: "δ",
+  epsilon: "ε",
+  zeta: "ζ",
+  eta: "η",
+  theta: "θ",
+  iota: "ι",
+  kappa: "κ",
+  lambda: "λ",
+  mu: "μ",
+  nu: "ν",
+  xi: "ξ",
+  omicron: "ο",
+  pi: "π",
+  rho: "ρ",
+  sigmaf: "ς",
+  sigma: "σ",
+  tau: "τ",
+  upsilon: "υ",
+  phi: "φ",
+  chi: "χ",
+  psi: "ψ",
+  omega: "ω",
+  thetasym: "ϑ",
+  upsih: "ϒ",
+  piv: "ϖ",
+  bull: "•",
+  hellip: "…",
+  prime: "′",
+  Prime: "″",
+  oline: "‾",
+  frasl: "⁄",
+  weierp: "℘",
+  image: "ℑ",
+  real: "ℜ",
+  trade: "™",
+  alefsym: "ℵ",
+  larr: "←",
+  uarr: "↑",
+  rarr: "→",
+  darr: "↓",
+  harr: "↔",
+  crarr: "↵",
+  lArr: "⇐",
+  uArr: "⇑",
+  rArr: "⇒",
+  dArr: "⇓",
+  hArr: "⇔",
+  forall: "∀",
+  part: "∂",
+  exist: "∃",
+  empty: "∅",
+  nabla: "∇",
+  isin: "∈",
+  notin: "∉",
+  ni: "∋",
+  prod: "∏",
+  sum: "∑",
+  minus: "−",
+  lowast: "∗",
+  radic: "√",
+  prop: "∝",
+  infin: "∞",
+  ang: "∠",
+  and: "∧",
+  or: "∨",
+  cap: "∩",
+  cup: "∪",
+  int: "∫",
+  there4: "∴",
+  sim: "∼",
+  cong: "≅",
+  asymp: "≈",
+  ne: "≠",
+  equiv: "≡",
+  le: "≤",
+  ge: "≥",
+  sub: "⊂",
+  sup: "⊃",
+  nsub: "⊄",
+  sube: "⊆",
+  supe: "⊇",
+  oplus: "⊕",
+  otimes: "⊗",
+  perp: "⊥",
+  sdot: "⋅",
+  lceil: "⌈",
+  rceil: "⌉",
+  lfloor: "⌊",
+  rfloor: "⌋",
+  lang: "〈",
+  rang: "〉",
+  loz: "◊",
+  spades: "♠",
+  clubs: "♣",
+  hearts: "♥",
+  diams: "♦",
   quot: '"',
   amp: "&",
   lt: "<",
   gt: ">",
-  OElig: "\u0152",
-  oelig: "\u0153",
-  Scaron: "\u0160",
-  scaron: "\u0161",
-  Yuml: "\u0178",
-  circ: "\u02C6",
-  tilde: "\u02DC",
-  ensp: "\u2002",
-  emsp: "\u2003",
-  thinsp: "\u2009",
-  zwnj: "\u200C",
-  zwj: "\u200D",
-  lrm: "\u200E",
-  rlm: "\u200F",
-  ndash: "\u2013",
-  mdash: "\u2014",
-  lsquo: "\u2018",
-  rsquo: "\u2019",
-  sbquo: "\u201A",
-  ldquo: "\u201C",
-  rdquo: "\u201D",
-  bdquo: "\u201E",
-  dagger: "\u2020",
-  Dagger: "\u2021",
-  permil: "\u2030",
-  lsaquo: "\u2039",
-  rsaquo: "\u203A",
-  euro: "\u20AC"
+  OElig: "Œ",
+  oelig: "œ",
+  Scaron: "Š",
+  scaron: "š",
+  Yuml: "Ÿ",
+  circ: "ˆ",
+  tilde: "˜",
+  ensp: " ",
+  emsp: " ",
+  thinsp: " ",
+  zwnj: "‌",
+  zwj: "‍",
+  lrm: "‎",
+  rlm: "‏",
+  ndash: "–",
+  mdash: "—",
+  lsquo: "‘",
+  rsquo: "’",
+  sbquo: "‚",
+  ldquo: "“",
+  rdquo: "”",
+  bdquo: "„",
+  dagger: "†",
+  Dagger: "‡",
+  permil: "‰",
+  lsaquo: "‹",
+  rsaquo: "›",
+  euro: "€"
 };
 
 // node_modules/stringify-entities/lib/constant/dangerous.js
@@ -41097,62 +41832,62 @@ var closing = omission({
   thead,
   tr
 });
-function headOrColgroupOrCaption(_2, index2, parent) {
+function headOrColgroupOrCaption(_, index2, parent) {
   const next = siblingAfter(parent, index2, true);
   return !next || next.type !== "comment" && !(next.type === "text" && whitespace(next.value.charAt(0)));
 }
-function html5(_2, index2, parent) {
+function html5(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type !== "comment";
 }
-function body(_2, index2, parent) {
+function body(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type !== "comment";
 }
-function p(_2, index2, parent) {
+function p(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return next ? next.type === "element" && (next.tagName === "address" || next.tagName === "article" || next.tagName === "aside" || next.tagName === "blockquote" || next.tagName === "details" || next.tagName === "div" || next.tagName === "dl" || next.tagName === "fieldset" || next.tagName === "figcaption" || next.tagName === "figure" || next.tagName === "footer" || next.tagName === "form" || next.tagName === "h1" || next.tagName === "h2" || next.tagName === "h3" || next.tagName === "h4" || next.tagName === "h5" || next.tagName === "h6" || next.tagName === "header" || next.tagName === "hgroup" || next.tagName === "hr" || next.tagName === "main" || next.tagName === "menu" || next.tagName === "nav" || next.tagName === "ol" || next.tagName === "p" || next.tagName === "pre" || next.tagName === "section" || next.tagName === "table" || next.tagName === "ul") : !parent || !(parent.type === "element" && (parent.tagName === "a" || parent.tagName === "audio" || parent.tagName === "del" || parent.tagName === "ins" || parent.tagName === "map" || parent.tagName === "noscript" || parent.tagName === "video"));
 }
-function li(_2, index2, parent) {
+function li(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type === "element" && next.tagName === "li";
 }
-function dt(_2, index2, parent) {
+function dt(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return Boolean(next && next.type === "element" && (next.tagName === "dt" || next.tagName === "dd"));
 }
-function dd(_2, index2, parent) {
+function dd(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type === "element" && (next.tagName === "dt" || next.tagName === "dd");
 }
-function rubyElement(_2, index2, parent) {
+function rubyElement(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type === "element" && (next.tagName === "rp" || next.tagName === "rt");
 }
-function optgroup(_2, index2, parent) {
+function optgroup(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type === "element" && next.tagName === "optgroup";
 }
-function option(_2, index2, parent) {
+function option(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type === "element" && (next.tagName === "option" || next.tagName === "optgroup");
 }
-function thead(_2, index2, parent) {
+function thead(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return Boolean(next && next.type === "element" && (next.tagName === "tbody" || next.tagName === "tfoot"));
 }
-function tbody(_2, index2, parent) {
+function tbody(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type === "element" && (next.tagName === "tbody" || next.tagName === "tfoot");
 }
-function tfoot(_2, index2, parent) {
+function tfoot(_, index2, parent) {
   return !siblingAfter(parent, index2);
 }
-function tr(_2, index2, parent) {
+function tr(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type === "element" && next.tagName === "tr";
 }
-function cells(_2, index2, parent) {
+function cells(_, index2, parent) {
   const next = siblingAfter(parent, index2);
   return !next || next.type === "element" && (next.tagName === "td" || next.tagName === "th");
 }
@@ -41325,7 +42060,7 @@ function serializeAttribute(state, key2, value) {
 
 // node_modules/hast-util-to-html/lib/handle/text.js
 var textEntitySubset = ["<", "&"];
-function text6(node2, _2, parent, state) {
+function text6(node2, _, parent, state) {
   return parent && parent.type === "element" && (parent.tagName === "script" || parent.tagName === "style") ? node2.value : stringifyEntities(node2.value, Object.assign({}, state.settings.characterReferences, {
     subset: textEntitySubset
   }));
@@ -41419,12 +42154,12 @@ function remarkHtml(options2) {
     schema = clean2;
   }
   self2.compiler = compiler2;
-  function compiler2(tree, file) {
+  function compiler2(tree, file2) {
     const hast = toHast(tree, { handlers: handlers2, allowDangerousHtml });
     const safeHast = allowDangerousHtml ? hast : sanitize2(hast, schema);
     const result = toHtml(safeHast, { ...toHtmlOptions, allowDangerousHtml });
-    if (file.extname) {
-      file.extname = ".html";
+    if (file2.extname) {
+      file2.extname = ".html";
     }
     return tree && tree.type === "root" && result && /[^\r\n]/.test(result.charAt(result.length - 1)) ? result + `
 ` : result;
@@ -41612,7 +42347,7 @@ function transformGfmAutolinkLiterals(tree) {
     [/(?<=^|\s|\p{P}|\p{S})([-.\w+]+)@([-\w]+(?:\.[-\w]+)+)/gu, findEmail]
   ], { ignore: ["link", "linkReference"] });
 }
-function findUrl(_2, protocol, domain, path2, match) {
+function findUrl(_, protocol, domain, path2, match) {
   let prefix = "";
   if (!previous2(match)) {
     return false;
@@ -41639,7 +42374,7 @@ function findUrl(_2, protocol, domain, path2, match) {
   }
   return result;
 }
-function findEmail(_2, atext, label, match) {
+function findEmail(_, atext, label, match) {
   if (!previous2(match, true) || /[-\d_]$/.test(label)) {
     return false;
   }
@@ -41716,7 +42451,7 @@ function exitFootnoteDefinition(token) {
 function footnoteReferencePeek() {
   return "[";
 }
-function footnoteReference2(node2, _2, state, info) {
+function footnoteReference2(node2, _, state, info) {
   const tracker = state.createTracker(info);
   let value = tracker.move("[^");
   const exit2 = state.enter("footnoteReference");
@@ -41752,7 +42487,7 @@ function gfmFootnoteToMarkdown(options2) {
     handlers: { footnoteDefinition, footnoteReference: footnoteReference2 },
     unsafe: [{ character: "[", inConstruct: ["label", "phrasing", "reference"] }]
   };
-  function footnoteDefinition(node2, _2, state, info) {
+  function footnoteDefinition(node2, _, state, info) {
     const tracker = state.createTracker(info);
     let value = tracker.move("[^");
     const exit2 = state.enter("footnoteDefinition");
@@ -41810,7 +42545,7 @@ function enterStrikethrough(token) {
 function exitStrikethrough(token) {
   this.exit(token);
 }
-function handleDelete(node2, _2, state, info) {
+function handleDelete(node2, _, state, info) {
   const tracker = state.createTracker(info);
   const exit2 = state.enter("strikethrough");
   let value = tracker.move("~~");
@@ -41848,7 +42583,7 @@ function markdownTable(table2, options2) {
       mostCellsPerRow = table2[rowIndex].length;
     }
     while (++columnIndex2 < table2[rowIndex].length) {
-      const cell = serialize2(table2[rowIndex][columnIndex2]);
+      const cell = serialize3(table2[rowIndex][columnIndex2]);
       if (settings.alignDelimiters !== false) {
         const size = stringLength(cell);
         sizes2[columnIndex2] = size;
@@ -41953,7 +42688,7 @@ function markdownTable(table2, options2) {
   return lines.join(`
 `);
 }
-function serialize2(value) {
+function serialize3(value) {
   return value === null || value === undefined ? "" : String(value);
 }
 function toAlignment(value) {
@@ -42040,16 +42775,16 @@ function gfmTableToMarkdown(options2) {
       tableRow: handleTableRow
     }
   };
-  function handleTable(node2, _2, state, info) {
+  function handleTable(node2, _, state, info) {
     return serializeData(handleTableAsData(node2, state, info), node2.align);
   }
-  function handleTableRow(node2, _2, state, info) {
+  function handleTableRow(node2, _, state, info) {
     const row = handleTableRowAsData(node2, state, info);
     const value = serializeData([row]);
     return value.slice(0, value.indexOf(`
 `));
   }
-  function handleTableCell(node2, _2, state, info) {
+  function handleTableCell(node2, _, state, info) {
     const exit3 = state.enter("tableCell");
     const subexit = state.enter("phrasing");
     const value = state.containerPhrasing(node2, {
@@ -47479,13 +48214,13 @@ var NUMERIC = {
 function recurRegex(re2, substitution, depth) {
   if (depth === -1)
     return "";
-  return re2.replace(substitution, (_2) => {
+  return re2.replace(substitution, (_) => {
     return recurRegex(re2, substitution, depth - 1);
   });
 }
 function java(hljs) {
   const regex2 = hljs.regex;
-  const JAVA_IDENT_RE = "[\xC0-\u02B8a-zA-Z_$][\xC0-\u02B8a-zA-Z_$0-9]*";
+  const JAVA_IDENT_RE = "[À-ʸa-zA-Z_$][À-ʸa-zA-Z_$0-9]*";
   const GENERIC_IDENT_RE = JAVA_IDENT_RE + recurRegex("(?:<" + JAVA_IDENT_RE + "~~~(?:\\s*,\\s*" + JAVA_IDENT_RE + "~~~)*>)?", /~~~/g, 2);
   const MAIN_KEYWORDS = [
     "synchronized",
@@ -56266,8 +57001,8 @@ function rehypeHighlight(options2) {
     const pos = prefix.indexOf("-");
     name = pos === -1 ? prefix : prefix.slice(0, pos);
   }
-  return function(tree, file) {
-    visit(tree, "element", function(node2, _2, parent) {
+  return function(tree, file2) {
+    visit(tree, "element", function(node2, _, parent) {
       if (node2.tagName !== "code" || !parent || parent.type !== "element" || parent.tagName !== "pre") {
         return;
       }
@@ -56288,7 +57023,7 @@ function rehypeHighlight(options2) {
       } catch (error) {
         const cause = error;
         if (lang && /Unknown language/.test(cause.message)) {
-          file.message("Cannot highlight as `" + lang + "`, it\u2019s not registered", {
+          file2.message("Cannot highlight as `" + lang + "`, it’s not registered", {
             ancestors: [parent, node2],
             cause,
             place: node2.position,
@@ -56332,6 +57067,7 @@ function language(node2) {
 // src/lib/markdown.ts
 import path3 from "path";
 var postsDirectory = path3.join(process.cwd(), "posts");
+var dataDirectory = path3.join(process.cwd(), "data");
 async function getAllPostSlugs() {
   const { glob } = await Promise.resolve().then(() => __toESM(require_out4(), 1));
   const paths = await glob("**/*.md", { cwd: postsDirectory });
@@ -56367,6 +57103,9 @@ async function getPostBySlug(slug) {
     if (!data.status) {
       data.status = "PUBLISHED";
     }
+    if (data.date && data.date instanceof Date) {
+      data.date = data.date.toISOString().split("T")[0];
+    }
     return {
       frontmatter: data,
       content: content3,
@@ -56401,22 +57140,30 @@ async function getAllPosts() {
     }
   }
   return posts.sort((a, b) => {
-    const dateA = parseSlugToDate(a.slug);
-    const dateB = parseSlugToDate(b.slug);
-    if (dateA && dateB) {
-      const dateAObj = new Date(`${dateA.year}-${dateA.month}-${dateA.day}`);
-      const dateBObj = new Date(`${dateB.year}-${dateB.month}-${dateB.day}`);
+    if (a.date && b.date) {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      if (!isNaN(dateA.getTime()) && !isNaN(dateB.getTime())) {
+        return dateB.getTime() - dateA.getTime();
+      }
+    }
+    if (a.date && !b.date)
+      return -1;
+    if (!a.date && b.date)
+      return 1;
+    const dateASlug = parseSlugToDate(a.slug);
+    const dateBSlug = parseSlugToDate(b.slug);
+    if (dateASlug && dateBSlug) {
+      const dateAObj = new Date(`${dateASlug.year}-${dateASlug.month}-${dateASlug.day}`);
+      const dateBObj = new Date(`${dateBSlug.year}-${dateBSlug.month}-${dateBSlug.day}`);
       if (!isNaN(dateAObj.getTime()) && !isNaN(dateBObj.getTime())) {
         return dateBObj.getTime() - dateAObj.getTime();
       }
     }
-    if (a.date && b.date) {
-      const dateAFallback = new Date(a.date);
-      const dateBFallback = new Date(b.date);
-      if (!isNaN(dateAFallback.getTime()) && !isNaN(dateBFallback.getTime())) {
-        return dateBFallback.getTime() - dateAFallback.getTime();
-      }
-    }
+    if (dateASlug && !dateBSlug)
+      return -1;
+    if (!dateASlug && dateBSlug)
+      return 1;
     return b.slug.localeCompare(a.slug);
   });
 }
@@ -56449,17 +57196,65 @@ async function getAllCategories() {
   return Array.from(categories).sort();
 }
 
+// src/lib/views.ts
+import path4 from "path";
+import { promises as fs2 } from "fs";
+var viewsDir = path4.join(process.cwd(), "data", "views");
+var viewsFile = path4.join(viewsDir, "views.json");
+async function ensureViewsDir() {
+  try {
+    await fs2.mkdir(viewsDir, { recursive: true });
+    try {
+      await fs2.access(viewsFile);
+    } catch {
+      await fs2.writeFile(viewsFile, JSON.stringify({}), "utf8");
+    }
+  } catch (error) {
+    console.error("Error creating views directory:", error);
+  }
+}
+async function getViews() {
+  await ensureViewsDir();
+  try {
+    const data = await fs2.readFile(viewsFile, "utf8");
+    return JSON.parse(data);
+  } catch (error) {
+    console.error("Error reading views file:", error);
+    return {};
+  }
+}
+async function incrementViews(slug) {
+  await ensureViewsDir();
+  try {
+    const views = await getViews();
+    views[slug] = (views[slug] || 0) + 1;
+    await fs2.writeFile(viewsFile, JSON.stringify(views, null, 2), "utf8");
+    return views[slug];
+  } catch (error) {
+    console.error("Error incrementing views:", error);
+    return 0;
+  }
+}
+async function getTotalViews() {
+  const views = await getViews();
+  return Object.values(views).reduce((sum, count) => sum + count, 0);
+}
+
 // src/routes/posts-simple.ts
-var postsRouteSimple = new Elysia({ prefix: "/api/posts" }).get("/", async () => {
-  const posts = await getAllPosts();
+async function formatPosts(posts) {
+  const views = await getViews();
   return posts.map((post) => {
-    let createdAt = new Date().toISOString();
-    if (post.date) {
-      const dateObj = new Date(post.date);
-      if (!isNaN(dateObj.getTime())) {
-        createdAt = dateObj.toISOString();
+    let createdAt = null;
+    if (post.date && typeof post.date === "string") {
+      const dateMatch = post.date.match(/^\d{4}-\d{2}-\d{2}$/);
+      if (dateMatch) {
+        const dateObj = new Date(post.date);
+        if (!isNaN(dateObj.getTime())) {
+          createdAt = dateObj.toISOString();
+        }
       }
-    } else {
+    }
+    if (!createdAt) {
       const dateInfo = parseSlugToDate(post.slug);
       if (dateInfo) {
         const dateObj = new Date(`${dateInfo.year}-${dateInfo.month}-${dateInfo.day}`);
@@ -56468,25 +57263,41 @@ var postsRouteSimple = new Elysia({ prefix: "/api/posts" }).get("/", async () =>
         }
       }
     }
-    return {
+    const result = {
       slug: post.slug,
       title: post.title,
       description: post.description,
       author: post.author || "zsden",
       status: post.status,
-      createdAt,
-      updatedAt: createdAt,
       tags: post.tags || [],
       categories: post.categories || [],
       date: post.date
     };
-  }).sort((a, b) => {
-    const dateA = new Date(a.createdAt);
-    const dateB = new Date(b.createdAt);
-    return dateB.getTime() - dateA.getTime();
+    if (createdAt) {
+      result.createdAt = createdAt;
+      result.updatedAt = createdAt;
+    }
+    result.viewCount = views[post.slug] || 0;
+    return result;
   });
-}).get("/*", async ({ params, set: set2, path: path4 }) => {
-  const slug = path4.replace("/api/posts/", "");
+}
+var postsRouteSimple = new Elysia({ prefix: "/api/posts" }).get("/", async () => {
+  const posts = await getAllPosts();
+  const formattedPosts = await formatPosts(posts);
+  return formattedPosts.sort((a, b) => {
+    if (a.createdAt && b.createdAt) {
+      const dateA = new Date(a.createdAt);
+      const dateB = new Date(b.createdAt);
+      return dateB.getTime() - dateA.getTime();
+    }
+    if (a.createdAt && !b.createdAt)
+      return -1;
+    if (!a.createdAt && b.createdAt)
+      return 1;
+    return b.slug.localeCompare(a.slug);
+  });
+}).get("/*", async ({ params, set: set2, path: path5 }) => {
+  const slug = path5.replace("/api/posts/", "");
   const post = await getPostBySlug(slug);
   if (!post) {
     set2.status = 404;
@@ -56497,20 +57308,41 @@ var postsRouteSimple = new Elysia({ prefix: "/api/posts" }).get("/", async () =>
     return { error: "Post not found" };
   }
   const html7 = await markdownToHtml(post.content);
+  const fs3 = await import("fs/promises");
+  const stats = await fs3.stat(post.filePath);
+  let createdAt = null;
+  let updatedAt = new Date(stats.mtime).toISOString();
+  if (post.frontmatter.date) {
+    const dateObj = new Date(post.frontmatter.date);
+    if (!isNaN(dateObj.getTime())) {
+      createdAt = dateObj.toISOString();
+    }
+  }
+  if (!createdAt) {
+    createdAt = new Date(stats.birthtime || stats.ctime).toISOString();
+  }
+  const viewCount = await incrementViews(slug);
   return {
     slug,
     frontmatter: post.frontmatter,
     content: html7,
-    viewCount: 0
+    createdAt,
+    updatedAt,
+    viewCount
   };
 }).get("/tags/:tag", async ({ params }) => {
   const { tag } = params;
   const posts = await getPostsByTag(tag);
-  return posts;
-}).get("/categories/:category", async ({ params }) => {
+  return await formatPosts(posts);
+}).get("/categories/:category", async ({ params, set: set2 }) => {
   const { category } = params;
-  const posts = await getPostsByCategory(category);
-  return posts;
+  const decodedCategory = decodeURIComponent(category);
+  const posts = await getPostsByCategory(decodedCategory);
+  if (posts.length === 0) {
+    set2.status = 404;
+    return { error: "No posts found for this category" };
+  }
+  return await formatPosts(posts);
 });
 var metaRouteSimple = new Elysia({ prefix: "/api" }).get("/tags", async () => {
   const tags = await getAllTags();
@@ -56522,11 +57354,12 @@ var metaRouteSimple = new Elysia({ prefix: "/api" }).get("/tags", async () => {
   const posts = await getAllPosts();
   const tags = await getAllTags();
   const categories = await getAllCategories();
+  const totalViews = await getTotalViews();
   return {
     posts: posts.length,
     tags: tags.length,
     categories: categories.length,
-    views: 0
+    views: totalViews
   };
 });
 
@@ -56581,11 +57414,51 @@ var rssRouteSimple = new Elysia({ prefix: "/rss" }).get("/", async ({ set: set2 
 });
 
 // src/index.ts
-var app = new Elysia().use(index_default()).use(index_default2({
+var app = new Elysia().use(index_default({
+  origin: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+})).use(index_default2({
   assets: "public",
-  prefix: "/"
+  prefix: "/",
+  alwaysStatic: true
 })).use(postsRouteSimple).use(metaRouteSimple).use(rssRouteSimple);
-if (true) {
+app.get("/health", () => ({ status: "ok", timestamp: new Date().toISOString() }));
+app.get("/debug", async () => {
+  const path5 = await import("path");
+  return {
+    environment: {
+      NODE_ENV: "development",
+      VERCEL: process.env.VERCEL,
+      VERCEL_ENV: process.env.VERCEL_ENV,
+      cwd: process.cwd(),
+      platform: process.platform
+    },
+    paths: {
+      postsDir: path5.join(process.cwd(), "posts"),
+      dataDir: path5.join(process.cwd(), "data"),
+      exists: {
+        posts: await import("fs").then((fs3) => {
+          try {
+            fs3.accessSync(path5.join(process.cwd(), "posts"));
+            return true;
+          } catch {
+            return false;
+          }
+        }),
+        data: await import("fs").then((fs3) => {
+          try {
+            fs3.accessSync(path5.join(process.cwd(), "data"));
+            return true;
+          } catch {
+            return false;
+          }
+        })
+      }
+    }
+  };
+});
+if (!process.env.VERCEL) {
   app.listen(3000);
   console.log(`\uD83E\uDD8A Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
 }

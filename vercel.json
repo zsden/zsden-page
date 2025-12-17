@@ -1,4 +1,25 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "bunVersion": "1.3.4"
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/posts"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/posts"
+    },
+    {
+      "source": "/debug",
+      "destination": "/api/posts"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public/$1"
+    }
+  ],
+  "functions": {
+    "api/posts.ts": {
+      "maxDuration": 10
+    }
+  }
 }
