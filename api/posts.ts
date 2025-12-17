@@ -29,19 +29,22 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const posts = await Promise.all(slugs.map(slug => getPostBySlug(slug)))
       const publishedPosts = posts.filter(post => post && post.frontmatter.status === 'PUBLISHED')
 
-      const formattedPosts = publishedPosts.map(post => ({
-        slug: post!.slug,
-        title: post!.frontmatter.title,
-        description: post!.frontmatter.description,
-        author: post!.frontmatter.author || 'zsden',
-        status: post!.frontmatter.status,
-        tags: post!.frontmatter.tags || [],
-        categories: post!.frontmatter.categories || [],
-        date: post!.frontmatter.date,
-        createdAt: post!.frontmatter.date ? new Date(post!.frontmatter.date).toISOString() : null,
-        updatedAt: post!.frontmatter.date ? new Date(post!.frontmatter.date).toISOString() : null,
-        viewCount: 0
-      })).sort((a, b) => {
+      const formattedPosts = publishedPosts.map((post) => {
+        if (!post) return null
+        return {
+          slug: post.slug,
+          title: post.frontmatter.title,
+          description: post.frontmatter.description,
+          author: post.frontmatter.author || 'zsden',
+          status: post.frontmatter.status,
+          tags: post.frontmatter.tags || [],
+          categories: post.frontmatter.categories || [],
+          date: post.frontmatter.date,
+          createdAt: post.frontmatter.date ? new Date(post.frontmatter.date).toISOString() : null,
+          updatedAt: post.frontmatter.date ? new Date(post.frontmatter.date).toISOString() : null,
+          viewCount: 0
+        }
+      }).filter((post): post is NonNullable<typeof post> => post !== null).sort((a, b) => {
         if (a.createdAt && b.createdAt) {
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
         }
@@ -67,7 +70,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         slug: post.slug,
         frontmatter: post.frontmatter,
         content: html,
-        createdAt: post.frontmatter.date ? new Date(post.frontmatter.date).toISOString() : new Date(stats.birthtime).toISOString(),
+        createdAt: post.frontmatter.date ? new Date(post.frontmatter.date).toISOString() : new Date(stats.birthtime || stats.ctime).toISOString(),
         updatedAt: new Date(stats.mtime).toISOString(),
         viewCount: 0
       })

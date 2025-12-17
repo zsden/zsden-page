@@ -25,7 +25,9 @@
   },
   "devDependencies": {
     "@types/node": "^25.0.1",
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "@vercel/node": "^3.0.0",
+    "typescript": "^5.0.0"
   },
   "module": "src/index.ts"
 }
