@@ -6,9 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
     "build": "bun build src/index.ts --outdir=dist --target=bun",
-    "build:vercel": "bun build src/index.ts --outdir=dist --target=node",
     "start": "bun src/index.ts",
-    "vercel-build": "bun run build:vercel"
+    "vercel-build": "echo 'Vercel build completed - no build needed for serverless functions'"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",

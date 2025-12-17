@@ -10,7 +10,7 @@ import fs from 'fs/promises'
 const postsDirectory = path.join(process.cwd(), 'posts')
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  const { method, query } = req
+  const { method, query, url } = req
 
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -23,8 +23,45 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
+    // Health check endpoint
+    if (url === '/health') {
+      res.json({
+        status: 'ok',
+        timestamp: new Date().toISOString(),
+        version: '1.0.0'
+      })
+      return
+    }
+
+    // Debug endpoint
+    if (url === '/debug') {
+      const fs = await import('fs')
+      const path = await import('path')
+      const postsDir = path.join(process.cwd(), 'posts')
+      const dataDir = path.join(process.cwd(), 'data')
+
+      res.json({
+        environment: {
+          NODE_ENV: process.env.NODE_ENV,
+          VERCEL: process.env.VERCEL,
+          VERCEL_ENV: process.env.VERCEL_ENV,
+          cwd: process.cwd(),
+          platform: process.platform
+        },
+        paths: {
+          postsDir,
+          dataDir,
+          exists: {
+            posts: fs.existsSync(postsDir),
+            data: fs.existsSync(dataDir)
+          }
+        }
+      })
+      return
+    }
+
     // Get all posts
-    if (req.url?.includes('/api/posts') && !query.slug && !query.tag && !query.category) {
+    if (url?.includes('/api/posts') && !query.slug && !query.tag && !query.category) {
       const slugs = await getAllPostSlugs()
       const posts = await Promise.all(slugs.map(slug => getPostBySlug(slug)))
       const publishedPosts = posts.filter(post => post && post.frontmatter.status === 'PUBLISHED')
@@ -78,7 +115,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // Get tags
-    if (req.url?.includes('/api/tags')) {
+    if (url?.includes('/api/tags')) {
       const posts = await getAllPosts()
       const tagsSet = new Set<string>()
       posts.forEach(post => {
@@ -91,7 +128,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // Get categories
-    if (req.url?.includes('/api/categories')) {
+    if (url?.includes('/api/categories')) {
       const posts = await getAllPosts()
       const categoriesSet = new Set<string>()
       posts.forEach(post => {
@@ -104,7 +141,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // Get stats
-    if (req.url?.includes('/api/stats')) {
+    if (url?.includes('/api/stats')) {
       const posts = await getAllPosts()
       const tagsSet = new Set<string>()
       const categoriesSet = new Set<string>()
