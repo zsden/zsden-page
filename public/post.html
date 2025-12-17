@@ -127,10 +127,35 @@
 
         .post-meta {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 15px;
             color: #666;
             font-size: 14px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             flex-wrap: wrap;
+        }
+
+        .meta-info {
+            padding: 6px 12px;
+            background-color: var(--hover-bg);
+            border-radius: 15px;
+            font-size: 13px;
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .meta-label {
+            margin-right: 10px;
+            font-weight: 600;
+            color: var(--text-color);
+            min-width: 50px;
         }
 
         .tag, .category {
@@ -142,6 +167,16 @@
             margin-right: 8px;
             margin-bottom: 8px;
             display: inline-block;
+            transition: all 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .tag:hover, .category:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-1px);
+            text-decoration: none;
         }
 
         .post-content {
@@ -484,6 +519,66 @@
             align-self: flex-end;
         }
 
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .related-posts {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-posts h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .related-post-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .related-post-card {
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        .related-post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .related-post-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .related-post-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-date {
+            font-size: 12px;
+            color: #999;
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -506,6 +601,7 @@
     </style>
 </head>
 <body>
+    <div id="top">
     <div id="app">
         <header>
             <div class="container">
@@ -533,29 +629,47 @@
                 </div>
                 <article v-else>
                     <div class="post-header">
-                        <h1 class="post-title">{{ post.title }}</h1>
+                        <h1 class="post-title">{{ post.frontmatter.title }}</h1>
                         <div class="post-meta">
-                            <span v-if="post.frontmatter?.author">作者: {{ post.frontmatter.author }}</span>
-                            <span v-if="post.frontmatter?.tags">
-                                标签:
-                                <span
+                            <div class="meta-item">
+                                <span v-if="post.frontmatter.author" class="meta-info">
+                                    👤 {{ post.frontmatter.author }}
+                                </span>
+                                <span v-if="post.createdAt" class="meta-info">
+                                    📅 发布于 {{ formatDate(post.createdAt) }}
+                                </span>
+                                <span v-if="post.updatedAt && post.updatedAt !== post.createdAt" class="meta-info">
+                                    ✏️ 更新于 {{ formatDate(post.updatedAt) }}
+                                </span>
+                                <span v-if="post.viewCount !== undefined" class="meta-info">
+                                    👁 {{ post.viewCount }} 次浏览
+                                </span>
+                                <span v-if="readingTime" class="meta-info">
+                                    ⏱️ 约 {{ readingTime }} 分钟阅读
+                                </span>
+                            </div>
+                            <div class="meta-item">
+                                <span v-if="post.frontmatter.tags?.length" class="meta-label">标签:</span>
+                                <a
                                     v-for="tag in post.frontmatter.tags"
                                     :key="tag"
                                     class="tag"
+                                    :href="`/tags.html?tag=${encodeURIComponent(tag)}`"
                                 >
                                     {{ tag }}
-                                </span>
-                            </span>
-                            <span v-if="post.frontmatter?.categories">
-                                分类:
-                                <span
+                                </a>
+                            </div>
+                            <div class="meta-item">
+                                <span v-if="post.frontmatter.categories?.length" class="meta-label">分类:</span>
+                                <a
                                     v-for="category in post.frontmatter.categories"
                                     :key="category"
                                     class="category"
+                                    :href="`/categories.html?category=${encodeURIComponent(category)}`"
                                 >
                                     {{ category }}
-                                </span>
-                            </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -563,14 +677,35 @@
 
                     <div class="post-navigation">
                         <a href="/" class="nav-link nav-prev">← 返回首页</a>
+                        <div class="nav-actions">
+                            <a href="#top" class="nav-link">↑ 回到顶部</a>
+                        </div>
+                    </div>
+
+                    <!-- 相关文章 -->
+                    <div class="related-posts" v-if="relatedPosts.length">
+                        <h3>相关文章</h3>
+                        <div class="related-post-list">
+                            <a
+                                v-for="relatedPost in relatedPosts"
+                                :key="relatedPost.slug"
+                                :href="`/post.html?slug=${relatedPost.slug}`"
+                                class="related-post-card"
+                            >
+                                <h4>{{ relatedPost.title }}</h4>
+                                <p>{{ relatedPost.description }}</p>
+                                <span class="post-date">{{ formatDate(relatedPost.createdAt) }}</span>
+                            </a>
+                        </div>
                     </div>
                 </article>
             </div>
         </div>
+    </div>
 
         <footer>
             <div class="container">
-                <p>&copy; 2024 Zsden. Built with ❤️ using Elysia + Bun + Vue</p>
+                <p>&copy; 2025 Zsden. Built with ❤️ using Elysia + Bun + Vue</p>
             </div>
         </footer>
 
@@ -589,10 +724,64 @@
                     loading: true,
                     error: null,
                     showBackToTop: false,
-                    isDark: localStorage.getItem('theme') === 'dark'
+                    isDark: localStorage.getItem('theme') === 'dark',
+                    readingTime: null,
+                    relatedPosts: []
                 }
             },
             methods: {
+                formatDate(dateString) {
+                    if (!dateString) return '未知日期';
+                    const date = new Date(dateString);
+                    if (isNaN(date.getTime())) {
+                        return '未知日期';
+                    }
+                    return date.toLocaleDateString('zh-CN', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                },
+                calculateReadingTime(content) {
+                    // 移除 HTML 标签
+                    const textContent = content.replace(/<[^>]*>/g, '');
+                    // 计算字数（中文字符和英文单词）
+                    const chineseChars = (textContent.match(/[\u4e00-\u9fa5]/g) || []).length;
+                    const englishWords = (textContent.match(/[a-zA-Z]+/g) || []).length;
+                    const totalWords = chineseChars + englishWords;
+                    // 假设每分钟阅读 300 字（中文字符）或 200 个英文单词
+                    const readingSpeed = totalWords > 100 ? 300 : 200;
+                    const minutes = Math.ceil(totalWords / readingSpeed);
+                    this.readingTime = minutes || 1;
+                },
+                async fetchRelatedPosts() {
+                    try {
+                        const response = await axios.get('/api/posts');
+                        const allPosts = response.data;
+
+                        // 获取当前文章的标签和分类
+                        const currentTags = this.post.frontmatter?.tags || [];
+                        const currentCategories = this.post.frontmatter?.categories || [];
+
+                        // 过滤相关文章（有相同标签或分类，排除当前文章）
+                        this.relatedPosts = allPosts
+                            .filter(post => {
+                                if (post.slug === this.post.slug) return false;
+
+                                const postTags = post.tags || [];
+                                const postCategories = post.categories || [];
+
+                                // 检查是否有相同标签或分类
+                                const hasCommonTag = currentTags.some(tag => postTags.includes(tag));
+                                const hasCommonCategory = currentCategories.some(cat => postCategories.includes(cat));
+
+                                return hasCommonTag || hasCommonCategory;
+                            })
+                            .slice(0, 6); // 最多显示 6 篇相关文章
+                    } catch (err) {
+                        console.error('加载相关文章失败:', err);
+                    }
+                },
                 async fetchPost() {
                     const urlParams = new URLSearchParams(window.location.search);
                     const slug = urlParams.get('slug');
@@ -606,7 +795,13 @@
                     try {
                         const response = await axios.get(`/api/posts/${slug}`);
                         this.post = response.data;
-                        document.title = `${this.post.frontmatter.title} - Zsden's Blog`;
+                        document.title = `${this.post.frontmatter?.title || '未知标题'} - Zsden's Blog`;
+
+                        // 计算阅读时间
+                        this.calculateReadingTime(this.post.content);
+
+                        // 获取相关文章
+                        await this.fetchRelatedPosts();
                     } catch (err) {
                         this.error = err.response?.data?.error || '加载文章失败';
                     }

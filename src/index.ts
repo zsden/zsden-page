@@ -1,8 +1,9 @@
 import cors from '@elysiajs/cors'
 import staticPlugin from '@elysiajs/static'
 import { Elysia } from 'elysia'
-// 使用不涉及数据库的路由
+
 import { metaRouteSimple, postsRouteSimple } from './routes/posts-simple'
+import { rssRouteSimple } from './routes/rss-simple'
 
 const app = new Elysia()
   .use(cors())
@@ -14,6 +15,7 @@ const app = new Elysia()
   )
   .use(postsRouteSimple)
   .use(metaRouteSimple)
+  .use(rssRouteSimple)
 
 // For local development
 if (process.env.NODE_ENV !== 'production') {

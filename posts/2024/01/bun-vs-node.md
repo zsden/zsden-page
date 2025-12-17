@@ -2,10 +2,10 @@
 title: Bun vs Node.js：性能对比
 description: 比较 Bun 和 Node.js 的性能，了解新一代 JavaScript 运行时
 author: zsden
-tags: [Bun, Node.js, performance]
-categories: [技术对比]
 status: PUBLISHED
-slug: 2024/01/bun-vs-node
+date: 2024-01-15
+tags: ["Bun", "Node.js", "performance"]
+categories: ["技术对比"]
 ---
 
 # Bun vs Node.js：性能对比

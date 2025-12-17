@@ -2,10 +2,9 @@
 title: 这是一篇草稿文章
 description: 这篇文章还没有发布，不会在前台显示
 author: zsden
-tags: [draft]
-categories: [未分类]
 status: DRAFT
-slug: 2024/01/draft-post
+tags: ["draft"]
+categories: ["未分类"]
 ---
 
 # 草稿内容

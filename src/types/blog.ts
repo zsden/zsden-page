@@ -1,30 +1,18 @@
 export interface Post {
-  id: string
   slug: string
   title: string
   description?: string
   content: string
   author: string
-  tags: Tag[]
-  categories: Category[]
+  tags: string[]
+  categories: string[]
   status: 'DRAFT' | 'PUBLISHED'
-  viewCount: number
-  createdAt: Date
-  updatedAt: Date
+  date?: string
 }
 
-export interface Tag {
-  id: string
-  name: string
-  slug: string
-  description?: string
-}
-
-export interface Category {
-  id: string
-  name: string
-  slug: string
-  description?: string
+export interface PostWithDates extends Post {
+  createdAt?: string
+  updatedAt?: string
 }
 
 export interface PostFrontmatter {
@@ -35,12 +23,11 @@ export interface PostFrontmatter {
   categories?: string[]
   status?: 'DRAFT' | 'PUBLISHED'
   slug?: string
+  date?: string
 }
 
-export interface ViewLog {
-  id: string
-  postId: string
-  ip?: string
-  userAgent?: string
-  viewedAt: Date
+export interface ParsedPost {
+  frontmatter: PostFrontmatter
+  content: string
+  filePath: string
 }

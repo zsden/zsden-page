@@ -133,10 +133,23 @@
 
         .post-meta {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             color: #666;
             font-size: 14px;
             margin-bottom: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .post-meta span {
+            padding: 4px 10px;
+            background-color: var(--hover-bg);
+            border-radius: 15px;
+            font-size: 12px;
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .tag, .category {
@@ -145,6 +158,13 @@
             border-radius: 15px;
             font-size: 12px;
             color: var(--text-color);
+            transition: all 0.3s;
+        }
+
+        .tag:hover, .category:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-1px);
         }
 
         .post-description {
@@ -196,74 +216,40 @@
         .stats {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-            padding: 20px;
+            gap: 40px;
+            margin-bottom: 30px;
+            padding: 25px;
             background-color: var(--hover-bg);
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .stat-item {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
 
         .stat-value {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             color: var(--primary-color);
+            line-height: 1;
         }
 
         .stat-label {
             font-size: 14px;
             color: #666;
-        }
-
-        .sidebar {
-            position: fixed;
-            right: 20px;
-            top: 100px;
-            width: 250px;
-            padding: 20px;
-            background-color: var(--hover-bg);
-            border-radius: 10px;
-            max-height: calc(100vh - 120px);
-            overflow-y: auto;
-        }
-
-        .sidebar h3 {
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-
-        .sidebar ul {
-            list-style: none;
-        }
-
-        .sidebar li {
-            margin-bottom: 8px;
-        }
-
-        .sidebar a {
-            color: var(--text-color);
-            text-decoration: none;
-            display: block;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: var(--bg-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 15px;
-            }
-
-            .sidebar {
-                display: none;
             }
 
             .stats {
@@ -281,7 +267,8 @@
                     <a href="/" class="logo">Zsden's Blog</a>
                     <nav class="nav">
                         <a href="/">首页</a>
-                        <a href="/api/posts" target="_blank">API</a>
+                        <a href="/categories.html" :class="{ active: currentPath === 'categories' }">分类</a>
+                        <a href="/tags.html" :class="{ active: currentPath === 'tags' }">标签</a>
                         <a href="/rss" target="_blank">RSS</a>
                         <button class="theme-toggle" @click="toggleTheme">
                             {{ isDark ? '🌙' : '☀️' }}
@@ -317,8 +304,14 @@
                         type="text"
                         v-model="searchQuery"
                         placeholder="搜索文章..."
-                        @input="filterPosts"
+                        @input="handleSearch"
+                        @focus="currentFilter = 'search'"
                     >
+                </div>
+
+                <!-- 筛选结果数量 -->
+                <div v-if="currentFilter" class="filter-results">
+                    找到 {{ filteredPosts.length }} 篇文章
                 </div>
 
                 <div v-if="loading" class="loading">加载中...</div>
@@ -332,8 +325,9 @@
                     >
                         <h2 class="post-title">{{ post.title }}</h2>
                         <div class="post-meta">
-                            <span>{{ formatDate(post.created_at) }}</span>
-                            <span v-if="post.view_count">👁 {{ post.view_count }}</span>
+                            <span>{{ formatDate(post.createdAt) }}</span>
+                            <span v-if="post.author">👤 {{ post.author }}</span>
+                            <span v-if="post.viewCount">👁 {{ post.viewCount }}</span>
                         </div>
                         <div v-if="post.tags && post.tags.length" class="post-meta">
                             <span
@@ -358,26 +352,11 @@
                 </div>
             </div>
 
-            <div class="sidebar" v-if="tags.length || categories.length">
-                <h3 v-if="tags.length">标签</h3>
-                <ul v-if="tags.length">
-                    <li v-for="tag in tags" :key="tag">
-                        <a href="#" @click.prevent="filterByTag(tag)">{{ tag }}</a>
-                    </li>
-                </ul>
-
-                <h3 v-if="categories.length" style="margin-top: 30px;">分类</h3>
-                <ul v-if="categories.length">
-                    <li v-for="category in categories" :key="category">
-                        <a href="#" @click.prevent="filterByCategory(category)">{{ category }}</a>
-                    </li>
-                </ul>
-            </div>
         </div>
 
         <footer>
             <div class="container">
-                <p>&copy; 2024 Zsden. Built with ❤️ using Elysia + Bun + Vue</p>
+                <p>&copy; 2025 Zsden. Built with ❤️ using Elysia + Bun + Vue</p>
             </div>
         </footer>
     </div>
@@ -389,20 +368,35 @@
             data() {
                 return {
                     posts: [],
+                    originalPosts: [], // 保存原始文章列表
                     tags: [],
                     categories: [],
                     stats: null,
                     loading: true,
                     error: null,
                     searchQuery: '',
+                    currentFilter: null, // null, 'tag', 'category', 'search'
+                    currentTag: null,
+                    currentCategory: null,
+                    currentPath: window.location.pathname === '/' || window.location.pathname.endsWith('.html') ? 'home' :
+                               window.location.pathname.includes('categories') ? 'categories' :
+                               window.location.pathname.includes('tags') ? 'tags' : 'home',
                     isDark: localStorage.getItem('theme') === 'dark'
                 }
             },
             computed: {
                 filteredPosts() {
-                    let filtered = this.posts;
+                    let filtered = this.originalPosts || this.posts;
 
-                    if (this.searchQuery) {
+                    if (this.currentFilter === 'tag' && this.currentTag) {
+                        filtered = filtered.filter(post =>
+                            post.tags && post.tags.includes(this.currentTag)
+                        );
+                    } else if (this.currentFilter === 'category' && this.currentCategory) {
+                        filtered = filtered.filter(post =>
+                            post.categories && post.categories.includes(this.currentCategory)
+                        );
+                    } else if (this.currentFilter === 'search' && this.searchQuery) {
                         filtered = filtered.filter(post =>
                             post.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
                             (post.description && post.description.toLowerCase().includes(this.searchQuery.toLowerCase()))
@@ -417,6 +411,7 @@
                     try {
                         const response = await axios.get('/api/posts');
                         this.posts = response.data;
+                        this.originalPosts = response.data; // 保存原始数据
                     } catch (err) {
                         this.error = '加载文章失败: ' + err.message;
                     }
@@ -446,7 +441,11 @@
                     }
                 },
                 formatDate(dateString) {
+                    if (!dateString) return '未知日期';
                     const date = new Date(dateString);
+                    if (isNaN(date.getTime())) {
+                        return '未知日期';
+                    }
                     return date.toLocaleDateString('zh-CN', {
                         year: 'numeric',
                         month: 'long',
@@ -459,11 +458,30 @@
                 filterPosts() {
                     // 已通过 computed 实现
                 },
+                handleSearch() {
+                    if (this.searchQuery) {
+                        this.currentFilter = 'search';
+                    } else {
+                        this.currentFilter = null;
+                    }
+                },
                 filterByTag(tag) {
-                    this.searchQuery = `#${tag}`;
+                    this.currentFilter = 'tag';
+                    this.currentTag = tag;
+                    this.currentCategory = null;
+                    this.searchQuery = '';
                 },
                 filterByCategory(category) {
-                    this.searchQuery = `📁${category}`;
+                    this.currentFilter = 'category';
+                    this.currentCategory = category;
+                    this.currentTag = null;
+                    this.searchQuery = '';
+                },
+                clearFilter() {
+                    this.currentFilter = null;
+                    this.currentTag = null;
+                    this.currentCategory = null;
+                    this.searchQuery = '';
                 },
                 toggleTheme() {
                     this.isDark = !this.isDark;

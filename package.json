@@ -5,24 +5,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
-    "build": "bun run build:prisma && bun run build:ts",
-    "build:prisma": "bunx prisma generate",
-    "build:ts": "bun build src/index.ts --outdir=dist --target=bun",
-    "start": "bun src/index.ts",
-    "postinstall": "bunx prisma generate"
+    "build": "bun build src/index.ts --outdir=dist --target=bun",
+    "start": "bun src/index.ts"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
     "@elysiajs/static": "^1.4.7",
-    "@prisma/adapter-pg": "^7.1.0",
-    "@prisma/client": "^7.1.0",
-    "@supabase/supabase-js": "^2.87.1",
     "date-fns": "^4.1.0",
     "elysia": "latest",
     "fast-glob": "^3.3.3",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
-    "prisma": "^7.1.0",
     "rehype-highlight": "^7.0.2",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",

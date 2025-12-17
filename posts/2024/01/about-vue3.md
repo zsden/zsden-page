@@ -2,10 +2,10 @@
 title: Vue 3 Composition API 入门
 description: 学习 Vue 3 的 Composition API，了解其优势和使用方法
 author: zsden
-tags: [Vue, JavaScript, frontend]
-categories: [前端开发]
 status: PUBLISHED
-slug: 2024/01/about-vue3
+date: 2024-01-20
+tags: ["Vue", "JavaScript", "frontend"]
+categories: ["前端开发"]
 ---
 
 # Vue 3 Composition API 入门

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签 - Zsden's Blog</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --primary-color: #2563eb;
+            --border-color: #e5e7eb;
+            --code-bg: #f3f4f6;
+            --hover-bg: #f9fafb;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e5e5e5;
+            --primary-color: #3b82f6;
+            --border-color: #374151;
+            --code-bg: #2d2d2d;
+            --hover-bg: #374151;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-color);
+            z-index: 100;
+            transition: background-color 0.3s;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background-color: var(--hover-bg);
+        }
+
+        .nav a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: background-color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--hover-bg);
+        }
+
+        .content {
+            padding: 40px 0;
+            min-height: calc(100vh - 160px);
+        }
+
+        .page-title {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 40px 20px;
+            background-color: var(--hover-bg);
+            border-radius: 20px;
+        }
+
+        .tag-item {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tag-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .tag-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .tag-item:hover::before {
+            left: 100%;
+        }
+
+        .tag-item .count {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 11px;
+            margin-left: 6px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .post-card {
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 12px;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .post-meta span {
+            padding: 4px 10px;
+            background-color: var(--hover-bg);
+            border-radius: 15px;
+            font-size: 12px;
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .post-description {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin: 60px 0 30px 0;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .error {
+            text-align: center;
+            padding: 60px;
+            color: #ef4444;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .back-link a:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 20px 0;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .tag-cloud {
+                padding: 20px;
+            }
+
+            .tag-item {
+                font-size: 12px;
+                padding: 6px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <a href="/" class="logo">Zsden's Blog</a>
+                    <nav class="nav">
+                        <a href="/">首页</a>
+                        <a href="/categories.html">分类</a>
+                        <a href="/tags.html" class="active">标签</a>
+                        <a href="/rss" target="_blank">RSS</a>
+                        <button class="theme-toggle" @click="toggleTheme">
+                            {{ isDark ? '🌙' : '☀️' }}
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="container">
+                <h1 class="page-title">标签</h1>
+                <p class="page-subtitle">{{ tags.length }} 个标签</p>
+
+                <div v-if="loading" class="loading">加载中...</div>
+                <div v-else-if="error" class="error">{{ error }}</div>
+                <div v-else>
+                    <!-- 标签云 -->
+                    <div class="tag-cloud">
+                        <a
+                            v-for="(tag, index) in sortedTags"
+                            :key="tag.name"
+                            :href="`?tag=${encodeURIComponent(tag.name)}`"
+                            class="tag-item"
+                            :style="{ fontSize: getTagFontSize(tag.count) }"
+                        >
+                            {{ tag.name }}
+                            <span class="count">{{ tag.count }}</span>
+                        </a>
+                    </div>
+
+                    <!-- 选中标签的文章列表 -->
+                    <div v-if="selectedTag" class="tag-section">
+                        <h2 class="section-title">#{{ selectedTag }} ({{ tagPosts.length }} 篇文章)</h2>
+                        <div class="posts-grid">
+                            <div
+                                v-for="post in tagPosts"
+                                :key="post.slug"
+                                class="post-card"
+                                @click="goToPost(post.slug)"
+                            >
+                                <h3 class="post-title">{{ post.title }}</h3>
+                                <div class="post-meta">
+                                    <span>{{ formatDate(post.createdAt) }}</span>
+                                    <span v-if="post.author">👤 {{ post.author }}</span>
+                                    <span v-if="post.viewCount">👁 {{ post.viewCount }}</span>
+                                </div>
+                                <p v-if="post.description" class="post-description">{{ post.description }}</p>
+                            </div>
+                        </div>
+                        <div class="back-link">
+                            <a href="/tags.html">← 返回标签列表</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Zsden. Built with ❤️ using Elysia + Bun + Vue</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    tags: [],
+                    tagPostCounts: {},
+                    posts: [],
+                    selectedTag: null,
+                    tagPosts: [],
+                    loading: true,
+                    error: null,
+                    isDark: localStorage.getItem('theme') === 'dark'
+                }
+            },
+            computed: {
+                sortedTags() {
+                    return Object.entries(this.tagPostCounts)
+                        .map(([name, count]) => ({ name, count }))
+                        .sort((a, b) => b.count - a.count)
+                }
+            },
+            methods: {
+                async fetchTags() {
+                    try {
+                        const response = await axios.get('/api/tags');
+                        this.tags = response.data;
+                    } catch (err) {
+                        this.error = '加载标签失败: ' + err.message;
+                    }
+                },
+                async fetchPosts() {
+                    try {
+                        const response = await axios.get('/api/posts');
+                        this.posts = response.data;
+
+                        // 计算每个标签的文章数量
+                        this.posts.forEach(post => {
+                            if (post.tags) {
+                                post.tags.forEach(tag => {
+                                    this.tagPostCounts[tag] = (this.tagPostCounts[tag] || 0) + 1;
+                                });
+                            }
+                        });
+                    } catch (err) {
+                        this.error = '加载文章失败: ' + err.message;
+                    }
+                },
+                async fetchTagPosts(tag) {
+                    try {
+                        const response = await axios.get(`/api/posts/tags/${encodeURIComponent(tag)}`);
+                        this.tagPosts = response.data;
+                    } catch (err) {
+                        console.error('加载标签文章失败:', err);
+                        this.tagPosts = [];
+                    }
+                },
+                formatDate(dateString) {
+                    if (!dateString) return '未知日期';
+                    const date = new Date(dateString);
+                    if (isNaN(date.getTime())) {
+                        return '未知日期';
+                    }
+                    return date.toLocaleDateString('zh-CN', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                },
+                getTagFontSize(count) {
+                    // 标签使用更小但更丰富的颜色变化
+                    const minSize = 12;
+                    const maxSize = 18;
+                    const minCount = Math.min(...Object.values(this.tagPostCounts));
+                    const maxCount = Math.max(...Object.values(this.tagPostCounts));
+
+                    if (maxCount === minCount) return `${maxSize}px`;
+
+                    const ratio = (count - minCount) / (maxCount - minCount);
+                    return `${minSize + (maxSize - minSize) * ratio}px`;
+                },
+                goToPost(slug) {
+                    window.location.href = `/post.html?slug=${slug}`;
+                },
+                toggleTheme() {
+                    this.isDark = !this.isDark;
+                    localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+                    document.documentElement.setAttribute('data-theme', this.isDark ? 'dark' : 'light');
+                },
+                initTheme() {
+                    document.documentElement.setAttribute('data-theme', this.isDark ? 'dark' : 'light');
+                },
+                handleUrlParams() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const tag = urlParams.get('tag');
+                    if (tag) {
+                        this.selectedTag = decodeURIComponent(tag);
+                        this.fetchTagPosts(this.selectedTag);
+                    }
+                }
+            },
+            async mounted() {
+                this.initTheme();
+                this.loading = true;
+
+                await Promise.all([
+                    this.fetchTags(),
+                    this.fetchPosts()
+                ]);
+
+                this.handleUrlParams();
+                this.loading = false;
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

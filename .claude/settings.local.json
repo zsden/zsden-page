@@ -9,7 +9,14 @@
       "Bash(rm:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(bun install)",
+      "Bash(curl:*)",
+      "Bash(tree:*)",
+      "Bash(bun run build:*)",
+      "Bash(bunx tsc:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)"
     ]
   }
 }

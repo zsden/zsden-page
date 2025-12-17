@@ -2,10 +2,10 @@
 title: Hello World
 description: 我的第一篇博客文章
 author: zsden
-tags: [tech, web]
-categories: [技术]
 status: PUBLISHED
-slug: 2024/01/hello-world
+date: 2024-01-01
+tags: ["tech", "web"]
+categories: ["技术"]
 ---
 
 # Hello World

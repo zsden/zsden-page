@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分类 - Zsden's Blog</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --primary-color: #2563eb;
+            --border-color: #e5e7eb;
+            --code-bg: #f3f4f6;
+            --hover-bg: #f9fafb;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e5e5e5;
+            --primary-color: #3b82f6;
+            --border-color: #374151;
+            --code-bg: #2d2d2d;
+            --hover-bg: #374151;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-color);
+            z-index: 100;
+            transition: background-color 0.3s;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background-color: var(--hover-bg);
+        }
+
+        .nav a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: background-color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--hover-bg);
+        }
+
+        .content {
+            padding: 40px 0;
+            min-height: calc(100vh - 160px);
+        }
+
+        .page-title {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .cloud-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background-color: var(--hover-bg);
+            border-radius: 20px;
+        }
+
+        .cloud-item {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cloud-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cloud-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .cloud-item:hover::before {
+            left: 100%;
+        }
+
+        .cloud-item .count {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .post-card {
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 12px;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .post-meta span {
+            padding: 4px 10px;
+            background-color: var(--hover-bg);
+            border-radius: 15px;
+            font-size: 12px;
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .post-description {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .error {
+            text-align: center;
+            padding: 60px;
+            color: #ef4444;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 20px 0;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .cloud-container {
+                padding: 20px;
+            }
+
+            .cloud-item {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <a href="/" class="logo">Zsden's Blog</a>
+                    <nav class="nav">
+                        <a href="/">首页</a>
+                        <a href="/categories.html" class="active">分类</a>
+                        <a href="/tags.html">标签</a>
+                        <a href="/rss" target="_blank">RSS</a>
+                        <button class="theme-toggle" @click="toggleTheme">
+                            {{ isDark ? '🌙' : '☀️' }}
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="container">
+                <h1 class="page-title">分类</h1>
+                <p class="page-subtitle">{{ categories.length }} 个分类</p>
+
+                <div v-if="loading" class="loading">加载中...</div>
+                <div v-else-if="error" class="error">{{ error }}</div>
+                <div v-else>
+                    <!-- 分类词云 -->
+                    <div class="cloud-container">
+                        <a
+                            v-for="(category, index) in sortedCategories"
+                            :key="category.name"
+                            :href="`?category=${encodeURIComponent(category.name)}`"
+                            class="cloud-item"
+                            :style="{ fontSize: getFontSize(category.count) }"
+                        >
+                            {{ category.name }}
+                            <span class="count">{{ category.count }}</span>
+                        </a>
+                    </div>
+
+                    <!-- 选中分类的文章列表 -->
+                    <div v-if="selectedCategory" class="category-section">
+                        <h2>{{ selectedCategory }} ({{ categoryPosts.length }} 篇文章)</h2>
+                        <div class="posts-grid">
+                            <div
+                                v-for="post in categoryPosts"
+                                :key="post.slug"
+                                class="post-card"
+                                @click="goToPost(post.slug)"
+                            >
+                                <h3 class="post-title">{{ post.title }}</h3>
+                                <div class="post-meta">
+                                    <span>{{ formatDate(post.createdAt) }}</span>
+                                    <span v-if="post.author">👤 {{ post.author }}</span>
+                                    <span v-if="post.viewCount">👁 {{ post.viewCount }}</span>
+                                </div>
+                                <p v-if="post.description" class="post-description">{{ post.description }}</p>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 30px;">
+                            <a href="/categories.html" class="cloud-item">← 返回分类列表</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Zsden. Built with ❤️ using Elysia + Bun + Vue</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    categories: [],
+                    categoryPostCounts: {},
+                    posts: [],
+                    selectedCategory: null,
+                    categoryPosts: [],
+                    loading: true,
+                    error: null,
+                    isDark: localStorage.getItem('theme') === 'dark'
+                }
+            },
+            computed: {
+                sortedCategories() {
+                    return Object.entries(this.categoryPostCounts)
+                        .map(([name, count]) => ({ name, count }))
+                        .sort((a, b) => b.count - a.count)
+                }
+            },
+            methods: {
+                async fetchCategories() {
+                    try {
+                        const response = await axios.get('/api/categories');
+                        this.categories = response.data;
+                    } catch (err) {
+                        this.error = '加载分类失败: ' + err.message;
+                    }
+                },
+                async fetchPosts() {
+                    try {
+                        const response = await axios.get('/api/posts');
+                        this.posts = response.data;
+
+                        // 计算每个分类的文章数量
+                        this.posts.forEach(post => {
+                            if (post.categories) {
+                                post.categories.forEach(category => {
+                                    this.categoryPostCounts[category] = (this.categoryPostCounts[category] || 0) + 1;
+                                });
+                            }
+                        });
+                    } catch (err) {
+                        this.error = '加载文章失败: ' + err.message;
+                    }
+                },
+                async fetchCategoryPosts(category) {
+                    try {
+                        const response = await axios.get(`/api/posts/categories/${encodeURIComponent(category)}`);
+                        this.categoryPosts = response.data;
+                    } catch (err) {
+                        console.error('加载分类文章失败:', err);
+                        this.categoryPosts = [];
+                    }
+                },
+                formatDate(dateString) {
+                    if (!dateString) return '未知日期';
+                    const date = new Date(dateString);
+                    if (isNaN(date.getTime())) {
+                        return '未知日期';
+                    }
+                    return date.toLocaleDateString('zh-CN', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                },
+                getFontSize(count) {
+                    // 根据文章数量动态调整字体大小
+                    const minSize = 16;
+                    const maxSize = 24;
+                    const minCount = Math.min(...Object.values(this.categoryPostCounts));
+                    const maxCount = Math.max(...Object.values(this.categoryPostCounts));
+
+                    if (maxCount === minCount) return `${maxSize}px`;
+
+                    const ratio = (count - minCount) / (maxCount - minCount);
+                    return `${minSize + (maxSize - minSize) * ratio}px`;
+                },
+                goToPost(slug) {
+                    window.location.href = `/post.html?slug=${slug}`;
+                },
+                toggleTheme() {
+                    this.isDark = !this.isDark;
+                    localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+                    document.documentElement.setAttribute('data-theme', this.isDark ? 'dark' : 'light');
+                },
+                initTheme() {
+                    document.documentElement.setAttribute('data-theme', this.isDark ? 'dark' : 'light');
+                },
+                handleUrlParams() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const category = urlParams.get('category');
+                    if (category) {
+                        this.selectedCategory = decodeURIComponent(category);
+                        this.fetchCategoryPosts(this.selectedCategory);
+                    }
+                }
+            },
+            async mounted() {
+                this.initTheme();
+                this.loading = true;
+
+                await Promise.all([
+                    this.fetchCategories(),
+                    this.fetchPosts()
+                ]);
+
+                this.handleUrlParams();
+                this.loading = false;
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
