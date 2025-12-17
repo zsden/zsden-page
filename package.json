@@ -4,9 +4,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts",
-    "build": "bun build src/index.ts --outdir=dist --target=bun",
-    "start": "bun src/index.ts",
+    "dev": "bun run --watch src/index.local.ts",
+    "build": "bun build src/index.local.ts --outdir=dist --target=bun",
+    "start": "bun src/index.local.ts",
     "vercel-build": "echo 'Vercel build completed - no build needed for serverless functions'"
   },
   "dependencies": {
@@ -27,6 +27,5 @@
     "bun-types": "latest",
     "@vercel/node": "^3.0.0",
     "typescript": "^5.0.0"
-  },
-  "module": "src/index.ts"
+  }
 }

@@ -1,4 +1,29 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/posts.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/posts"
+    },
+    {
+      "src": "/health",
+      "dest": "/api/posts"
+    },
+    {
+      "src": "/debug",
+      "dest": "/api/posts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ],
   "functions": {
     "api/posts.ts": {
       "maxDuration": 10
