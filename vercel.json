@@ -3,5 +3,11 @@
     "api/posts.ts": {
       "maxDuration": 10
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/posts"
+    }
+  ]
 }
