@@ -8,6 +8,18 @@
     {
       "source": "/api/(.*)",
       "destination": "/api/posts"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/posts"
+    },
+    {
+      "source": "/debug",
+      "destination": "/api/posts"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public/$1"
     }
   ]
 }
