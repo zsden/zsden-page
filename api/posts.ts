@@ -82,7 +82,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const posts = await getAllPosts()
       const tagsSet = new Set<string>()
       posts.forEach(post => {
-        if (post.frontmatter.tags) {
+        if (post && post.frontmatter.tags) {
           post.frontmatter.tags.forEach((tag: string) => tagsSet.add(tag))
         }
       })
@@ -95,7 +95,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const posts = await getAllPosts()
       const categoriesSet = new Set<string>()
       posts.forEach(post => {
-        if (post.frontmatter.categories) {
+        if (post && post.frontmatter.categories) {
           post.frontmatter.categories.forEach((category: string) => categoriesSet.add(category))
         }
       })
@@ -110,16 +110,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const categoriesSet = new Set<string>()
 
       posts.forEach(post => {
-        if (post.frontmatter.tags) {
+        if (post && post.frontmatter.tags) {
           post.frontmatter.tags.forEach((tag: string) => tagsSet.add(tag))
         }
-        if (post.frontmatter.categories) {
+        if (post && post.frontmatter.categories) {
           post.frontmatter.categories.forEach((category: string) => categoriesSet.add(category))
         }
       })
 
       res.json({
-        posts: posts.filter(post => post.frontmatter.status === 'PUBLISHED').length,
+        posts: posts.filter(post => post && post.frontmatter.status === 'PUBLISHED').length,
         tags: tagsSet.size,
         categories: categoriesSet.size,
         views: 0
