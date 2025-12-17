@@ -1,21 +1,12 @@
 {
+  "version": 2,
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": ".",
+  "installCommand": "npm install",
+  "framework": null,
   "functions": {
     "api/posts.ts": {
       "maxDuration": 10
     }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/posts"
-    },
-    {
-      "source": "/health",
-      "destination": "/api/posts"
-    },
-    {
-      "source": "/debug",
-      "destination": "/api/posts"
-    }
-  ]
+  }
 }
